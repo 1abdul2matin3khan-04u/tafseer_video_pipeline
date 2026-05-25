@@ -7,9 +7,11 @@ import re
 import urllib.request
 import urllib.error
 import argparse
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+import api_logger
 
 # Configurable Gemini Model
-GEMINI_MODEL = "models/gemini-2.5-flash-lite"
+GEMINI_MODEL = "models/gemini-2.5-flash"
 
 SYSTEM_PROMPT_ENGLISH = """You are an expert Islamic media producer, scriptwriter, and public speaker.
 Your task is to take a single Ruku's target functional block Tafseer data and the Arabic verse text as input, and generate a conversational, natural, and human-like spoken video script in English.
@@ -68,52 +70,73 @@ def strip_markdown_code_blocks(text):
             text = text[:-3].strip()
     return text
 
-def call_gemini_api(api_key, model, system_prompt, user_content):
-    url = f"https://generativelanguage.googleapis.com/v1beta/{model}:generateContent?key={api_key}"
-    headers = {
-        "Content-Type": "application/json"
-    }
-    payload = {
-        "contents": [
-            {
-                "parts": [
-                    {"text": f"{system_prompt}\n\nInput Context:\n{user_content}"}
-                ]
-            }
-        ]
-    }
-    req = urllib.request.Request(
-        url,
-        data=json.dumps(payload).encode("utf-8"),
-        headers=headers
-    )
-    
-    max_retries = 3
+def call_gemini_api(model, system_prompt, user_content, step_name, abs_ruku, surah_number, surah_name, rel_ruku):
+    max_retries = 7
     for attempt in range(1, max_retries + 1):
+        key_name, api_key = api_logger.get_next_api_key(step_name)
+        if not api_key:
+            print("  Error: No API keys loaded.")
+            return None
+            
+        url = f"https://generativelanguage.googleapis.com/v1beta/{model}:generateContent?key={api_key}"
+        headers = {
+            "Content-Type": "application/json"
+        }
+        payload = {
+            "contents": [
+                {
+                    "parts": [
+                        {"text": f"{system_prompt}\n\nInput Context:\n{user_content}"}
+                    ]
+                }
+            ]
+        }
+        req = urllib.request.Request(
+            url,
+            data=json.dumps(payload).encode("utf-8"),
+            headers=headers
+        )
         try:
             with urllib.request.urlopen(req, timeout=180) as response:
                 res_data = json.loads(response.read().decode("utf-8"))
-                text_response = res_data["candidates"][0]["content"]["parts"][0]["text"].strip()
-                return text_response
+                response_text = res_data["candidates"][0]["content"]["parts"][0]["text"].strip()
+                
+                input_tokens = None
+                output_tokens = None
+                if "usageMetadata" in res_data:
+                    input_tokens = res_data["usageMetadata"].get("promptTokenCount")
+                    output_tokens = res_data["usageMetadata"].get("candidatesTokenCount")
+                    
+                api_logger.log_api_call(
+                    step_name, abs_ruku, surah_number, surah_name, rel_ruku,
+                    model, key_name, "Success", input_tokens, output_tokens
+                )
+                return response_text
         except urllib.error.HTTPError as e:
             try:
                 err_msg = e.read().decode('utf-8')
             except Exception:
                 err_msg = e.reason
-            print(f"  [Attempt {attempt}/{max_retries}] HTTP Error {e.code}: {e.reason}. Detail: {err_msg}")
+            print(f"  [Attempt {attempt}/{max_retries} with {key_name}] HTTP Error {e.code}: {e.reason}. Detail: {err_msg}")
+            
+            api_logger.log_api_call(
+                step_name, abs_ruku, surah_number, surah_name, rel_ruku,
+                model, key_name, f"HTTP Error {e.code}", None, None
+            )
             
             if e.code == 429:
-                sleep_time = max(30, 2 ** (attempt + 3))
-                print(f"  [Rate Limit Active] Waiting {sleep_time} seconds before retry...")
-                time.sleep(sleep_time)
+                print(f"  [Rate Limit Active] Rotating key and retrying...")
+                time.sleep(2)
                 continue
         except Exception as e:
-            print(f"  [Attempt {attempt}/{max_retries}] Error: {e}")
-        
+            print(f"  [Attempt {attempt}/{max_retries} with {key_name}] Error: {e}")
+            api_logger.log_api_call(
+                step_name, abs_ruku, surah_number, surah_name, rel_ruku,
+                model, key_name, f"Error: {str(e)[:50]}", None, None
+            )
+            
         if attempt < max_retries:
-            sleep_time = 2 ** attempt
-            print(f"  Retrying in {sleep_time} seconds...")
-            time.sleep(sleep_time)
+            time.sleep(1)
             
     return None
 
@@ -273,10 +296,10 @@ def generate_track(api_key, script_dir, root_dir, limit, ruku_filter, force_flag
             }
             
             ai_response = call_gemini_api(
-                api_key,
                 GEMINI_MODEL,
                 SYSTEM_PROMPT_ENGLISH,
-                json.dumps(block_context, ensure_ascii=False, indent=2)
+                json.dumps(block_context, ensure_ascii=False, indent=2),
+                "step3", abs_ruku, surah_num, surah_name, rel_ruku
             )
             
             if not ai_response:
@@ -328,18 +351,12 @@ def main():
     script_dir = os.path.dirname(os.path.abspath(__file__))
     root_dir = os.path.dirname(script_dir)
     
-    # Load environment variables
-    env = load_env(os.path.join(root_dir, ".env"))
-    api_key = (
-        env.get("GEMINI_API_KEY_STEP3") or 
-        env.get("GEMINI_API_KEY") or 
-        os.environ.get("GEMINI_API_KEY_STEP3") or 
-        os.environ.get("GEMINI_API_KEY")
-    )
-    
-    if not api_key:
-        print("Error: GEMINI_API_KEY_STEP3 or GEMINI_API_KEY not found in .env or environment variables.", file=sys.stderr)
+    # Load environment variables via api_logger
+    keys = api_logger.load_env_keys()
+    if not keys:
+        print("Error: No GEMINI_API_KEY_1 through GEMINI_API_KEY_7 found in .env file.", file=sys.stderr)
         sys.exit(1)
+    api_key = None
         
     generate_track(api_key, script_dir, root_dir, args.limit, args.ruku, args.force, args.delay)
     print("\nEnglish Step 3 processing finished.")

@@ -22,44 +22,23 @@ if sys.platform.startswith('win'):
     except Exception:
         pass
 
-# Configurable Gemini Model for transliteration
-GEMINI_MODEL = "models/gemini-2.5-flash-lite"
+# Add root directory to sys.path to import api_logger
+script_dir = os.path.dirname(os.path.abspath(__file__))
+root_dir = os.path.dirname(script_dir)
+if root_dir not in sys.path:
+    sys.path.append(root_dir)
+import api_logger
 
-class GeminiKeyManager:
-    def __init__(self, keys):
-        self.keys = keys
-        self.current_index = 0
-        self.consecutive_failures = 0
-        self.all_keys_exhausted = False
-        
-    def get_current_key(self):
-        if not self.keys or self.all_keys_exhausted:
-            return None
-        return self.keys[self.current_index]
-        
-    def rotate_key(self):
-        if not self.keys:
-            return None
-        self.consecutive_failures += 1
-        if self.consecutive_failures >= len(self.keys):
-            self.all_keys_exhausted = True
-            print("\n  [WARNING] All Gemini API keys are exhausted or rate-limited. Short-circuiting to direct Roman Urdu fallback for remaining scenes.")
-            return None
-        self.current_index = (self.current_index + 1) % len(self.keys)
-        print(f"  [Key Rotation] Switched to Gemini API Key index {self.current_index} (ending in ...{self.keys[self.current_index][-6:]})")
-        return self.get_current_key()
-        
-    def report_success(self):
-        self.consecutive_failures = 0
+# Configurable Gemini Models for transliteration
+PRIMARY_GEMINI_MODEL = "models/gemini-3.1-flash-lite"
+FALLBACK_GEMINI_MODEL = "models/gemini-2.5-flash-lite"
 
-# Global key manager instance
-KEY_MANAGER = None
+GEMINI_DISABLED = False
 
-def load_env_keys(filepath):
-    keys = []
+def load_env_vars(filepath):
     env_vars = {}
     if not os.path.exists(filepath):
-        return keys, env_vars
+        return env_vars
     try:
         with open(filepath, 'r', encoding='utf-8') as f:
             for line in f:
@@ -71,24 +50,26 @@ def load_env_keys(filepath):
                     key = key.strip()
                     val = val.strip()
                     env_vars[key] = val
-                    if 'GEMINI_API_KEY' in key and val:
-                        if val not in keys:
-                            keys.append(val)
     except Exception as e:
         print(f"Warning: Failed to parse .env file: {e}")
-    return keys, env_vars
+    return env_vars
 
-def call_gemini_api(model, prompt):
-    global KEY_MANAGER
-    if not KEY_MANAGER or not KEY_MANAGER.keys or KEY_MANAGER.all_keys_exhausted:
+def call_gemini_api(model, prompt, step_name, abs_ruku, surph_num, surah_name, rel_ruku):
+    global GEMINI_DISABLED
+    if GEMINI_DISABLED:
         return None
         
-    max_retries = len(KEY_MANAGER.keys)
+    max_retries = 7  # Allow rotating through all 7 keys
+    current_model = model
+    
     for attempt in range(1, max_retries + 1):
-        api_key = KEY_MANAGER.get_current_key()
+        key_name, api_key = api_logger.get_next_api_key(step_name)
         if not api_key:
+            print("  Error: No API keys loaded.")
+            GEMINI_DISABLED = True
             return None
-        url = f"https://generativelanguage.googleapis.com/v1beta/{model}:generateContent?key={api_key}"
+            
+        url = f"https://generativelanguage.googleapis.com/v1beta/{current_model}:generateContent?key={api_key}"
         headers = {
             "Content-Type": "application/json"
         }
@@ -107,20 +88,53 @@ def call_gemini_api(model, prompt):
             headers=headers
         )
         try:
-            with urllib.request.urlopen(req, timeout=30) as response:
+            with urllib.request.urlopen(req, timeout=180) as response:
                 res_data = json.loads(response.read().decode("utf-8"))
-                KEY_MANAGER.report_success()
-                return res_data["candidates"][0]["content"]["parts"][0]["text"].strip()
+                response_text = res_data["candidates"][0]["content"]["parts"][0]["text"].strip()
+                
+                input_tokens = None
+                output_tokens = None
+                if "usageMetadata" in res_data:
+                    input_tokens = res_data["usageMetadata"].get("promptTokenCount")
+                    output_tokens = res_data["usageMetadata"].get("candidatesTokenCount")
+                    
+                api_logger.log_api_call(
+                    step_name, abs_ruku, surph_num, surah_name, rel_ruku,
+                    current_model, key_name, "Success", input_tokens, output_tokens
+                )
+                return response_text
         except urllib.error.HTTPError as e:
-            # Switch key immediately on rate limits
-            KEY_MANAGER.rotate_key()
-            if KEY_MANAGER.all_keys_exhausted:
-                break
-        except Exception as e:
-            KEY_MANAGER.rotate_key()
-            if KEY_MANAGER.all_keys_exhausted:
-                break
+            try:
+                err_msg = e.read().decode('utf-8')
+            except Exception:
+                err_msg = e.reason
+            print(f"  [Attempt {attempt}/{max_retries} with {key_name}] HTTP Error {e.code}: {e.reason}. Detail: {err_msg}")
             
+            api_logger.log_api_call(
+                step_name, abs_ruku, surph_num, surah_name, rel_ruku,
+                current_model, key_name, f"HTTP Error {e.code}", None, None
+            )
+            
+            if e.code == 429:
+                if current_model == PRIMARY_GEMINI_MODEL:
+                    print(f"  [Rate Limit Active] Swapping from {PRIMARY_GEMINI_MODEL} to fallback {FALLBACK_GEMINI_MODEL}")
+                    current_model = FALLBACK_GEMINI_MODEL
+                else:
+                    print(f"  [Rate Limit Active] Rotating key and retrying...")
+                time.sleep(2)
+                continue
+        except Exception as e:
+            print(f"  [Attempt {attempt}/{max_retries} with {key_name}] Error: {e}")
+            api_logger.log_api_call(
+                step_name, abs_ruku, surph_num, surah_name, rel_ruku,
+                current_model, key_name, f"Error: {str(e)[:50]}", None, None
+            )
+            
+        if attempt < max_retries:
+            time.sleep(1)
+            
+    GEMINI_DISABLED = True
+    print("\n  [WARNING] All Gemini API keys are exhausted or rate-limited. Short-circuiting to direct Roman Urdu fallback for remaining scenes.")
     return None
 
 def strip_markdown_code_blocks(text):
@@ -131,7 +145,7 @@ def strip_markdown_code_blocks(text):
             text = text[:-3].strip()
     return text
 
-def transliterate_roman_to_nastaliq(text):
+def transliterate_roman_to_nastaliq(text, abs_ruku, surah_number, surah_name, rel_ruku):
     """
     Transliterates Roman Urdu text to Nastaliq Urdu using Gemini API.
     """
@@ -143,7 +157,7 @@ def transliterate_roman_to_nastaliq(text):
 
 Text: {text}"""
     
-    response = call_gemini_api(GEMINI_MODEL, prompt)
+    response = call_gemini_api(PRIMARY_GEMINI_MODEL, prompt, "step5", abs_ruku, surah_number, surah_name, rel_ruku)
     if response:
         return strip_markdown_code_blocks(response)
     return text
@@ -267,7 +281,8 @@ def parse_recitation_verse(text):
         return int(match.group(1))
     return None
 
-async def process_subblock(subblock_path, output_dir, lang, polly_client):
+async def process_subblock(subblock_path, output_dir, lang, polly_client,
+                           surah_num_fallback, rel_ruku_fallback, abs_ruku_fallback, surah_name_fallback):
     """
     Processes a single subblock, generating audio files and updating the JSON metadata.
     """
@@ -277,16 +292,17 @@ async def process_subblock(subblock_path, output_dir, lang, polly_client):
     with open(subblock_path, 'r', encoding='utf-8') as f:
         data = json.load(f)
         
-    surah_num = data.get("surah_number")
-    rel_ruku = data.get("relative_ruku")
-    abs_ruku = data.get("absolute_ruku")
+    surah_num = data.get("surah_number") or surah_num_fallback
+    rel_ruku = data.get("relative_ruku") or rel_ruku_fallback
+    abs_ruku = data.get("absolute_ruku") or abs_ruku_fallback
+    surah_name = data.get("surah_name") or surah_name_fallback
     
     audio_dir = os.path.join(output_dir, "audio", subblock_id)
     os.makedirs(audio_dir, exist_ok=True)
     
     # Batch Transliteration for Roman Urdu to Nastaliq Urdu to optimize Gemini API calls
     transliterated_map = {}
-    if lang == "ur" and not KEY_MANAGER.all_keys_exhausted:
+    if lang == "ur" and not GEMINI_DISABLED:
         scenes_to_transliterate = []
         for scene in data.get("scenes", []):
             script_text = scene["script"]
@@ -311,7 +327,7 @@ Text:
 {combined_prompt_text}"""
             
             print(f"      Batch transliterating {len(scenes_to_transliterate)} scenes using Gemini...")
-            gemini_res = call_gemini_api(GEMINI_MODEL, prompt)
+            gemini_res = call_gemini_api(PRIMARY_GEMINI_MODEL, prompt, "step5", abs_ruku, surah_num, surah_name, rel_ruku)
             if gemini_res:
                 cleaned_res = strip_markdown_code_blocks(gemini_res)
                 parts = re.split(r'===SCENE\s+(\d+)===', cleaned_res)
@@ -325,7 +341,7 @@ Text:
                             pass
             
             print(f"      Successfully transliterated {len(transliterated_map)} / {len(scenes_to_transliterate)} scenes.")
-
+ 
     updated_scenes = []
     
     for scene in data.get("scenes", []):
@@ -356,11 +372,11 @@ Text:
                 cleaned_roman = re.sub(r'\[.*?\]', '', script_text).strip()
                 if cleaned_roman:
                     nastaliq_text = None
-                    if not KEY_MANAGER.all_keys_exhausted:
+                    if not GEMINI_DISABLED:
                         nastaliq_text = transliterated_map.get(scene_no)
                         if not nastaliq_text:
                             print(f"        Warning: Scene {scene_no} missing from batch. Transliterating individually...")
-                            nastaliq_text = transliterate_roman_to_nastaliq(cleaned_roman)
+                            nastaliq_text = transliterate_roman_to_nastaliq(cleaned_roman, abs_ruku, surah_num, surah_name, rel_ruku)
                     
                     if not nastaliq_text:
                         # Fallback directly to Roman Urdu if Gemini is exhausted
@@ -398,7 +414,6 @@ Text:
     return True
 
 async def main_async():
-    global KEY_MANAGER
     parser = argparse.ArgumentParser(description="Step 5: Animation-Audio Integration Pipeline")
     parser.add_argument("--limit", type=int, default=None, help="Limit the number of Rukus to process.")
     parser.add_argument("--ruku", type=int, default=None, help="Process a specific absolute Ruku index.")
@@ -409,13 +424,14 @@ async def main_async():
     script_dir = os.path.dirname(os.path.abspath(__file__))
     root_dir = os.path.dirname(script_dir)
     
-    keys, env = load_env_keys(os.path.join(root_dir, ".env"))
+    # Load environment variables
+    keys = api_logger.load_env_keys()
+    env = load_env_vars(os.path.join(root_dir, ".env"))
     
     if not keys:
         print("Error: No Gemini API keys found in .env.", file=sys.stderr)
         sys.exit(1)
         
-    KEY_MANAGER = GeminiKeyManager(keys)
     print(f"Loaded {len(keys)} Gemini API keys for quota rotation.")
     
     aws_access_key = env.get("AWS_ACCESS_KEY_ID")
@@ -506,7 +522,8 @@ async def main_async():
                     continue
                     
                 subblock_success = await process_subblock(
-                    subblock_json_path, output_dir, lang, polly_client
+                    subblock_json_path, output_dir, lang, polly_client,
+                    surah_num, rel_ruku, abs_ruku, surah_name
                 )
                 if not subblock_success:
                     success = False

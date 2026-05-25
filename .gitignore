@@ -47,3 +47,6 @@ build/
 Thumbs.db
 ehthumbs.db
 Desktop.ini
+
+# Local Run Logs and State
+logs/
