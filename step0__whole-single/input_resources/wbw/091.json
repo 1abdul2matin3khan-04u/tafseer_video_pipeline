@@ -1,0 +1,716 @@
+{
+  "1": {
+    "w": [
+      {
+        "c": "وَالشَّمْسِ",
+        "d": "wal-shamsi",
+        "e_en": "By the sun",
+        "e_ur": "قسم ہے سورج کی",
+        "a": 1,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "وَضُحَاهَا",
+        "d": "waḍuḥāhā",
+        "e_en": "and its brightness",
+        "e_ur": "اور قسم ہے اس کی دھوپ کی",
+        "a": 2,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      }
+    ],
+    "a": {
+      "g_en": "By the sun and its brightness",
+      "g_ur": "قسم ہے سورج کی اور اس کی دھوپ چڑھنے کی"
+    }
+  },
+  "2": {
+    "w": [
+      {
+        "c": "وَالْقَمَرِ",
+        "d": "wal-qamari",
+        "e_en": "And the moon",
+        "e_ur": "اور قسم ہے چاند کی",
+        "a": 1,
+        "o_ca": 3,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 2
+      },
+      {
+        "c": "إِذَا",
+        "d": "idhā",
+        "e_en": "when",
+        "e_ur": "جبکہ",
+        "a": 2,
+        "o_ca": 183,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 21
+      },
+      {
+        "c": "تَلَاهَا",
+        "d": "talāhā",
+        "e_en": "it follows it",
+        "e_ur": "وہ اس کے پیچھے آئے",
+        "a": 3,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      }
+    ],
+    "a": {
+      "g_en": "And [by] the moon when it follows it",
+      "g_ur": "اور چاند کی جب کہ وہ سورج کے پیچھے آئے"
+    }
+  },
+  "3": {
+    "w": [
+      {
+        "c": "وَالنَّهَارِ",
+        "d": "wal-nahāri",
+        "e_en": "And the day",
+        "e_ur": "اور قسم ہے دن کی",
+        "a": 1,
+        "o_ca": 12,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 2
+      },
+      {
+        "c": "إِذَا",
+        "d": "idhā",
+        "e_en": "when",
+        "e_ur": "جبکہ",
+        "a": 2,
+        "o_ca": 184,
+        "o_s": 2,
+        "o_r": 2,
+        "o_cr": 22
+      },
+      {
+        "c": "جَلَّاهَا",
+        "d": "jallāhā",
+        "e_en": "it displays it",
+        "e_ur": "وہ اس کو ظاہر کرے",
+        "a": 3,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      }
+    ],
+    "a": {
+      "g_en": "And [by] the day when it displays it",
+      "g_ur": "اور دن کی جب کہ وہ اس کو روشن کردے"
+    }
+  },
+  "4": {
+    "w": [
+      {
+        "c": "وَاللَّيْلِ",
+        "d": "wa-al-layli",
+        "e_en": "And the night",
+        "e_ur": "اور قسم ہے رات کی",
+        "a": 1,
+        "o_ca": 5,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 6
+      },
+      {
+        "c": "إِذَا",
+        "d": "idhā",
+        "e_en": "when",
+        "e_ur": "جب",
+        "a": 2,
+        "o_ca": 185,
+        "o_s": 3,
+        "o_r": 3,
+        "o_cr": 23
+      },
+      {
+        "c": "يَغْشَاهَا",
+        "d": "yaghshāhā",
+        "e_en": "it covers it",
+        "e_ur": "وہ چھا جائے اس پر",
+        "a": 3,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      }
+    ],
+    "a": {
+      "g_en": "And [by] the night when it covers it",
+      "g_ur": "اور رات کی جب وہ اس کو چھپائے"
+    }
+  },
+  "5": {
+    "w": [
+      {
+        "c": "وَالسَّمَاءِ",
+        "d": "wal-samāi",
+        "e_en": "And the heaven",
+        "e_ur": "اور قسم ہے آسمان کی",
+        "a": 1,
+        "o_ca": 5,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "وَمَا",
+        "d": "wamā",
+        "e_en": "and He Who",
+        "e_ur": "اور اس کی",
+        "a": 2,
+        "o_ca": 633,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 29
+      },
+      {
+        "c": "بَنَاهَا",
+        "d": "banāhā",
+        "e_en": "constructed it",
+        "e_ur": "جس نے بنایا اس کو",
+        "a": 3,
+        "o_ca": 2,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      }
+    ],
+    "a": {
+      "g_en": "And [by] the sky and He who constructed it",
+      "g_ur": "اور آسمان کی اور جیسا کہ اس کو بنایا"
+    }
+  },
+  "6": {
+    "w": [
+      {
+        "c": "وَالْأَرْضِ",
+        "d": "wal-arḍi",
+        "e_en": "And the earth",
+        "e_ur": "اور قسم ہے زمین کی",
+        "a": 1,
+        "o_ca": 108,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "وَمَا",
+        "d": "wamā",
+        "e_en": "and He Who",
+        "e_ur": "اور اس کی",
+        "a": 2,
+        "o_ca": 634,
+        "o_s": 2,
+        "o_r": 2,
+        "o_cr": 30
+      },
+      {
+        "c": "طَحَاهَا",
+        "d": "ṭaḥāhā",
+        "e_en": "spread it",
+        "e_ur": "جس نے بچھایا اس کو",
+        "a": 3,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      }
+    ],
+    "a": {
+      "g_en": "And [by] the earth and He who spread it",
+      "g_ur": "اور زمین کی اور جیسا کہ اس کو پھیلایا"
+    }
+  },
+  "7": {
+    "w": [
+      {
+        "c": "وَنَفْسٍ",
+        "d": "wanafsin",
+        "e_en": "And (the) soul",
+        "e_ur": "اور قسم ہے نفس انسانی کی",
+        "a": 1,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "وَمَا",
+        "d": "wamā",
+        "e_en": "and He Who",
+        "e_ur": "اور اس کی",
+        "a": 2,
+        "o_ca": 635,
+        "o_s": 3,
+        "o_r": 3,
+        "o_cr": 31
+      },
+      {
+        "c": "سَوَّاهَا",
+        "d": "sawwāhā",
+        "e_en": "proportioned it",
+        "e_ur": "جس نے درست کیا اس کو/ ہموار کیا اس کو",
+        "a": 3,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      }
+    ],
+    "a": {
+      "g_en": "And [by] the soul and He who proportioned it",
+      "g_ur": "اور جان کی جیسا کہ اس کو ٹھیک کیا"
+    }
+  },
+  "8": {
+    "w": [
+      {
+        "c": "فَأَلْهَمَهَا",
+        "d": "fa-alhamahā",
+        "e_en": "And He inspired it",
+        "e_ur": "پس اس نے الہام کیا اس کو",
+        "a": 1,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "فُجُورَهَا",
+        "d": "fujūrahā",
+        "e_en": "(to understand) what is wrong for it",
+        "e_ur": "اور اس کی بدی کو",
+        "a": 2,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "وَتَقْوَاهَا",
+        "d": "wataqwāhā",
+        "e_en": "and what is right for it",
+        "e_ur": "اور اس کے تقویٰ کو",
+        "a": 3,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      }
+    ],
+    "a": {
+      "g_en": "And inspired it [with discernment of] its wickedness and its righteousness,",
+      "g_ur": "پھر اس کو سمجھ دی،اس کی بدی کی اور اس کی نیکی کی"
+    }
+  },
+  "9": {
+    "w": [
+      {
+        "c": "قَدْ",
+        "d": "qad",
+        "e_en": "Indeed",
+        "e_ur": "یقیناً",
+        "a": 1,
+        "o_ca": 120,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 2
+      },
+      {
+        "c": "أَفْلَحَ",
+        "d": "aflaḥa",
+        "e_en": "he succeeds",
+        "e_ur": "فلاح پا گیا",
+        "a": 2,
+        "o_ca": 4,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 2
+      },
+      {
+        "c": "مَنْ",
+        "d": "man",
+        "e_en": "who",
+        "e_ur": "جس نے",
+        "a": 3,
+        "o_ca": 367,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 9
+      },
+      {
+        "c": "زَكَّاهَا",
+        "d": "zakkāhā",
+        "e_en": "purifies it",
+        "e_ur": "پاک کیا اس کو",
+        "a": 4,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      }
+    ],
+    "a": {
+      "g_en": "He has succeeded who purifies it,",
+      "g_ur": "کامیاب ہوا جس نے اس کو پاک کیا"
+    }
+  },
+  "10": {
+    "w": [
+      {
+        "c": "وَقَدْ",
+        "d": "waqad",
+        "e_en": "And indeed",
+        "e_ur": "اور یقیناً",
+        "a": 1,
+        "o_ca": 43,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 2
+      },
+      {
+        "c": "خَابَ",
+        "d": "khāba",
+        "e_en": "he fails",
+        "e_ur": "ناکام ہوا",
+        "a": 2,
+        "o_ca": 3,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "مَنْ",
+        "d": "man",
+        "e_en": "who",
+        "e_ur": "جس نے",
+        "a": 3,
+        "o_ca": 368,
+        "o_s": 2,
+        "o_r": 2,
+        "o_cr": 10
+      },
+      {
+        "c": "دَسَّاهَا",
+        "d": "dassāhā",
+        "e_en": "corrupts it",
+        "e_ur": "دبا دیا اس کو",
+        "a": 4,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      }
+    ],
+    "a": {
+      "g_en": "And he has failed who instills it [with corruption].",
+      "g_ur": "اور نامراد ہو ا جس نے اس کو آلودہ کیا"
+    }
+  },
+  "11": {
+    "w": [
+      {
+        "c": "كَذَّبَتْ",
+        "d": "kadhabat",
+        "e_en": "Denied",
+        "e_ur": "جھٹلایا",
+        "a": 1,
+        "o_ca": 14,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "ثَمُودُ",
+        "d": "thamūdu",
+        "e_en": "Thamud",
+        "e_ur": "ثمود نے",
+        "a": 2,
+        "o_ca": 7,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "بِطَغْوَاهَا",
+        "d": "biṭaghwāhā",
+        "e_en": "by their transgression",
+        "e_ur": "اپنی سرکشی کے ساتھ",
+        "a": 3,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      }
+    ],
+    "a": {
+      "g_en": "Thamud denied [their prophet] by reason of their transgression,",
+      "g_ur": "ثمود نے اپنی سرکشی کی بنا پر جھٹلایا"
+    }
+  },
+  "12": {
+    "w": [
+      {
+        "c": "إِذِ",
+        "d": "idhi",
+        "e_en": "When",
+        "e_ur": "جب",
+        "a": 1,
+        "o_ca": 9,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "انْبَعَثَ",
+        "d": "inbaʿatha",
+        "e_en": "(was) sent forth",
+        "e_ur": "اٹھا",
+        "a": 2,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "أَشْقَاهَا",
+        "d": "ashqāhā",
+        "e_en": "(the) most wicked of them",
+        "e_ur": "سب سے بڑا بدبخت اس کا",
+        "a": 3,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      }
+    ],
+    "a": {
+      "g_en": "When the most wretched of them was sent forth.",
+      "g_ur": "جب کہ اٹھ کھڑا ہوا ان کا سب سے بڑا بدبخت"
+    }
+  },
+  "13": {
+    "w": [
+      {
+        "c": "فَقَالَ",
+        "d": "faqāla",
+        "e_en": "But said",
+        "e_ur": "تو کہا",
+        "a": 1,
+        "o_ca": 27,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 2
+      },
+      {
+        "c": "لَهُمْ",
+        "d": "lahum",
+        "e_en": "to them",
+        "e_ur": "ان کو",
+        "a": 2,
+        "o_ca": 325,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 5
+      },
+      {
+        "c": "رَسُولُ",
+        "d": "rasūlu",
+        "e_en": "(the) Messenger",
+        "e_ur": "رسول نے",
+        "a": 3,
+        "o_ca": 10,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "اللَّهِ",
+        "d": "l-lahi",
+        "e_en": "(of) Allah",
+        "e_ur": "اللہ کے",
+        "a": 4,
+        "o_ca": 823,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 6
+      },
+      {
+        "c": "نَاقَةَ",
+        "d": "nāqata",
+        "e_en": "(It is the) she-camel",
+        "e_ur": "اونٹنی ہے",
+        "a": 5,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "اللَّهِ",
+        "d": "l-lahi",
+        "e_en": "(of) Allah",
+        "e_ur": "اللہ کی",
+        "a": 6,
+        "o_ca": 824,
+        "o_s": 2,
+        "o_r": 2,
+        "o_cr": 7
+      },
+      {
+        "c": "وَسُقْيَاهَا",
+        "d": "wasuq'yāhā",
+        "e_en": "and her drink",
+        "e_ur": "اور پانی پلانا اس کو",
+        "a": 7,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      }
+    ],
+    "a": {
+      "g_en": "And the messenger of Allah [Salih] said to them, \"[Do not harm] the she-camel of Allah or [prevent her from] her drink.\"",
+      "g_ur": "تو اللہ کے رسول نے ان سے کہا کہ اللہ کی اونٹنی اور اس کے پانی پینے سے خبردار"
+    }
+  },
+  "14": {
+    "w": [
+      {
+        "c": "فَكَذَّبُوهُ",
+        "d": "fakadhabūhu",
+        "e_en": "But they denied him",
+        "e_ur": "تو انہوں نے جھٹلایا اس کو",
+        "a": 1,
+        "o_ca": 8,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "فَعَقَرُوهَا",
+        "d": "faʿaqarūhā",
+        "e_en": "and they hamstrung her",
+        "e_ur": "پھر کاٹ ڈالا اس کو",
+        "a": 2,
+        "o_ca": 3,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "فَدَمْدَمَ",
+        "d": "fadamdama",
+        "e_en": "So destroyed",
+        "e_ur": "تو ہلاکت ڈالی",
+        "a": 3,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "عَلَيْهِمْ",
+        "d": "ʿalayhim",
+        "e_en": "them",
+        "e_ur": "ان پر",
+        "a": 4,
+        "o_ca": 181,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 5
+      },
+      {
+        "c": "رَبُّهُمْ",
+        "d": "rabbuhum",
+        "e_en": "their Lord",
+        "e_ur": "ان کے رب نے",
+        "a": 5,
+        "o_ca": 12,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "بِذَنْبِهِمْ",
+        "d": "bidhanbihim",
+        "e_en": "for their sin",
+        "e_ur": "ان کے گناہوں کی وجہ سے",
+        "a": 6,
+        "o_ca": 2,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "فَسَوَّاهَا",
+        "d": "fasawwāhā",
+        "e_en": "and leveled them",
+        "e_ur": "پھر برابر کردیا اس کو",
+        "a": 7,
+        "o_ca": 2,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      }
+    ],
+    "a": {
+      "g_en": "But they denied him and hamstrung her. So their Lord brought down upon them destruction for their sin and made it equal [upon all of them].",
+      "g_ur": "تو انھوں نے اس کو جھٹلایا، پھر اونٹنی کو مار ڈالا،پھر ان کے رب نے ان پر ہلاکت نازل کی ان كے گناه كے سبب، پھر سب کو برابر کردیا"
+    }
+  },
+  "15": {
+    "w": [
+      {
+        "c": "وَلَا",
+        "d": "walā",
+        "e_en": "And not",
+        "e_ur": "اور نہیں",
+        "a": 1,
+        "o_ca": 654,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 16
+      },
+      {
+        "c": "يَخَافُ",
+        "d": "yakhāfu",
+        "e_en": "He fears",
+        "e_ur": "وہ ڈرتا",
+        "a": 2,
+        "o_ca": 5,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "عُقْبَاهَا",
+        "d": "ʿuq'bāhā",
+        "e_en": "its consequences",
+        "e_ur": "اس کے انجام سے",
+        "a": 3,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      }
+    ],
+    "a": {
+      "g_en": "And He does not fear the consequence thereof.",
+      "g_ur": "وہ نہیں ڈرتا کہ اس کے پیچھے کیا ہوگا"
+    }
+  }
+}

@@ -1,0 +1,49 @@
+# Dependencies
+node_modules/
+jspm_packages/
+web_modules/
+
+# Local Environment Variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Python Build and Cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+pip-log.txt
+pip-delete-this-directory.txt
+.venv/
+.tox/
+.coverage
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.log
+
+# Remotion & Video Build Files
+.remotion/
+out/
+build/
+*.mp4
+*.webm
+*.wav
+*.mp3
+
+# Generated Pipeline Output Resources (Ignore heavy binary audio/video data)
+**/output_resources/
+!**/input_resources/
+
+# OS Files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini

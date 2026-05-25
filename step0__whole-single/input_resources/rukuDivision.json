@@ -1,0 +1,1587 @@
+
+[
+  {
+    "surah_number": 1,
+    "surah_name": "Fatehah",
+    "meaning": "The Opening",
+    "total_ayahs": 7,
+    "rukus_count": 1,
+    "verse_ranges": [
+      "1-7"
+    ]
+  },
+  {
+    "surah_number": 2,
+    "surah_name": "Baqarah",
+    "meaning": "The Cow",
+    "total_ayahs": 286,
+    "rukus_count": 40,
+    "verse_ranges": [
+      "1-7",
+      "8-20",
+      "21-29",
+      "30-39",
+      "40-46",
+      "47-59",
+      "60-61",
+      "62-71",
+      "72-82",
+      "83-86",
+      "87-96",
+      "97-103",
+      "104-112",
+      "113-121",
+      "122-129",
+      "130-141",
+      "142-147",
+      "148-152",
+      "153-163",
+      "164-167",
+      "168-176",
+      "177-182",
+      "183-188",
+      "189-196",
+      "197-210",
+      "211-216",
+      "217-221",
+      "222-228",
+      "229-231",
+      "232-235",
+      "236-242",
+      "243-248",
+      "249-253",
+      "254-257",
+      "258-260",
+      "261-266",
+      "267-273",
+      "274-281",
+      "282-283",
+      "284-286"
+    ]
+  },
+  {
+    "surah_number": 3,
+    "surah_name": "Aal-e-Imran",
+    "meaning": "The Family of Imran",
+    "total_ayahs": 200,
+    "rukus_count": 20,
+    "verse_ranges": [
+      "1-9",
+      "10-20",
+      "21-30",
+      "31-41",
+      "42-54",
+      "55-62",
+      "63-71",
+      "72-80",
+      "81-91",
+      "92-101",
+      "102-109",
+      "110-120",
+      "121-129",
+      "130-143",
+      "144-148",
+      "149-155",
+      "156-171",
+      "172-180",
+      "181-189",
+      "190-200"
+    ]
+  },
+  {
+    "surah_number": 4,
+    "surah_name": "Nisaa",
+    "meaning": "The Women",
+    "total_ayahs": 176,
+    "rukus_count": 24,
+    "verse_ranges": [
+      "1-10",
+      "11-14",
+      "15-22",
+      "23-25",
+      "26-33",
+      "34-42",
+      "43-50",
+      "51-59",
+      "60-70",
+      "71-76",
+      "77-87",
+      "88-91",
+      "92-96",
+      "97-100",
+      "101-104",
+      "105-112",
+      "113-115",
+      "116-126",
+      "127-134",
+      "135-141",
+      "142-152",
+      "153-162",
+      "163-171",
+      "172-176"
+    ]
+  },
+  {
+    "surah_number": 5,
+    "surah_name": "Maidah",
+    "meaning": "The Table spread with foods",
+    "total_ayahs": 120,
+    "rukus_count": 16,
+    "verse_ranges": [
+      "1-5",
+      "6-11",
+      "12-19",
+      "20-26",
+      "27-34",
+      "35-43",
+      "44-50",
+      "51-56",
+      "57-66",
+      "67-77",
+      "78-86",
+      "87-93",
+      "94-100",
+      "101-108",
+      "109-115",
+      "116-120"
+    ]
+  },
+  {
+    "surah_number": 6,
+    "surah_name": "Al-Anaam",
+    "meaning": "The Cattle",
+    "total_ayahs": 165,
+    "rukus_count": 20,
+    "verse_ranges": [
+      "1-10",
+      "11-20",
+      "21-30",
+      "31-41",
+      "42-50",
+      "51-55",
+      "56-60",
+      "61-70",
+      "71-82",
+      "83-90",
+      "91-94",
+      "95-100",
+      "101-110",
+      "111-121",
+      "122-129",
+      "130-140",
+      "141-144",
+      "145-150",
+      "151-154",
+      "155-165"
+    ]
+  },
+  {
+    "surah_number": 7,
+    "surah_name": "Al-Araaf",
+    "meaning": "The wall with Elevations",
+    "total_ayahs": 206,
+    "rukus_count": 24,
+    "verse_ranges": [
+      "1-10",
+      "11-25",
+      "26-31",
+      "32-39",
+      "40-47",
+      "48-53",
+      "54-58",
+      "59-64",
+      "65-72",
+      "73-84",
+      "85-93",
+      "94-99",
+      "100-108",
+      "109-126",
+      "127-129",
+      "130-141",
+      "142-147",
+      "148-151",
+      "152-157",
+      "158-162",
+      "163-171",
+      "172-181",
+      "182-188",
+      "189-206"
+    ]
+  },
+  {
+    "surah_number": 8,
+    "surah_name": "Al-Anfaal",
+    "meaning": "The Spoils of War",
+    "total_ayahs": 75,
+    "rukus_count": 10,
+    "verse_ranges": [
+      "1-10",
+      "11-19",
+      "20-28",
+      "29-37",
+      "38-44",
+      "45-48",
+      "49-58",
+      "59-64",
+      "65-69",
+      "70-75"
+    ]
+  },
+  {
+    "surah_number": 9,
+    "surah_name": "Tawbah",
+    "meaning": "The Repentance",
+    "total_ayahs": 129,
+    "rukus_count": 16,
+    "verse_ranges": [
+      "1-6",
+      "7-16",
+      "17-24",
+      "25-29",
+      "30-37",
+      "38-42",
+      "43-59",
+      "60-66",
+      "67-72",
+      "73-80",
+      "81-89",
+      "90-99",
+      "100-110",
+      "111-118",
+      "119-122",
+      "123-129"
+    ]
+  },
+  {
+    "surah_number": 10,
+    "surah_name": "Yunus",
+    "meaning": "The Prophet [Jonah]",
+    "total_ayahs": 109,
+    "rukus_count": 11,
+    "verse_ranges": [
+      "1-10",
+      "11-20",
+      "21-30",
+      "31-40",
+      "41-53",
+      "54-60",
+      "61-70",
+      "71-82",
+      "83-92",
+      "93-103",
+      "104-109"
+    ]
+  },
+  {
+    "surah_number": 11,
+    "surah_name": "Hud",
+    "meaning": "The Prophet Hud",
+    "total_ayahs": 123,
+    "rukus_count": 10,
+    "verse_ranges": [
+      "1-8",
+      "9-24",
+      "25-35",
+      "36-49",
+      "50-60",
+      "61-68",
+      "69-83",
+      "84-95",
+      "96-109",
+      "110-123"
+    ]
+  },
+  {
+    "surah_number": 12,
+    "surah_name": "Yusuf",
+    "meaning": "The Prophet Joseph",
+    "total_ayahs": 111,
+    "rukus_count": 12,
+    "verse_ranges": [
+      "1-6",
+      "7-20",
+      "21-29",
+      "30-35",
+      "36-42",
+      "43-49",
+      "50-57",
+      "58-68",
+      "69-79",
+      "80-93",
+      "94-104",
+      "105-111"
+    ]
+  },
+  {
+    "surah_number": 13,
+    "surah_name": "Ar-Ra'd",
+    "meaning": "The Thunder",
+    "total_ayahs": 43,
+    "rukus_count": 6,
+    "verse_ranges": [
+      "1-7",
+      "8-15",
+      "16-19",
+      "20-28",
+      "29-34",
+      "35-43"
+    ]
+  },
+  {
+    "surah_number": 14,
+    "surah_name": "Ibrahim",
+    "meaning": "The Prophet Abraham",
+    "total_ayahs": 52,
+    "rukus_count": 7,
+    "verse_ranges": [
+      "1-6",
+      "7-12",
+      "13-21",
+      "22-27",
+      "28-34",
+      "35-41",
+      "42-52"
+    ]
+  },
+  {
+    "surah_number": 15,
+    "surah_name": "Al-Hijr",
+    "meaning": "The Rocky Tract",
+    "total_ayahs": 99,
+    "rukus_count": 6,
+    "verse_ranges": [
+      "1-15",
+      "16-25",
+      "26-44",
+      "45-60",
+      "61-79",
+      "80-99"
+    ]
+  },
+  {
+    "surah_number": 16,
+    "surah_name": "An-Nahl",
+    "meaning": "The Bee",
+    "total_ayahs": 128,
+    "rukus_count": 16,
+    "verse_ranges": [
+      "1-9",
+      "10-20",
+      "21-30",
+      "31-40",
+      "41-50",
+      "51-60",
+      "61-65",
+      "66-70",
+      "71-76",
+      "77-83",
+      "84-89",
+      "90-94",
+      "95-100",
+      "101-110",
+      "111-118",
+      "119-128"
+    ]
+  },
+  {
+    "surah_number": 17,
+    "surah_name": "Bani Israeel",
+    "meaning": "The Children of Israel",
+    "total_ayahs": 111,
+    "rukus_count": 12,
+    "verse_ranges": [
+      "1-10",
+      "11-22",
+      "23-30",
+      "31-40",
+      "41-52",
+      "53-60",
+      "61-70",
+      "71-77",
+      "78-82",
+      "83-93",
+      "94-100",
+      "101-111"
+    ]
+  },
+  {
+    "surah_number": 18,
+    "surah_name": "Al-Kahf",
+    "meaning": "The Cave",
+    "total_ayahs": 110,
+    "rukus_count": 12,
+    "verse_ranges": [
+      "1-12",
+      "13-17",
+      "18-22",
+      "23-31",
+      "32-44",
+      "45-49",
+      "50-59",
+      "60-70",
+      "71-82",
+      "83-98",
+      "99-108",
+      "109-110"
+    ]
+  },
+  {
+    "surah_number": 19,
+    "surah_name": "Maryam",
+    "meaning": "Mary",
+    "total_ayahs": 98,
+    "rukus_count": 6,
+    "verse_ranges": [
+      "1-15",
+      "16-34",
+      "35-50",
+      "51-65",
+      "66-82",
+      "83-98"
+    ]
+  },
+  {
+    "surah_number": 20,
+    "surah_name": "Taa-Haa",
+    "meaning": "Ta-Ha",
+    "total_ayahs": 135,
+    "rukus_count": 8,
+    "verse_ranges": [
+      "1-24",
+      "25-54",
+      "55-76",
+      "77-87",
+      "88-101",
+      "102-113",
+      "114-123",
+      "124-135"
+    ]
+  },
+  {
+    "surah_number": 21,
+    "surah_name": "Al-Anbiyaa",
+    "meaning": "The Prophets",
+    "total_ayahs": 112,
+    "rukus_count": 7,
+    "verse_ranges": [
+      "1-10",
+      "11-29",
+      "30-47",
+      "48-65",
+      "66-82",
+      "83-101",
+      "102-112"
+    ]
+  },
+  {
+    "surah_number": 22,
+    "surah_name": "Al-Hajj",
+    "meaning": "The Pilgrimage",
+    "total_ayahs": 78,
+    "rukus_count": 10,
+    "verse_ranges": [
+      "1-10",
+      "11-22",
+      "23-25",
+      "26-33",
+      "34-38",
+      "39-48",
+      "49-57",
+      "58-64",
+      "65-72",
+      "73-78"
+    ]
+  },
+  {
+    "surah_number": 23,
+    "surah_name": "Al-Muminoon",
+    "meaning": "The Believers",
+    "total_ayahs": 118,
+    "rukus_count": 6,
+    "verse_ranges": [
+      "1-22",
+      "23-32",
+      "33-50",
+      "51-77",
+      "78-92",
+      "93-118"
+    ]
+  },
+  {
+    "surah_number": 24,
+    "surah_name": "An-Noor",
+    "meaning": "The Light",
+    "total_ayahs": 64,
+    "rukus_count": 9,
+    "verse_ranges": [
+      "1-10",
+      "11-20",
+      "21-27",
+      "28-31",
+      "32-34",
+      "35-40",
+      "41-50",
+      "51-57",
+      "58-64"
+    ]
+  },
+  {
+    "surah_number": 25,
+    "surah_name": "Al-Furqaan",
+    "meaning": "The Criterion",
+    "total_ayahs": 77,
+    "rukus_count": 6,
+    "verse_ranges": [
+      "1-20",
+      "21-34",
+      "35-44",
+      "45-55",
+      "56-67",
+      "68-77"
+    ]
+  },
+  {
+    "surah_number": 26,
+    "surah_name": "Ash-Shu'araa",
+    "meaning": "The Poets",
+    "total_ayahs": 227,
+    "rukus_count": 11,
+    "verse_ranges": [
+      "1-9",
+      "10-33",
+      "34-51",
+      "52-68",
+      "69-89",
+      "90-104",
+      "105-122",
+      "123-140",
+      "141-159",
+      "160-175",
+      "176-227"
+    ]
+  },
+  {
+    "surah_number": 27,
+    "surah_name": "An-Naml",
+    "meaning": "The Ant",
+    "total_ayahs": 93,
+    "rukus_count": 7,
+    "verse_ranges": [
+      "1-14",
+      "15-31",
+      "32-44",
+      "45-59",
+      "60-66",
+      "67-82",
+      "83-93"
+    ]
+  },
+  {
+    "surah_number": 28,
+    "surah_name": "Al-Qasas",
+    "meaning": "The Stories",
+    "total_ayahs": 88,
+    "rukus_count": 9,
+    "verse_ranges": [
+      "1-13",
+      "14-21",
+      "22-28",
+      "29-42",
+      "43-50",
+      "51-60",
+      "61-75",
+      "76-82",
+      "83-88"
+    ]
+  },
+  {
+    "surah_number": 29,
+    "surah_name": "Al-Ankaboot",
+    "meaning": "The Spider",
+    "total_ayahs": 69,
+    "rukus_count": 7,
+    "verse_ranges": [
+      "1-13",
+      "14-22",
+      "23-30",
+      "31-44",
+      "45-51",
+      "52-63",
+      "64-69"
+    ]
+  },
+  {
+    "surah_number": 30,
+    "surah_name": "Ar-Room",
+    "meaning": "The Romans",
+    "total_ayahs": 60,
+    "rukus_count": 6,
+    "verse_ranges": [
+      "1-10",
+      "11-19",
+      "20-27",
+      "28-40",
+      "41-50",
+      "51-60"
+    ]
+  },
+  {
+    "surah_number": 31,
+    "surah_name": "Luqman",
+    "meaning": "Luqman",
+    "total_ayahs": 34,
+    "rukus_count": 4,
+    "verse_ranges": [
+      "1-11",
+      "12-19",
+      "20-30",
+      "31-34"
+    ]
+  },
+  {
+    "surah_number": 32,
+    "surah_name": "As-Sajda",
+    "meaning": "The Prostration",
+    "total_ayahs": 30,
+    "rukus_count": 3,
+    "verse_ranges": [
+      "1-11",
+      "12-22",
+      "23-30"
+    ]
+  },
+  {
+    "surah_number": 33,
+    "surah_name": "Al-Ahzaab",
+    "meaning": "The Confederates",
+    "total_ayahs": 73,
+    "rukus_count": 9,
+    "verse_ranges": [
+      "1-8",
+      "9-20",
+      "21-27",
+      "28-34",
+      "35-40",
+      "41-48",
+      "49-52",
+      "53-62",
+      "63-73"
+    ]
+  },
+  {
+    "surah_number": 34,
+    "surah_name": "Saba",
+    "meaning": "Sheba",
+    "total_ayahs": 54,
+    "rukus_count": 6,
+    "verse_ranges": [
+      "1-9",
+      "10-14",
+      "15-21",
+      "22-30",
+      "31-39",
+      "40-54"
+    ]
+  },
+  {
+    "surah_number": 35,
+    "surah_name": "Faatir",
+    "meaning": "The Originator",
+    "total_ayahs": 45,
+    "rukus_count": 5,
+    "verse_ranges": [
+      "1-7",
+      "8-14",
+      "15-26",
+      "27-37",
+      "38-45"
+    ]
+  },
+  {
+    "surah_number": 36,
+    "surah_name": "Yaseen",
+    "meaning": "Ya Sin",
+    "total_ayahs": 83,
+    "rukus_count": 5,
+    "verse_ranges": [
+      "1-12",
+      "13-27",
+      "28-40",
+      "41-54",
+      "55-83"
+    ]
+  },
+  {
+    "surah_number": 37,
+    "surah_name": "As-Saaffaat",
+    "meaning": "Those who set the Ranks",
+    "total_ayahs": 182,
+    "rukus_count": 5,
+    "verse_ranges": [
+      "1-21",
+      "22-74",
+      "75-113",
+      "114-138",
+      "139-182"
+    ]
+  },
+  {
+    "surah_number": 38,
+    "surah_name": "Saad",
+    "meaning": "Sad",
+    "total_ayahs": 88,
+    "rukus_count": 5,
+    "verse_ranges": [
+      "1-16",
+      "17-29",
+      "30-40",
+      "41-64",
+      "65-88"
+    ]
+  },
+  {
+    "surah_number": 39,
+    "surah_name": "Az-Zumar",
+    "meaning": "The Groups",
+    "total_ayahs": 75,
+    "rukus_count": 8,
+    "verse_ranges": [
+      "1-9",
+      "10-21",
+      "22-31",
+      "32-40",
+      "41-52",
+      "53-63",
+      "64-70",
+      "71-75"
+    ]
+  },
+  {
+    "surah_number": 40,
+    "surah_name": "Ghaafir",
+    "meaning": "The Forgiver",
+    "total_ayahs": 85,
+    "rukus_count": 9,
+    "verse_ranges": [
+      "1-9",
+      "10-20",
+      "21-27",
+      "28-37",
+      "38-50",
+      "51-60",
+      "61-68",
+      "69-78",
+      "79-85"
+    ]
+  },
+  {
+    "surah_number": 41,
+    "surah_name": "Fussilat",
+    "meaning": "Explained in Detail",
+    "total_ayahs": 54,
+    "rukus_count": 6,
+    "verse_ranges": [
+      "1-8",
+      "9-18",
+      "19-29",
+      "30-38",
+      "39-46",
+      "47-54"
+    ]
+  },
+  {
+    "surah_number": 42,
+    "surah_name": "Ash-Shura",
+    "meaning": "The Consultation",
+    "total_ayahs": 53,
+    "rukus_count": 5,
+    "verse_ranges": [
+      "1-10",
+      "11-20",
+      "21-29",
+      "30-41",
+      "42-53"
+    ]
+  },
+  {
+    "surah_number": 43,
+    "surah_name": "Az-Zukhruf",
+    "meaning": "The Gold Adornments",
+    "total_ayahs": 89,
+    "rukus_count": 7,
+    "verse_ranges": [
+      "1-15",
+      "16-25",
+      "26-35",
+      "36-45",
+      "46-56",
+      "57-67",
+      "68-89"
+    ]
+  },
+  {
+    "surah_number": 44,
+    "surah_name": "Ad-Dukhaan",
+    "meaning": "The Smoke",
+    "total_ayahs": 59,
+    "rukus_count": 3,
+    "verse_ranges": [
+      "1-29",
+      "30-42",
+      "43-59"
+    ]
+  },
+  {
+    "surah_number": 45,
+    "surah_name": "Al-Jaathiya",
+    "meaning": "The Kneeling",
+    "total_ayahs": 37,
+    "rukus_count": 4,
+    "verse_ranges": [
+      "1-11",
+      "12-21",
+      "22-26",
+      "27-37"
+    ]
+  },
+  {
+    "surah_number": 46,
+    "surah_name": "Al-Ahqaaf",
+    "meaning": "The Wind-Curved Sandhills",
+    "total_ayahs": 35,
+    "rukus_count": 4,
+    "verse_ranges": [
+      "1-10",
+      "11-20",
+      "21-28",
+      "29-35"
+    ]
+  },
+  {
+    "surah_number": 47,
+    "surah_name": "Muhammad",
+    "meaning": "The Prophet Muhammad",
+    "total_ayahs": 38,
+    "rukus_count": 4,
+    "verse_ranges": [
+      "1-11",
+      "12-19",
+      "20-28",
+      "29-38"
+    ]
+  },
+  {
+    "surah_number": 48,
+    "surah_name": "Al-Fath",
+    "meaning": "The Victory",
+    "total_ayahs": 29,
+    "rukus_count": 4,
+    "verse_ranges": [
+      "1-9",
+      "10-17",
+      "18-26",
+      "27-29"
+    ]
+  },
+  {
+    "surah_number": 49,
+    "surah_name": "Al-Hujuraat",
+    "meaning": "The Private Apartments",
+    "total_ayahs": 18,
+    "rukus_count": 2,
+    "verse_ranges": [
+      "1-10",
+      "11-18"
+    ]
+  },
+  {
+    "surah_number": 50,
+    "surah_name": "Qaaf",
+    "meaning": "Qaf",
+    "total_ayahs": 45,
+    "rukus_count": 3,
+    "verse_ranges": [
+      "1-15",
+      "16-29",
+      "30-45"
+    ]
+  },
+  {
+    "surah_number": 51,
+    "surah_name": "Adh-Dhaariyaat",
+    "meaning": "The Winnowing Winds",
+    "total_ayahs": 60,
+    "rukus_count": 3,
+    "verse_ranges": [
+      "1-23",
+      "24-46",
+      "47-60"
+    ]
+  },
+  {
+    "surah_number": 52,
+    "surah_name": "At-Tur",
+    "meaning": "The Mount",
+    "total_ayahs": 49,
+    "rukus_count": 2,
+    "verse_ranges": [
+      "1-28",
+      "29-49"
+    ]
+  },
+  {
+    "surah_number": 53,
+    "surah_name": "An-Najm",
+    "meaning": "The Star",
+    "total_ayahs": 62,
+    "rukus_count": 3,
+    "verse_ranges": [
+      "1-26",
+      "27-44",
+      "45-62"
+    ]
+  },
+  {
+    "surah_number": 54,
+    "surah_name": "Al-Qamar",
+    "meaning": "The Moon",
+    "total_ayahs": 55,
+    "rukus_count": 3,
+    "verse_ranges": [
+      "1-22",
+      "23-40",
+      "41-55"
+    ]
+  },
+  {
+    "surah_number": 55,
+    "surah_name": "Ar-Rahmaan",
+    "meaning": "The Most Gracious",
+    "total_ayahs": 78,
+    "rukus_count": 3,
+    "verse_ranges": [
+      "1-25",
+      "26-45",
+      "46-78"
+    ]
+  },
+  {
+    "surah_number": 56,
+    "surah_name": "Al-Waaqia",
+    "meaning": "The Inevitable",
+    "total_ayahs": 96,
+    "rukus_count": 3,
+    "verse_ranges": [
+      "1-38",
+      "39-74",
+      "75-96"
+    ]
+  },
+  {
+    "surah_number": 57,
+    "surah_name": "Al-Hadid",
+    "meaning": "The Iron",
+    "total_ayahs": 29,
+    "rukus_count": 4,
+    "verse_ranges": [
+      "1-10",
+      "11-19",
+      "20-24",
+      "25-29"
+    ]
+  },
+  {
+    "surah_number": 58,
+    "surah_name": "Al-Mujaadila",
+    "meaning": "The Pleading Woman",
+    "total_ayahs": 22,
+    "rukus_count": 3,
+    "verse_ranges": [
+      "1-6",
+      "7-13",
+      "14-22"
+    ]
+  },
+  {
+    "surah_number": 59,
+    "surah_name": "Al-Hashr",
+    "meaning": "The Exile",
+    "total_ayahs": 24,
+    "rukus_count": 3,
+    "verse_ranges": [
+      "1-7",
+      "8-17",
+      "18-24"
+    ]
+  },
+  {
+    "surah_number": 60,
+    "surah_name": "Al-Mumtahana",
+    "meaning": "The Woman to be Examined",
+    "total_ayahs": 13,
+    "rukus_count": 2,
+    "verse_ranges": [
+      "1-9",
+      "10-13"
+    ]
+  },
+  {
+    "surah_number": 61,
+    "surah_name": "As-Saff",
+    "meaning": "The Ranks",
+    "total_ayahs": 14,
+    "rukus_count": 2,
+    "verse_ranges": [
+      "1-9",
+      "10-14"
+    ]
+  },
+  {
+    "surah_number": 62,
+    "surah_name": "Al-Jumu'a",
+    "meaning": "The Friday",
+    "total_ayahs": 11,
+    "rukus_count": 2,
+    "verse_ranges": [
+      "1-8",
+      "9-11"
+    ]
+  },
+  {
+    "surah_number": 63,
+    "surah_name": "Al-Munaafiqoon",
+    "meaning": "The Hypocrites",
+    "total_ayahs": 11,
+    "rukus_count": 2,
+    "verse_ranges": [
+      "1-8",
+      "9-11"
+    ]
+  },
+  {
+    "surah_number": 64,
+    "surah_name": "At-Taghaabun",
+    "meaning": "The Mutual Disillusion",
+    "total_ayahs": 18,
+    "rukus_count": 2,
+    "verse_ranges": [
+      "1-10",
+      "11-18"
+    ]
+  },
+  {
+    "surah_number": 65,
+    "surah_name": "At-Talaaq",
+    "meaning": "The Divorce",
+    "total_ayahs": 12,
+    "rukus_count": 2,
+    "verse_ranges": [
+      "1-7",
+      "8-12"
+    ]
+  },
+  {
+    "surah_number": 66,
+    "surah_name": "At-Tahrim",
+    "meaning": "The Prohibition",
+    "total_ayahs": 12,
+    "rukus_count": 2,
+    "verse_ranges": [
+      "1-7",
+      "8-12"
+    ]
+  },
+  {
+    "surah_number": 67,
+    "surah_name": "Al-Mulk",
+    "meaning": "The Sovereignty",
+    "total_ayahs": 30,
+    "rukus_count": 2,
+    "verse_ranges": [
+      "1-14",
+      "15-30"
+    ]
+  },
+  {
+    "surah_number": 68,
+    "surah_name": "Al-Qalam",
+    "meaning": "The Pen",
+    "total_ayahs": 52,
+    "rukus_count": 2,
+    "verse_ranges": [
+      "1-33",
+      "34-52"
+    ]
+  },
+  {
+    "surah_number": 69,
+    "surah_name": "Al-Haaqqa",
+    "meaning": "The Reality",
+    "total_ayahs": 52,
+    "rukus_count": 2,
+    "verse_ranges": [
+      "1-37",
+      "38-52"
+    ]
+  },
+  {
+    "surah_number": 70,
+    "surah_name": "Al-Ma'aarij",
+    "meaning": "The Ascending Stairways",
+    "total_ayahs": 44,
+    "rukus_count": 2,
+    "verse_ranges": [
+      "1-35",
+      "36-44"
+    ]
+  },
+  {
+    "surah_number": 71,
+    "surah_name": "Nooh",
+    "meaning": "Noah",
+    "total_ayahs": 28,
+    "rukus_count": 2,
+    "verse_ranges": [
+      "1-20",
+      "21-28"
+    ]
+  },
+  {
+    "surah_number": 72,
+    "surah_name": "Al-Jinn",
+    "meaning": "The Jinn",
+    "total_ayahs": 28,
+    "rukus_count": 2,
+    "verse_ranges": [
+      "1-19",
+      "20-28"
+    ]
+  },
+  {
+    "surah_number": 73,
+    "surah_name": "Al-Muzzammil",
+    "meaning": "The Enshrouded One",
+    "total_ayahs": 20,
+    "rukus_count": 2,
+    "verse_ranges": [
+      "1-19",
+      "20"
+    ]
+  },
+  {
+    "surah_number": 74,
+    "surah_name": "Al-Muddaththir",
+    "meaning": "The Cloaked One",
+    "total_ayahs": 56,
+    "rukus_count": 2,
+    "verse_ranges": [
+      "1-31",
+      "32-56"
+    ]
+  },
+  {
+    "surah_number": 75,
+    "surah_name": "Al-Qiyaama",
+    "meaning": "The Resurrection",
+    "total_ayahs": 40,
+    "rukus_count": 2,
+    "verse_ranges": [
+      "1-25",
+      "26-40"
+    ]
+  },
+  {
+    "surah_number": 76,
+    "surah_name": "Ad-Dahr",
+    "meaning": "The Time",
+    "total_ayahs": 31,
+    "rukus_count": 2,
+    "verse_ranges": [
+      "1-22",
+      "23-31"
+    ]
+  },
+  {
+    "surah_number": 77,
+    "surah_name": "Al-Mursalaat",
+    "meaning": "The Emissaries",
+    "total_ayahs": 50,
+    "rukus_count": 2,
+    "verse_ranges": [
+      "1-40",
+      "41-50"
+    ]
+  },
+  {
+    "surah_number": 78,
+    "surah_name": "An-Naba",
+    "meaning": "The Tidings",
+    "total_ayahs": 40,
+    "rukus_count": 2,
+    "verse_ranges": [
+      "1-30",
+      "31-40"
+    ]
+  },
+  {
+    "surah_number": 79,
+    "surah_name": "An-Naazi'aat",
+    "meaning": "Those who Pull Out",
+    "total_ayahs": 46,
+    "rukus_count": 2,
+    "verse_ranges": [
+      "1-26",
+      "27-46"
+    ]
+  },
+  {
+    "surah_number": 80,
+    "surah_name": "Abasa",
+    "meaning": "He Frowned",
+    "total_ayahs": 42,
+    "rukus_count": 1,
+    "verse_ranges": [
+      "1-42"
+    ]
+  },
+  {
+    "surah_number": 81,
+    "surah_name": "At-Takwir",
+    "meaning": "The Overthrowing",
+    "total_ayahs": 29,
+    "rukus_count": 1,
+    "verse_ranges": [
+      "1-29"
+    ]
+  },
+  {
+    "surah_number": 82,
+    "surah_name": "Al-Infitar",
+    "meaning": "The Cleaving",
+    "total_ayahs": 19,
+    "rukus_count": 1,
+    "verse_ranges": [
+      "1-19"
+    ]
+  },
+  {
+    "surah_number": 83,
+    "surah_name": "Al-Mutaffifin",
+    "meaning": "Those Who Deal in Fraud",
+    "total_ayahs": 36,
+    "rukus_count": 1,
+    "verse_ranges": [
+      "1-36"
+    ]
+  },
+  {
+    "surah_number": 84,
+    "surah_name": "Al-Inshiqaaq",
+    "meaning": "The Splitting Asunder",
+    "total_ayahs": 25,
+    "rukus_count": 1,
+    "verse_ranges": [
+      "1-25"
+    ]
+  },
+  {
+    "surah_number": 85,
+    "surah_name": "Al-Burooj",
+    "meaning": "The Big Stars",
+    "total_ayahs": 22,
+    "rukus_count": 1,
+    "verse_ranges": [
+      "1-22"
+    ]
+  },
+  {
+    "surah_number": 86,
+    "surah_name": "At-Taariq",
+    "meaning": "The Night-Comer",
+    "total_ayahs": 17,
+    "rukus_count": 1,
+    "verse_ranges": [
+      "1-17"
+    ]
+  },
+  {
+    "surah_number": 87,
+    "surah_name": "Al-A'laa",
+    "meaning": "The Most High",
+    "total_ayahs": 19,
+    "rukus_count": 1,
+    "verse_ranges": [
+      "1-19"
+    ]
+  },
+  {
+    "surah_number": 88,
+    "surah_name": "Al-Ghaashiya",
+    "meaning": "The Overwhelming",
+    "total_ayahs": 26,
+    "rukus_count": 1,
+    "verse_ranges": [
+      "1-26"
+    ]
+  },
+  {
+    "surah_number": 89,
+    "surah_name": "Al-Fajr",
+    "meaning": "The Dawn",
+    "total_ayahs": 30,
+    "rukus_count": 1,
+    "verse_ranges": [
+      "1-30"
+    ]
+  },
+  {
+    "surah_number": 90,
+    "surah_name": "Al-Balad",
+    "meaning": "The City",
+    "total_ayahs": 20,
+    "rukus_count": 1,
+    "verse_ranges": [
+      "1-20"
+    ]
+  },
+  {
+    "surah_number": 91,
+    "surah_name": "Ash-Shams",
+    "meaning": "The Sun",
+    "total_ayahs": 15,
+    "rukus_count": 1,
+    "verse_ranges": [
+      "1-15"
+    ]
+  },
+  {
+    "surah_number": 92,
+    "surah_name": "Al-Lail",
+    "meaning": "The Night",
+    "total_ayahs": 21,
+    "rukus_count": 1,
+    "verse_ranges": [
+      "1-21"
+    ]
+  },
+  {
+    "surah_number": 93,
+    "surah_name": "Ad-Dhuhaa",
+    "meaning": "The Forenoon",
+    "total_ayahs": 11,
+    "rukus_count": 1,
+    "verse_ranges": [
+      "1-11"
+    ]
+  },
+  {
+    "surah_number": 94,
+    "surah_name": "Ash-Sharh",
+    "meaning": "The Opening Forth",
+    "total_ayahs": 8,
+    "rukus_count": 1,
+    "verse_ranges": [
+      "1-8"
+    ]
+  },
+  {
+    "surah_number": 95,
+    "surah_name": "At-Tin",
+    "meaning": "The Fig",
+    "total_ayahs": 8,
+    "rukus_count": 1,
+    "verse_ranges": [
+      "1-8"
+    ]
+  },
+  {
+    "surah_number": 96,
+    "surah_name": "Al-Alaq",
+    "meaning": "The Clot",
+    "total_ayahs": 19,
+    "rukus_count": 1,
+    "verse_ranges": [
+      "1-19"
+    ]
+  },
+  {
+    "surah_number": 97,
+    "surah_name": "Al-Qadr",
+    "meaning": "The Night of Decree",
+    "total_ayahs": 5,
+    "rukus_count": 1,
+    "verse_ranges": [
+      "1-5"
+    ]
+  },
+  {
+    "surah_number": 98,
+    "surah_name": "Al-Bayyina",
+    "meaning": "The Clear Evidence",
+    "total_ayahs": 8,
+    "rukus_count": 1,
+    "verse_ranges": [
+      "1-8"
+    ]
+  },
+  {
+    "surah_number": 99,
+    "surah_name": "Az-Zalzala",
+    "meaning": "The Earthquake",
+    "total_ayahs": 8,
+    "rukus_count": 1,
+    "verse_ranges": [
+      "1-8"
+    ]
+  },
+  {
+    "surah_number": 100,
+    "surah_name": "Al-Aadiyaat",
+    "meaning": "Those That Run",
+    "total_ayahs": 11,
+    "rukus_count": 1,
+    "verse_ranges": [
+      "1-11"
+    ]
+  },
+  {
+    "surah_number": 101,
+    "surah_name": "Al-Qaari'a",
+    "meaning": "The Striking Hour",
+    "total_ayahs": 11,
+    "rukus_count": 1,
+    "verse_ranges": [
+      "1-11"
+    ]
+  },
+  {
+    "surah_number": 102,
+    "surah_name": "At-Takaathur",
+    "meaning": "The Piling Up",
+    "total_ayahs": 8,
+    "rukus_count": 1,
+    "verse_ranges": [
+      "1-8"
+    ]
+  },
+  {
+    "surah_number": 103,
+    "surah_name": "Al-Asr",
+    "meaning": "The Time",
+    "total_ayahs": 3,
+    "rukus_count": 1,
+    "verse_ranges": [
+      "1-3"
+    ]
+  },
+  {
+    "surah_number": 104,
+    "surah_name": "Al-Humaza",
+    "meaning": "The Slanderer",
+    "total_ayahs": 9,
+    "rukus_count": 1,
+    "verse_ranges": [
+      "1-9"
+    ]
+  },
+  {
+    "surah_number": 105,
+    "surah_name": "Al-Fil",
+    "meaning": "The Elephant",
+    "total_ayahs": 5,
+    "rukus_count": 1,
+    "verse_ranges": [
+      "1-5"
+    ]
+  },
+  {
+    "surah_number": 106,
+    "surah_name": "Quraish",
+    "meaning": "Quraysh",
+    "total_ayahs": 4,
+    "rukus_count": 1,
+    "verse_ranges": [
+      "1-4"
+    ]
+  },
+  {
+    "surah_number": 107,
+    "surah_name": "Al-Maa'un",
+    "meaning": "The Small Kindnesses",
+    "total_ayahs": 7,
+    "rukus_count": 1,
+    "verse_ranges": [
+      "1-7"
+    ]
+  },
+  {
+    "surah_number": 108,
+    "surah_name": "Al-Kawthar",
+    "meaning": "The Abundance",
+    "total_ayahs": 3,
+    "rukus_count": 1,
+    "verse_ranges": [
+      "1-3"
+    ]
+  },
+  {
+    "surah_number": 109,
+    "surah_name": "Al-Kaafiroon",
+    "meaning": "The Disbelievers",
+    "total_ayahs": 6,
+    "rukus_count": 1,
+    "verse_ranges": [
+      "1-6"
+    ]
+  },
+  {
+    "surah_number": 110,
+    "surah_name": "An-Nasr",
+    "meaning": "The Help",
+    "total_ayahs": 3,
+    "rukus_count": 1,
+    "verse_ranges": [
+      "1-3"
+    ]
+  },
+  {
+    "surah_number": 111,
+    "surah_name": "Al-Masad",
+    "meaning": "The Palm Fiber",
+    "total_ayahs": 5,
+    "rukus_count": 1,
+    "verse_ranges": [
+      "1-5"
+    ]
+  },
+  {
+    "surah_number": 112,
+    "surah_name": "Al-Ikhlaas",
+    "meaning": "The Sincerity",
+    "total_ayahs": 4,
+    "rukus_count": 1,
+    "verse_ranges": [
+      "1-4"
+    ]
+  },
+  {
+    "surah_number": 113,
+    "surah_name": "Al-Falaq",
+    "meaning": "The Daybreak",
+    "total_ayahs": 5,
+    "rukus_count": 1,
+    "verse_ranges": [
+      "1-5"
+    ]
+  },
+  {
+    "surah_number": 114,
+    "surah_name": "An-Naas",
+    "meaning": "Mankind",
+    "total_ayahs": 6,
+    "rukus_count": 1,
+    "verse_ranges": [
+      "1-6"
+    ]
+  }
+]

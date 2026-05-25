@@ -1,0 +1,4487 @@
+{
+  "1": {
+    "w": [
+      {
+        "c": "الرَّحْمَنُ",
+        "d": "al-raḥmānu",
+        "e_en": "The Most Gracious",
+        "e_ur": "الرحمان",
+        "a": 1,
+        "o_ca": 17,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 20
+      }
+    ],
+    "a": {
+      "g_en": "The Most Merciful",
+      "g_ur": "رحمان نے"
+    }
+  },
+  "2": {
+    "w": [
+      {
+        "c": "عَلَّمَ",
+        "d": "ʿallama",
+        "e_en": "He taught",
+        "e_ur": "اس نے تعلیم دی",
+        "a": 1,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 3
+      },
+      {
+        "c": "الْقُرْءَانَ",
+        "d": "l-qur'āna",
+        "e_en": "the Quran",
+        "e_ur": "قرآن کی",
+        "a": 2,
+        "o_ca": 19,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 20
+      }
+    ],
+    "a": {
+      "g_en": "Taught the Qur'an,",
+      "g_ur": "قرآن کی تعلیم دی"
+    }
+  },
+  "3": {
+    "w": [
+      {
+        "c": "خَلَقَ",
+        "d": "khalaqa",
+        "e_en": "He created",
+        "e_ur": "اس نے پیدا کیا",
+        "a": 1,
+        "o_ca": 45,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 52
+      },
+      {
+        "c": "الْإِنْسَانَ",
+        "d": "l-insāna",
+        "e_en": "[the] man",
+        "e_ur": "انسان کو",
+        "a": 2,
+        "o_ca": 17,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 24
+      }
+    ],
+    "a": {
+      "g_en": "Created man,",
+      "g_ur": "اس نے انسان کو پیدا کیا"
+    }
+  },
+  "4": {
+    "w": [
+      {
+        "c": "عَلَّمَهُ",
+        "d": "ʿallamahu",
+        "e_en": "He taught him",
+        "e_ur": "سکھایا اس کو",
+        "a": 1,
+        "o_ca": 3,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 3
+      },
+      {
+        "c": "الْبَيَانَ",
+        "d": "l-bayāna",
+        "e_en": "[the] speech",
+        "e_ur": "بولنا",
+        "a": 2,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      }
+    ],
+    "a": {
+      "g_en": "[And] taught him eloquence.",
+      "g_ur": "اس کو بولنا سکھایا"
+    }
+  },
+  "5": {
+    "w": [
+      {
+        "c": "الشَّمْسُ",
+        "d": "al-shamsu",
+        "e_en": "The sun",
+        "e_ur": "سورج",
+        "a": 1,
+        "o_ca": 2,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 4
+      },
+      {
+        "c": "وَالْقَمَرُ",
+        "d": "wal-qamaru",
+        "e_en": "and the moon",
+        "e_ur": "اور چاند",
+        "a": 2,
+        "o_ca": 3,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 3
+      },
+      {
+        "c": "بِحُسْبَانٍ",
+        "d": "biḥus'bānin",
+        "e_en": "by (precise) calculation",
+        "e_ur": "حساب کے ساتھ ہیں",
+        "a": 3,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      }
+    ],
+    "a": {
+      "g_en": "The sun and the moon [move] by precise calculation,",
+      "g_ur": "سورج اور چاند کے لیے ایک حساب ہے"
+    }
+  },
+  "6": {
+    "w": [
+      {
+        "c": "وَالنَّجْمُ",
+        "d": "wal-najmu",
+        "e_en": "And the stars",
+        "e_ur": "اور تارے",
+        "a": 1,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "وَالشَّجَرُ",
+        "d": "wal-shajaru",
+        "e_en": "and the trees",
+        "e_ur": "اور درخت",
+        "a": 2,
+        "o_ca": 2,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "يَسْجُدَانِ",
+        "d": "yasjudāni",
+        "e_en": "both prostrate",
+        "e_ur": "سجدہ کر رہے ہیں",
+        "a": 3,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      }
+    ],
+    "a": {
+      "g_en": "And the stars and trees prostrate.",
+      "g_ur": "اور ستارے اوردرخت سجدہ کرتے ہیں"
+    }
+  },
+  "7": {
+    "w": [
+      {
+        "c": "وَالسَّمَاءَ",
+        "d": "wal-samāa",
+        "e_en": "And the heaven",
+        "e_ur": "اور آسمان",
+        "a": 1,
+        "o_ca": 4,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 4
+      },
+      {
+        "c": "رَفَعَهَا",
+        "d": "rafaʿahā",
+        "e_en": "He raised it",
+        "e_ur": "اس نے بلند کیا اس کو",
+        "a": 2,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "وَوَضَعَ",
+        "d": "wawaḍaʿa",
+        "e_en": "and He has set up",
+        "e_ur": "اور قائم کردی۔ رکھ دی",
+        "a": 3,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "الْمِيزَانَ",
+        "d": "l-mīzāna",
+        "e_en": "the balance",
+        "e_ur": "میزان",
+        "a": 4,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      }
+    ],
+    "a": {
+      "g_en": "And the heaven He raised and imposed the balance",
+      "g_ur": "اوراس نے آسمان کواونچا کیا اور اس نے ترازو رکھ دی"
+    }
+  },
+  "8": {
+    "w": [
+      {
+        "c": "أَلَّا",
+        "d": "allā",
+        "e_en": "That not",
+        "e_ur": "کہ نہ",
+        "a": 1,
+        "o_ca": 42,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 41
+      },
+      {
+        "c": "تَطْغَوْا",
+        "d": "taṭghaw",
+        "e_en": "you may transgress",
+        "e_ur": "تم خلل ڈالو۔ زیادتی کرو",
+        "a": 2,
+        "o_ca": 3,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 3
+      },
+      {
+        "c": "فِي",
+        "d": "fī",
+        "e_en": "in",
+        "e_ur": "میں",
+        "a": 3,
+        "o_ca": 1066,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1012
+      },
+      {
+        "c": "الْمِيزَانِ",
+        "d": "l-mīzāni",
+        "e_en": "the balance",
+        "e_ur": "میزان",
+        "a": 4,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      }
+    ],
+    "a": {
+      "g_en": "That you not transgress within the balance.",
+      "g_ur": "کہ تم تولنے میں زیادتی نہ کرو"
+    }
+  },
+  "9": {
+    "w": [
+      {
+        "c": "وَأَقِيمُوا",
+        "d": "wa-aqīmū",
+        "e_en": "And establish",
+        "e_ur": "اور قائم کرو۔ تولو",
+        "a": 1,
+        "o_ca": 9,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 9
+      },
+      {
+        "c": "الْوَزْنَ",
+        "d": "l-wazna",
+        "e_en": "the weight",
+        "e_ur": "وزن کو",
+        "a": 2,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "بِالْقِسْطِ",
+        "d": "bil-qis'ṭi",
+        "e_en": "in justice",
+        "e_ur": "انصاف کے ساتھ",
+        "a": 3,
+        "o_ca": 13,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 12
+      },
+      {
+        "c": "وَلَا",
+        "d": "walā",
+        "e_en": "and (do) not",
+        "e_ur": "اور نہ",
+        "a": 4,
+        "o_ca": 585,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 556
+      },
+      {
+        "c": "تُخْسِرُوا",
+        "d": "tukh'sirū",
+        "e_en": "make deficient",
+        "e_ur": "خسارہ کر کے دو ۔ نقصان دو",
+        "a": 5,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "الْمِيزَانَ",
+        "d": "l-mīzāna",
+        "e_en": "the balance",
+        "e_ur": "میزان میں۔ ترازو میں",
+        "a": 6,
+        "o_ca": 2,
+        "o_s": 2,
+        "o_r": 2,
+        "o_cr": 2
+      }
+    ],
+    "a": {
+      "g_en": "And establish weight in justice and do not make deficient the balance.",
+      "g_ur": "اور انصاف کے ساتھ سیدھی ترازو تولو اور تول میں نہ گھٹاؤ"
+    }
+  },
+  "10": {
+    "w": [
+      {
+        "c": "وَالْأَرْضَ",
+        "d": "wal-arḍa",
+        "e_en": "And the earth",
+        "e_ur": "اور زمین",
+        "a": 1,
+        "o_ca": 38,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 39
+      },
+      {
+        "c": "وَضَعَهَا",
+        "d": "waḍaʿahā",
+        "e_en": "He laid it",
+        "e_ur": "اس نے رکھ دیا اس کو",
+        "a": 2,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "لِلْأَنَامِ",
+        "d": "lil'anāmi",
+        "e_en": "for the creatures",
+        "e_ur": "مخلوقات کے لیے",
+        "a": 3,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      }
+    ],
+    "a": {
+      "g_en": "And the earth He laid [out] for the creatures.",
+      "g_ur": "اور زمین کو اس نے خلق کے لیے رکھ دیا"
+    }
+  },
+  "11": {
+    "w": [
+      {
+        "c": "فِيهَا",
+        "d": "fīhā",
+        "e_en": "Therein",
+        "e_ur": "اس میں",
+        "a": 1,
+        "o_ca": 208,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 198
+      },
+      {
+        "c": "فَاكِهَةٌ",
+        "d": "fākihatun",
+        "e_en": "(is) fruit",
+        "e_ur": "پھل ہیں",
+        "a": 2,
+        "o_ca": 3,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 3
+      },
+      {
+        "c": "وَالنَّخْلُ",
+        "d": "wal-nakhlu",
+        "e_en": "and date-palms",
+        "e_ur": "اور کھجور کے درخت",
+        "a": 3,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "ذَاتُ",
+        "d": "dhātu",
+        "e_en": "having",
+        "e_ur": "والے",
+        "a": 4,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "الْأَكْمَامِ",
+        "d": "l-akmāmi",
+        "e_en": "sheaths",
+        "e_ur": "خوشوں",
+        "a": 5,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      }
+    ],
+    "a": {
+      "g_en": "Therein is fruit and palm trees having sheaths [of dates]",
+      "g_ur": "اس میں میوے ہیں اور کھجور ہیں جن کے اوپرغلاف ہوتا ہے"
+    }
+  },
+  "12": {
+    "w": [
+      {
+        "c": "وَالْحَبُّ",
+        "d": "wal-ḥabu",
+        "e_en": "And the grain",
+        "e_ur": "اور غلے",
+        "a": 1,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "ذُو",
+        "d": "dhū",
+        "e_en": "having",
+        "e_ur": "والے",
+        "a": 2,
+        "o_ca": 19,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 21
+      },
+      {
+        "c": "الْعَصْفِ",
+        "d": "l-ʿaṣfi",
+        "e_en": "husk",
+        "e_ur": "بھس",
+        "a": 3,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "وَالرَّيْحَانُ",
+        "d": "wal-rayḥānu",
+        "e_en": "and scented plants",
+        "e_ur": "اور خوشبودار پھول",
+        "a": 4,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      }
+    ],
+    "a": {
+      "g_en": "And grain having husks and scented plants.",
+      "g_ur": "اور بھس والے اناج بھی ہیں اور خوشبودار پھول بھی"
+    }
+  },
+  "13": {
+    "w": [
+      {
+        "c": "فَبِأَيِّ",
+        "d": "fabi-ayyi",
+        "e_en": "So which",
+        "e_ur": "تو ساتھ کون سی",
+        "a": 1,
+        "o_ca": 4,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 5
+      },
+      {
+        "c": "ءَالَاءِ",
+        "d": "ālāi",
+        "e_en": "(of the) favors",
+        "e_ur": "نعمتوں کے",
+        "a": 2,
+        "o_ca": 2,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 2
+      },
+      {
+        "c": "رَبِّكُمَا",
+        "d": "rabbikumā",
+        "e_en": "(of) your Lord",
+        "e_ur": "اپنے رب کی",
+        "a": 3,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "تُكَذِّبَانِ",
+        "d": "tukadhibāni",
+        "e_en": "will you both deny",
+        "e_ur": "تم دونوں جھٹلاؤ گے",
+        "a": 4,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      }
+    ],
+    "a": {
+      "g_en": "So which of the favors of your Lord would you deny?",
+      "g_ur": "پھر تم اپنے رب کی کن کن نعمتوں کو جھٹلاؤگے"
+    }
+  },
+  "14": {
+    "w": [
+      {
+        "c": "خَلَقَ",
+        "d": "khalaqa",
+        "e_en": "He created",
+        "e_ur": "اس نے پیدا کیا",
+        "a": 1,
+        "o_ca": 46,
+        "o_s": 2,
+        "o_r": 2,
+        "o_cr": 53
+      },
+      {
+        "c": "الْإِنْسَانَ",
+        "d": "l-insāna",
+        "e_en": "the man",
+        "e_ur": "انسان کو",
+        "a": 2,
+        "o_ca": 18,
+        "o_s": 2,
+        "o_r": 2,
+        "o_cr": 25
+      },
+      {
+        "c": "مِنْ",
+        "d": "min",
+        "e_en": "from",
+        "e_ur": "سے",
+        "a": 3,
+        "o_ca": 1530,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1457
+      },
+      {
+        "c": "صَلْصَالٍ",
+        "d": "ṣalṣālin",
+        "e_en": "clay",
+        "e_ur": "بجنے والی مٹی",
+        "a": 4,
+        "o_ca": 4,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 4
+      },
+      {
+        "c": "كَالْفَخَّارِ",
+        "d": "kal-fakhāri",
+        "e_en": "like the pottery",
+        "e_ur": "ٹھیکری کی طرح",
+        "a": 5,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      }
+    ],
+    "a": {
+      "g_en": "He created man from clay like [that of] pottery.",
+      "g_ur": "اس نے پیدا کیا انسان کو ٹھیکرے کی طرح کھنکھناتی ہوئی مٹی سے"
+    }
+  },
+  "15": {
+    "w": [
+      {
+        "c": "وَخَلَقَ",
+        "d": "wakhalaqa",
+        "e_en": "And He created",
+        "e_ur": "اور اس نے پیدا کیا",
+        "a": 1,
+        "o_ca": 5,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 5
+      },
+      {
+        "c": "الْجَانَّ",
+        "d": "l-jāna",
+        "e_en": "the jinn",
+        "e_ur": "جن کو",
+        "a": 2,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "مِنْ",
+        "d": "min",
+        "e_en": "from",
+        "e_ur": "سے",
+        "a": 3,
+        "o_ca": 1531,
+        "o_s": 2,
+        "o_r": 2,
+        "o_cr": 1458
+      },
+      {
+        "c": "مَارِجٍ",
+        "d": "mārijin",
+        "e_en": "a smokeless flame",
+        "e_ur": "شعلے والی",
+        "a": 4,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "مِنْ",
+        "d": "min",
+        "e_en": "of",
+        "e_ur": "سے",
+        "a": 5,
+        "o_ca": 1532,
+        "o_s": 3,
+        "o_r": 3,
+        "o_cr": 1459
+      },
+      {
+        "c": "نَارٍ",
+        "d": "nārin",
+        "e_en": "fire",
+        "e_ur": "آگ",
+        "a": 6,
+        "o_ca": 4,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 3
+      }
+    ],
+    "a": {
+      "g_en": "And He created the jinn from a smokeless flame of fire.",
+      "g_ur": "اوراس نے جنات کو آگ کی لپٹ سے پیداکیا"
+    }
+  },
+  "16": {
+    "w": [
+      {
+        "c": "فَبِأَيِّ",
+        "d": "fabi-ayyi",
+        "e_en": "So which",
+        "e_ur": "تو ساتھ کون سی",
+        "a": 1,
+        "o_ca": 5,
+        "o_s": 2,
+        "o_r": 2,
+        "o_cr": 6
+      },
+      {
+        "c": "ءَالَاءِ",
+        "d": "ālāi",
+        "e_en": "(of the) favors",
+        "e_ur": "نعمتوں کے",
+        "a": 2,
+        "o_ca": 3,
+        "o_s": 2,
+        "o_r": 2,
+        "o_cr": 3
+      },
+      {
+        "c": "رَبِّكُمَا",
+        "d": "rabbikumā",
+        "e_en": "(of) your Lord",
+        "e_ur": "اپنے رب کی",
+        "a": 3,
+        "o_ca": 2,
+        "o_s": 2,
+        "o_r": 2,
+        "o_cr": 2
+      },
+      {
+        "c": "تُكَذِّبَانِ",
+        "d": "tukadhibāni",
+        "e_en": "will you both deny",
+        "e_ur": "تم دونوں جھٹلاؤ گے",
+        "a": 4,
+        "o_ca": 2,
+        "o_s": 2,
+        "o_r": 2,
+        "o_cr": 2
+      }
+    ],
+    "a": {
+      "g_en": "So which of the favors of your Lord would you deny?",
+      "g_ur": "پھر تم اپنے رب کی کن کن نعمتوں کو جھٹلاؤگے"
+    }
+  },
+  "17": {
+    "w": [
+      {
+        "c": "رَبُّ",
+        "d": "rabbu",
+        "e_en": "Lord",
+        "e_ur": "رب ہے",
+        "a": 1,
+        "o_ca": 21,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 22
+      },
+      {
+        "c": "الْمَشْرِقَيْنِ",
+        "d": "l-mashriqayni",
+        "e_en": "(of) the two Easts",
+        "e_ur": "دو مشرقوں کا",
+        "a": 2,
+        "o_ca": 2,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 2
+      },
+      {
+        "c": "وَرَبُّ",
+        "d": "warabbu",
+        "e_en": "and Lord",
+        "e_ur": "اور رب ہے",
+        "a": 3,
+        "o_ca": 5,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 5
+      },
+      {
+        "c": "الْمَغْرِبَيْنِ",
+        "d": "l-maghribayni",
+        "e_en": "(of) the two Wests",
+        "e_ur": "دو مغربوں کا",
+        "a": 4,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      }
+    ],
+    "a": {
+      "g_en": "[He is] Lord of the two sunrises and Lord of the two sunsets.",
+      "g_ur": "اور وہ مالک ہے دونوں مشرق کااور دونوں مغرب کا"
+    }
+  },
+  "18": {
+    "w": [
+      {
+        "c": "فَبِأَيِّ",
+        "d": "fabi-ayyi",
+        "e_en": "So which",
+        "e_ur": "تو ساتھ کون سی",
+        "a": 1,
+        "o_ca": 6,
+        "o_s": 3,
+        "o_r": 3,
+        "o_cr": 7
+      },
+      {
+        "c": "ءَالَاءِ",
+        "d": "ālāi",
+        "e_en": "(of the) favors",
+        "e_ur": "نعمتوں کے",
+        "a": 2,
+        "o_ca": 4,
+        "o_s": 3,
+        "o_r": 3,
+        "o_cr": 4
+      },
+      {
+        "c": "رَبِّكُمَا",
+        "d": "rabbikumā",
+        "e_en": "(of) your Lord",
+        "e_ur": "اپنے رب کی",
+        "a": 3,
+        "o_ca": 3,
+        "o_s": 3,
+        "o_r": 3,
+        "o_cr": 3
+      },
+      {
+        "c": "تُكَذِّبَانِ",
+        "d": "tukadhibāni",
+        "e_en": "will you both deny",
+        "e_ur": "تم دونوں جھٹلاؤ گے",
+        "a": 4,
+        "o_ca": 3,
+        "o_s": 3,
+        "o_r": 3,
+        "o_cr": 3
+      }
+    ],
+    "a": {
+      "g_en": "So which of the favors of your Lord would you deny?",
+      "g_ur": "پھر تم اپنے رب کی کن کن نعمتوں کو جھٹلاؤگے"
+    }
+  },
+  "19": {
+    "w": [
+      {
+        "c": "مَرَجَ",
+        "d": "maraja",
+        "e_en": "He released",
+        "e_ur": "اس نے چھوڑ دیا",
+        "a": 1,
+        "o_ca": 2,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 2
+      },
+      {
+        "c": "الْبَحْرَيْنِ",
+        "d": "l-baḥrayni",
+        "e_en": "the two seas",
+        "e_ur": "دو سمندروں کو",
+        "a": 2,
+        "o_ca": 4,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 4
+      },
+      {
+        "c": "يَلْتَقِيَانِ",
+        "d": "yaltaqiyāni",
+        "e_en": "meeting",
+        "e_ur": "کہ دونوں باہم مل جائیں",
+        "a": 3,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      }
+    ],
+    "a": {
+      "g_en": "He released the two seas, meeting [side by side];",
+      "g_ur": "اس نے چلائے دو دریا، مل کر چلنے والے"
+    }
+  },
+  "20": {
+    "w": [
+      {
+        "c": "بَيْنَهُمَا",
+        "d": "baynahumā",
+        "e_en": "Between both of them",
+        "e_ur": "ان دونوں کے درمیان",
+        "a": 1,
+        "o_ca": 28,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 25
+      },
+      {
+        "c": "بَرْزَخٌ",
+        "d": "barzakhun",
+        "e_en": "(is) a barrier",
+        "e_ur": "ایک پردہ ہے",
+        "a": 2,
+        "o_ca": 2,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 2
+      },
+      {
+        "c": "لَا",
+        "d": "lā",
+        "e_en": "not",
+        "e_ur": "نہیں",
+        "a": 3,
+        "o_ca": 723,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 684
+      },
+      {
+        "c": "يَبْغِيَانِ",
+        "d": "yabghiyāni",
+        "e_en": "they transgress",
+        "e_ur": "وہ تجاوز کرتے۔ آگے بڑھتے",
+        "a": 4,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      }
+    ],
+    "a": {
+      "g_en": "Between them is a barrier [so] neither of them transgresses.",
+      "g_ur": "دونوں کے درمیان ایک پردہ ہے جس سے وہ تجاوز نہیں کرتے"
+    }
+  },
+  "21": {
+    "w": [
+      {
+        "c": "فَبِأَيِّ",
+        "d": "fabi-ayyi",
+        "e_en": "So which",
+        "e_ur": "تو ساتھ کون سی",
+        "a": 1,
+        "o_ca": 7,
+        "o_s": 4,
+        "o_r": 4,
+        "o_cr": 8
+      },
+      {
+        "c": "ءَالَاءِ",
+        "d": "ālāi",
+        "e_en": "(of the) favors",
+        "e_ur": "نعمتوں کے",
+        "a": 2,
+        "o_ca": 5,
+        "o_s": 4,
+        "o_r": 4,
+        "o_cr": 5
+      },
+      {
+        "c": "رَبِّكُمَا",
+        "d": "rabbikumā",
+        "e_en": "(of) your Lord",
+        "e_ur": "اپنے رب کی",
+        "a": 3,
+        "o_ca": 4,
+        "o_s": 4,
+        "o_r": 4,
+        "o_cr": 4
+      },
+      {
+        "c": "تُكَذِّبَانِ",
+        "d": "tukadhibāni",
+        "e_en": "will you both deny",
+        "e_ur": "تم دونوں جھٹلاؤ گے",
+        "a": 4,
+        "o_ca": 4,
+        "o_s": 4,
+        "o_r": 4,
+        "o_cr": 4
+      }
+    ],
+    "a": {
+      "g_en": "So which of the favors of your Lord would you deny?",
+      "g_ur": "پھر تم اپنے رب کی کن کن نعمتوں کو جھٹلاؤ گے"
+    }
+  },
+  "22": {
+    "w": [
+      {
+        "c": "يَخْرُجُ",
+        "d": "yakhruju",
+        "e_en": "Come forth",
+        "e_ur": "نکلتے ہیں",
+        "a": 1,
+        "o_ca": 7,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 8
+      },
+      {
+        "c": "مِنْهُمَا",
+        "d": "min'humā",
+        "e_en": "from both of them",
+        "e_ur": "ان دونوں سے",
+        "a": 2,
+        "o_ca": 10,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 9
+      },
+      {
+        "c": "اللُّؤْلُؤُ",
+        "d": "l-lu'lu-u",
+        "e_en": "the pearl",
+        "e_ur": "موتی",
+        "a": 3,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "وَالْمَرْجَانُ",
+        "d": "wal-marjānu",
+        "e_en": "and the coral",
+        "e_ur": "اور مونگے",
+        "a": 4,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      }
+    ],
+    "a": {
+      "g_en": "From both of them emerge pearl and coral.",
+      "g_ur": "ان دونوں سے موتی اور مونگا نکلتا ہے"
+    }
+  },
+  "23": {
+    "w": [
+      {
+        "c": "فَبِأَيِّ",
+        "d": "fabi-ayyi",
+        "e_en": "So which",
+        "e_ur": "تو ساتھ کون سی",
+        "a": 1,
+        "o_ca": 8,
+        "o_s": 5,
+        "o_r": 5,
+        "o_cr": 9
+      },
+      {
+        "c": "ءَالَاءِ",
+        "d": "ālāi",
+        "e_en": "(of the) favors",
+        "e_ur": "نعمتوں کے",
+        "a": 2,
+        "o_ca": 6,
+        "o_s": 5,
+        "o_r": 5,
+        "o_cr": 6
+      },
+      {
+        "c": "رَبِّكُمَا",
+        "d": "rabbikumā",
+        "e_en": "(of) your Lord",
+        "e_ur": "اپنے رب کی",
+        "a": 3,
+        "o_ca": 5,
+        "o_s": 5,
+        "o_r": 5,
+        "o_cr": 5
+      },
+      {
+        "c": "تُكَذِّبَانِ",
+        "d": "tukadhibāni",
+        "e_en": "will you both deny",
+        "e_ur": "تم دونوں جھٹلاؤ گے",
+        "a": 4,
+        "o_ca": 5,
+        "o_s": 5,
+        "o_r": 5,
+        "o_cr": 5
+      }
+    ],
+    "a": {
+      "g_en": "So which of the favors of your Lord would you deny?",
+      "g_ur": "پھر تم اپنے رب کی کن کن نعمتوں کو جھٹلاؤگے"
+    }
+  },
+  "24": {
+    "w": [
+      {
+        "c": "وَلَهُ",
+        "d": "walahu",
+        "e_en": "And for Him",
+        "e_ur": "اور اسی کے لیے ہیں",
+        "a": 1,
+        "o_ca": 21,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 22
+      },
+      {
+        "c": "الْجَوَارِ",
+        "d": "l-jawāri",
+        "e_en": "(are) the ships",
+        "e_ur": "جہاز",
+        "a": 2,
+        "o_ca": 2,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 3
+      },
+      {
+        "c": "الْمُنْشَءَاتُ",
+        "d": "l-munshaātu",
+        "e_en": "elevated",
+        "e_ur": "اونچے اٹھے ہوئے",
+        "a": 3,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "فِي",
+        "d": "fī",
+        "e_en": "in",
+        "e_ur": "میں",
+        "a": 4,
+        "o_ca": 1067,
+        "o_s": 2,
+        "o_r": 2,
+        "o_cr": 1013
+      },
+      {
+        "c": "الْبَحْرِ",
+        "d": "l-baḥri",
+        "e_en": "the sea",
+        "e_ur": "سمندر",
+        "a": 5,
+        "o_ca": 14,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 12
+      },
+      {
+        "c": "كَالْأَعْلَامِ",
+        "d": "kal-aʿlāmi",
+        "e_en": "like mountains",
+        "e_ur": "اونچے پہاڑوں کی طرح",
+        "a": 6,
+        "o_ca": 2,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 2
+      }
+    ],
+    "a": {
+      "g_en": "And to Him belong the ships [with sails] elevated in the sea like mountains.",
+      "g_ur": "اور اسی کی ہیں جہاز، سمندر میں اونچے کھڑے ہوئے جیسے پہاڑ"
+    }
+  },
+  "25": {
+    "w": [
+      {
+        "c": "فَبِأَيِّ",
+        "d": "fabi-ayyi",
+        "e_en": "So which",
+        "e_ur": "تو ساتھ کون سی",
+        "a": 1,
+        "o_ca": 9,
+        "o_s": 6,
+        "o_r": 6,
+        "o_cr": 10
+      },
+      {
+        "c": "ءَالَاءِ",
+        "d": "ālāi",
+        "e_en": "(of the) favors",
+        "e_ur": "نعمتوں کے",
+        "a": 2,
+        "o_ca": 7,
+        "o_s": 6,
+        "o_r": 6,
+        "o_cr": 7
+      },
+      {
+        "c": "رَبِّكُمَا",
+        "d": "rabbikumā",
+        "e_en": "(of) your Lord",
+        "e_ur": "اپنے رب کی",
+        "a": 3,
+        "o_ca": 6,
+        "o_s": 6,
+        "o_r": 6,
+        "o_cr": 6
+      },
+      {
+        "c": "تُكَذِّبَانِ",
+        "d": "tukadhibāni",
+        "e_en": "will you both deny",
+        "e_ur": "تم دونوں جھٹلاؤ گے",
+        "a": 4,
+        "o_ca": 6,
+        "o_s": 6,
+        "o_r": 6,
+        "o_cr": 6
+      }
+    ],
+    "a": {
+      "g_en": "So which of the favors of your Lord would you deny?",
+      "g_ur": "پھر تم اپنے رب کی کن کن نعمتوں کو جھٹلاؤ گے"
+    }
+  },
+  "26": {
+    "w": [
+      {
+        "c": "كُلُّ",
+        "d": "kullu",
+        "e_en": "Everyone",
+        "e_ur": "سب کے سب",
+        "a": 1,
+        "o_ca": 42,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 45
+      },
+      {
+        "c": "مَنْ",
+        "d": "man",
+        "e_en": "who",
+        "e_ur": "جو",
+        "a": 2,
+        "o_ca": 329,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 318
+      },
+      {
+        "c": "عَلَيْهَا",
+        "d": "ʿalayhā",
+        "e_en": "(is) on it",
+        "e_ur": "اس پر ہیں",
+        "a": 3,
+        "o_ca": 39,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 38
+      },
+      {
+        "c": "فَانٍ",
+        "d": "fānin",
+        "e_en": "(will) perish",
+        "e_ur": "فنا ہونے والے ہیں",
+        "a": 4,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      }
+    ],
+    "a": {
+      "g_en": "Everyone upon the earth will perish,",
+      "g_ur": "جو بھی زمین پر ہے، وہ فنا ہونے والا"
+    }
+  },
+  "27": {
+    "w": [
+      {
+        "c": "وَيَبْقَى",
+        "d": "wayabqā",
+        "e_en": "But will remain",
+        "e_ur": "اور باقی رہے گی",
+        "a": 1,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "وَجْهُ",
+        "d": "wajhu",
+        "e_en": "(the) Face",
+        "e_ur": "ذات",
+        "a": 2,
+        "o_ca": 3,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 3
+      },
+      {
+        "c": "رَبِّكَ",
+        "d": "rabbika",
+        "e_en": "(of) your Lord",
+        "e_ur": "تیرے رب کی",
+        "a": 3,
+        "o_ca": 91,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 106
+      },
+      {
+        "c": "ذُو",
+        "d": "dhū",
+        "e_en": "(the) Owner",
+        "e_ur": "والی",
+        "a": 4,
+        "o_ca": 20,
+        "o_s": 2,
+        "o_r": 1,
+        "o_cr": 22
+      },
+      {
+        "c": "الْجَلَالِ",
+        "d": "l-jalāli",
+        "e_en": "(of) Majesty",
+        "e_ur": "بزرگی",
+        "a": 5,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "وَالْإِكْرَامِ",
+        "d": "wal-ik'rāmi",
+        "e_en": "and Honor",
+        "e_ur": "اور کرم والی",
+        "a": 6,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      }
+    ],
+    "a": {
+      "g_en": "And there will remain the Face of your Lord, Owner of Majesty and Honor.",
+      "g_ur": "اور تیرے رب کی ذات باقی رہے گی، عظمت والی اور عزت والی"
+    }
+  },
+  "28": {
+    "w": [
+      {
+        "c": "فَبِأَيِّ",
+        "d": "fabi-ayyi",
+        "e_en": "So which",
+        "e_ur": "تو ساتھ کون سی",
+        "a": 1,
+        "o_ca": 10,
+        "o_s": 7,
+        "o_r": 1,
+        "o_cr": 11
+      },
+      {
+        "c": "ءَالَاءِ",
+        "d": "ālāi",
+        "e_en": "(of the) favors",
+        "e_ur": "نعمتوں کے",
+        "a": 2,
+        "o_ca": 8,
+        "o_s": 7,
+        "o_r": 1,
+        "o_cr": 8
+      },
+      {
+        "c": "رَبِّكُمَا",
+        "d": "rabbikumā",
+        "e_en": "(of) your Lord",
+        "e_ur": "اپنے رب کی",
+        "a": 3,
+        "o_ca": 7,
+        "o_s": 7,
+        "o_r": 1,
+        "o_cr": 7
+      },
+      {
+        "c": "تُكَذِّبَانِ",
+        "d": "tukadhibāni",
+        "e_en": "will you both deny",
+        "e_ur": "تم دونوں جھٹلاؤ گے",
+        "a": 4,
+        "o_ca": 7,
+        "o_s": 7,
+        "o_r": 1,
+        "o_cr": 7
+      }
+    ],
+    "a": {
+      "g_en": "So which of the favors of your Lord would you deny?",
+      "g_ur": "پھر تم اپنے رب کی کن کن نعمتوں کو جھٹلاؤگے"
+    }
+  },
+  "29": {
+    "w": [
+      {
+        "c": "يَسْءَلُهُ",
+        "d": "yasaluhu",
+        "e_en": "Asks Him",
+        "e_ur": "مانگتے ہیں اس سے",
+        "a": 1,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "مَنْ",
+        "d": "man",
+        "e_en": "whoever",
+        "e_ur": "جو بھی",
+        "a": 2,
+        "o_ca": 330,
+        "o_s": 2,
+        "o_r": 2,
+        "o_cr": 319
+      },
+      {
+        "c": "فِي",
+        "d": "fī",
+        "e_en": "(is) in",
+        "e_ur": "میں ہیں",
+        "a": 3,
+        "o_ca": 1068,
+        "o_s": 3,
+        "o_r": 1,
+        "o_cr": 1014
+      },
+      {
+        "c": "السَّمَاوَاتِ",
+        "d": "l-samāwāti",
+        "e_en": "the heavens",
+        "e_ur": "آسمانوں",
+        "a": 4,
+        "o_ca": 158,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 147
+      },
+      {
+        "c": "وَالْأَرْضِ",
+        "d": "wal-arḍi",
+        "e_en": "and the earth",
+        "e_ur": "اور زمین میں",
+        "a": 5,
+        "o_ca": 95,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 90
+      },
+      {
+        "c": "كُلَّ",
+        "d": "kulla",
+        "e_en": "Every",
+        "e_ur": "ہر",
+        "a": 6,
+        "o_ca": 45,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 43
+      },
+      {
+        "c": "يَوْمٍ",
+        "d": "yawmin",
+        "e_en": "day",
+        "e_ur": "روز",
+        "a": 7,
+        "o_ca": 24,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 26
+      },
+      {
+        "c": "هُوَ",
+        "d": "huwa",
+        "e_en": "He",
+        "e_ur": "وہ",
+        "a": 8,
+        "o_ca": 223,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 222
+      },
+      {
+        "c": "فِي",
+        "d": "fī",
+        "e_en": "(is) in",
+        "e_ur": "میں ہے",
+        "a": 9,
+        "o_ca": 1069,
+        "o_s": 4,
+        "o_r": 2,
+        "o_cr": 1015
+      },
+      {
+        "c": "شَأْنٍ",
+        "d": "shanin",
+        "e_en": "a matter",
+        "e_ur": "نئی شان",
+        "a": 10,
+        "o_ca": 2,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 2
+      }
+    ],
+    "a": {
+      "g_en": "Whoever is within the heavens and earth asks Him; every day He is bringing about a matter.",
+      "g_ur": "اسی سے مانگتے ہیں جو آسمانوں اورزمین میں ہیں ہر روز اس کا ایک کام ہے"
+    }
+  },
+  "30": {
+    "w": [
+      {
+        "c": "فَبِأَيِّ",
+        "d": "fabi-ayyi",
+        "e_en": "So which",
+        "e_ur": "تو ساتھ کون سی",
+        "a": 1,
+        "o_ca": 11,
+        "o_s": 8,
+        "o_r": 2,
+        "o_cr": 12
+      },
+      {
+        "c": "ءَالَاءِ",
+        "d": "ālāi",
+        "e_en": "(of the) favors",
+        "e_ur": "نعمتوں کے",
+        "a": 2,
+        "o_ca": 9,
+        "o_s": 8,
+        "o_r": 2,
+        "o_cr": 9
+      },
+      {
+        "c": "رَبِّكُمَا",
+        "d": "rabbikumā",
+        "e_en": "(of) your Lord",
+        "e_ur": "اپنے رب کی",
+        "a": 3,
+        "o_ca": 8,
+        "o_s": 8,
+        "o_r": 2,
+        "o_cr": 8
+      },
+      {
+        "c": "تُكَذِّبَانِ",
+        "d": "tukadhibāni",
+        "e_en": "will you both deny",
+        "e_ur": "تم دونوں تم دونوں جھٹلاؤ گے",
+        "a": 4,
+        "o_ca": 8,
+        "o_s": 8,
+        "o_r": 2,
+        "o_cr": 8
+      }
+    ],
+    "a": {
+      "g_en": "So which of the favors of your Lord would you deny?",
+      "g_ur": "پھر تم اپنے رب کی کن کن نعمتوں کوجھٹلاؤگے"
+    }
+  },
+  "31": {
+    "w": [
+      {
+        "c": "سَنَفْرُغُ",
+        "d": "sanafrughu",
+        "e_en": "Soon We will attend",
+        "e_ur": "عنقریب ہم فارغ ہوجائیں گے",
+        "a": 1,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "لَكُمْ",
+        "d": "lakum",
+        "e_en": "to you",
+        "e_ur": "تمہارے لیے",
+        "a": 2,
+        "o_ca": 255,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 237
+      },
+      {
+        "c": "أَيُّهَ",
+        "d": "ayyuha",
+        "e_en": "O you",
+        "e_ur": "اے",
+        "a": 3,
+        "o_ca": 2,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "الثَّقَلَانِ",
+        "d": "l-thaqalāni",
+        "e_en": "two classes!",
+        "e_ur": "دو بوجھو",
+        "a": 4,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      }
+    ],
+    "a": {
+      "g_en": "We will attend to you, O prominent beings.",
+      "g_ur": "ہم جلدی فارغ ہونے والے ہیں تمھاری طرف ، اے دو بھاری قافلو"
+    }
+  },
+  "32": {
+    "w": [
+      {
+        "c": "فَبِأَيِّ",
+        "d": "fabi-ayyi",
+        "e_en": "So which",
+        "e_ur": "تو ساتھ کون سی",
+        "a": 1,
+        "o_ca": 12,
+        "o_s": 9,
+        "o_r": 3,
+        "o_cr": 13
+      },
+      {
+        "c": "ءَالَاءِ",
+        "d": "ālāi",
+        "e_en": "(of the) favors",
+        "e_ur": "نعمتوں کے",
+        "a": 2,
+        "o_ca": 10,
+        "o_s": 9,
+        "o_r": 3,
+        "o_cr": 10
+      },
+      {
+        "c": "رَبِّكُمَا",
+        "d": "rabbikumā",
+        "e_en": "(of) your Lord",
+        "e_ur": "اپنے رب کی",
+        "a": 3,
+        "o_ca": 9,
+        "o_s": 9,
+        "o_r": 3,
+        "o_cr": 9
+      },
+      {
+        "c": "تُكَذِّبَانِ",
+        "d": "tukadhibāni",
+        "e_en": "will you both deny",
+        "e_ur": "تم دونوں جھٹلاؤ گے",
+        "a": 4,
+        "o_ca": 9,
+        "o_s": 9,
+        "o_r": 3,
+        "o_cr": 9
+      }
+    ],
+    "a": {
+      "g_en": "So which of the favors of your Lord would you deny?",
+      "g_ur": "پھر تم اپنے رب کی کن کن نعمتوں کوجھٹلاؤگے"
+    }
+  },
+  "33": {
+    "w": [
+      {
+        "c": "يَامَعْشَرَ",
+        "d": "yāmaʿshara",
+        "e_en": "O assembly",
+        "e_ur": "اے گروہ",
+        "a": 1,
+        "o_ca": 3,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 3
+      },
+      {
+        "c": "الْجِنِّ",
+        "d": "l-jini",
+        "e_en": "(of) the jinn",
+        "e_ur": "جن",
+        "a": 2,
+        "o_ca": 13,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 15
+      },
+      {
+        "c": "وَالْإِنْسِ",
+        "d": "wal-insi",
+        "e_en": "and the men!",
+        "e_ur": "و انس",
+        "a": 3,
+        "o_ca": 8,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 8
+      },
+      {
+        "c": "إِنِ",
+        "d": "ini",
+        "e_en": "If",
+        "e_ur": "اگر",
+        "a": 4,
+        "o_ca": 11,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 10
+      },
+      {
+        "c": "اسْتَطَعْتُمْ",
+        "d": "is'taṭaʿtum",
+        "e_en": "you are able",
+        "e_ur": "تم استطاعت رکھتے ہو",
+        "a": 5,
+        "o_ca": 4,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 4
+      },
+      {
+        "c": "أَنْ",
+        "d": "an",
+        "e_en": "to",
+        "e_ur": "کہ",
+        "a": 6,
+        "o_ca": 464,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 427
+      },
+      {
+        "c": "تَنْفُذُوا",
+        "d": "tanfudhū",
+        "e_en": "pass beyond",
+        "e_ur": "تم نکل بھاگو",
+        "a": 7,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "مِنْ",
+        "d": "min",
+        "e_en": "[of]",
+        "e_ur": "سے",
+        "a": 8,
+        "o_ca": 1533,
+        "o_s": 4,
+        "o_r": 1,
+        "o_cr": 1460
+      },
+      {
+        "c": "أَقْطَارِ",
+        "d": "aqṭāri",
+        "e_en": "(the) regions",
+        "e_ur": "کناروں",
+        "a": 9,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "السَّمَاوَاتِ",
+        "d": "l-samāwāti",
+        "e_en": "(of) the heavens",
+        "e_ur": "آسمانوں کے",
+        "a": 10,
+        "o_ca": 159,
+        "o_s": 2,
+        "o_r": 2,
+        "o_cr": 148
+      },
+      {
+        "c": "وَالْأَرْضِ",
+        "d": "wal-arḍi",
+        "e_en": "and the earth",
+        "e_ur": "اور زمین کے",
+        "a": 11,
+        "o_ca": 96,
+        "o_s": 2,
+        "o_r": 2,
+        "o_cr": 91
+      },
+      {
+        "c": "فَانْفُذُوا",
+        "d": "fa-unfudhū",
+        "e_en": "then pass",
+        "e_ur": "تو بھاگ نکلو",
+        "a": 12,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "لَا",
+        "d": "lā",
+        "e_en": "Not",
+        "e_ur": "نہیں",
+        "a": 13,
+        "o_ca": 724,
+        "o_s": 2,
+        "o_r": 1,
+        "o_cr": 685
+      },
+      {
+        "c": "تَنْفُذُونَ",
+        "d": "tanfudhūna",
+        "e_en": "you (can) pass",
+        "e_ur": "تم بھاگ سکتے",
+        "a": 14,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "إِلَّا",
+        "d": "illā",
+        "e_en": "except",
+        "e_ur": "مگر",
+        "a": 15,
+        "o_ca": 599,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 599
+      },
+      {
+        "c": "بِسُلْطَانٍ",
+        "d": "bisul'ṭānin",
+        "e_en": "by authority",
+        "e_ur": "ساتھ ایک زور کے",
+        "a": 16,
+        "o_ca": 8,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 8
+      }
+    ],
+    "a": {
+      "g_en": "O company of jinn and mankind, if you are able to pass beyond the regions of the heavens and the earth, then pass. You will not pass except by authority [from Allah].",
+      "g_ur": "اے جنوں اور انسانوں کے گروہاگر تم سے ہوسکے کہ تم آسمانوں اورزمین کی حدود سے نکل جاؤ تو نکل جاؤ،تم نہیں نکل سکتے بغیر سند کے"
+    }
+  },
+  "34": {
+    "w": [
+      {
+        "c": "فَبِأَيِّ",
+        "d": "fabi-ayyi",
+        "e_en": "So which",
+        "e_ur": "تو ساتھ کون سی",
+        "a": 1,
+        "o_ca": 13,
+        "o_s": 10,
+        "o_r": 4,
+        "o_cr": 14
+      },
+      {
+        "c": "ءَالَاءِ",
+        "d": "ālāi",
+        "e_en": "(of the) favors",
+        "e_ur": "نعمتوں کے",
+        "a": 2,
+        "o_ca": 11,
+        "o_s": 10,
+        "o_r": 4,
+        "o_cr": 11
+      },
+      {
+        "c": "رَبِّكُمَا",
+        "d": "rabbikumā",
+        "e_en": "(of) your Lord",
+        "e_ur": "اپنے رب کی",
+        "a": 3,
+        "o_ca": 10,
+        "o_s": 10,
+        "o_r": 4,
+        "o_cr": 10
+      },
+      {
+        "c": "تُكَذِّبَانِ",
+        "d": "tukadhibāni",
+        "e_en": "will you both deny",
+        "e_ur": "تم دونوں جھٹلاؤ گے",
+        "a": 4,
+        "o_ca": 10,
+        "o_s": 10,
+        "o_r": 4,
+        "o_cr": 10
+      }
+    ],
+    "a": {
+      "g_en": "So which of the favors of your Lord would you deny?",
+      "g_ur": "پھر تم اپنے رب کی کن کن نعمتوں کو جھٹلاؤ گے"
+    }
+  },
+  "35": {
+    "w": [
+      {
+        "c": "يُرْسَلُ",
+        "d": "yur'salu",
+        "e_en": "Will be sent",
+        "e_ur": "چھوڑ دیا جائے گا",
+        "a": 1,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "عَلَيْكُمَا",
+        "d": "ʿalaykumā",
+        "e_en": "against both of you",
+        "e_ur": "تم پر",
+        "a": 2,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "شُوَاظٌ",
+        "d": "shuwāẓun",
+        "e_en": "a flame",
+        "e_ur": "شعلہ",
+        "a": 3,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "مِنْ",
+        "d": "min",
+        "e_en": "of",
+        "e_ur": "میں سے",
+        "a": 4,
+        "o_ca": 1534,
+        "o_s": 5,
+        "o_r": 2,
+        "o_cr": 1461
+      },
+      {
+        "c": "نَارٍ",
+        "d": "nārin",
+        "e_en": "fire",
+        "e_ur": "آگ",
+        "a": 5,
+        "o_ca": 5,
+        "o_s": 2,
+        "o_r": 1,
+        "o_cr": 4
+      },
+      {
+        "c": "وَنُحَاسٌ",
+        "d": "wanuḥāsun",
+        "e_en": "and smoke",
+        "e_ur": "اور دھواں",
+        "a": 6,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "فَلَا",
+        "d": "falā",
+        "e_en": "and not",
+        "e_ur": "تو نہ",
+        "a": 7,
+        "o_ca": 139,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 145
+      },
+      {
+        "c": "تَنْتَصِرَانِ",
+        "d": "tantaṣirāni",
+        "e_en": "you will (be able to) defend yourselves",
+        "e_ur": "تم دونوں مقابلہ کرسکو گے",
+        "a": 8,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      }
+    ],
+    "a": {
+      "g_en": "There will be sent upon you a flame of fire and smoke, and you will not defend yourselves.",
+      "g_ur": "تم پرچھوڑے جائیں گے آگ کے شعلے اور دھواں تو تم بچاؤ نہ کرسکو گے"
+    }
+  },
+  "36": {
+    "w": [
+      {
+        "c": "فَبِأَيِّ",
+        "d": "fabi-ayyi",
+        "e_en": "So which",
+        "e_ur": "تو ساتھ کون سی",
+        "a": 1,
+        "o_ca": 14,
+        "o_s": 11,
+        "o_r": 5,
+        "o_cr": 15
+      },
+      {
+        "c": "ءَالَاءِ",
+        "d": "ālāi",
+        "e_en": "(of the) favors",
+        "e_ur": "نعمتوں کے",
+        "a": 2,
+        "o_ca": 12,
+        "o_s": 11,
+        "o_r": 5,
+        "o_cr": 12
+      },
+      {
+        "c": "رَبِّكُمَا",
+        "d": "rabbikumā",
+        "e_en": "(of) your Lord",
+        "e_ur": "اپنے رب کی",
+        "a": 3,
+        "o_ca": 11,
+        "o_s": 11,
+        "o_r": 5,
+        "o_cr": 11
+      },
+      {
+        "c": "تُكَذِّبَانِ",
+        "d": "tukadhibāni",
+        "e_en": "will you both deny",
+        "e_ur": "تم دونوں جھٹلاؤ گے",
+        "a": 4,
+        "o_ca": 11,
+        "o_s": 11,
+        "o_r": 5,
+        "o_cr": 11
+      }
+    ],
+    "a": {
+      "g_en": "So which of the favors of your Lord would you deny?",
+      "g_ur": "پھر تم اپنے رب کی کن کن قدرتوں کو جھٹلاؤ گے"
+    }
+  },
+  "37": {
+    "w": [
+      {
+        "c": "فَإِذَا",
+        "d": "fa-idhā",
+        "e_en": "Then when",
+        "e_ur": "تو جب",
+        "a": 1,
+        "o_ca": 74,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 78
+      },
+      {
+        "c": "انْشَقَّتِ",
+        "d": "inshaqqati",
+        "e_en": "is split",
+        "e_ur": "پھٹ جائے گا",
+        "a": 2,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "السَّمَاءُ",
+        "d": "l-samāu",
+        "e_en": "the heaven",
+        "e_ur": "آسمان",
+        "a": 3,
+        "o_ca": 6,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 15
+      },
+      {
+        "c": "فَكَانَتْ",
+        "d": "fakānat",
+        "e_en": "and it becomes",
+        "e_ur": "تو ہوجائے گا",
+        "a": 4,
+        "o_ca": 2,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 5
+      },
+      {
+        "c": "وَرْدَةً",
+        "d": "wardatan",
+        "e_en": "rose-colored",
+        "e_ur": "سرخ سرخ",
+        "a": 5,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "كَالدِّهَانِ",
+        "d": "kal-dihāni",
+        "e_en": "like murky oil",
+        "e_ur": "چمڑے کی طرح۔ تیل کی تلچھٹ کی طرح",
+        "a": 6,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      }
+    ],
+    "a": {
+      "g_en": "And when the heaven is split open and becomes rose-colored like oil -",
+      "g_ur": "پھر جب آسمان پھٹ کر کھال کے مانند سرخ ہوجائے گا"
+    }
+  },
+  "38": {
+    "w": [
+      {
+        "c": "فَبِأَيِّ",
+        "d": "fabi-ayyi",
+        "e_en": "So which",
+        "e_ur": "تو ساتھ کون سی",
+        "a": 1,
+        "o_ca": 15,
+        "o_s": 12,
+        "o_r": 6,
+        "o_cr": 16
+      },
+      {
+        "c": "ءَالَاءِ",
+        "d": "ālāi",
+        "e_en": "(of the) favors",
+        "e_ur": "نعمتوں کے",
+        "a": 2,
+        "o_ca": 13,
+        "o_s": 12,
+        "o_r": 6,
+        "o_cr": 13
+      },
+      {
+        "c": "رَبِّكُمَا",
+        "d": "rabbikumā",
+        "e_en": "(of) your Lord",
+        "e_ur": "اپنے رب کی تم دونوں",
+        "a": 3,
+        "o_ca": 12,
+        "o_s": 12,
+        "o_r": 6,
+        "o_cr": 12
+      },
+      {
+        "c": "تُكَذِّبَانِ",
+        "d": "tukadhibāni",
+        "e_en": "will you both deny",
+        "e_ur": "تم دونوں جھٹلاؤ گے",
+        "a": 4,
+        "o_ca": 12,
+        "o_s": 12,
+        "o_r": 6,
+        "o_cr": 12
+      }
+    ],
+    "a": {
+      "g_en": "So which of the favors of your Lord would you deny? -",
+      "g_ur": "پھر تم اپنے رب کی کن کن قدرتوں کو جھٹلاؤ گے"
+    }
+  },
+  "39": {
+    "w": [
+      {
+        "c": "فَيَوْمَئِذٍ",
+        "d": "fayawma-idhin",
+        "e_en": "Then on that Day",
+        "e_ur": "تو اس دن",
+        "a": 1,
+        "o_ca": 2,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 4
+      },
+      {
+        "c": "لَا",
+        "d": "lā",
+        "e_en": "not",
+        "e_ur": "نہ",
+        "a": 2,
+        "o_ca": 725,
+        "o_s": 3,
+        "o_r": 2,
+        "o_cr": 686
+      },
+      {
+        "c": "يُسْءَلُ",
+        "d": "yus'alu",
+        "e_en": "will be asked",
+        "e_ur": "پوچھا جائے گا",
+        "a": 3,
+        "o_ca": 3,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 3
+      },
+      {
+        "c": "عَنْ",
+        "d": "ʿan",
+        "e_en": "about",
+        "e_ur": "کے بارے میں",
+        "a": 4,
+        "o_ca": 142,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 125
+      },
+      {
+        "c": "ذَنْبِهِ",
+        "d": "dhanbihi",
+        "e_en": "his sin",
+        "e_ur": "اپنے گناہوں",
+        "a": 5,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "إِنْسٌ",
+        "d": "insun",
+        "e_en": "any man",
+        "e_ur": "کوئی انسان",
+        "a": 6,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "وَلَا",
+        "d": "walā",
+        "e_en": "and not",
+        "e_ur": "اور نہ",
+        "a": 7,
+        "o_ca": 586,
+        "o_s": 2,
+        "o_r": 1,
+        "o_cr": 557
+      },
+      {
+        "c": "جَانٌّ",
+        "d": "jānnun",
+        "e_en": "any jinn",
+        "e_ur": "کوئی جن",
+        "a": 8,
+        "o_ca": 3,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 3
+      }
+    ],
+    "a": {
+      "g_en": "Then on that Day none will be asked about his sin among men or jinn.",
+      "g_ur": "پس اس دن کسی انسان یا جن سے اس کے گناہ کی بابت پوچھ نہ ہوگی"
+    }
+  },
+  "40": {
+    "w": [
+      {
+        "c": "فَبِأَيِّ",
+        "d": "fabi-ayyi",
+        "e_en": "So which",
+        "e_ur": "تو ساتھ کون سی",
+        "a": 1,
+        "o_ca": 16,
+        "o_s": 13,
+        "o_r": 7,
+        "o_cr": 17
+      },
+      {
+        "c": "ءَالَاءِ",
+        "d": "ālāi",
+        "e_en": "(of the) favors",
+        "e_ur": "نعمتوں کے",
+        "a": 2,
+        "o_ca": 14,
+        "o_s": 13,
+        "o_r": 7,
+        "o_cr": 14
+      },
+      {
+        "c": "رَبِّكُمَا",
+        "d": "rabbikumā",
+        "e_en": "(of) your Lord",
+        "e_ur": "اپنے رب کی تم دونوں",
+        "a": 3,
+        "o_ca": 13,
+        "o_s": 13,
+        "o_r": 7,
+        "o_cr": 13
+      },
+      {
+        "c": "تُكَذِّبَانِ",
+        "d": "tukadhibāni",
+        "e_en": "will you both deny",
+        "e_ur": "تم دونوں جھٹلاؤ گے",
+        "a": 4,
+        "o_ca": 13,
+        "o_s": 13,
+        "o_r": 7,
+        "o_cr": 13
+      }
+    ],
+    "a": {
+      "g_en": "So which of the favors of your Lord would you deny?",
+      "g_ur": "پھر تم اپنے رب کی کن کن قدرتوں کو جھٹلاؤ گے"
+    }
+  },
+  "41": {
+    "w": [
+      {
+        "c": "يُعْرَفُ",
+        "d": "yuʿ'rafu",
+        "e_en": "Will be known",
+        "e_ur": "پہچانے جائیں گے",
+        "a": 1,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "الْمُجْرِمُونَ",
+        "d": "l-muj'rimūna",
+        "e_en": "the criminals",
+        "e_ur": "مجرم",
+        "a": 2,
+        "o_ca": 12,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 12
+      },
+      {
+        "c": "بِسِيمَاهُمْ",
+        "d": "bisīmāhum",
+        "e_en": "by their marks",
+        "e_ur": "اپنے چہروں کے ساتھ",
+        "a": 3,
+        "o_ca": 5,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 5
+      },
+      {
+        "c": "فَيُؤْخَذُ",
+        "d": "fayu'khadhu",
+        "e_en": "and will be seized",
+        "e_ur": "تو پکڑے جائیں گے",
+        "a": 4,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "بِالنَّوَاصِي",
+        "d": "bil-nawāṣī",
+        "e_en": "by the forelocks",
+        "e_ur": "پیشانی کے بالوں سے",
+        "a": 5,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "وَالْأَقْدَامِ",
+        "d": "wal-aqdāmi",
+        "e_en": "and the feet",
+        "e_ur": "اور قدموں سے",
+        "a": 6,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      }
+    ],
+    "a": {
+      "g_en": "The criminals will be known by their marks, and they will be seized by the forelocks and the feet.",
+      "g_ur": "مجرم پہچان لیے جائیں گے اپنی علامتوں سے، پھر پکڑا جائے گاپیشانی کے بال سے اور پاؤں سے"
+    }
+  },
+  "42": {
+    "w": [
+      {
+        "c": "فَبِأَيِّ",
+        "d": "fabi-ayyi",
+        "e_en": "So which",
+        "e_ur": "تو ساتھ کون سی",
+        "a": 1,
+        "o_ca": 17,
+        "o_s": 14,
+        "o_r": 8,
+        "o_cr": 18
+      },
+      {
+        "c": "ءَالَاءِ",
+        "d": "ālāi",
+        "e_en": "(of the) favors",
+        "e_ur": "نعمتوں کے",
+        "a": 2,
+        "o_ca": 15,
+        "o_s": 14,
+        "o_r": 8,
+        "o_cr": 15
+      },
+      {
+        "c": "رَبِّكُمَا",
+        "d": "rabbikumā",
+        "e_en": "(of) your Lord",
+        "e_ur": "اپنے رب کی تم دونوں",
+        "a": 3,
+        "o_ca": 14,
+        "o_s": 14,
+        "o_r": 8,
+        "o_cr": 14
+      },
+      {
+        "c": "تُكَذِّبَانِ",
+        "d": "tukadhibāni",
+        "e_en": "will you both deny",
+        "e_ur": "تم دونوں جھٹلاؤ گے",
+        "a": 4,
+        "o_ca": 14,
+        "o_s": 14,
+        "o_r": 8,
+        "o_cr": 14
+      }
+    ],
+    "a": {
+      "g_en": "So which of the favors of your Lord would you deny?",
+      "g_ur": "پھر تم اپنے رب کی کن کن قدرتوں کو جھٹلاؤ گے"
+    }
+  },
+  "43": {
+    "w": [
+      {
+        "c": "هَذِهِ",
+        "d": "hādhihi",
+        "e_en": "This",
+        "e_ur": "یہ ہے",
+        "a": 1,
+        "o_ca": 44,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 43
+      },
+      {
+        "c": "جَهَنَّمُ",
+        "d": "jahannamu",
+        "e_en": "(is) Hell",
+        "e_ur": "وہ جہنم",
+        "a": 2,
+        "o_ca": 16,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 14
+      },
+      {
+        "c": "الَّتِي",
+        "d": "allatī",
+        "e_en": "which",
+        "e_ur": "وہ جو",
+        "a": 3,
+        "o_ca": 51,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 51
+      },
+      {
+        "c": "يُكَذِّبُ",
+        "d": "yukadhibu",
+        "e_en": "deny",
+        "e_ur": "جھٹلاتے تھے",
+        "a": 4,
+        "o_ca": 2,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 5
+      },
+      {
+        "c": "بِهَا",
+        "d": "bihā",
+        "e_en": "[of it]",
+        "e_ur": "جس کو",
+        "a": 5,
+        "o_ca": 76,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 68
+      },
+      {
+        "c": "الْمُجْرِمُونَ",
+        "d": "l-muj'rimūna",
+        "e_en": "the criminals",
+        "e_ur": "مجرم",
+        "a": 6,
+        "o_ca": 13,
+        "o_s": 2,
+        "o_r": 2,
+        "o_cr": 13
+      }
+    ],
+    "a": {
+      "g_en": "This is Hell, which the criminals deny.",
+      "g_ur": "یہ جہنم ہے جس کو مجرم لوگ جھوٹ بتاتے تھے"
+    }
+  },
+  "44": {
+    "w": [
+      {
+        "c": "يَطُوفُونَ",
+        "d": "yaṭūfūna",
+        "e_en": "They will go around",
+        "e_ur": "گردش کریں گے",
+        "a": 1,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "بَيْنَهَا",
+        "d": "baynahā",
+        "e_en": "between it",
+        "e_ur": "اس کے درمیان",
+        "a": 2,
+        "o_ca": 2,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 2
+      },
+      {
+        "c": "وَبَيْنَ",
+        "d": "wabayna",
+        "e_en": "and between",
+        "e_ur": "اور درمیان",
+        "a": 3,
+        "o_ca": 8,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 8
+      },
+      {
+        "c": "حَمِيمٍ",
+        "d": "ḥamīmin",
+        "e_en": "scalding water",
+        "e_ur": "کھولتے پانی کے",
+        "a": 4,
+        "o_ca": 6,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 7
+      },
+      {
+        "c": "ءَانٍ",
+        "d": "ānin",
+        "e_en": "heated",
+        "e_ur": "جو سخت گرم ہوگا۔ شدید گرم ہوگا",
+        "a": 5,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      }
+    ],
+    "a": {
+      "g_en": "They will go around between it and scalding water, heated [to the utmost degree].",
+      "g_ur": "وہ پھریں گے اس کے درمیان اورکھولتے پانی کے درمیان"
+    }
+  },
+  "45": {
+    "w": [
+      {
+        "c": "فَبِأَيِّ",
+        "d": "fabi-ayyi",
+        "e_en": "So which",
+        "e_ur": "تو ساتھ کون سی",
+        "a": 1,
+        "o_ca": 18,
+        "o_s": 15,
+        "o_r": 9,
+        "o_cr": 19
+      },
+      {
+        "c": "ءَالَاءِ",
+        "d": "ālāi",
+        "e_en": "(of the) favors",
+        "e_ur": "نعمتوں کے",
+        "a": 2,
+        "o_ca": 16,
+        "o_s": 15,
+        "o_r": 9,
+        "o_cr": 16
+      },
+      {
+        "c": "رَبِّكُمَا",
+        "d": "rabbikumā",
+        "e_en": "(of) your Lord",
+        "e_ur": "اپنے رب کی تم دونوں",
+        "a": 3,
+        "o_ca": 15,
+        "o_s": 15,
+        "o_r": 9,
+        "o_cr": 15
+      },
+      {
+        "c": "تُكَذِّبَانِ",
+        "d": "tukadhibāni",
+        "e_en": "will you both deny",
+        "e_ur": "تم دونوں جھٹلاؤ گے",
+        "a": 4,
+        "o_ca": 15,
+        "o_s": 15,
+        "o_r": 9,
+        "o_cr": 15
+      }
+    ],
+    "a": {
+      "g_en": "So which of the favors of your Lord would you deny?",
+      "g_ur": "پھر تم اپنے رب کی کن کن قدرتوں کو جھٹلاؤ گے"
+    }
+  },
+  "46": {
+    "w": [
+      {
+        "c": "وَلِمَنْ",
+        "d": "waliman",
+        "e_en": "But for (him) who",
+        "e_ur": "اور واسطے اس کے",
+        "a": 1,
+        "o_ca": 2,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 3
+      },
+      {
+        "c": "خَافَ",
+        "d": "khāfa",
+        "e_en": "fears",
+        "e_ur": "جو ڈرے",
+        "a": 2,
+        "o_ca": 4,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 5
+      },
+      {
+        "c": "مَقَامَ",
+        "d": "maqāma",
+        "e_en": "(the) standing",
+        "e_ur": "سامنے کھڑے ہونے سے",
+        "a": 3,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 2
+      },
+      {
+        "c": "رَبِّهِ",
+        "d": "rabbihi",
+        "e_en": "(before) his Lord",
+        "e_ur": "اپنے رب کے",
+        "a": 4,
+        "o_ca": 36,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 42
+      },
+      {
+        "c": "جَنَّتَانِ",
+        "d": "jannatāni",
+        "e_en": "(are) two gardens",
+        "e_ur": "دو باغ ہیں",
+        "a": 5,
+        "o_ca": 2,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 2
+      }
+    ],
+    "a": {
+      "g_en": "But for he who has feared the position of his Lord are two gardens -",
+      "g_ur": "اور جو شخص اپنے رب کے سامنے کھڑا ہونے سے ڈرے، اس کے لیے دوباغ ہیں"
+    }
+  },
+  "47": {
+    "w": [
+      {
+        "c": "فَبِأَيِّ",
+        "d": "fabi-ayyi",
+        "e_en": "So which",
+        "e_ur": "تو ساتھ کون سی",
+        "a": 1,
+        "o_ca": 19,
+        "o_s": 16,
+        "o_r": 1,
+        "o_cr": 20
+      },
+      {
+        "c": "ءَالَاءِ",
+        "d": "ālāi",
+        "e_en": "(of the) favors",
+        "e_ur": "نعمتوں کے",
+        "a": 2,
+        "o_ca": 17,
+        "o_s": 16,
+        "o_r": 1,
+        "o_cr": 17
+      },
+      {
+        "c": "رَبِّكُمَا",
+        "d": "rabbikumā",
+        "e_en": "(of) your Lord",
+        "e_ur": "اپنے رب کی تم دونوں",
+        "a": 3,
+        "o_ca": 16,
+        "o_s": 16,
+        "o_r": 1,
+        "o_cr": 16
+      },
+      {
+        "c": "تُكَذِّبَانِ",
+        "d": "tukadhibāni",
+        "e_en": "will you both deny",
+        "e_ur": "تم دونوں جھٹلاؤ گے",
+        "a": 4,
+        "o_ca": 16,
+        "o_s": 16,
+        "o_r": 1,
+        "o_cr": 16
+      }
+    ],
+    "a": {
+      "g_en": "So which of the favors of your Lord would you deny? -",
+      "g_ur": "پھر تم اپنے رب کی کن کن نعمتوں کو جھٹلاؤ گے"
+    }
+  },
+  "48": {
+    "w": [
+      {
+        "c": "ذَوَاتَا",
+        "d": "dhawātā",
+        "e_en": "Having",
+        "e_ur": "ہری بھری ڈالیوں والے",
+        "a": 1,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "أَفْنَانٍ",
+        "d": "afnānin",
+        "e_en": "branches",
+        "e_ur": "ہری بھری ڈالیوں والے",
+        "a": 2,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      }
+    ],
+    "a": {
+      "g_en": "Having [spreading] branches.",
+      "g_ur": "دونوں بہت شاخوں والے"
+    }
+  },
+  "49": {
+    "w": [
+      {
+        "c": "فَبِأَيِّ",
+        "d": "fabi-ayyi",
+        "e_en": "So which",
+        "e_ur": "تو ساتھ کون سی",
+        "a": 1,
+        "o_ca": 20,
+        "o_s": 17,
+        "o_r": 2,
+        "o_cr": 21
+      },
+      {
+        "c": "ءَالَاءِ",
+        "d": "ālāi",
+        "e_en": "(of the) favors",
+        "e_ur": "نعمتوں کے",
+        "a": 2,
+        "o_ca": 18,
+        "o_s": 17,
+        "o_r": 2,
+        "o_cr": 18
+      },
+      {
+        "c": "رَبِّكُمَا",
+        "d": "rabbikumā",
+        "e_en": "(of) your Lord",
+        "e_ur": "اپنے رب کی تم دونوں",
+        "a": 3,
+        "o_ca": 17,
+        "o_s": 17,
+        "o_r": 2,
+        "o_cr": 17
+      },
+      {
+        "c": "تُكَذِّبَانِ",
+        "d": "tukadhibāni",
+        "e_en": "will you both deny",
+        "e_ur": "تم دونوں جھٹلاؤ گے",
+        "a": 4,
+        "o_ca": 17,
+        "o_s": 17,
+        "o_r": 2,
+        "o_cr": 17
+      }
+    ],
+    "a": {
+      "g_en": "So which of the favors of your Lord would you deny?",
+      "g_ur": "پھر تم اپنے رب کی کن کن نعمتوں کو جھٹلاؤ گے"
+    }
+  },
+  "50": {
+    "w": [
+      {
+        "c": "فِيهِمَا",
+        "d": "fīhimā",
+        "e_en": "In both of them",
+        "e_ur": "ان دونوں میں",
+        "a": 1,
+        "o_ca": 5,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 5
+      },
+      {
+        "c": "عَيْنَانِ",
+        "d": "ʿaynāni",
+        "e_en": "(are) two springs",
+        "e_ur": "دو چشمے ہیں",
+        "a": 2,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "تَجْرِيَانِ",
+        "d": "tajriyāni",
+        "e_en": "flowing",
+        "e_ur": "بہتے ہوئے",
+        "a": 3,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      }
+    ],
+    "a": {
+      "g_en": "In both of them are two springs, flowing.",
+      "g_ur": "ان کے درمیان دوچشمے جاری ہوں گے"
+    }
+  },
+  "51": {
+    "w": [
+      {
+        "c": "فَبِأَيِّ",
+        "d": "fabi-ayyi",
+        "e_en": "So which",
+        "e_ur": "تو ساتھ کون سی",
+        "a": 1,
+        "o_ca": 21,
+        "o_s": 18,
+        "o_r": 3,
+        "o_cr": 22
+      },
+      {
+        "c": "ءَالَاءِ",
+        "d": "ālāi",
+        "e_en": "(of the) favors",
+        "e_ur": "نعمتوں کے",
+        "a": 2,
+        "o_ca": 19,
+        "o_s": 18,
+        "o_r": 3,
+        "o_cr": 19
+      },
+      {
+        "c": "رَبِّكُمَا",
+        "d": "rabbikumā",
+        "e_en": "(of) your Lord",
+        "e_ur": "اپنے رب کی تم دونوں",
+        "a": 3,
+        "o_ca": 18,
+        "o_s": 18,
+        "o_r": 3,
+        "o_cr": 18
+      },
+      {
+        "c": "تُكَذِّبَانِ",
+        "d": "tukadhibāni",
+        "e_en": "will you both deny",
+        "e_ur": "تم دونوں جھٹلاؤ گے",
+        "a": 4,
+        "o_ca": 18,
+        "o_s": 18,
+        "o_r": 3,
+        "o_cr": 18
+      }
+    ],
+    "a": {
+      "g_en": "So which of the favors of your Lord would you deny?",
+      "g_ur": "پھر تم اپنے رب کی کن کن نعمتوں کو جھٹلاؤ گے"
+    }
+  },
+  "52": {
+    "w": [
+      {
+        "c": "فِيهِمَا",
+        "d": "fīhimā",
+        "e_en": "In both of them",
+        "e_ur": "ان دونوں میں",
+        "a": 1,
+        "o_ca": 6,
+        "o_s": 2,
+        "o_r": 2,
+        "o_cr": 6
+      },
+      {
+        "c": "مِنْ",
+        "d": "min",
+        "e_en": "[of]",
+        "e_ur": "میں سے ہیں",
+        "a": 2,
+        "o_ca": 1535,
+        "o_s": 6,
+        "o_r": 1,
+        "o_cr": 1462
+      },
+      {
+        "c": "كُلِّ",
+        "d": "kulli",
+        "e_en": "(are) every",
+        "e_ur": "ہر قسم کے",
+        "a": 3,
+        "o_ca": 114,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 103
+      },
+      {
+        "c": "فَاكِهَةٍ",
+        "d": "fākihatin",
+        "e_en": "fruits",
+        "e_ur": "پھلوں",
+        "a": 4,
+        "o_ca": 2,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 2
+      },
+      {
+        "c": "زَوْجَانِ",
+        "d": "zawjāni",
+        "e_en": "(in) pairs",
+        "e_ur": "دو قسم",
+        "a": 5,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      }
+    ],
+    "a": {
+      "g_en": "In both of them are of every fruit, two kinds.",
+      "g_ur": "دونوں باغوں میں ہر پھل کی دو قسمیں"
+    }
+  },
+  "53": {
+    "w": [
+      {
+        "c": "فَبِأَيِّ",
+        "d": "fabi-ayyi",
+        "e_en": "So which",
+        "e_ur": "تو ساتھ کون سی",
+        "a": 1,
+        "o_ca": 22,
+        "o_s": 19,
+        "o_r": 4,
+        "o_cr": 23
+      },
+      {
+        "c": "ءَالَاءِ",
+        "d": "ālāi",
+        "e_en": "(of the) favors",
+        "e_ur": "نعمتوں کے",
+        "a": 2,
+        "o_ca": 20,
+        "o_s": 19,
+        "o_r": 4,
+        "o_cr": 20
+      },
+      {
+        "c": "رَبِّكُمَا",
+        "d": "rabbikumā",
+        "e_en": "(of) your Lord",
+        "e_ur": "اپنے رب کی تم دونوں",
+        "a": 3,
+        "o_ca": 19,
+        "o_s": 19,
+        "o_r": 4,
+        "o_cr": 19
+      },
+      {
+        "c": "تُكَذِّبَانِ",
+        "d": "tukadhibāni",
+        "e_en": "will you both deny",
+        "e_ur": "تم دونوں جھٹلاؤ گے",
+        "a": 4,
+        "o_ca": 19,
+        "o_s": 19,
+        "o_r": 4,
+        "o_cr": 19
+      }
+    ],
+    "a": {
+      "g_en": "So which of the favors of your Lord would you deny?",
+      "g_ur": "پھر تم اپنے رب کی کن کن نعمتوں کو جھٹلاؤ گے"
+    }
+  },
+  "54": {
+    "w": [
+      {
+        "c": "مُتَّكِئِينَ",
+        "d": "muttakiīna",
+        "e_en": "Reclining",
+        "e_ur": "تکیہ لگائے ہوئے ہوں گے",
+        "a": 1,
+        "o_ca": 4,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 5
+      },
+      {
+        "c": "عَلَى",
+        "d": "ʿalā",
+        "e_en": "on",
+        "e_ur": "پر",
+        "a": 2,
+        "o_ca": 595,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 551
+      },
+      {
+        "c": "فُرُشٍ",
+        "d": "furushin",
+        "e_en": "couches",
+        "e_ur": "ایسے فرشوں",
+        "a": 3,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "بَطَائِنُهَا",
+        "d": "baṭāinuhā",
+        "e_en": "(whose) inner linings",
+        "e_ur": "ان کے استر",
+        "a": 4,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "مِنْ",
+        "d": "min",
+        "e_en": "(are) of",
+        "e_ur": "ہوں گے  کے",
+        "a": 5,
+        "o_ca": 1536,
+        "o_s": 7,
+        "o_r": 2,
+        "o_cr": 1463
+      },
+      {
+        "c": "إِسْتَبْرَقٍ",
+        "d": "is'tabraqin",
+        "e_en": "brocade",
+        "e_ur": "موٹے تافتے",
+        "a": 6,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "وَجَنَى",
+        "d": "wajanā",
+        "e_en": "and (the) fruit",
+        "e_ur": "اور پھل",
+        "a": 7,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "الْجَنَّتَيْنِ",
+        "d": "l-janatayni",
+        "e_en": "(of) both the gardens",
+        "e_ur": "دونوں باغوں کے۔ پھل توڑیں گے دونوں باغوں کے",
+        "a": 8,
+        "o_ca": 2,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 2
+      },
+      {
+        "c": "دَانٍ",
+        "d": "dānin",
+        "e_en": "(is) near",
+        "e_ur": "قریب قریب ہوں گے۔ جھکے ہوئے ہوں گے",
+        "a": 9,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      }
+    ],
+    "a": {
+      "g_en": "[They are] reclining on beds whose linings are of silk brocade, and the fruit of the two gardens is hanging low.",
+      "g_ur": "وہ تکیہ لگائے ایسے بچھونوں پر بیٹھے ہوں گے جن کے استر دبیزریشم کے ہوں گےاور پھل ان باغوں کا جھک رہا ہوگا"
+    }
+  },
+  "55": {
+    "w": [
+      {
+        "c": "فَبِأَيِّ",
+        "d": "fabi-ayyi",
+        "e_en": "So which",
+        "e_ur": "تو ساتھ کون سی",
+        "a": 1,
+        "o_ca": 23,
+        "o_s": 20,
+        "o_r": 5,
+        "o_cr": 24
+      },
+      {
+        "c": "ءَالَاءِ",
+        "d": "ālāi",
+        "e_en": "(of the) favors",
+        "e_ur": "نعمتوں کے",
+        "a": 2,
+        "o_ca": 21,
+        "o_s": 20,
+        "o_r": 5,
+        "o_cr": 21
+      },
+      {
+        "c": "رَبِّكُمَا",
+        "d": "rabbikumā",
+        "e_en": "(of) your Lord",
+        "e_ur": "اپنے رب کی تم دونوں",
+        "a": 3,
+        "o_ca": 20,
+        "o_s": 20,
+        "o_r": 5,
+        "o_cr": 20
+      },
+      {
+        "c": "تُكَذِّبَانِ",
+        "d": "tukadhibāni",
+        "e_en": "will you both deny",
+        "e_ur": "تم دونوں جھٹلاؤ گے",
+        "a": 4,
+        "o_ca": 20,
+        "o_s": 20,
+        "o_r": 5,
+        "o_cr": 20
+      }
+    ],
+    "a": {
+      "g_en": "So which of the favors of your Lord would you deny?",
+      "g_ur": "پھر تم اپنے رب کی کن کن نعمتوں کو جھٹلاؤ گے"
+    }
+  },
+  "56": {
+    "w": [
+      {
+        "c": "فِيهِنَّ",
+        "d": "fīhinna",
+        "e_en": "In them",
+        "e_ur": "ان میں ہوں گی",
+        "a": 1,
+        "o_ca": 7,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 6
+      },
+      {
+        "c": "قَاصِرَاتُ",
+        "d": "qāṣirātu",
+        "e_en": "(will be) companions of modest gaze",
+        "e_ur": "جھکانے والیاں",
+        "a": 2,
+        "o_ca": 3,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 3
+      },
+      {
+        "c": "الطَّرْفِ",
+        "d": "l-ṭarfi",
+        "e_en": "(will be) companions of modest gaze",
+        "e_ur": "نگاہوں کو",
+        "a": 3,
+        "o_ca": 3,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 3
+      },
+      {
+        "c": "لَمْ",
+        "d": "lam",
+        "e_en": "not",
+        "e_ur": "نہیں",
+        "a": 4,
+        "o_ca": 140,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 118
+      },
+      {
+        "c": "يَطْمِثْهُنَّ",
+        "d": "yaṭmith'hunna",
+        "e_en": "has touched them",
+        "e_ur": "چھوا ہوگا ان کو",
+        "a": 5,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "إِنْسٌ",
+        "d": "insun",
+        "e_en": "any man",
+        "e_ur": "کسی انسان نے",
+        "a": 6,
+        "o_ca": 2,
+        "o_s": 2,
+        "o_r": 1,
+        "o_cr": 2
+      },
+      {
+        "c": "قَبْلَهُمْ",
+        "d": "qablahum",
+        "e_en": "before them",
+        "e_ur": "ان سے پہلے",
+        "a": 7,
+        "o_ca": 14,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 13
+      },
+      {
+        "c": "وَلَا",
+        "d": "walā",
+        "e_en": "and not",
+        "e_ur": "اور نہ",
+        "a": 8,
+        "o_ca": 587,
+        "o_s": 3,
+        "o_r": 1,
+        "o_cr": 558
+      },
+      {
+        "c": "جَانٌّ",
+        "d": "jānnun",
+        "e_en": "any jinn",
+        "e_ur": "کسی جن نے",
+        "a": 9,
+        "o_ca": 4,
+        "o_s": 2,
+        "o_r": 1,
+        "o_cr": 4
+      }
+    ],
+    "a": {
+      "g_en": "In them are women limiting [their] glances, untouched before them by man or jinni -",
+      "g_ur": "ان میں نیچی نگاہ والی عورتیں ہوں گی، جنھیں ان لوگوں سے پہلے نہ کسی انسان نے چھوا ہوگا نہ کسی جن نے"
+    }
+  },
+  "57": {
+    "w": [
+      {
+        "c": "فَبِأَيِّ",
+        "d": "fabi-ayyi",
+        "e_en": "So which",
+        "e_ur": "تو ساتھ کون سی",
+        "a": 1,
+        "o_ca": 24,
+        "o_s": 21,
+        "o_r": 6,
+        "o_cr": 25
+      },
+      {
+        "c": "ءَالَاءِ",
+        "d": "ālāi",
+        "e_en": "(of the) favors",
+        "e_ur": "نعمتوں کے",
+        "a": 2,
+        "o_ca": 22,
+        "o_s": 21,
+        "o_r": 6,
+        "o_cr": 22
+      },
+      {
+        "c": "رَبِّكُمَا",
+        "d": "rabbikumā",
+        "e_en": "(of) your Lord",
+        "e_ur": "اپنے رب کی تم دونوں",
+        "a": 3,
+        "o_ca": 21,
+        "o_s": 21,
+        "o_r": 6,
+        "o_cr": 21
+      },
+      {
+        "c": "تُكَذِّبَانِ",
+        "d": "tukadhibāni",
+        "e_en": "will you both deny",
+        "e_ur": "تم دونوں جھٹلاؤ گے",
+        "a": 4,
+        "o_ca": 21,
+        "o_s": 21,
+        "o_r": 6,
+        "o_cr": 21
+      }
+    ],
+    "a": {
+      "g_en": "So which of the favors of your Lord would you deny? -",
+      "g_ur": "پھر تم اپنے رب کی کن کن نعمتوں کو جھٹلاؤ گے"
+    }
+  },
+  "58": {
+    "w": [
+      {
+        "c": "كَأَنَّهُنَّ",
+        "d": "ka-annahunna",
+        "e_en": "As if they were",
+        "e_ur": "گویا کہ وہ",
+        "a": 1,
+        "o_ca": 2,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 2
+      },
+      {
+        "c": "الْيَاقُوتُ",
+        "d": "l-yāqūtu",
+        "e_en": "rubies",
+        "e_ur": "یاقوت ہیں",
+        "a": 2,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "وَالْمَرْجَانُ",
+        "d": "wal-marjānu",
+        "e_en": "and coral",
+        "e_ur": "اور موتی",
+        "a": 3,
+        "o_ca": 2,
+        "o_s": 2,
+        "o_r": 1,
+        "o_cr": 2
+      }
+    ],
+    "a": {
+      "g_en": "As if they were rubies and coral.",
+      "g_ur": "وہ ایسی ہوں گی جیسے کہ یاقوت اورمرجان"
+    }
+  },
+  "59": {
+    "w": [
+      {
+        "c": "فَبِأَيِّ",
+        "d": "fabi-ayyi",
+        "e_en": "So which",
+        "e_ur": "تو ساتھ کون سی",
+        "a": 1,
+        "o_ca": 25,
+        "o_s": 22,
+        "o_r": 7,
+        "o_cr": 26
+      },
+      {
+        "c": "ءَالَاءِ",
+        "d": "ālāi",
+        "e_en": "(of the) favors",
+        "e_ur": "نعمتوں کے",
+        "a": 2,
+        "o_ca": 23,
+        "o_s": 22,
+        "o_r": 7,
+        "o_cr": 23
+      },
+      {
+        "c": "رَبِّكُمَا",
+        "d": "rabbikumā",
+        "e_en": "(of) your Lord",
+        "e_ur": "اپنے رب کی تم دونوں",
+        "a": 3,
+        "o_ca": 22,
+        "o_s": 22,
+        "o_r": 7,
+        "o_cr": 22
+      },
+      {
+        "c": "تُكَذِّبَانِ",
+        "d": "tukadhibāni",
+        "e_en": "will you both deny",
+        "e_ur": "تم دونوں جھٹلاؤ گے",
+        "a": 4,
+        "o_ca": 22,
+        "o_s": 22,
+        "o_r": 7,
+        "o_cr": 22
+      }
+    ],
+    "a": {
+      "g_en": "So which of the favors of your Lord would you deny?",
+      "g_ur": "پھر تم اپنے رب کی کن کن نعمتوں کو جھٹلاؤ گے"
+    }
+  },
+  "60": {
+    "w": [
+      {
+        "c": "هَلْ",
+        "d": "hal",
+        "e_en": "Is",
+        "e_ur": "کیا",
+        "a": 1,
+        "o_ca": 57,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 58
+      },
+      {
+        "c": "جَزَاءُ",
+        "d": "jazāu",
+        "e_en": "(the) reward",
+        "e_ur": "بدلہ ہے",
+        "a": 2,
+        "o_ca": 12,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 9
+      },
+      {
+        "c": "الْإِحْسَانِ",
+        "d": "l-iḥ'sāni",
+        "e_en": "for the good",
+        "e_ur": "احسن کا",
+        "a": 3,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "إِلَّا",
+        "d": "illā",
+        "e_en": "but",
+        "e_ur": "سوائے",
+        "a": 4,
+        "o_ca": 600,
+        "o_s": 2,
+        "o_r": 1,
+        "o_cr": 600
+      },
+      {
+        "c": "الْإِحْسَانُ",
+        "d": "l-iḥ'sānu",
+        "e_en": "good",
+        "e_ur": "احسان کے (کچھ اور ہے ؟ )",
+        "a": 5,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      }
+    ],
+    "a": {
+      "g_en": "Is the reward for good [anything] but good?",
+      "g_ur": "نیکی کا بدلہ نیکی کے سوا اور کیا ہے"
+    }
+  },
+  "61": {
+    "w": [
+      {
+        "c": "فَبِأَيِّ",
+        "d": "fabi-ayyi",
+        "e_en": "So which",
+        "e_ur": "تو ساتھ کون سی",
+        "a": 1,
+        "o_ca": 26,
+        "o_s": 23,
+        "o_r": 8,
+        "o_cr": 27
+      },
+      {
+        "c": "ءَالَاءِ",
+        "d": "ālāi",
+        "e_en": "(of the) favors",
+        "e_ur": "نعمتوں کے",
+        "a": 2,
+        "o_ca": 24,
+        "o_s": 23,
+        "o_r": 8,
+        "o_cr": 24
+      },
+      {
+        "c": "رَبِّكُمَا",
+        "d": "rabbikumā",
+        "e_en": "(of) your Lord",
+        "e_ur": "اپنے رب کی تم دونوں",
+        "a": 3,
+        "o_ca": 23,
+        "o_s": 23,
+        "o_r": 8,
+        "o_cr": 23
+      },
+      {
+        "c": "تُكَذِّبَانِ",
+        "d": "tukadhibāni",
+        "e_en": "will you both deny",
+        "e_ur": "تم دونوں جھٹلاؤ گے",
+        "a": 4,
+        "o_ca": 23,
+        "o_s": 23,
+        "o_r": 8,
+        "o_cr": 23
+      }
+    ],
+    "a": {
+      "g_en": "So which of the favors of your Lord would you deny?",
+      "g_ur": "پھر تم اپنے رب کی کن کن نعمتوں کو جھٹلاؤگے"
+    }
+  },
+  "62": {
+    "w": [
+      {
+        "c": "وَمِنْ",
+        "d": "wamin",
+        "e_en": "Besides these two",
+        "e_ur": "اور",
+        "a": 1,
+        "o_ca": 60,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 61
+      },
+      {
+        "c": "دُونِهِمَا",
+        "d": "dūnihimā",
+        "e_en": "Besides these two",
+        "e_ur": "ان دونوں کے علاوہ",
+        "a": 2,
+        "o_ca": 2,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 2
+      },
+      {
+        "c": "جَنَّتَانِ",
+        "d": "jannatāni",
+        "e_en": "(are) two gardens",
+        "e_ur": "دو باغ ہیں",
+        "a": 3,
+        "o_ca": 3,
+        "o_s": 2,
+        "o_r": 2,
+        "o_cr": 3
+      }
+    ],
+    "a": {
+      "g_en": "And below them both [in excellence] are two [other] gardens -",
+      "g_ur": "اور ان کے سوا دو باغ اور ہیں"
+    }
+  },
+  "63": {
+    "w": [
+      {
+        "c": "فَبِأَيِّ",
+        "d": "fabi-ayyi",
+        "e_en": "So which",
+        "e_ur": "تو ساتھ کون سی",
+        "a": 1,
+        "o_ca": 27,
+        "o_s": 24,
+        "o_r": 9,
+        "o_cr": 28
+      },
+      {
+        "c": "ءَالَاءِ",
+        "d": "ālāi",
+        "e_en": "(of the) favors",
+        "e_ur": "نعمتوں کے",
+        "a": 2,
+        "o_ca": 25,
+        "o_s": 24,
+        "o_r": 9,
+        "o_cr": 25
+      },
+      {
+        "c": "رَبِّكُمَا",
+        "d": "rabbikumā",
+        "e_en": "(of) your Lord",
+        "e_ur": "اپنے رب کی تم دونوں",
+        "a": 3,
+        "o_ca": 24,
+        "o_s": 24,
+        "o_r": 9,
+        "o_cr": 24
+      },
+      {
+        "c": "تُكَذِّبَانِ",
+        "d": "tukadhibāni",
+        "e_en": "will you both deny",
+        "e_ur": "تم دونوں جھٹلاؤ گے",
+        "a": 4,
+        "o_ca": 24,
+        "o_s": 24,
+        "o_r": 9,
+        "o_cr": 24
+      }
+    ],
+    "a": {
+      "g_en": "So which of the favors of your Lord would you deny? -",
+      "g_ur": "پھر تم اپنے رب کی کن کن نعمتوں کو جھٹلاؤ گے"
+    }
+  },
+  "64": {
+    "w": [
+      {
+        "c": "مُدْهَامَّتَانِ",
+        "d": "mud'hāmmatāni",
+        "e_en": "Dark green",
+        "e_ur": "نہایت سبز",
+        "a": 1,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      }
+    ],
+    "a": {
+      "g_en": "Dark green [in color].",
+      "g_ur": "دونوں گہرے سبز سیاہی مائل"
+    }
+  },
+  "65": {
+    "w": [
+      {
+        "c": "فَبِأَيِّ",
+        "d": "fabi-ayyi",
+        "e_en": "So which",
+        "e_ur": "تو ساتھ کون سی",
+        "a": 1,
+        "o_ca": 28,
+        "o_s": 25,
+        "o_r": 10,
+        "o_cr": 29
+      },
+      {
+        "c": "ءَالَاءِ",
+        "d": "ālāi",
+        "e_en": "(of the) favors",
+        "e_ur": "نعمتوں کے",
+        "a": 2,
+        "o_ca": 26,
+        "o_s": 25,
+        "o_r": 10,
+        "o_cr": 26
+      },
+      {
+        "c": "رَبِّكُمَا",
+        "d": "rabbikumā",
+        "e_en": "(of) your Lord",
+        "e_ur": "اپنے رب کی تم دونوں",
+        "a": 3,
+        "o_ca": 25,
+        "o_s": 25,
+        "o_r": 10,
+        "o_cr": 25
+      },
+      {
+        "c": "تُكَذِّبَانِ",
+        "d": "tukadhibāni",
+        "e_en": "will you both deny",
+        "e_ur": "تم دونوں جھٹلاؤ گے",
+        "a": 4,
+        "o_ca": 25,
+        "o_s": 25,
+        "o_r": 10,
+        "o_cr": 25
+      }
+    ],
+    "a": {
+      "g_en": "So which of the favors of your Lord would you deny?",
+      "g_ur": "پھر تم اپنے رب کی کن کن نعمتوں کو جھٹلاؤ گے"
+    }
+  },
+  "66": {
+    "w": [
+      {
+        "c": "فِيهِمَا",
+        "d": "fīhimā",
+        "e_en": "In both of them",
+        "e_ur": "ان دونوں میں",
+        "a": 1,
+        "o_ca": 7,
+        "o_s": 3,
+        "o_r": 3,
+        "o_cr": 7
+      },
+      {
+        "c": "عَيْنَانِ",
+        "d": "ʿaynāni",
+        "e_en": "(are) two springs",
+        "e_ur": "دو چشمے ہیں",
+        "a": 2,
+        "o_ca": 2,
+        "o_s": 2,
+        "o_r": 2,
+        "o_cr": 2
+      },
+      {
+        "c": "نَضَّاخَتَانِ",
+        "d": "naḍḍākhatāni",
+        "e_en": "gushing forth",
+        "e_ur": "جوش مارنے والے",
+        "a": 3,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      }
+    ],
+    "a": {
+      "g_en": "In both of them are two springs, spouting.",
+      "g_ur": "ان میں دوچشمے ہوں گے ابلتے ہوئے"
+    }
+  },
+  "67": {
+    "w": [
+      {
+        "c": "فَبِأَيِّ",
+        "d": "fabi-ayyi",
+        "e_en": "So which",
+        "e_ur": "تو ساتھ کون سی",
+        "a": 1,
+        "o_ca": 29,
+        "o_s": 26,
+        "o_r": 11,
+        "o_cr": 30
+      },
+      {
+        "c": "ءَالَاءِ",
+        "d": "ālāi",
+        "e_en": "(of the) favors",
+        "e_ur": "نعمتوں کے",
+        "a": 2,
+        "o_ca": 27,
+        "o_s": 26,
+        "o_r": 11,
+        "o_cr": 27
+      },
+      {
+        "c": "رَبِّكُمَا",
+        "d": "rabbikumā",
+        "e_en": "(of) your Lord",
+        "e_ur": "اپنے رب کی تم دونوں",
+        "a": 3,
+        "o_ca": 26,
+        "o_s": 26,
+        "o_r": 11,
+        "o_cr": 26
+      },
+      {
+        "c": "تُكَذِّبَانِ",
+        "d": "tukadhibāni",
+        "e_en": "will you both deny",
+        "e_ur": "تم دونوں  جھٹلاؤ گے",
+        "a": 4,
+        "o_ca": 26,
+        "o_s": 26,
+        "o_r": 11,
+        "o_cr": 26
+      }
+    ],
+    "a": {
+      "g_en": "So which of the favors of your Lord would you deny?",
+      "g_ur": "پھر تم اپنے رب کی کن کن نعمتوں کو جھٹلاؤگے"
+    }
+  },
+  "68": {
+    "w": [
+      {
+        "c": "فِيهِمَا",
+        "d": "fīhimā",
+        "e_en": "In both of them",
+        "e_ur": "ان دونوں میں",
+        "a": 1,
+        "o_ca": 8,
+        "o_s": 4,
+        "o_r": 4,
+        "o_cr": 8
+      },
+      {
+        "c": "فَاكِهَةٌ",
+        "d": "fākihatun",
+        "e_en": "(are) fruits",
+        "e_ur": "پھل ہیں",
+        "a": 2,
+        "o_ca": 4,
+        "o_s": 2,
+        "o_r": 1,
+        "o_cr": 4
+      },
+      {
+        "c": "وَنَخْلٌ",
+        "d": "wanakhlun",
+        "e_en": "and date-palms",
+        "e_ur": "اور کھجور کے درخت",
+        "a": 3,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "وَرُمَّانٌ",
+        "d": "warummānun",
+        "e_en": "and pomegranates",
+        "e_ur": "اور انار",
+        "a": 4,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      }
+    ],
+    "a": {
+      "g_en": "In both of them are fruit and palm trees and pomegranates.",
+      "g_ur": "ان میں پھل اور کھجور اور انارہوں گے"
+    }
+  },
+  "69": {
+    "w": [
+      {
+        "c": "فَبِأَيِّ",
+        "d": "fabi-ayyi",
+        "e_en": "So which",
+        "e_ur": "تو ساتھ کون سی",
+        "a": 1,
+        "o_ca": 30,
+        "o_s": 27,
+        "o_r": 12,
+        "o_cr": 31
+      },
+      {
+        "c": "ءَالَاءِ",
+        "d": "ālāi",
+        "e_en": "(of the) favors",
+        "e_ur": "نعمتوں کے",
+        "a": 2,
+        "o_ca": 28,
+        "o_s": 27,
+        "o_r": 12,
+        "o_cr": 28
+      },
+      {
+        "c": "رَبِّكُمَا",
+        "d": "rabbikumā",
+        "e_en": "(of) your Lord",
+        "e_ur": "اپنے رب کی تم دونوں",
+        "a": 3,
+        "o_ca": 27,
+        "o_s": 27,
+        "o_r": 12,
+        "o_cr": 27
+      },
+      {
+        "c": "تُكَذِّبَانِ",
+        "d": "tukadhibāni",
+        "e_en": "will you both deny",
+        "e_ur": "تم دونوں جھٹلاؤ گے",
+        "a": 4,
+        "o_ca": 27,
+        "o_s": 27,
+        "o_r": 12,
+        "o_cr": 27
+      }
+    ],
+    "a": {
+      "g_en": "So which of the favors of your Lord would you deny?",
+      "g_ur": "پھر تم اپنے رب کی کن کن نعمتوں کو جھٹلاؤ گے"
+    }
+  },
+  "70": {
+    "w": [
+      {
+        "c": "فِيهِنَّ",
+        "d": "fīhinna",
+        "e_en": "In them",
+        "e_ur": "ان میں  ہیں",
+        "a": 1,
+        "o_ca": 8,
+        "o_s": 2,
+        "o_r": 2,
+        "o_cr": 7
+      },
+      {
+        "c": "خَيْرَاتٌ",
+        "d": "khayrātun",
+        "e_en": "(are) good",
+        "e_ur": "اچھی عورتیں",
+        "a": 2,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "حِسَانٌ",
+        "d": "ḥisānun",
+        "e_en": "and beautiful ones",
+        "e_ur": "خوبصورت",
+        "a": 3,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      }
+    ],
+    "a": {
+      "g_en": "In them are good and beautiful women -",
+      "g_ur": "ان میں خوب سیرت، خوب صورت عورتیں ہوں گی"
+    }
+  },
+  "71": {
+    "w": [
+      {
+        "c": "فَبِأَيِّ",
+        "d": "fabi-ayyi",
+        "e_en": "So which",
+        "e_ur": "تو ساتھ کون سی",
+        "a": 1,
+        "o_ca": 31,
+        "o_s": 28,
+        "o_r": 13,
+        "o_cr": 32
+      },
+      {
+        "c": "ءَالَاءِ",
+        "d": "ālāi",
+        "e_en": "(of the) favors",
+        "e_ur": "نعمتوں کے",
+        "a": 2,
+        "o_ca": 29,
+        "o_s": 28,
+        "o_r": 13,
+        "o_cr": 29
+      },
+      {
+        "c": "رَبِّكُمَا",
+        "d": "rabbikumā",
+        "e_en": "(of) your Lord",
+        "e_ur": "اپنے رب کی تم دونوں",
+        "a": 3,
+        "o_ca": 28,
+        "o_s": 28,
+        "o_r": 13,
+        "o_cr": 28
+      },
+      {
+        "c": "تُكَذِّبَانِ",
+        "d": "tukadhibāni",
+        "e_en": "will you both deny",
+        "e_ur": "تم دونوں جھٹلاؤ گے",
+        "a": 4,
+        "o_ca": 28,
+        "o_s": 28,
+        "o_r": 13,
+        "o_cr": 28
+      }
+    ],
+    "a": {
+      "g_en": "So which of the favors of your Lord would you deny? -",
+      "g_ur": "پھر تم اپنے رب کی کن کن نعمتوں کو جھٹلاؤ گے"
+    }
+  },
+  "72": {
+    "w": [
+      {
+        "c": "حُورٌ",
+        "d": "ḥūrun",
+        "e_en": "Fair ones",
+        "e_ur": "حوریں",
+        "a": 1,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "مَقْصُورَاتٌ",
+        "d": "maqṣūrātun",
+        "e_en": "restrained",
+        "e_ur": "ٹھہرائی ہوئیں۔ روکی ہوئیں",
+        "a": 2,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "فِي",
+        "d": "fī",
+        "e_en": "in",
+        "e_ur": "میں",
+        "a": 3,
+        "o_ca": 1070,
+        "o_s": 5,
+        "o_r": 1,
+        "o_cr": 1016
+      },
+      {
+        "c": "الْخِيَامِ",
+        "d": "l-khiyāmi",
+        "e_en": "the pavilions",
+        "e_ur": "خیموں",
+        "a": 4,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      }
+    ],
+    "a": {
+      "g_en": "Fair ones reserved in pavilions -",
+      "g_ur": "حوریں خیموں میں رہنے والیاں"
+    }
+  },
+  "73": {
+    "w": [
+      {
+        "c": "فَبِأَيِّ",
+        "d": "fabi-ayyi",
+        "e_en": "So which",
+        "e_ur": "تو ساتھ کون سی",
+        "a": 1,
+        "o_ca": 32,
+        "o_s": 29,
+        "o_r": 14,
+        "o_cr": 33
+      },
+      {
+        "c": "ءَالَاءِ",
+        "d": "ālāi",
+        "e_en": "(of the) favors",
+        "e_ur": "نعمتوں کے",
+        "a": 2,
+        "o_ca": 30,
+        "o_s": 29,
+        "o_r": 14,
+        "o_cr": 30
+      },
+      {
+        "c": "رَبِّكُمَا",
+        "d": "rabbikumā",
+        "e_en": "(of) your Lord",
+        "e_ur": "اپنے رب کی تم دونوں",
+        "a": 3,
+        "o_ca": 29,
+        "o_s": 29,
+        "o_r": 14,
+        "o_cr": 29
+      },
+      {
+        "c": "تُكَذِّبَانِ",
+        "d": "tukadhibāni",
+        "e_en": "will you both deny",
+        "e_ur": "تم دونوں جھٹلاؤ گے",
+        "a": 4,
+        "o_ca": 29,
+        "o_s": 29,
+        "o_r": 14,
+        "o_cr": 29
+      }
+    ],
+    "a": {
+      "g_en": "So which of the favors of your Lord would you deny? -",
+      "g_ur": "پھر تم اپنے رب کی کن کن نعمتوں کو جھٹلاؤ گے"
+    }
+  },
+  "74": {
+    "w": [
+      {
+        "c": "لَمْ",
+        "d": "lam",
+        "e_en": "Not",
+        "e_ur": "نہیں",
+        "a": 1,
+        "o_ca": 141,
+        "o_s": 2,
+        "o_r": 2,
+        "o_cr": 119
+      },
+      {
+        "c": "يَطْمِثْهُنَّ",
+        "d": "yaṭmith'hunna",
+        "e_en": "has touched them",
+        "e_ur": "چھوا ہوگا ان کو",
+        "a": 2,
+        "o_ca": 2,
+        "o_s": 2,
+        "o_r": 2,
+        "o_cr": 2
+      },
+      {
+        "c": "إِنْسٌ",
+        "d": "insun",
+        "e_en": "any man",
+        "e_ur": "کسی انسان نے",
+        "a": 3,
+        "o_ca": 3,
+        "o_s": 3,
+        "o_r": 2,
+        "o_cr": 3
+      },
+      {
+        "c": "قَبْلَهُمْ",
+        "d": "qablahum",
+        "e_en": "before them",
+        "e_ur": "ان سے پہلے",
+        "a": 4,
+        "o_ca": 15,
+        "o_s": 2,
+        "o_r": 2,
+        "o_cr": 14
+      },
+      {
+        "c": "وَلَا",
+        "d": "walā",
+        "e_en": "and not",
+        "e_ur": "اور نہ",
+        "a": 5,
+        "o_ca": 588,
+        "o_s": 4,
+        "o_r": 2,
+        "o_cr": 559
+      },
+      {
+        "c": "جَانٌّ",
+        "d": "jānnun",
+        "e_en": "any jinn",
+        "e_ur": "کسی جن نے",
+        "a": 6,
+        "o_ca": 5,
+        "o_s": 3,
+        "o_r": 2,
+        "o_cr": 5
+      }
+    ],
+    "a": {
+      "g_en": "Untouched before them by man or jinni -",
+      "g_ur": "ان سے پہلے ان کو نہ کسی انسان نے ہاتھ لگایا ہوگا اور نہ کسی جن نے"
+    }
+  },
+  "75": {
+    "w": [
+      {
+        "c": "فَبِأَيِّ",
+        "d": "fabi-ayyi",
+        "e_en": "So which",
+        "e_ur": "تو ساتھ کون سی",
+        "a": 1,
+        "o_ca": 33,
+        "o_s": 30,
+        "o_r": 15,
+        "o_cr": 34
+      },
+      {
+        "c": "ءَالَاءِ",
+        "d": "ālāi",
+        "e_en": "(of the) favors",
+        "e_ur": "نعمتوں کے",
+        "a": 2,
+        "o_ca": 31,
+        "o_s": 30,
+        "o_r": 15,
+        "o_cr": 31
+      },
+      {
+        "c": "رَبِّكُمَا",
+        "d": "rabbikumā",
+        "e_en": "(of) your Lord",
+        "e_ur": "اپنے رب کی",
+        "a": 3,
+        "o_ca": 30,
+        "o_s": 30,
+        "o_r": 15,
+        "o_cr": 30
+      },
+      {
+        "c": "تُكَذِّبَانِ",
+        "d": "tukadhibāni",
+        "e_en": "will you both deny",
+        "e_ur": "تم دونوں تم دونوں جھٹلاؤ گے",
+        "a": 4,
+        "o_ca": 30,
+        "o_s": 30,
+        "o_r": 15,
+        "o_cr": 30
+      }
+    ],
+    "a": {
+      "g_en": "So which of the favors of your Lord would you deny? -",
+      "g_ur": "پھر تم اپنے رب کی کن کن نعمتوں کو جھٹلاؤ گے"
+    }
+  },
+  "76": {
+    "w": [
+      {
+        "c": "مُتَّكِئِينَ",
+        "d": "muttakiīna",
+        "e_en": "Reclining",
+        "e_ur": "تکیہ لگائے ہوئے ہوں گے",
+        "a": 1,
+        "o_ca": 5,
+        "o_s": 2,
+        "o_r": 2,
+        "o_cr": 6
+      },
+      {
+        "c": "عَلَى",
+        "d": "ʿalā",
+        "e_en": "on",
+        "e_ur": "پر",
+        "a": 2,
+        "o_ca": 596,
+        "o_s": 2,
+        "o_r": 2,
+        "o_cr": 552
+      },
+      {
+        "c": "رَفْرَفٍ",
+        "d": "rafrafin",
+        "e_en": "cushions",
+        "e_ur": "مسندوں",
+        "a": 3,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "خُضْرٍ",
+        "d": "khuḍ'rin",
+        "e_en": "green",
+        "e_ur": "سبز",
+        "a": 4,
+        "o_ca": 3,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 3
+      },
+      {
+        "c": "وَعَبْقَرِيٍّ",
+        "d": "waʿabqariyyin",
+        "e_en": "and carpets",
+        "e_ur": "اور نادر",
+        "a": 5,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "حِسَانٍ",
+        "d": "ḥisānin",
+        "e_en": "beautiful",
+        "e_ur": "نفیس",
+        "a": 6,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      }
+    ],
+    "a": {
+      "g_en": "Reclining on green cushions and beautiful fine carpets.",
+      "g_ur": "تکیہ لگائے سبز مسندوں پر اور قیمتی نفیس بچھونے پر"
+    }
+  },
+  "77": {
+    "w": [
+      {
+        "c": "فَبِأَيِّ",
+        "d": "fabi-ayyi",
+        "e_en": "So which",
+        "e_ur": "تو ساتھ کون سی",
+        "a": 1,
+        "o_ca": 34,
+        "o_s": 31,
+        "o_r": 16,
+        "o_cr": 35
+      },
+      {
+        "c": "ءَالَاءِ",
+        "d": "ālāi",
+        "e_en": "(of the) favors",
+        "e_ur": "نعمتوں کے",
+        "a": 2,
+        "o_ca": 32,
+        "o_s": 31,
+        "o_r": 16,
+        "o_cr": 32
+      },
+      {
+        "c": "رَبِّكُمَا",
+        "d": "rabbikumā",
+        "e_en": "(of) your Lord",
+        "e_ur": "اپنے رب کی تم دونوں",
+        "a": 3,
+        "o_ca": 31,
+        "o_s": 31,
+        "o_r": 16,
+        "o_cr": 31
+      },
+      {
+        "c": "تُكَذِّبَانِ",
+        "d": "tukadhibāni",
+        "e_en": "will you both deny",
+        "e_ur": "تم دونوں جھٹلاؤ گے",
+        "a": 4,
+        "o_ca": 31,
+        "o_s": 31,
+        "o_r": 16,
+        "o_cr": 31
+      }
+    ],
+    "a": {
+      "g_en": "So which of the favors of your Lord would you deny?",
+      "g_ur": "پھر تم اپنے رب کی کن کن نعمتوں کو جھٹلاؤ گے"
+    }
+  },
+  "78": {
+    "w": [
+      {
+        "c": "تَبَارَكَ",
+        "d": "tabāraka",
+        "e_en": "Blessed is",
+        "e_ur": "بہت بابرکت ہے",
+        "a": 1,
+        "o_ca": 5,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 6
+      },
+      {
+        "c": "اسْمُ",
+        "d": "us'mu",
+        "e_en": "(the) name",
+        "e_ur": "نام",
+        "a": 2,
+        "o_ca": 5,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 4
+      },
+      {
+        "c": "رَبِّكَ",
+        "d": "rabbika",
+        "e_en": "(of) your Lord",
+        "e_ur": "تیرے رب کا",
+        "a": 3,
+        "o_ca": 92,
+        "o_s": 2,
+        "o_r": 1,
+        "o_cr": 107
+      },
+      {
+        "c": "ذِي",
+        "d": "dhī",
+        "e_en": "Owner",
+        "e_ur": "جو صاحب",
+        "a": 4,
+        "o_ca": 13,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 19
+      },
+      {
+        "c": "الْجَلَالِ",
+        "d": "l-jalāli",
+        "e_en": "(of) Majesty",
+        "e_ur": "جلال ہے",
+        "a": 5,
+        "o_ca": 2,
+        "o_s": 2,
+        "o_r": 1,
+        "o_cr": 2
+      },
+      {
+        "c": "وَالْإِكْرَامِ",
+        "d": "wal-ik'rāmi",
+        "e_en": "and Honor",
+        "e_ur": "اور کریم ہے۔ صاحب اکرام ہے",
+        "a": 6,
+        "o_ca": 2,
+        "o_s": 2,
+        "o_r": 1,
+        "o_cr": 2
+      }
+    ],
+    "a": {
+      "g_en": "Blessed is the name of your Lord, Owner of Majesty and Honor.",
+      "g_ur": "بڑا بابرکت ہے تیرے رب کا نام بڑائی والااور عظمت والا"
+    }
+  }
+}

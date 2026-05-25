@@ -1,0 +1,363 @@
+{
+  "1": {
+    "w": [
+      {
+        "c": "أَلَمْ",
+        "d": "alam",
+        "e_en": "Have not",
+        "e_ur": "کیا نہیں",
+        "a": 1,
+        "o_ca": 75,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 5
+      },
+      {
+        "c": "نَشْرَحْ",
+        "d": "nashraḥ",
+        "e_en": "We expanded",
+        "e_ur": "ہم نے کھول دیا",
+        "a": 2,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "لَكَ",
+        "d": "laka",
+        "e_en": "for you",
+        "e_ur": "تیرے لئے",
+        "a": 3,
+        "o_ca": 68,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 4
+      },
+      {
+        "c": "صَدْرَكَ",
+        "d": "ṣadraka",
+        "e_en": "your breast",
+        "e_ur": "سینہ تیرا",
+        "a": 4,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      }
+    ],
+    "a": {
+      "g_en": "Did We not expand for you, [O Muhammad], your breast?",
+      "g_ur": "کیا ہم نے تمھارا سینہ تمھارے لیے کھول نہیں دیا"
+    }
+  },
+  "2": {
+    "w": [
+      {
+        "c": "وَوَضَعْنَا",
+        "d": "wawaḍaʿnā",
+        "e_en": "And We removed",
+        "e_ur": "اور اٹھالیا ہم نے",
+        "a": 1,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "عَنْكَ",
+        "d": "ʿanka",
+        "e_en": "from you",
+        "e_ur": "تجھ سے",
+        "a": 2,
+        "o_ca": 8,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "وِزْرَكَ",
+        "d": "wiz'raka",
+        "e_en": "your burden",
+        "e_ur": "بوجھ تیرا",
+        "a": 3,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      }
+    ],
+    "a": {
+      "g_en": "And We removed from you your burden",
+      "g_ur": "اور تمھارا وہ بوجھ اُتار دیا"
+    }
+  },
+  "3": {
+    "w": [
+      {
+        "c": "الَّذِي",
+        "d": "alladhī",
+        "e_en": "Which",
+        "e_ur": "وہ جس نے",
+        "a": 1,
+        "o_ca": 260,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 8
+      },
+      {
+        "c": "أَنْقَضَ",
+        "d": "anqaḍa",
+        "e_en": "weighed upon",
+        "e_ur": "توڑ دی تھی",
+        "a": 2,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "ظَهْرَكَ",
+        "d": "ẓahraka",
+        "e_en": "your back",
+        "e_ur": "تیری کمر",
+        "a": 3,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      }
+    ],
+    "a": {
+      "g_en": "Which had weighed upon your back",
+      "g_ur": "جس نے تمھاری پیٹھ جھکادی تھی"
+    }
+  },
+  "4": {
+    "w": [
+      {
+        "c": "وَرَفَعْنَا",
+        "d": "warafaʿnā",
+        "e_en": "And We raised high",
+        "e_ur": "اور بلند کیا ہم نے",
+        "a": 1,
+        "o_ca": 5,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "لَكَ",
+        "d": "laka",
+        "e_en": "for you",
+        "e_ur": "تیرے لئے",
+        "a": 2,
+        "o_ca": 69,
+        "o_s": 2,
+        "o_r": 2,
+        "o_cr": 5
+      },
+      {
+        "c": "ذِكْرَكَ",
+        "d": "dhik'raka",
+        "e_en": "your esteem",
+        "e_ur": "تیرا ذکر",
+        "a": 3,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      }
+    ],
+    "a": {
+      "g_en": "And raised high for you your repute.",
+      "g_ur": "اور ہم نے تمھارا ذكر بلند کیا"
+    }
+  },
+  "5": {
+    "w": [
+      {
+        "c": "فَإِنَّ",
+        "d": "fa-inna",
+        "e_en": "So indeed",
+        "e_ur": "پس یقیناً",
+        "a": 1,
+        "o_ca": 71,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "مَعَ",
+        "d": "maʿa",
+        "e_en": "with",
+        "e_ur": "ساتھ",
+        "a": 2,
+        "o_ca": 57,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 2
+      },
+      {
+        "c": "الْعُسْرِ",
+        "d": "l-ʿus'ri",
+        "e_en": "the hardship",
+        "e_ur": "تنگی کے",
+        "a": 3,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "يُسْرًا",
+        "d": "yus'ran",
+        "e_en": "(is) ease",
+        "e_ur": "آسانی ہے",
+        "a": 4,
+        "o_ca": 5,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      }
+    ],
+    "a": {
+      "g_en": "For indeed, with hardship [will be] ease.",
+      "g_ur": "پس مشکل کے ساتھ آسانی ہے"
+    }
+  },
+  "6": {
+    "w": [
+      {
+        "c": "إِنَّ",
+        "d": "inna",
+        "e_en": "Indeed",
+        "e_ur": "بیشک",
+        "a": 1,
+        "o_ca": 601,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 18
+      },
+      {
+        "c": "مَعَ",
+        "d": "maʿa",
+        "e_en": "with",
+        "e_ur": "ساتھ",
+        "a": 2,
+        "o_ca": 58,
+        "o_s": 2,
+        "o_r": 2,
+        "o_cr": 3
+      },
+      {
+        "c": "الْعُسْرِ",
+        "d": "l-ʿus'ri",
+        "e_en": "the hardship",
+        "e_ur": "تنگی کے",
+        "a": 3,
+        "o_ca": 2,
+        "o_s": 2,
+        "o_r": 2,
+        "o_cr": 2
+      },
+      {
+        "c": "يُسْرًا",
+        "d": "yus'ran",
+        "e_en": "(is) ease",
+        "e_ur": "آسانی ہے",
+        "a": 4,
+        "o_ca": 6,
+        "o_s": 2,
+        "o_r": 2,
+        "o_cr": 2
+      }
+    ],
+    "a": {
+      "g_en": "Indeed, with hardship [will be] ease.",
+      "g_ur": "بے شک مشکل کے ساتھ آسانی ہے"
+    }
+  },
+  "7": {
+    "w": [
+      {
+        "c": "فَإِذَا",
+        "d": "fa-idhā",
+        "e_en": "So when",
+        "e_ur": "پس جب",
+        "a": 1,
+        "o_ca": 86,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 2
+      },
+      {
+        "c": "فَرَغْتَ",
+        "d": "faraghta",
+        "e_en": "you are free",
+        "e_ur": "تم فارغ ہوجاؤ",
+        "a": 2,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "فَانْصَبْ",
+        "d": "fa-inṣab",
+        "e_en": "then stand up",
+        "e_ur": "تو محنت کرو/ کھڑے ہوجاؤ",
+        "a": 3,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      }
+    ],
+    "a": {
+      "g_en": "So when you have finished [your duties], then stand up [for worship].",
+      "g_ur": "پھر جب تم فارغ ہوجاؤ تو محنت کرو"
+    }
+  },
+  "8": {
+    "w": [
+      {
+        "c": "وَإِلَى",
+        "d": "wa-ilā",
+        "e_en": "And to",
+        "e_ur": "اور  طرف",
+        "a": 1,
+        "o_ca": 27,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "رَبِّكَ",
+        "d": "rabbika",
+        "e_en": "your Lord",
+        "e_ur": "اپنے رب کی",
+        "a": 2,
+        "o_ca": 113,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 10
+      },
+      {
+        "c": "فَارْغَبْ",
+        "d": "fa-ir'ghab",
+        "e_en": "turn your attention",
+        "e_ur": "پس راغب ہوجاؤ/ رغبت کرو",
+        "a": 3,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      }
+    ],
+    "a": {
+      "g_en": "And to your Lord direct [your] longing.",
+      "g_ur": "اور اپنے رب کی طرف توجہ رکھو"
+    }
+  }
+}

@@ -1,0 +1,1100 @@
+{
+  "1": {
+    "w": [
+      {
+        "c": "لَمْ",
+        "d": "lam",
+        "e_en": "Not",
+        "e_ur": "نہیں",
+        "a": 1,
+        "o_ca": 162,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 122
+      },
+      {
+        "c": "يَكُنِ",
+        "d": "yakuni",
+        "e_en": "were",
+        "e_ur": "تھے وہ",
+        "a": 2,
+        "o_ca": 4,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 4
+      },
+      {
+        "c": "الَّذِينَ",
+        "d": "alladhīna",
+        "e_en": "those who",
+        "e_ur": "لوگ",
+        "a": 3,
+        "o_ca": 804,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 637
+      },
+      {
+        "c": "كَفَرُوا",
+        "d": "kafarū",
+        "e_en": "disbelieved",
+        "e_ur": "جنہوں نے کفر کیا",
+        "a": 4,
+        "o_ca": 188,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 149
+      },
+      {
+        "c": "مِنْ",
+        "d": "min",
+        "e_en": "from",
+        "e_ur": "سے",
+        "a": 5,
+        "o_ca": 1664,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1479
+      },
+      {
+        "c": "أَهْلِ",
+        "d": "ahli",
+        "e_en": "(the) People",
+        "e_ur": "اہل",
+        "a": 6,
+        "o_ca": 22,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 18
+      },
+      {
+        "c": "الْكِتَابِ",
+        "d": "l-kitābi",
+        "e_en": "of the Book",
+        "e_ur": "کتاب میں سے",
+        "a": 7,
+        "o_ca": 76,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 66
+      },
+      {
+        "c": "وَالْمُشْرِكِينَ",
+        "d": "wal-mush'rikīna",
+        "e_en": "and the polytheists",
+        "e_ur": "اور مشرکین میں سے",
+        "a": 8,
+        "o_ca": 3,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 2
+      },
+      {
+        "c": "مُنْفَكِّينَ",
+        "d": "munfakkīna",
+        "e_en": "to be abandoned",
+        "e_ur": "باز آنے والے",
+        "a": 9,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "حَتَّى",
+        "d": "ḥattā",
+        "e_en": "until",
+        "e_ur": "یہاں تک کہ",
+        "a": 10,
+        "o_ca": 141,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 124
+      },
+      {
+        "c": "تَأْتِيَهُمُ",
+        "d": "tatiyahumu",
+        "e_en": "(there) comes to them",
+        "e_ur": "آجائے ان کے پاس",
+        "a": 11,
+        "o_ca": 5,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 4
+      },
+      {
+        "c": "الْبَيِّنَةُ",
+        "d": "l-bayinatu",
+        "e_en": "the clear evidence",
+        "e_ur": "واضح دلیل",
+        "a": 12,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      }
+    ],
+    "a": {
+      "g_en": "Those who disbelieved among the People of the Scripture and the polytheists were not to be parted [from misbelief] until there came to them clear evidence -",
+      "g_ur": "اہل کتاب اور مشرکین میں سے جن لوگوں نے انکار کیا، وہ باز آنے والے نہیں جب تک ان کے پاس واضح دلیل نہ آجائے"
+    }
+  },
+  "2": {
+    "w": [
+      {
+        "c": "رَسُولٌ",
+        "d": "rasūlun",
+        "e_en": "A Messenger",
+        "e_ur": "ایک رسول",
+        "a": 1,
+        "o_ca": 21,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 18
+      },
+      {
+        "c": "مِنَ",
+        "d": "mina",
+        "e_en": "from",
+        "e_ur": "سے",
+        "a": 2,
+        "o_ca": 692,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 591
+      },
+      {
+        "c": "اللَّهِ",
+        "d": "l-lahi",
+        "e_en": "Allah",
+        "e_ur": "اللہ کی طرف (سے)",
+        "a": 3,
+        "o_ca": 825,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 659
+      },
+      {
+        "c": "يَتْلُوا",
+        "d": "yatlū",
+        "e_en": "reciting",
+        "e_ur": "جو پڑھتا ہے",
+        "a": 4,
+        "o_ca": 7,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 6
+      },
+      {
+        "c": "صُحُفًا",
+        "d": "ṣuḥufan",
+        "e_en": "pages",
+        "e_ur": "صحیفے",
+        "a": 5,
+        "o_ca": 2,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 2
+      },
+      {
+        "c": "مُطَهَّرَةً",
+        "d": "muṭahharatan",
+        "e_en": "purified",
+        "e_ur": "پاکیزہ",
+        "a": 6,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      }
+    ],
+    "a": {
+      "g_en": "A Messenger from Allah, reciting purified scriptures",
+      "g_ur": "اللہ کی طرف سے ایک رسول جو پاک صحیفے پڑھ کر سنائے"
+    }
+  },
+  "3": {
+    "w": [
+      {
+        "c": "فِيهَا",
+        "d": "fīhā",
+        "e_en": "Wherein",
+        "e_ur": "اس میں",
+        "a": 1,
+        "o_ca": 239,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 204
+      },
+      {
+        "c": "كُتُبٌ",
+        "d": "kutubun",
+        "e_en": "(are) writings",
+        "e_ur": "احکام ہیں/ تحریریں ہیں",
+        "a": 2,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "قَيِّمَةٌ",
+        "d": "qayyimatun",
+        "e_en": "correct",
+        "e_ur": "درست",
+        "a": 3,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      }
+    ],
+    "a": {
+      "g_en": "Within which are correct writings.",
+      "g_ur": "جن میں درست مضامین لکھے ہوں"
+    }
+  },
+  "4": {
+    "w": [
+      {
+        "c": "وَمَا",
+        "d": "wamā",
+        "e_en": "And not",
+        "e_ur": "اور نہیں",
+        "a": 1,
+        "o_ca": 641,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 593
+      },
+      {
+        "c": "تَفَرَّقَ",
+        "d": "tafarraqa",
+        "e_en": "became divided",
+        "e_ur": "تفرقہ کیا",
+        "a": 2,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "الَّذِينَ",
+        "d": "alladhīna",
+        "e_en": "those who",
+        "e_ur": "ان لوگوں نے",
+        "a": 3,
+        "o_ca": 805,
+        "o_s": 2,
+        "o_r": 2,
+        "o_cr": 638
+      },
+      {
+        "c": "أُوتُوا",
+        "d": "ūtū",
+        "e_en": "were given",
+        "e_ur": "جو دیئے گئے",
+        "a": 4,
+        "o_ca": 32,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 25
+      },
+      {
+        "c": "الْكِتَابَ",
+        "d": "l-kitāba",
+        "e_en": "the Book",
+        "e_ur": "کتاب",
+        "a": 5,
+        "o_ca": 78,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 70
+      },
+      {
+        "c": "إِلَّا",
+        "d": "illā",
+        "e_en": "until",
+        "e_ur": "مگر",
+        "a": 6,
+        "o_ca": 660,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 604
+      },
+      {
+        "c": "مِنْ",
+        "d": "min",
+        "e_en": "from",
+        "e_ur": "کے",
+        "a": 7,
+        "o_ca": 1665,
+        "o_s": 2,
+        "o_r": 2,
+        "o_cr": 1480
+      },
+      {
+        "c": "بَعْدِ",
+        "d": "baʿdi",
+        "e_en": "after",
+        "e_ur": "بعد اس کے",
+        "a": 8,
+        "o_ca": 82,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 67
+      },
+      {
+        "c": "مَا",
+        "d": "mā",
+        "e_en": "what",
+        "e_ur": "جو",
+        "a": 9,
+        "o_ca": 998,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 865
+      },
+      {
+        "c": "جَاءَتْهُمُ",
+        "d": "jāathumu",
+        "e_en": "came (to) them",
+        "e_ur": "آئی ان کے پاس",
+        "a": 10,
+        "o_ca": 7,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 7
+      },
+      {
+        "c": "الْبَيِّنَةُ",
+        "d": "l-bayinatu",
+        "e_en": "(of) the clear evidence",
+        "e_ur": "واضح بیان/واضح نصیحت/ واضح چیز",
+        "a": 11,
+        "o_ca": 2,
+        "o_s": 2,
+        "o_r": 2,
+        "o_cr": 2
+      }
+    ],
+    "a": {
+      "g_en": "Nor did those who were given the Scripture become divided until after there had come to them clear evidence.",
+      "g_ur": "اور جو لوگ اہل کتاب تھے وہ واضح دلیل آجانے کے بعد ہی مختلف ہوگئے"
+    }
+  },
+  "5": {
+    "w": [
+      {
+        "c": "وَمَا",
+        "d": "wamā",
+        "e_en": "And not",
+        "e_ur": "اور نہیں",
+        "a": 1,
+        "o_ca": 642,
+        "o_s": 2,
+        "o_r": 2,
+        "o_cr": 594
+      },
+      {
+        "c": "أُمِرُوا",
+        "d": "umirū",
+        "e_en": "they were commanded",
+        "e_ur": "وہ حکم دیئے گئے تھے",
+        "a": 2,
+        "o_ca": 3,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 2
+      },
+      {
+        "c": "إِلَّا",
+        "d": "illā",
+        "e_en": "except",
+        "e_ur": "مگر",
+        "a": 3,
+        "o_ca": 661,
+        "o_s": 2,
+        "o_r": 2,
+        "o_cr": 605
+      },
+      {
+        "c": "لِيَعْبُدُوا",
+        "d": "liyaʿbudū",
+        "e_en": "to worship",
+        "e_ur": "یہ کہ وہ عبادت کرتے",
+        "a": 4,
+        "o_ca": 2,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "اللَّهَ",
+        "d": "l-laha",
+        "e_en": "Allah",
+        "e_ur": "اللہ کی",
+        "a": 5,
+        "o_ca": 592,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 419
+      },
+      {
+        "c": "مُخْلِصِينَ",
+        "d": "mukh'liṣīna",
+        "e_en": "(being) sincere",
+        "e_ur": "خالص کرتے ہوئے",
+        "a": 6,
+        "o_ca": 7,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 7
+      },
+      {
+        "c": "لَهُ",
+        "d": "lahu",
+        "e_en": "to Him",
+        "e_ur": "اس کے لئے",
+        "a": 7,
+        "o_ca": 274,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 249
+      },
+      {
+        "c": "الدِّينَ",
+        "d": "l-dīna",
+        "e_en": "(in) the religion",
+        "e_ur": "دین کو",
+        "a": 8,
+        "o_ca": 13,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 13
+      },
+      {
+        "c": "حُنَفَاءَ",
+        "d": "ḥunafāa",
+        "e_en": "upright",
+        "e_ur": "یکسو ہوکر",
+        "a": 9,
+        "o_ca": 2,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "وَيُقِيمُوا",
+        "d": "wayuqīmū",
+        "e_en": "and to establish",
+        "e_ur": "اور وہ قائم کرتے",
+        "a": 10,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "الصَّلَوةَ",
+        "d": "l-ṣalata",
+        "e_en": "the prayer",
+        "e_ur": "نماز",
+        "a": 11,
+        "o_ca": 47,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 36
+      },
+      {
+        "c": "وَيُؤْتُوا",
+        "d": "wayu'tū",
+        "e_en": "and to give",
+        "e_ur": "اور ادا کرتے",
+        "a": 12,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "الزَّكَوةَ",
+        "d": "l-zakata",
+        "e_en": "the Zakah",
+        "e_ur": "زکوٰۃ",
+        "a": 13,
+        "o_ca": 24,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 14
+      },
+      {
+        "c": "وَذَلِكَ",
+        "d": "wadhālika",
+        "e_en": "And that",
+        "e_ur": "اور یہ ہے",
+        "a": 14,
+        "o_ca": 13,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 7
+      },
+      {
+        "c": "دِينُ",
+        "d": "dīnu",
+        "e_en": "(is the) religion",
+        "e_ur": "دین",
+        "a": 15,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "الْقَيِّمَةِ",
+        "d": "l-qayimati",
+        "e_en": "the correct",
+        "e_ur": "درست",
+        "a": 16,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      }
+    ],
+    "a": {
+      "g_en": "And they were not commanded except to worship Allah, [being] sincere to Him in religion, inclining to truth, and to establish prayer and to give zakah. And that is the correct religion.",
+      "g_ur": "حالاں کہ ان کو یہی حکم دیا گیا تھا کہ وہ اللہ کی عبادت کریں اس کے لیے دین کو خالص کردیں ،یکسو ہوکر اور نماز قائم کریں اور زکوٰۃ دیں ، اور یہی درست دین ہے"
+    }
+  },
+  "6": {
+    "w": [
+      {
+        "c": "إِنَّ",
+        "d": "inna",
+        "e_en": "Indeed",
+        "e_ur": "بیشک",
+        "a": 1,
+        "o_ca": 604,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 514
+      },
+      {
+        "c": "الَّذِينَ",
+        "d": "alladhīna",
+        "e_en": "those who",
+        "e_ur": "وہ لوگ",
+        "a": 2,
+        "o_ca": 806,
+        "o_s": 3,
+        "o_r": 3,
+        "o_cr": 639
+      },
+      {
+        "c": "كَفَرُوا",
+        "d": "kafarū",
+        "e_en": "disbelieve",
+        "e_ur": "جنہوں نے کفر کیا",
+        "a": 3,
+        "o_ca": 189,
+        "o_s": 2,
+        "o_r": 2,
+        "o_cr": 150
+      },
+      {
+        "c": "مِنْ",
+        "d": "min",
+        "e_en": "from",
+        "e_ur": "سے",
+        "a": 4,
+        "o_ca": 1666,
+        "o_s": 3,
+        "o_r": 3,
+        "o_cr": 1481
+      },
+      {
+        "c": "أَهْلِ",
+        "d": "ahli",
+        "e_en": "(the) People",
+        "e_ur": "اہل",
+        "a": 5,
+        "o_ca": 23,
+        "o_s": 2,
+        "o_r": 2,
+        "o_cr": 19
+      },
+      {
+        "c": "الْكِتَابِ",
+        "d": "l-kitābi",
+        "e_en": "(of) the Book",
+        "e_ur": "کتاب میں (سے)",
+        "a": 6,
+        "o_ca": 77,
+        "o_s": 2,
+        "o_r": 2,
+        "o_cr": 67
+      },
+      {
+        "c": "وَالْمُشْرِكِينَ",
+        "d": "wal-mush'rikīna",
+        "e_en": "and the polytheists",
+        "e_ur": "اور مشرکین میں سے",
+        "a": 7,
+        "o_ca": 4,
+        "o_s": 2,
+        "o_r": 2,
+        "o_cr": 3
+      },
+      {
+        "c": "فِي",
+        "d": "fī",
+        "e_en": "(will be) in",
+        "e_ur": "میں",
+        "a": 8,
+        "o_ca": 1175,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1018
+      },
+      {
+        "c": "نَارِ",
+        "d": "nāri",
+        "e_en": "(the) Fire",
+        "e_ur": "آگ میں ہوں گے",
+        "a": 9,
+        "o_ca": 5,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 3
+      },
+      {
+        "c": "جَهَنَّمَ",
+        "d": "jahannama",
+        "e_en": "(of) Hell",
+        "e_ur": "جہنم کی",
+        "a": 10,
+        "o_ca": 54,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 47
+      },
+      {
+        "c": "خَالِدِينَ",
+        "d": "khālidīna",
+        "e_en": "abiding eternally",
+        "e_ur": "ہمیشہ رہنے والے",
+        "a": 11,
+        "o_ca": 42,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 31
+      },
+      {
+        "c": "فِيهَا",
+        "d": "fīhā",
+        "e_en": "therein",
+        "e_ur": "اس میں",
+        "a": 12,
+        "o_ca": 240,
+        "o_s": 2,
+        "o_r": 2,
+        "o_cr": 205
+      },
+      {
+        "c": "أُولَئِكَ",
+        "d": "ulāika",
+        "e_en": "Those",
+        "e_ur": "یہی لوگ",
+        "a": 13,
+        "o_ca": 132,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 107
+      },
+      {
+        "c": "هُمْ",
+        "d": "hum",
+        "e_en": "they",
+        "e_ur": "وہ",
+        "a": 14,
+        "o_ca": 177,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 168
+      },
+      {
+        "c": "شَرُّ",
+        "d": "sharru",
+        "e_en": "(are the) worst",
+        "e_ur": "بدترین",
+        "a": 15,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "الْبَرِيَّةِ",
+        "d": "l-bariyati",
+        "e_en": "(of) the creatures",
+        "e_ur": "مخلوق ہیں",
+        "a": 16,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      }
+    ],
+    "a": {
+      "g_en": "Indeed, they who disbelieved among the People of the Scripture and the polytheists will be in the fire of Hell, abiding eternally therein. Those are the worst of creatures.",
+      "g_ur": "بے شک اہل کتاب اور مشرکین میں سے جن لوگوں نے کفر کیا وہ جہنم کی آگ میں پڑیں گے، وہ ہمیشہ اس میں رہیں گے، یہ لوگ بدترین خلائق ہیں"
+    }
+  },
+  "7": {
+    "w": [
+      {
+        "c": "إِنَّ",
+        "d": "inna",
+        "e_en": "Indeed",
+        "e_ur": "بیشک",
+        "a": 1,
+        "o_ca": 605,
+        "o_s": 2,
+        "o_r": 2,
+        "o_cr": 515
+      },
+      {
+        "c": "الَّذِينَ",
+        "d": "alladhīna",
+        "e_en": "those who",
+        "e_ur": "وہ لوگ",
+        "a": 2,
+        "o_ca": 807,
+        "o_s": 4,
+        "o_r": 4,
+        "o_cr": 640
+      },
+      {
+        "c": "ءَامَنُوا",
+        "d": "āmanū",
+        "e_en": "believe",
+        "e_ur": "جو ایمان لائے",
+        "a": 3,
+        "o_ca": 252,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 177
+      },
+      {
+        "c": "وَعَمِلُوا",
+        "d": "waʿamilū",
+        "e_en": "and do",
+        "e_ur": "اور انہوں نے عمل کئے",
+        "a": 4,
+        "o_ca": 52,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 44
+      },
+      {
+        "c": "الصَّالِحَاتِ",
+        "d": "l-ṣāliḥāti",
+        "e_en": "righteous deeds",
+        "e_ur": "اچھے",
+        "a": 5,
+        "o_ca": 58,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 50
+      },
+      {
+        "c": "أُولَئِكَ",
+        "d": "ulāika",
+        "e_en": "those",
+        "e_ur": "یہی لوگ",
+        "a": 6,
+        "o_ca": 133,
+        "o_s": 2,
+        "o_r": 2,
+        "o_cr": 108
+      },
+      {
+        "c": "هُمْ",
+        "d": "hum",
+        "e_en": "they",
+        "e_ur": "وہ",
+        "a": 7,
+        "o_ca": 178,
+        "o_s": 2,
+        "o_r": 2,
+        "o_cr": 169
+      },
+      {
+        "c": "خَيْرُ",
+        "d": "khayru",
+        "e_en": "(are the) best",
+        "e_ur": "بہترین",
+        "a": 8,
+        "o_ca": 20,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 17
+      },
+      {
+        "c": "الْبَرِيَّةِ",
+        "d": "l-bariyati",
+        "e_en": "(of) the creatures",
+        "e_ur": "مخلوق ہیں",
+        "a": 9,
+        "o_ca": 2,
+        "o_s": 2,
+        "o_r": 2,
+        "o_cr": 2
+      }
+    ],
+    "a": {
+      "g_en": "Indeed, they who have believed and done righteous deeds - those are the best of creatures.",
+      "g_ur": "جو لوگ ایمان لائے اور انھوں نے اچھے کام کيے ،وہ لوگ بہترین ِ خلائق ہیں"
+    }
+  },
+  "8": {
+    "w": [
+      {
+        "c": "جَزَاؤُهُمْ",
+        "d": "jazāuhum",
+        "e_en": "Their reward",
+        "e_ur": "ان کی جزا",
+        "a": 1,
+        "o_ca": 5,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 5
+      },
+      {
+        "c": "عِنْدَ",
+        "d": "ʿinda",
+        "e_en": "(is) with",
+        "e_ur": "پاس",
+        "a": 2,
+        "o_ca": 98,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 81
+      },
+      {
+        "c": "رَبِّهِمْ",
+        "d": "rabbihim",
+        "e_en": "their Lord",
+        "e_ur": "ان کے رب کے",
+        "a": 3,
+        "o_ca": 80,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 77
+      },
+      {
+        "c": "جَنَّاتُ",
+        "d": "jannātu",
+        "e_en": "Gardens",
+        "e_ur": "باغات",
+        "a": 4,
+        "o_ca": 9,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 9
+      },
+      {
+        "c": "عَدْنٍ",
+        "d": "ʿadnin",
+        "e_en": "(of) Eternity",
+        "e_ur": "ہمیشگی کے",
+        "a": 5,
+        "o_ca": 11,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 9
+      },
+      {
+        "c": "تَجْرِي",
+        "d": "tajrī",
+        "e_en": "flow",
+        "e_ur": "بہتی ہیں",
+        "a": 6,
+        "o_ca": 48,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 33
+      },
+      {
+        "c": "مِنْ",
+        "d": "min",
+        "e_en": "from",
+        "e_ur": "سے",
+        "a": 7,
+        "o_ca": 1667,
+        "o_s": 4,
+        "o_r": 4,
+        "o_cr": 1482
+      },
+      {
+        "c": "تَحْتِهَا",
+        "d": "taḥtihā",
+        "e_en": "underneath them",
+        "e_ur": "ان کے نیچے سے",
+        "a": 8,
+        "o_ca": 35,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 22
+      },
+      {
+        "c": "الْأَنْهَارُ",
+        "d": "l-anhāru",
+        "e_en": "the rivers",
+        "e_ur": "نہریں",
+        "a": 9,
+        "o_ca": 40,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 26
+      },
+      {
+        "c": "خَالِدِينَ",
+        "d": "khālidīna",
+        "e_en": "will abide",
+        "e_ur": "ہمیشہ رہنے والے ہیں",
+        "a": 10,
+        "o_ca": 43,
+        "o_s": 2,
+        "o_r": 2,
+        "o_cr": 32
+      },
+      {
+        "c": "فِيهَا",
+        "d": "fīhā",
+        "e_en": "therein",
+        "e_ur": "اس میں",
+        "a": 11,
+        "o_ca": 241,
+        "o_s": 3,
+        "o_r": 3,
+        "o_cr": 206
+      },
+      {
+        "c": "أَبَدًا",
+        "d": "abadan",
+        "e_en": "forever",
+        "e_ur": "ہمیشہ ہمیشہ",
+        "a": 12,
+        "o_ca": 28,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 14
+      },
+      {
+        "c": "رَضِيَ",
+        "d": "raḍiya",
+        "e_en": "(will be) pleased",
+        "e_ur": "راضی ہوگیا",
+        "a": 13,
+        "o_ca": 5,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "اللَّهُ",
+        "d": "l-lahu",
+        "e_en": "Allah",
+        "e_ur": "اللہ",
+        "a": 14,
+        "o_ca": 731,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 547
+      },
+      {
+        "c": "عَنْهُمْ",
+        "d": "ʿanhum",
+        "e_en": "with them",
+        "e_ur": "ان سے",
+        "a": 15,
+        "o_ca": 67,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 53
+      },
+      {
+        "c": "وَرَضُوا",
+        "d": "waraḍū",
+        "e_en": "and they (will be) pleased",
+        "e_ur": "اور وہ راضی ہوگئے",
+        "a": 16,
+        "o_ca": 5,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 2
+      },
+      {
+        "c": "عَنْهُ",
+        "d": "ʿanhu",
+        "e_en": "with Him",
+        "e_ur": "اس سے",
+        "a": 17,
+        "o_ca": 36,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 31
+      },
+      {
+        "c": "ذَلِكَ",
+        "d": "dhālika",
+        "e_en": "That",
+        "e_ur": "یہ",
+        "a": 18,
+        "o_ca": 279,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 219
+      },
+      {
+        "c": "لِمَنْ",
+        "d": "liman",
+        "e_en": "(is) for whoever",
+        "e_ur": "واسطے اس کے ہے جو",
+        "a": 19,
+        "o_ca": 55,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 50
+      },
+      {
+        "c": "خَشِيَ",
+        "d": "khashiya",
+        "e_en": "feared",
+        "e_ur": "ڈرتا ہو",
+        "a": 20,
+        "o_ca": 3,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 3
+      },
+      {
+        "c": "رَبَّهُ",
+        "d": "rabbahu",
+        "e_en": "his Lord",
+        "e_ur": "اپنے رب سے",
+        "a": 21,
+        "o_ca": 19,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 19
+      }
+    ],
+    "a": {
+      "g_en": "Their reward with Allah will be gardens of perpetual residence beneath which rivers flow, wherein they will abide forever, Allah being pleased with them and they with Him. That is for whoever has feared his Lord.",
+      "g_ur": "ان کا بدلہ ان کے رب کے پاس ہمیشہ رہنے والے باغ ہیں جن کے نیچے نہریں جاری ہوں گی،ان میں وہ ہمیشہ ہمیشہ رہیں گےاللہ ان سے راضی اور وہ اللہ سے راضی،یہ اس شخص کے لیے ہے جو اپنے رب سے ڈرے"
+    }
+  }
+}

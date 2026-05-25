@@ -1,0 +1,377 @@
+{
+  "1": {
+    "w": [
+      {
+        "c": "بِسْمِ",
+        "d": "bis'mi",
+        "e_en": "In (the) name",
+        "e_ur": "ساتھ نام",
+        "a": 1,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "اللَّهِ",
+        "d": "l-lahi",
+        "e_en": "(of) Allah",
+        "e_ur": "اللہ کے",
+        "a": 2,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 4
+      },
+      {
+        "c": "الرَّحْمَنِ",
+        "d": "l-raḥmāni",
+        "e_en": "the Most Gracious",
+        "e_ur": "جو بے حد مہربان ہے",
+        "a": 3,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "الرَّحِيمِ",
+        "d": "l-raḥīmi",
+        "e_en": "the Most Merciful",
+        "e_ur": "بار بار رحم فرمانے والا ہے",
+        "a": 4,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      }
+    ],
+    "a": {
+      "g_en": "In the name of Allah, the Entirely Merciful, the Especially Merciful.",
+      "g_ur": "شروع اللہ کے نام سے جو بڑامہربان،نہایت رحم والا ہے"
+    }
+  },
+  "2": {
+    "w": [
+      {
+        "c": "الْحَمْدُ",
+        "d": "al-ḥamdu",
+        "e_en": "All praises and thanks",
+        "e_ur": "سب تعریف",
+        "a": 1,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "لِلَّهِ",
+        "d": "lillahi",
+        "e_en": "(be) to Allah",
+        "e_ur": "اللہ کے لیے ہے",
+        "a": 2,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "رَبِّ",
+        "d": "rabbi",
+        "e_en": "(the) Lord",
+        "e_ur": "جو رب ہے",
+        "a": 3,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "الْعَالَمِينَ",
+        "d": "l-ʿālamīna",
+        "e_en": "(of all) the worlds",
+        "e_ur": "تمام جہانوں کا",
+        "a": 4,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      }
+    ],
+    "a": {
+      "g_en": "[All] praise is [due] to Allah, Lord of the worlds -",
+      "g_ur": "سب تعریف اللہ کے لئے ہے جو سارے جہان کا مالک ہے"
+    }
+  },
+  "3": {
+    "w": [
+      {
+        "c": "الرَّحْمَنِ",
+        "d": "al-raḥmāni",
+        "e_en": "The Most Gracious",
+        "e_ur": "جو بہت مہربان",
+        "a": 1,
+        "o_ca": 2,
+        "o_s": 2,
+        "o_r": 2,
+        "o_cr": 2
+      },
+      {
+        "c": "الرَّحِيمِ",
+        "d": "l-raḥīmi",
+        "e_en": "the Most Merciful",
+        "e_ur": "بار بار رحم فرمانے والا ہے",
+        "a": 2,
+        "o_ca": 2,
+        "o_s": 2,
+        "o_r": 2,
+        "o_cr": 2
+      }
+    ],
+    "a": {
+      "g_en": "The Entirely Merciful, the Especially Merciful,",
+      "g_ur": "بہت مہربان، نہایت رحم والا ہے"
+    }
+  },
+  "4": {
+    "w": [
+      {
+        "c": "مَالِكِ",
+        "d": "māliki",
+        "e_en": "Master",
+        "e_ur": "مالک ہے",
+        "a": 1,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "يَوْمِ",
+        "d": "yawmi",
+        "e_en": "(of the) Day",
+        "e_ur": "دن کا",
+        "a": 2,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 2
+      },
+      {
+        "c": "الدِّينِ",
+        "d": "l-dīni",
+        "e_en": "(of) [the] Judgment",
+        "e_ur": "بدلے کے",
+        "a": 3,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 2
+      }
+    ],
+    "a": {
+      "g_en": "Sovereign of the Day of Recompense.",
+      "g_ur": "انصاف کے دن کا مالک ہے"
+    }
+  },
+  "5": {
+    "w": [
+      {
+        "c": "إِيَّاكَ",
+        "d": "iyyāka",
+        "e_en": "You Alone",
+        "e_ur": "صرف تیری",
+        "a": 1,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "نَعْبُدُ",
+        "d": "naʿbudu",
+        "e_en": "we worship",
+        "e_ur": "ہم عبادت کرتے ہیں",
+        "a": 2,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "وَإِيَّاكَ",
+        "d": "wa-iyyāka",
+        "e_en": "and You Alone",
+        "e_ur": "اور صرف تجھ سے",
+        "a": 3,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "نَسْتَعِينُ",
+        "d": "nastaʿīnu",
+        "e_en": "we ask for help",
+        "e_ur": "ہم مدد چاہتے ہیں",
+        "a": 4,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      }
+    ],
+    "a": {
+      "g_en": "It is You we worship and You we ask for help.",
+      "g_ur": "ہم تیری ہی عبادت کرتے ہیں اور تجھی سے مدد چاہتے ہیں"
+    }
+  },
+  "6": {
+    "w": [
+      {
+        "c": "اهْدِنَا",
+        "d": "ih'dinā",
+        "e_en": "Guide us",
+        "e_ur": "دکھا ہم کو",
+        "a": 1,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "الصِّرَاطَ",
+        "d": "l-ṣirāṭa",
+        "e_en": "(to) the path",
+        "e_ur": "راستہ",
+        "a": 2,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "الْمُسْتَقِيمَ",
+        "d": "l-mus'taqīma",
+        "e_en": "the straight",
+        "e_ur": "سیدھا",
+        "a": 3,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      }
+    ],
+    "a": {
+      "g_en": "Guide us to the straight path -",
+      "g_ur": "ہم کو سیدھا راستہ دکھا"
+    }
+  },
+  "7": {
+    "w": [
+      {
+        "c": "صِرَاطَ",
+        "d": "ṣirāṭa",
+        "e_en": "(The) path",
+        "e_ur": "راستہ",
+        "a": 1,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "الَّذِينَ",
+        "d": "alladhīna",
+        "e_en": "(of) those",
+        "e_ur": "ان لوگوں کا",
+        "a": 2,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 7
+      },
+      {
+        "c": "أَنْعَمْتَ",
+        "d": "anʿamta",
+        "e_en": "You have bestowed (Your) Favors",
+        "e_ur": "انعام کیا تو نے",
+        "a": 3,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "عَلَيْهِمْ",
+        "d": "ʿalayhim",
+        "e_en": "on them",
+        "e_ur": "اوپر ان کے",
+        "a": 4,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "غَيْرِ",
+        "d": "ghayri",
+        "e_en": "not (of)",
+        "e_ur": "نہ ان (لوگوں) کا",
+        "a": 5,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "الْمَغْضُوبِ",
+        "d": "l-maghḍūbi",
+        "e_en": "those who earned (Your) wrath",
+        "e_ur": "غضب کیا گیا",
+        "a": 6,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "عَلَيْهِمْ",
+        "d": "ʿalayhim",
+        "e_en": "on themselves",
+        "e_ur": "اوپر ان کے",
+        "a": 7,
+        "o_ca": 2,
+        "o_s": 2,
+        "o_r": 2,
+        "o_cr": 2
+      },
+      {
+        "c": "وَلَا",
+        "d": "walā",
+        "e_en": "and not",
+        "e_ur": "اور نہ",
+        "a": 8,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 7
+      },
+      {
+        "c": "الضَّالِّينَ",
+        "d": "l-ḍālīna",
+        "e_en": "(of) those who go astray",
+        "e_ur": "ان (لوگوں) کا جو گمراہ ہیں / گم کردہ راہ ہیں",
+        "a": 9,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      }
+    ],
+    "a": {
+      "g_en": "The path of those upon whom You have bestowed favor, not of those who have evoked [Your] anger or of those who are astray.",
+      "g_ur": "ان لوگوں کا راستہ جن پر تو نے فضل کیا ان کا راستہ نہیں جن پر تیرا غضب ہوا ،اور نہ ان لوگوں کا راستہ جو راستے سے بھٹک گئے"
+    }
+  }
+}

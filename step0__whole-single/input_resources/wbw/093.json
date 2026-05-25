@@ -1,0 +1,530 @@
+{
+  "1": {
+    "w": [
+      {
+        "c": "وَالضُّحَى",
+        "d": "wal-ḍuḥā",
+        "e_en": "By the morning brightness",
+        "e_ur": "قسم ہے روز روشن کی",
+        "a": 1,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      }
+    ],
+    "a": {
+      "g_en": "By the morning brightness",
+      "g_ur": "قسم ہے روزِ روشن کی"
+    }
+  },
+  "2": {
+    "w": [
+      {
+        "c": "وَاللَّيْلِ",
+        "d": "wa-al-layli",
+        "e_en": "And the night",
+        "e_ur": "اور رات کی",
+        "a": 1,
+        "o_ca": 7,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 5
+      },
+      {
+        "c": "إِذَا",
+        "d": "idhā",
+        "e_en": "when",
+        "e_ur": "جب",
+        "a": 2,
+        "o_ca": 189,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 14
+      },
+      {
+        "c": "سَجَى",
+        "d": "sajā",
+        "e_en": "it covers with darkness",
+        "e_ur": "وہ ڈھانپ لے",
+        "a": 3,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      }
+    ],
+    "a": {
+      "g_en": "And [by] the night when it covers with darkness,",
+      "g_ur": "اور رات کی جب وہ چھاجائے"
+    }
+  },
+  "3": {
+    "w": [
+      {
+        "c": "مَا",
+        "d": "mā",
+        "e_en": "Not",
+        "e_ur": "نہیں",
+        "a": 1,
+        "o_ca": 995,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 14
+      },
+      {
+        "c": "وَدَّعَكَ",
+        "d": "waddaʿaka",
+        "e_en": "has forsaken you",
+        "e_ur": "چھوڑا تجھ کو",
+        "a": 2,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "رَبُّكَ",
+        "d": "rabbuka",
+        "e_en": "your Lord",
+        "e_ur": "تیرے رب نے",
+        "a": 3,
+        "o_ca": 41,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 4
+      },
+      {
+        "c": "وَمَا",
+        "d": "wamā",
+        "e_en": "and not",
+        "e_ur": "اور نہ",
+        "a": 4,
+        "o_ca": 639,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 19
+      },
+      {
+        "c": "قَلَى",
+        "d": "qalā",
+        "e_en": "He is displeased",
+        "e_ur": "وہ ناراض ہوا",
+        "a": 5,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      }
+    ],
+    "a": {
+      "g_en": "Your Lord has not taken leave of you, [O Muhammad], nor has He detested [you].",
+      "g_ur": "تمھارے رب نے تم کو نہیں چھوڑا،اور نہ وہ تم سے بیزار ہوا"
+    }
+  },
+  "4": {
+    "w": [
+      {
+        "c": "وَلَلْءَاخِرَةُ",
+        "d": "walalākhiratu",
+        "e_en": "And surely the Hereafter",
+        "e_ur": "اور البتہ آخرت/ انجام",
+        "a": 1,
+        "o_ca": 2,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "خَيْرٌ",
+        "d": "khayrun",
+        "e_en": "(is) better",
+        "e_ur": "بہتر ہے",
+        "a": 2,
+        "o_ca": 77,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 2
+      },
+      {
+        "c": "لَكَ",
+        "d": "laka",
+        "e_en": "for you",
+        "e_ur": "تیرے لئے",
+        "a": 3,
+        "o_ca": 67,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 3
+      },
+      {
+        "c": "مِنَ",
+        "d": "mina",
+        "e_en": "than",
+        "e_ur": "سے",
+        "a": 4,
+        "o_ca": 691,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 5
+      },
+      {
+        "c": "الْأُولَى",
+        "d": "l-ūlā",
+        "e_en": "the first",
+        "e_ur": "آغاز سے/ ابتداء سے",
+        "a": 5,
+        "o_ca": 14,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 2
+      }
+    ],
+    "a": {
+      "g_en": "And the Hereafter is better for you than the first [life].",
+      "g_ur": "اور یقیناً آخرت تمھارے لیے دنیا سے بہترہے"
+    }
+  },
+  "5": {
+    "w": [
+      {
+        "c": "وَلَسَوْفَ",
+        "d": "walasawfa",
+        "e_en": "And soon",
+        "e_ur": "اور البتہ عنقریب",
+        "a": 1,
+        "o_ca": 2,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 2
+      },
+      {
+        "c": "يُعْطِيكَ",
+        "d": "yuʿ'ṭīka",
+        "e_en": "will give you",
+        "e_ur": "عطا کرے گا تجھ کو",
+        "a": 2,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "رَبُّكَ",
+        "d": "rabbuka",
+        "e_en": "your Lord",
+        "e_ur": "تیرا رب",
+        "a": 3,
+        "o_ca": 42,
+        "o_s": 2,
+        "o_r": 2,
+        "o_cr": 5
+      },
+      {
+        "c": "فَتَرْضَى",
+        "d": "fatarḍā",
+        "e_en": "then you will be satisfied",
+        "e_ur": "تو تو راضی ہوجائے گا/ خوش ہوجائے گا",
+        "a": 4,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      }
+    ],
+    "a": {
+      "g_en": "And your Lord is going to give you, and you will be satisfied.",
+      "g_ur": "اور عنقریب اللہ تجھ کو دے گا،پھر تو راضی ہوجائے گا"
+    }
+  },
+  "6": {
+    "w": [
+      {
+        "c": "أَلَمْ",
+        "d": "alam",
+        "e_en": "Did not",
+        "e_ur": "کیا نہیں",
+        "a": 1,
+        "o_ca": 74,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 4
+      },
+      {
+        "c": "يَجِدْكَ",
+        "d": "yajid'ka",
+        "e_en": "He find you",
+        "e_ur": "پایا تجھ کو",
+        "a": 2,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "يَتِيمًا",
+        "d": "yatīman",
+        "e_en": "an orphan",
+        "e_ur": "یتیم",
+        "a": 3,
+        "o_ca": 2,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "فءَاوَى",
+        "d": "faāwā",
+        "e_en": "and gave shelter",
+        "e_ur": "پھر اس نے ٹھکانہ فراہم کیا",
+        "a": 4,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      }
+    ],
+    "a": {
+      "g_en": "Did He not find you an orphan and give [you] refuge?",
+      "g_ur": "کیا اللہ نے تم کو یتیم نہیں پایا، پھر اُس نے تم کو ٹھکانا دیا"
+    }
+  },
+  "7": {
+    "w": [
+      {
+        "c": "وَوَجَدَكَ",
+        "d": "wawajadaka",
+        "e_en": "And He found you",
+        "e_ur": "اور پایا تجھ کو",
+        "a": 1,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "ضَالًّا",
+        "d": "ḍāllan",
+        "e_en": "lost",
+        "e_ur": "راہ بھولا",
+        "a": 2,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "فَهَدَى",
+        "d": "fahadā",
+        "e_en": "so He guided",
+        "e_ur": "تو اس نے ہدایت بخشی/ رہنمائی کی",
+        "a": 3,
+        "o_ca": 3,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 2
+      }
+    ],
+    "a": {
+      "g_en": "And He found you lost and guided [you],",
+      "g_ur": "اور تم کو متلاشی پایا تو تم کو راہ دکھائی"
+    }
+  },
+  "8": {
+    "w": [
+      {
+        "c": "وَوَجَدَكَ",
+        "d": "wawajadaka",
+        "e_en": "And He found you",
+        "e_ur": "اور پایا تجھ کو",
+        "a": 1,
+        "o_ca": 2,
+        "o_s": 2,
+        "o_r": 2,
+        "o_cr": 2
+      },
+      {
+        "c": "عَائِلًا",
+        "d": "ʿāilan",
+        "e_en": "in need",
+        "e_ur": "مفلس",
+        "a": 2,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "فَأَغْنَى",
+        "d": "fa-aghnā",
+        "e_en": "so He made self-sufficient",
+        "e_ur": "تو اس نے غنی کردیا",
+        "a": 3,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      }
+    ],
+    "a": {
+      "g_en": "And He found you poor and made [you] self-sufficient.",
+      "g_ur": "اور تم کو نادار پایا تو تم کو غنی کردیا"
+    }
+  },
+  "9": {
+    "w": [
+      {
+        "c": "فَأَمَّا",
+        "d": "fa-ammā",
+        "e_en": "So as for",
+        "e_ur": "تو رہا",
+        "a": 1,
+        "o_ca": 21,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 3
+      },
+      {
+        "c": "الْيَتِيمَ",
+        "d": "l-yatīma",
+        "e_en": "the orphan",
+        "e_ur": "یتیم",
+        "a": 2,
+        "o_ca": 2,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 2
+      },
+      {
+        "c": "فَلَا",
+        "d": "falā",
+        "e_en": "then (do) not",
+        "e_ur": "پس نہ",
+        "a": 3,
+        "o_ca": 155,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 5
+      },
+      {
+        "c": "تَقْهَرْ",
+        "d": "taqhar",
+        "e_en": "oppress",
+        "e_ur": "سختی کر",
+        "a": 4,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      }
+    ],
+    "a": {
+      "g_en": "So as for the orphan, do not oppress [him].",
+      "g_ur": "پس تم یتیم پر سختی نہ کرو"
+    }
+  },
+  "10": {
+    "w": [
+      {
+        "c": "وَأَمَّا",
+        "d": "wa-ammā",
+        "e_en": "And as for",
+        "e_ur": "اور رہا",
+        "a": 1,
+        "o_ca": 26,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 3
+      },
+      {
+        "c": "السَّائِلَ",
+        "d": "l-sāila",
+        "e_en": "him who asks",
+        "e_ur": "سوالی",
+        "a": 2,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "فَلَا",
+        "d": "falā",
+        "e_en": "then (do) not",
+        "e_ur": "پس نہ",
+        "a": 3,
+        "o_ca": 156,
+        "o_s": 2,
+        "o_r": 2,
+        "o_cr": 6
+      },
+      {
+        "c": "تَنْهَرْ",
+        "d": "tanhar",
+        "e_en": "repel",
+        "e_ur": "جھڑکو",
+        "a": 4,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      }
+    ],
+    "a": {
+      "g_en": "And as for the petitioner, do not repel [him].",
+      "g_ur": "اور تم سائل کو نہ جھڑکو"
+    }
+  },
+  "11": {
+    "w": [
+      {
+        "c": "وَأَمَّا",
+        "d": "wa-ammā",
+        "e_en": "But as for",
+        "e_ur": "اور رہی",
+        "a": 1,
+        "o_ca": 27,
+        "o_s": 2,
+        "o_r": 2,
+        "o_cr": 4
+      },
+      {
+        "c": "بِنِعْمَةِ",
+        "d": "biniʿ'mati",
+        "e_en": "(the) Favor",
+        "e_ur": "نعمت",
+        "a": 2,
+        "o_ca": 2,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 2
+      },
+      {
+        "c": "رَبِّكَ",
+        "d": "rabbika",
+        "e_en": "(of) your Lord",
+        "e_ur": "اپنے رب کی",
+        "a": 3,
+        "o_ca": 112,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 9
+      },
+      {
+        "c": "فَحَدِّثْ",
+        "d": "faḥaddith",
+        "e_en": "narrate",
+        "e_ur": "پس بیان کرو",
+        "a": 4,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      }
+    ],
+    "a": {
+      "g_en": "But as for the favor of your Lord, report [it].",
+      "g_ur": "اور تم اپنے رب کی نعمت بیان کرو"
+    }
+  }
+}

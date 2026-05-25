@@ -1,0 +1,221 @@
+{
+  "1": {
+    "w": [
+      {
+        "c": "لِإِيلَافِ",
+        "d": "liīlāfi",
+        "e_en": "For (the) familiarity",
+        "e_ur": "مانوس کرنے کے لئے",
+        "a": 1,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "قُرَيْشٍ",
+        "d": "qurayshin",
+        "e_en": "(of the) Quraish",
+        "e_ur": "قریش کو",
+        "a": 2,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      }
+    ],
+    "a": {
+      "g_en": "For the accustomed security of the Quraysh -",
+      "g_ur": "اس واسطے کہ قریش مانوس ہوئے"
+    }
+  },
+  "2": {
+    "w": [
+      {
+        "c": "إِيلَافِهِمْ",
+        "d": "īlāfihim",
+        "e_en": "Their familiarity",
+        "e_ur": "مانوس کرنا ان کو",
+        "a": 1,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "رِحْلَةَ",
+        "d": "riḥ'lata",
+        "e_en": "(with the) journey",
+        "e_ur": "سفر میں",
+        "a": 2,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "الشِّتَاءِ",
+        "d": "l-shitāi",
+        "e_en": "(of) winter",
+        "e_ur": "سردی کے",
+        "a": 3,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "وَالصَّيْفِ",
+        "d": "wal-ṣayfi",
+        "e_en": "and summer",
+        "e_ur": "اور گرمی کے",
+        "a": 4,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      }
+    ],
+    "a": {
+      "g_en": "Their accustomed security [in] the caravan of winter and summer -",
+      "g_ur": "جاڑے او رگرمی کے سفر سے مانوس"
+    }
+  },
+  "3": {
+    "w": [
+      {
+        "c": "فَلْيَعْبُدُوا",
+        "d": "falyaʿbudū",
+        "e_en": "So let them worship",
+        "e_ur": "پس چاہیے کہ وہ عبادت کریں",
+        "a": 1,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "رَبَّ",
+        "d": "rabba",
+        "e_en": "(the) Lord",
+        "e_ur": "رب کی",
+        "a": 2,
+        "o_ca": 5,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "هَذَا",
+        "d": "hādhā",
+        "e_en": "(of) this",
+        "e_ur": "اس",
+        "a": 3,
+        "o_ca": 190,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 6
+      },
+      {
+        "c": "الْبَيْتِ",
+        "d": "l-bayti",
+        "e_en": "House",
+        "e_ur": "گھر کے",
+        "a": 4,
+        "o_ca": 8,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      }
+    ],
+    "a": {
+      "g_en": "Let them worship the Lord of this House,",
+      "g_ur": "تو ان کوچاہيے کہ وہ اس گھر کے رب کی عبادت کریں"
+    }
+  },
+  "4": {
+    "w": [
+      {
+        "c": "الَّذِي",
+        "d": "alladhī",
+        "e_en": "The One Who",
+        "e_ur": "جس نے",
+        "a": 1,
+        "o_ca": 265,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 15
+      },
+      {
+        "c": "أَطْعَمَهُمْ",
+        "d": "aṭʿamahum",
+        "e_en": "feeds them",
+        "e_ur": "کھلایا ان کو",
+        "a": 2,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "مِنْ",
+        "d": "min",
+        "e_en": "against",
+        "e_ur": "سے",
+        "a": 3,
+        "o_ca": 1669,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 31
+      },
+      {
+        "c": "جُوعٍ",
+        "d": "jūʿin",
+        "e_en": "hunger",
+        "e_ur": "بھوک (سے)",
+        "a": 4,
+        "o_ca": 2,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "وَءَامَنَهُمْ",
+        "d": "waāmanahum",
+        "e_en": "and gives them security",
+        "e_ur": "اور امن دیا ان کو",
+        "a": 5,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "مِنْ",
+        "d": "min",
+        "e_en": "against",
+        "e_ur": "سے",
+        "a": 6,
+        "o_ca": 1670,
+        "o_s": 2,
+        "o_r": 2,
+        "o_cr": 32
+      },
+      {
+        "c": "خَوْفٍ",
+        "d": "khawfin",
+        "e_en": "fear",
+        "e_ur": "خوف (سے)",
+        "a": 7,
+        "o_ca": 2,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      }
+    ],
+    "a": {
+      "g_en": "Who has fed them, [saving them] from hunger and made them safe, [saving them] from fear.",
+      "g_ur": "جس نے ان کو بھوک میں کھانا دیا اور خوف سے ان کو امن دیا"
+    }
+  }
+}

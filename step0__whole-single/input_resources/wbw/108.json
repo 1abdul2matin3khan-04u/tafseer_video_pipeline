@@ -1,0 +1,136 @@
+{
+  "1": {
+    "w": [
+      {
+        "c": "إِنَّا",
+        "d": "innā",
+        "e_en": "Indeed, We",
+        "e_ur": "بیشک ہم نے",
+        "a": 1,
+        "o_ca": 156,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 8
+      },
+      {
+        "c": "أَعْطَيْنَاكَ",
+        "d": "aʿṭaynāka",
+        "e_en": "have given you",
+        "e_ur": "عطا کی ہم نے آپ کو",
+        "a": 2,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "الْكَوْثَرَ",
+        "d": "l-kawthara",
+        "e_en": "Al-Kauthar",
+        "e_ur": "خیر کثیر",
+        "a": 3,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      }
+    ],
+    "a": {
+      "g_en": "Indeed, We have granted you, [O Muhammad], al-Kawthar.",
+      "g_ur": "ہم نے تم کو کوثردے دیا"
+    }
+  },
+  "2": {
+    "w": [
+      {
+        "c": "فَصَلِّ",
+        "d": "faṣalli",
+        "e_en": "So pray",
+        "e_ur": "پس نماز پڑھو",
+        "a": 1,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "لِرَبِّكَ",
+        "d": "lirabbika",
+        "e_en": "to your Lord",
+        "e_ur": "اپنے رب کے لئے",
+        "a": 2,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "وَانْحَرْ",
+        "d": "wa-in'ḥar",
+        "e_en": "and sacrifice",
+        "e_ur": "اور قربانی کرو",
+        "a": 3,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      }
+    ],
+    "a": {
+      "g_en": "So pray to your Lord and sacrifice [to Him alone].",
+      "g_ur": "پس اپنے رب کے لیے نماز پڑھو اور قربانی کرو"
+    }
+  },
+  "3": {
+    "w": [
+      {
+        "c": "إِنَّ",
+        "d": "inna",
+        "e_en": "Indeed",
+        "e_ur": "بیشک",
+        "a": 1,
+        "o_ca": 609,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 22
+      },
+      {
+        "c": "شَانِئَكَ",
+        "d": "shāni-aka",
+        "e_en": "your enemy",
+        "e_ur": "دشمن تیرا",
+        "a": 2,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "هُوَ",
+        "d": "huwa",
+        "e_en": "he (is)",
+        "e_ur": "وہی",
+        "a": 3,
+        "o_ca": 264,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 10
+      },
+      {
+        "c": "الْأَبْتَرُ",
+        "d": "l-abtaru",
+        "e_en": "the one cut off",
+        "e_ur": "جڑ کٹا ہے",
+        "a": 4,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      }
+    ],
+    "a": {
+      "g_en": "Indeed, your enemy is the one cut off.",
+      "g_ur": "بے شک تمھارا دشمن ہی بے نام ونشان ہے"
+    }
+  }
+}

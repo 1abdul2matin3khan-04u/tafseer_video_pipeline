@@ -1,0 +1,235 @@
+{
+  "1": {
+    "w": [
+      {
+        "c": "إِذَا",
+        "d": "idhā",
+        "e_en": "When",
+        "e_ur": "جب",
+        "a": 1,
+        "o_ca": 193,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 195
+      },
+      {
+        "c": "جَاءَ",
+        "d": "jāa",
+        "e_en": "comes",
+        "e_ur": "آگئی",
+        "a": 2,
+        "o_ca": 57,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 57
+      },
+      {
+        "c": "نَصْرُ",
+        "d": "naṣru",
+        "e_en": "(the) Help",
+        "e_ur": "مدد",
+        "a": 3,
+        "o_ca": 3,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 3
+      },
+      {
+        "c": "اللَّهِ",
+        "d": "l-lahi",
+        "e_en": "(of) Allah",
+        "e_ur": "اللہ کی",
+        "a": 4,
+        "o_ca": 827,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 827
+      },
+      {
+        "c": "وَالْفَتْحُ",
+        "d": "wal-fatḥu",
+        "e_en": "and the Victory",
+        "e_ur": "اور فتح",
+        "a": 5,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      }
+    ],
+    "a": {
+      "g_en": "When the victory of Allah has come and the conquest,",
+      "g_ur": "جب اللہ کی مدد آجائے اور فتح"
+    }
+  },
+  "2": {
+    "w": [
+      {
+        "c": "وَرَأَيْتَ",
+        "d": "wara-ayta",
+        "e_en": "And you see",
+        "e_ur": "اور تم نے دیکھا",
+        "a": 1,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "النَّاسَ",
+        "d": "l-nāsa",
+        "e_en": "the people",
+        "e_ur": "لوگوں کو",
+        "a": 2,
+        "o_ca": 48,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 48
+      },
+      {
+        "c": "يَدْخُلُونَ",
+        "d": "yadkhulūna",
+        "e_en": "entering",
+        "e_ur": "داخل ہو رہے ہیں",
+        "a": 3,
+        "o_ca": 6,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 6
+      },
+      {
+        "c": "فِي",
+        "d": "fī",
+        "e_en": "into",
+        "e_ur": "میں",
+        "a": 4,
+        "o_ca": 1182,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1185
+      },
+      {
+        "c": "دِينِ",
+        "d": "dīni",
+        "e_en": "(the) religion",
+        "e_ur": "دین (میں)",
+        "a": 5,
+        "o_ca": 5,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 5
+      },
+      {
+        "c": "اللَّهِ",
+        "d": "l-lahi",
+        "e_en": "(of) Allah",
+        "e_ur": "اللہ کے",
+        "a": 6,
+        "o_ca": 828,
+        "o_s": 2,
+        "o_r": 2,
+        "o_cr": 828
+      },
+      {
+        "c": "أَفْوَاجًا",
+        "d": "afwājan",
+        "e_en": "(in) multitudes",
+        "e_ur": "فوج در فوج",
+        "a": 7,
+        "o_ca": 2,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 2
+      }
+    ],
+    "a": {
+      "g_en": "And you see the people entering into the religion of Allah in multitudes,",
+      "g_ur": "اور تم دیکھو گے کہ لوگ خدا کے دین میں داخل ہورہے ہیں فوج در فوج"
+    }
+  },
+  "3": {
+    "w": [
+      {
+        "c": "فَسَبِّحْ",
+        "d": "fasabbiḥ",
+        "e_en": "Then glorify",
+        "e_ur": "تو تسبیح کرو",
+        "a": 1,
+        "o_ca": 6,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 6
+      },
+      {
+        "c": "بِحَمْدِ",
+        "d": "biḥamdi",
+        "e_en": "(the) praises",
+        "e_ur": "حمد کے ساتھ",
+        "a": 2,
+        "o_ca": 10,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 10
+      },
+      {
+        "c": "رَبِّكَ",
+        "d": "rabbika",
+        "e_en": "(of) your Lord",
+        "e_ur": "اپنے رب کی",
+        "a": 3,
+        "o_ca": 116,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 116
+      },
+      {
+        "c": "وَاسْتَغْفِرْهُ",
+        "d": "wa-is'taghfir'hu",
+        "e_en": "and ask His forgiveness",
+        "e_ur": "اور بخشش مانگو اس سے",
+        "a": 4,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "إِنَّهُ",
+        "d": "innahu",
+        "e_en": "Indeed He",
+        "e_ur": "بیشک وہ",
+        "a": 5,
+        "o_ca": 147,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 147
+      },
+      {
+        "c": "كَانَ",
+        "d": "kāna",
+        "e_en": "is",
+        "e_ur": "ہے",
+        "a": 6,
+        "o_ca": 323,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 323
+      },
+      {
+        "c": "تَوَّابًا",
+        "d": "tawwāban",
+        "e_en": "Oft-Returning",
+        "e_ur": "توبہ قبول کرنے والا",
+        "a": 7,
+        "o_ca": 3,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 3
+      }
+    ],
+    "a": {
+      "g_en": "Then exalt [Him] with praise of your Lord and ask forgiveness of Him. Indeed, He is ever Accepting of repentance.",
+      "g_ur": "تو اپنے رب کی تسبیح کرو اس کی حمد کے ساتھ اور اس سے بخشش مانگو،بے شک وہ بہت معاف کرنے والا ہے"
+    }
+  }
+}

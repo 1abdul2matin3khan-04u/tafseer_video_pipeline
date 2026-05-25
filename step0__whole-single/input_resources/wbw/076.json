@@ -1,0 +1,2923 @@
+{
+  "1": {
+    "w": [
+      {
+        "c": "هَلْ",
+        "d": "hal",
+        "e_en": "Has",
+        "e_ur": "کیا",
+        "a": 1,
+        "o_ca": 60,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 59
+      },
+      {
+        "c": "أَتَى",
+        "d": "atā",
+        "e_en": "(there) come",
+        "e_ur": "آیا ہے",
+        "a": 2,
+        "o_ca": 6,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 6
+      },
+      {
+        "c": "عَلَى",
+        "d": "ʿalā",
+        "e_en": "upon",
+        "e_ur": "پر",
+        "a": 3,
+        "o_ca": 655,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 553
+      },
+      {
+        "c": "الْإِنْسَانِ",
+        "d": "l-insāni",
+        "e_en": "man",
+        "e_ur": "انسان",
+        "a": 4,
+        "o_ca": 4,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 4
+      },
+      {
+        "c": "حِينٌ",
+        "d": "ḥīnun",
+        "e_en": "a period",
+        "e_ur": "ایک وقت",
+        "a": 5,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "مِنَ",
+        "d": "mina",
+        "e_en": "of",
+        "e_ur": "میں سے",
+        "a": 6,
+        "o_ca": 685,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 588
+      },
+      {
+        "c": "الدَّهْرِ",
+        "d": "l-dahri",
+        "e_en": "time",
+        "e_ur": "زمانے",
+        "a": 7,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "لَمْ",
+        "d": "lam",
+        "e_en": "not",
+        "e_ur": "نہ",
+        "a": 8,
+        "o_ca": 155,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 120
+      },
+      {
+        "c": "يَكُنْ",
+        "d": "yakun",
+        "e_en": "he was",
+        "e_ur": "تھا",
+        "a": 9,
+        "o_ca": 26,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 25
+      },
+      {
+        "c": "شَيْئًا",
+        "d": "shayan",
+        "e_en": "a thing",
+        "e_ur": "کوئی چیز",
+        "a": 10,
+        "o_ca": 76,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 60
+      },
+      {
+        "c": "مَذْكُورًا",
+        "d": "madhkūran",
+        "e_en": "mentioned",
+        "e_ur": "قابل ذکر",
+        "a": 11,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      }
+    ],
+    "a": {
+      "g_en": "Has there [not] come upon man a period of time when he was not a thing [even] mentioned?",
+      "g_ur": "کبھی انسان پرزمانہ میں ایک وقت گزرا ہے کہ وہ کوئی قابلِ ذکر چیز نہ تھا"
+    }
+  },
+  "2": {
+    "w": [
+      {
+        "c": "إِنَّا",
+        "d": "innā",
+        "e_en": "Indeed We",
+        "e_ur": "بیشک ہم نے",
+        "a": 1,
+        "o_ca": 148,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 140
+      },
+      {
+        "c": "خَلَقْنَا",
+        "d": "khalaqnā",
+        "e_en": "[We] created",
+        "e_ur": "پیدا کیا ہم نے",
+        "a": 2,
+        "o_ca": 19,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 21
+      },
+      {
+        "c": "الْإِنْسَانَ",
+        "d": "l-insāna",
+        "e_en": "man",
+        "e_ur": "انسان کو",
+        "a": 3,
+        "o_ca": 20,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 26
+      },
+      {
+        "c": "مِنْ",
+        "d": "min",
+        "e_en": "from",
+        "e_ur": "سے",
+        "a": 4,
+        "o_ca": 1638,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1464
+      },
+      {
+        "c": "نُطْفَةٍ",
+        "d": "nuṭ'fatin",
+        "e_en": "a sperm-drop",
+        "e_ur": "ایک نطفے",
+        "a": 5,
+        "o_ca": 8,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 8
+      },
+      {
+        "c": "أَمْشَاجٍ",
+        "d": "amshājin",
+        "e_en": "mixture",
+        "e_ur": "ملے ہوئے۔ مخلوط",
+        "a": 6,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "نَبْتَلِيهِ",
+        "d": "nabtalīhi",
+        "e_en": "(that) We test him;",
+        "e_ur": "کہ ہم آزمائیں اس کو۔ آزمائش کریں اس کی",
+        "a": 7,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "فَجَعَلْنَاهُ",
+        "d": "fajaʿalnāhu",
+        "e_en": "so We made (for) him",
+        "e_ur": "تو بنایا ہم نے اس کو",
+        "a": 8,
+        "o_ca": 2,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 3
+      },
+      {
+        "c": "سَمِيعًا",
+        "d": "samīʿan",
+        "e_en": "hearing",
+        "e_ur": "سننے والا",
+        "a": 9,
+        "o_ca": 4,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 4
+      },
+      {
+        "c": "بَصِيرًا",
+        "d": "baṣīran",
+        "e_en": "and sight",
+        "e_ur": "دیکھنے والا",
+        "a": 10,
+        "o_ca": 14,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 14
+      }
+    ],
+    "a": {
+      "g_en": "Indeed, We created man from a sperm-drop mixture that We may try him; and We made him hearing and seeing.",
+      "g_ur": "ہم نے انسان کو ایک مخلوط بوند سے پیدا کیا،ہم اس کو پلٹتے رہےپھر ہم نے اس کو سننے والا،دیکھنے والا بنادیا"
+    }
+  },
+  "3": {
+    "w": [
+      {
+        "c": "إِنَّا",
+        "d": "innā",
+        "e_en": "Indeed We",
+        "e_ur": "بیشک ہم نے",
+        "a": 1,
+        "o_ca": 149,
+        "o_s": 2,
+        "o_r": 2,
+        "o_cr": 141
+      },
+      {
+        "c": "هَدَيْنَاهُ",
+        "d": "hadaynāhu",
+        "e_en": "guided him",
+        "e_ur": "راہ دکھائی ہم نے اس کو۔ ہدایت دی ہم نے اس کو",
+        "a": 2,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "السَّبِيلَ",
+        "d": "l-sabīla",
+        "e_en": "(to) the way",
+        "e_ur": "راستے کی",
+        "a": 3,
+        "o_ca": 5,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 6
+      },
+      {
+        "c": "إِمَّا",
+        "d": "immā",
+        "e_en": "whether",
+        "e_ur": "خواہ",
+        "a": 4,
+        "o_ca": 9,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 8
+      },
+      {
+        "c": "شَاكِرًا",
+        "d": "shākiran",
+        "e_en": "(he) be grateful",
+        "e_ur": "شکر گزار ہو",
+        "a": 5,
+        "o_ca": 3,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 3
+      },
+      {
+        "c": "وَإِمَّا",
+        "d": "wa-immā",
+        "e_en": "and whether",
+        "e_ur": "اور خواہ",
+        "a": 6,
+        "o_ca": 13,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 12
+      },
+      {
+        "c": "كَفُورًا",
+        "d": "kafūran",
+        "e_en": "(he) be ungrateful",
+        "e_ur": "ناشکرا ہو",
+        "a": 7,
+        "o_ca": 3,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 3
+      }
+    ],
+    "a": {
+      "g_en": "Indeed, We guided him to the way, be he grateful or be he ungrateful.",
+      "g_ur": "ہم نے اس کو راہ سمجھائی،چاہے وہ شکر کرنے والا بنے یا انکار کرنے والا"
+    }
+  },
+  "4": {
+    "w": [
+      {
+        "c": "إِنَّا",
+        "d": "innā",
+        "e_en": "Indeed We",
+        "e_ur": "بیشک ہم نے",
+        "a": 1,
+        "o_ca": 150,
+        "o_s": 3,
+        "o_r": 3,
+        "o_cr": 142
+      },
+      {
+        "c": "أَعْتَدْنَا",
+        "d": "aʿtadnā",
+        "e_en": "[We] have prepared",
+        "e_ur": "تیار کیا ہم نے",
+        "a": 2,
+        "o_ca": 6,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 5
+      },
+      {
+        "c": "لِلْكَافِرِينَ",
+        "d": "lil'kāfirīna",
+        "e_en": "for the disbelievers",
+        "e_ur": "کافروں کے لیے",
+        "a": 3,
+        "o_ca": 23,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 21
+      },
+      {
+        "c": "سَلَاسِلَا",
+        "d": "salāsilā",
+        "e_en": "chains",
+        "e_ur": "زنجیروں کو",
+        "a": 4,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "وَأَغْلَالًا",
+        "d": "wa-aghlālan",
+        "e_en": "and shackles",
+        "e_ur": "اور طوق کو",
+        "a": 5,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "وَسَعِيرًا",
+        "d": "wasaʿīran",
+        "e_en": "and a Blazing Fire",
+        "e_ur": "اور بھڑکتی آگ کو",
+        "a": 6,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      }
+    ],
+    "a": {
+      "g_en": "Indeed, We have prepared for the disbelievers chains and shackles and a blaze.",
+      "g_ur": "ہم نے منکروں  کے لیے زنجیریں اور طوق اور بھڑکتی ہوئی آگ تیار کر رکھی ہے"
+    }
+  },
+  "5": {
+    "w": [
+      {
+        "c": "إِنَّ",
+        "d": "inna",
+        "e_en": "Indeed",
+        "e_ur": "بیشک",
+        "a": 1,
+        "o_ca": 575,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 508
+      },
+      {
+        "c": "الْأَبْرَارَ",
+        "d": "l-abrāra",
+        "e_en": "the righteous",
+        "e_ur": "نیک لوگ",
+        "a": 2,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 3
+      },
+      {
+        "c": "يَشْرَبُونَ",
+        "d": "yashrabūna",
+        "e_en": "will drink",
+        "e_ur": "پیئیں گے",
+        "a": 3,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "مِنْ",
+        "d": "min",
+        "e_en": "from",
+        "e_ur": "سے",
+        "a": 4,
+        "o_ca": 1639,
+        "o_s": 2,
+        "o_r": 2,
+        "o_cr": 1465
+      },
+      {
+        "c": "كَأْسٍ",
+        "d": "kasin",
+        "e_en": "a cup",
+        "e_ur": "ایک ساغر",
+        "a": 5,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "كَانَ",
+        "d": "kāna",
+        "e_en": "is",
+        "e_ur": "ہے",
+        "a": 6,
+        "o_ca": 312,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 299
+      },
+      {
+        "c": "مِزَاجُهَا",
+        "d": "mizājuhā",
+        "e_en": "its mixture",
+        "e_ur": "اس کی آمیزش",
+        "a": 7,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "كَافُورًا",
+        "d": "kāfūran",
+        "e_en": "(of) Kafur",
+        "e_ur": "کافور سے",
+        "a": 8,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      }
+    ],
+    "a": {
+      "g_en": "Indeed, the righteous will drink from a cup [of wine] whose mixture is of Kafur,",
+      "g_ur": "نیک لوگ ایسے پیالے سے پئیں گے جس میں کافور کی آمیزش ہوگی"
+    }
+  },
+  "6": {
+    "w": [
+      {
+        "c": "عَيْنًا",
+        "d": "ʿaynan",
+        "e_en": "A spring",
+        "e_ur": "ایک چشمہ ہے",
+        "a": 1,
+        "o_ca": 4,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 5
+      },
+      {
+        "c": "يَشْرَبُ",
+        "d": "yashrabu",
+        "e_en": "will drink",
+        "e_ur": "پیئیں گے",
+        "a": 2,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 2
+      },
+      {
+        "c": "بِهَا",
+        "d": "bihā",
+        "e_en": "from it",
+        "e_ur": "اس سے",
+        "a": 3,
+        "o_ca": 78,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 69
+      },
+      {
+        "c": "عِبَادُ",
+        "d": "ʿibādu",
+        "e_en": "(the) slaves",
+        "e_ur": "بندے",
+        "a": 4,
+        "o_ca": 2,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 2
+      },
+      {
+        "c": "اللَّهِ",
+        "d": "l-lahi",
+        "e_en": "(of) Allah",
+        "e_ur": "اللہ کے",
+        "a": 5,
+        "o_ca": 821,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 652
+      },
+      {
+        "c": "يُفَجِّرُونَهَا",
+        "d": "yufajjirūnahā",
+        "e_en": "causing it to gush forth",
+        "e_ur": "پھاڑ لے جائیں گے",
+        "a": 6,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "تَفْجِيرًا",
+        "d": "tafjīran",
+        "e_en": "abundantly",
+        "e_ur": "پھاڑ لے جانا",
+        "a": 7,
+        "o_ca": 2,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 2
+      }
+    ],
+    "a": {
+      "g_en": "A spring of which the [righteous] servants of Allah will drink; they will make it gush forth in force [and abundance].",
+      "g_ur": "اس چشمہ سے اللہ کے بندے پئیں گےوہ اس کی شاخیں نکالیں گے"
+    }
+  },
+  "7": {
+    "w": [
+      {
+        "c": "يُوفُونَ",
+        "d": "yūfūna",
+        "e_en": "They fulfill",
+        "e_ur": "وہ پوری کرتے ہیں",
+        "a": 1,
+        "o_ca": 2,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 2
+      },
+      {
+        "c": "بِالنَّذْرِ",
+        "d": "bil-nadhri",
+        "e_en": "the vows",
+        "e_ur": "نذر۔ منت",
+        "a": 2,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "وَيَخَافُونَ",
+        "d": "wayakhāfūna",
+        "e_en": "and fear",
+        "e_ur": "اور وہ ڈرتے ہیں",
+        "a": 3,
+        "o_ca": 3,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 3
+      },
+      {
+        "c": "يَوْمًا",
+        "d": "yawman",
+        "e_en": "a Day",
+        "e_ur": "ایک دن سے",
+        "a": 4,
+        "o_ca": 14,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 12
+      },
+      {
+        "c": "كَانَ",
+        "d": "kāna",
+        "e_en": "(which) is",
+        "e_ur": "ہے اس کی",
+        "a": 5,
+        "o_ca": 313,
+        "o_s": 2,
+        "o_r": 2,
+        "o_cr": 300
+      },
+      {
+        "c": "شَرُّهُ",
+        "d": "sharruhu",
+        "e_en": "its evil",
+        "e_ur": "آفت۔ اس کا شر",
+        "a": 6,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "مُسْتَطِيرًا",
+        "d": "mus'taṭīran",
+        "e_en": "widespread",
+        "e_ur": "پھیل جانے والا",
+        "a": 7,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      }
+    ],
+    "a": {
+      "g_en": "They [are those who] fulfill [their] vows and fear a Day whose evil will be widespread.",
+      "g_ur": "وہ لوگ واجبات کو پورا کرتے ہیں اور ایسے دن سے ڈرتے ہیں جس کی سختی عام ہوگی"
+    }
+  },
+  "8": {
+    "w": [
+      {
+        "c": "وَيُطْعِمُونَ",
+        "d": "wayuṭ'ʿimūna",
+        "e_en": "And they feed",
+        "e_ur": "اور وہ کھلاتے ہیں",
+        "a": 1,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "الطَّعَامَ",
+        "d": "l-ṭaʿāma",
+        "e_en": "the food",
+        "e_ur": "کھانا",
+        "a": 2,
+        "o_ca": 5,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 4
+      },
+      {
+        "c": "عَلَى",
+        "d": "ʿalā",
+        "e_en": "in spite of",
+        "e_ur": "میں",
+        "a": 3,
+        "o_ca": 656,
+        "o_s": 2,
+        "o_r": 2,
+        "o_cr": 554
+      },
+      {
+        "c": "حُبِّهِ",
+        "d": "ḥubbihi",
+        "e_en": "love (for) it",
+        "e_ur": "اس کی محبت",
+        "a": 4,
+        "o_ca": 2,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 2
+      },
+      {
+        "c": "مِسْكِينًا",
+        "d": "mis'kīnan",
+        "e_en": "(to the) needy",
+        "e_ur": "مسکین کو",
+        "a": 5,
+        "o_ca": 2,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 2
+      },
+      {
+        "c": "وَيَتِيمًا",
+        "d": "wayatīman",
+        "e_en": "and (the) orphan",
+        "e_ur": "اور یتیم کو",
+        "a": 6,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "وَأَسِيرًا",
+        "d": "wa-asīran",
+        "e_en": "and (the) captive",
+        "e_ur": "اور قیدی کو",
+        "a": 7,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      }
+    ],
+    "a": {
+      "g_en": "And they give food in spite of love for it to the needy, the orphan, and the captive,",
+      "g_ur": "اور اس کی محبت پر کھانا کھلاتے ہیں محتاج کو اور یتیم کواور قیدی کو"
+    }
+  },
+  "9": {
+    "w": [
+      {
+        "c": "إِنَّمَا",
+        "d": "innamā",
+        "e_en": "Only",
+        "e_ur": "بیشک",
+        "a": 1,
+        "o_ca": 110,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 90
+      },
+      {
+        "c": "نُطْعِمُكُمْ",
+        "d": "nuṭ'ʿimukum",
+        "e_en": "we feed you",
+        "e_ur": "ہم کھلاتے ہیں تم کو",
+        "a": 2,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "لِوَجْهِ",
+        "d": "liwajhi",
+        "e_en": "for (the) Countenance",
+        "e_ur": "ذات کے لیے",
+        "a": 3,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "اللَّهِ",
+        "d": "l-lahi",
+        "e_en": "(of) Allah",
+        "e_ur": "اللہ کی",
+        "a": 4,
+        "o_ca": 822,
+        "o_s": 2,
+        "o_r": 2,
+        "o_cr": 653
+      },
+      {
+        "c": "لَا",
+        "d": "lā",
+        "e_en": "Not",
+        "e_ur": "نہیں",
+        "a": 5,
+        "o_ca": 791,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 687
+      },
+      {
+        "c": "نُرِيدُ",
+        "d": "nurīdu",
+        "e_en": "we desire",
+        "e_ur": "ہم چاہتے",
+        "a": 6,
+        "o_ca": 4,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 3
+      },
+      {
+        "c": "مِنْكُمْ",
+        "d": "minkum",
+        "e_en": "from you",
+        "e_ur": "تم سے",
+        "a": 7,
+        "o_ca": 104,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 76
+      },
+      {
+        "c": "جَزَاءً",
+        "d": "jazāan",
+        "e_en": "any reward",
+        "e_ur": "کوئی بدلہ",
+        "a": 8,
+        "o_ca": 12,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 11
+      },
+      {
+        "c": "وَلَا",
+        "d": "walā",
+        "e_en": "and not",
+        "e_ur": "اور نہ",
+        "a": 9,
+        "o_ca": 642,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 560
+      },
+      {
+        "c": "شُكُورًا",
+        "d": "shukūran",
+        "e_en": "thanks",
+        "e_ur": "شکریہ",
+        "a": 10,
+        "o_ca": 2,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 2
+      }
+    ],
+    "a": {
+      "g_en": "[Saying], \"We feed you only for the countenance of Allah. We wish not from you reward or gratitude.",
+      "g_ur": "ہم جوتم کو کھلاتے ہیں تو اللہ کی خوشی چاہنے کے لیےہم نہ تم سے بدلہ چاہتے ہیں اور نہ شکرگزاری"
+    }
+  },
+  "10": {
+    "w": [
+      {
+        "c": "إِنَّا",
+        "d": "innā",
+        "e_en": "Indeed we",
+        "e_ur": "بیشک ہم",
+        "a": 1,
+        "o_ca": 151,
+        "o_s": 4,
+        "o_r": 4,
+        "o_cr": 143
+      },
+      {
+        "c": "نَخَافُ",
+        "d": "nakhāfu",
+        "e_en": "fear",
+        "e_ur": "ہم ڈرتے ہیں",
+        "a": 2,
+        "o_ca": 2,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 2
+      },
+      {
+        "c": "مِنْ",
+        "d": "min",
+        "e_en": "from",
+        "e_ur": "سے",
+        "a": 3,
+        "o_ca": 1640,
+        "o_s": 3,
+        "o_r": 3,
+        "o_cr": 1466
+      },
+      {
+        "c": "رَبِّنَا",
+        "d": "rabbinā",
+        "e_en": "our Lord",
+        "e_ur": "اپنے رب",
+        "a": 4,
+        "o_ca": 17,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 17
+      },
+      {
+        "c": "يَوْمًا",
+        "d": "yawman",
+        "e_en": "a Day",
+        "e_ur": "اس دن سے",
+        "a": 5,
+        "o_ca": 15,
+        "o_s": 2,
+        "o_r": 2,
+        "o_cr": 13
+      },
+      {
+        "c": "عَبُوسًا",
+        "d": "ʿabūsan",
+        "e_en": "harsh",
+        "e_ur": "منہ بنانے والا ہوگا",
+        "a": 6,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "قَمْطَرِيرًا",
+        "d": "qamṭarīran",
+        "e_en": "and distressful",
+        "e_ur": "تیوری چڑھانے والا ہوگا",
+        "a": 7,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      }
+    ],
+    "a": {
+      "g_en": "Indeed, We fear from our Lord a Day austere and distressful.\"",
+      "g_ur": "ہم اپنے رب کی طرف سے ایک سخت اور تلخ دن کا اندیشہ رکھتے ہیں"
+    }
+  },
+  "11": {
+    "w": [
+      {
+        "c": "فَوَقَاهُمُ",
+        "d": "fawaqāhumu",
+        "e_en": "But will protect them",
+        "e_ur": "پس بچالے گا ان کو",
+        "a": 1,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "اللَّهُ",
+        "d": "l-lahu",
+        "e_en": "Allah",
+        "e_ur": "اللہ",
+        "a": 2,
+        "o_ca": 724,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 537
+      },
+      {
+        "c": "شَرَّ",
+        "d": "sharra",
+        "e_en": "(from the) evil",
+        "e_ur": "شر سے۔ تکلیف سے",
+        "a": 3,
+        "o_ca": 3,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 3
+      },
+      {
+        "c": "ذَلِكَ",
+        "d": "dhālika",
+        "e_en": "(of) that",
+        "e_ur": "کے",
+        "a": 4,
+        "o_ca": 272,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 216
+      },
+      {
+        "c": "الْيَوْمِ",
+        "d": "l-yawmi",
+        "e_en": "Day",
+        "e_ur": "اس دن",
+        "a": 5,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "وَلَقَّاهُمْ",
+        "d": "walaqqāhum",
+        "e_en": "and will cause them to meet",
+        "e_ur": "اور عطا کرے گا ان کو",
+        "a": 6,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "نَضْرَةً",
+        "d": "naḍratan",
+        "e_en": "radiance",
+        "e_ur": "تازگی",
+        "a": 7,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "وَسُرُورًا",
+        "d": "wasurūran",
+        "e_en": "and happiness",
+        "e_ur": "اور خوشی",
+        "a": 8,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      }
+    ],
+    "a": {
+      "g_en": "So Allah will protect them from the evil of that Day and give them radiance and happiness",
+      "g_ur": "پس اللہ نے ان کواس دن کی سختی سے بچالیااور ان کو تازگی اور خوشی عطا فرمائی"
+    }
+  },
+  "12": {
+    "w": [
+      {
+        "c": "وَجَزَاهُمْ",
+        "d": "wajazāhum",
+        "e_en": "And will reward them",
+        "e_ur": "اور جزا دے گا ان کو",
+        "a": 1,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "بِمَا",
+        "d": "bimā",
+        "e_en": "because",
+        "e_ur": "بوجہ اس کے",
+        "a": 2,
+        "o_ca": 294,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 241
+      },
+      {
+        "c": "صَبَرُوا",
+        "d": "ṣabarū",
+        "e_en": "they were patient",
+        "e_ur": "جو انہوں نے صبر کیا",
+        "a": 3,
+        "o_ca": 13,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 12
+      },
+      {
+        "c": "جَنَّةً",
+        "d": "jannatan",
+        "e_en": "(with) a Garden",
+        "e_ur": "جنت",
+        "a": 4,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "وَحَرِيرًا",
+        "d": "waḥarīran",
+        "e_en": "and silk",
+        "e_ur": "اور ریشم کی شکل میں",
+        "a": 5,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      }
+    ],
+    "a": {
+      "g_en": "And will reward them for what they patiently endured [with] a garden [in Paradise] and silk [garments].",
+      "g_ur": "اور ان کے صبر کے بدلہ میں ان کوجنت اور ریشمی لباس عطاکیا"
+    }
+  },
+  "13": {
+    "w": [
+      {
+        "c": "مُتَّكِئِينَ",
+        "d": "muttakiīna",
+        "e_en": "Reclining",
+        "e_ur": "تکیہ لگائے ہوئے ہوں گے",
+        "a": 1,
+        "o_ca": 7,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 7
+      },
+      {
+        "c": "فِيهَا",
+        "d": "fīhā",
+        "e_en": "therein",
+        "e_ur": "اس میں",
+        "a": 2,
+        "o_ca": 223,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 199
+      },
+      {
+        "c": "عَلَى",
+        "d": "ʿalā",
+        "e_en": "on",
+        "e_ur": "پر",
+        "a": 3,
+        "o_ca": 657,
+        "o_s": 3,
+        "o_r": 3,
+        "o_cr": 555
+      },
+      {
+        "c": "الْأَرَائِكِ",
+        "d": "l-arāiki",
+        "e_en": "couches",
+        "e_ur": "تختوں",
+        "a": 4,
+        "o_ca": 3,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 5
+      },
+      {
+        "c": "لَا",
+        "d": "lā",
+        "e_en": "Not",
+        "e_ur": "نہ",
+        "a": 5,
+        "o_ca": 792,
+        "o_s": 2,
+        "o_r": 2,
+        "o_cr": 688
+      },
+      {
+        "c": "يَرَوْنَ",
+        "d": "yarawna",
+        "e_en": "they will see",
+        "e_ur": "وہ دیکھیں گے",
+        "a": 6,
+        "o_ca": 8,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 7
+      },
+      {
+        "c": "فِيهَا",
+        "d": "fīhā",
+        "e_en": "therein",
+        "e_ur": "اس میں",
+        "a": 7,
+        "o_ca": 224,
+        "o_s": 2,
+        "o_r": 2,
+        "o_cr": 200
+      },
+      {
+        "c": "شَمْسًا",
+        "d": "shamsan",
+        "e_en": "any sun",
+        "e_ur": "دھوپ",
+        "a": 8,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "وَلَا",
+        "d": "walā",
+        "e_en": "and not",
+        "e_ur": "اور نہ",
+        "a": 9,
+        "o_ca": 643,
+        "o_s": 2,
+        "o_r": 2,
+        "o_cr": 561
+      },
+      {
+        "c": "زَمْهَرِيرًا",
+        "d": "zamharīran",
+        "e_en": "freezing cold",
+        "e_ur": "جاڑا۔ ٹھنڈک",
+        "a": 10,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      }
+    ],
+    "a": {
+      "g_en": "[They will be] reclining therein on adorned couches. They will not see therein any [burning] sun or [freezing] cold.",
+      "g_ur": "ٹیک لگائے ہوں گے وہ اس میں تختوں پر، اس میں نہ وہ گرمی سے دوچار ہوں گے اور نہ سردی سے"
+    }
+  },
+  "14": {
+    "w": [
+      {
+        "c": "وَدَانِيَةً",
+        "d": "wadāniyatan",
+        "e_en": "And near",
+        "e_ur": "اور جھکے ہوئے ہوں گے",
+        "a": 1,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "عَلَيْهِمْ",
+        "d": "ʿalayhim",
+        "e_en": "above them",
+        "e_ur": "ان پر",
+        "a": 2,
+        "o_ca": 174,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 148
+      },
+      {
+        "c": "ظِلَالُهَا",
+        "d": "ẓilāluhā",
+        "e_en": "(are) its shades",
+        "e_ur": "اس کے سائے",
+        "a": 3,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "وَذُلِّلَتْ",
+        "d": "wadhullilat",
+        "e_en": "and will hang low",
+        "e_ur": "اور نزدیک کئے گئے",
+        "a": 4,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "قُطُوفُهَا",
+        "d": "quṭūfuhā",
+        "e_en": "its cluster of fruits",
+        "e_ur": "اس کے پھل",
+        "a": 5,
+        "o_ca": 2,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 2
+      },
+      {
+        "c": "تَذْلِيلًا",
+        "d": "tadhlīlan",
+        "e_en": "very low",
+        "e_ur": "جھکے ہوئے",
+        "a": 6,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      }
+    ],
+    "a": {
+      "g_en": "And near above them are its shades, and its [fruit] to be picked will be lowered in compliance.",
+      "g_ur": "جنت کے سائے ان پر جھکے ہوئے ہوں گے اور اس کے پھل ان کے بس میں ہوں گے"
+    }
+  },
+  "15": {
+    "w": [
+      {
+        "c": "وَيُطَافُ",
+        "d": "wayuṭāfu",
+        "e_en": "And will be circulated",
+        "e_ur": "اور پھرائے جائیں گے",
+        "a": 1,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "عَلَيْهِمْ",
+        "d": "ʿalayhim",
+        "e_en": "among them",
+        "e_ur": "ان پر",
+        "a": 2,
+        "o_ca": 175,
+        "o_s": 2,
+        "o_r": 2,
+        "o_cr": 149
+      },
+      {
+        "c": "بِءَانِيَةٍ",
+        "d": "biāniyatin",
+        "e_en": "vessels",
+        "e_ur": "برتنوں میں",
+        "a": 3,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "مِنْ",
+        "d": "min",
+        "e_en": "of",
+        "e_ur": "کے",
+        "a": 4,
+        "o_ca": 1641,
+        "o_s": 4,
+        "o_r": 4,
+        "o_cr": 1467
+      },
+      {
+        "c": "فِضَّةٍ",
+        "d": "fiḍḍatin",
+        "e_en": "silver",
+        "e_ur": "چاندی",
+        "a": 5,
+        "o_ca": 2,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 2
+      },
+      {
+        "c": "وَأَكْوَابٍ",
+        "d": "wa-akwābin",
+        "e_en": "and cups",
+        "e_ur": "اور پیالے",
+        "a": 6,
+        "o_ca": 2,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 2
+      },
+      {
+        "c": "كَانَتْ",
+        "d": "kānat",
+        "e_en": "that are",
+        "e_ur": "ہوں گے",
+        "a": 7,
+        "o_ca": 26,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 26
+      },
+      {
+        "c": "قَوَارِيرَا",
+        "d": "qawārīrā",
+        "e_en": "(of) crystal",
+        "e_ur": "شیشے کے",
+        "a": 8,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      }
+    ],
+    "a": {
+      "g_en": "And there will be circulated among them vessels of silver and cups having been [created] clear [as glass],",
+      "g_ur": "اور ان کے آگے چاندی کے برتن اور شیشے کے پیالے گردش میں ہوں گے"
+    }
+  },
+  "16": {
+    "w": [
+      {
+        "c": "قَوَارِيرَا",
+        "d": "qawārīrā",
+        "e_en": "Crystal-clear",
+        "e_ur": "شیشے کے",
+        "a": 1,
+        "o_ca": 2,
+        "o_s": 2,
+        "o_r": 2,
+        "o_cr": 2
+      },
+      {
+        "c": "مِنْ",
+        "d": "min",
+        "e_en": "of",
+        "e_ur": "میں سے",
+        "a": 2,
+        "o_ca": 1642,
+        "o_s": 5,
+        "o_r": 5,
+        "o_cr": 1468
+      },
+      {
+        "c": "فِضَّةٍ",
+        "d": "fiḍḍatin",
+        "e_en": "silver",
+        "e_ur": "چاندی",
+        "a": 3,
+        "o_ca": 3,
+        "o_s": 2,
+        "o_r": 2,
+        "o_cr": 3
+      },
+      {
+        "c": "قَدَّرُوهَا",
+        "d": "qaddarūhā",
+        "e_en": "They will determine its",
+        "e_ur": "اندازے سے بھرا ہوگا ان کو",
+        "a": 4,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "تَقْدِيرًا",
+        "d": "taqdīran",
+        "e_en": "measure",
+        "e_ur": "اندازے کے ساتھ",
+        "a": 5,
+        "o_ca": 2,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 2
+      }
+    ],
+    "a": {
+      "g_en": "Clear glasses [made] from silver of which they have determined the measure.",
+      "g_ur": "شیشے چاندی کے ہوں گے،جن کو بھرنے والوں نے مناسب انداز سے بھرا ہوگا"
+    }
+  },
+  "17": {
+    "w": [
+      {
+        "c": "وَيُسْقَوْنَ",
+        "d": "wayus'qawna",
+        "e_en": "And they will be given to drink",
+        "e_ur": "اور وہ پلائے جائیں گے",
+        "a": 1,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "فِيهَا",
+        "d": "fīhā",
+        "e_en": "therein",
+        "e_ur": "اس میں",
+        "a": 2,
+        "o_ca": 225,
+        "o_s": 3,
+        "o_r": 3,
+        "o_cr": 201
+      },
+      {
+        "c": "كَأْسًا",
+        "d": "kasan",
+        "e_en": "a cup",
+        "e_ur": "ایک جام",
+        "a": 3,
+        "o_ca": 2,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 2
+      },
+      {
+        "c": "كَانَ",
+        "d": "kāna",
+        "e_en": "is",
+        "e_ur": "ہوگی اس میں",
+        "a": 4,
+        "o_ca": 314,
+        "o_s": 3,
+        "o_r": 3,
+        "o_cr": 301
+      },
+      {
+        "c": "مِزَاجُهَا",
+        "d": "mizājuhā",
+        "e_en": "its mixture",
+        "e_ur": "آمیزش۔ ملاوٹ",
+        "a": 5,
+        "o_ca": 2,
+        "o_s": 2,
+        "o_r": 2,
+        "o_cr": 2
+      },
+      {
+        "c": "زَنْجَبِيلًا",
+        "d": "zanjabīlan",
+        "e_en": "(of) Zanjabil",
+        "e_ur": "زنجیل کی۔ سونٹھ کی",
+        "a": 6,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      }
+    ],
+    "a": {
+      "g_en": "And they will be given to drink a cup [of wine] whose mixture is of ginger",
+      "g_ur": "اور وہاں ان کو ایک اور جام پلایا جائے گا جس میں سونٹھ کی آمیزش ہوگی"
+    }
+  },
+  "18": {
+    "w": [
+      {
+        "c": "عَيْنًا",
+        "d": "ʿaynan",
+        "e_en": "A spring",
+        "e_ur": "ایک چشمہ ہوگا",
+        "a": 1,
+        "o_ca": 5,
+        "o_s": 2,
+        "o_r": 2,
+        "o_cr": 6
+      },
+      {
+        "c": "فِيهَا",
+        "d": "fīhā",
+        "e_en": "therein",
+        "e_ur": "اس میں",
+        "a": 2,
+        "o_ca": 226,
+        "o_s": 4,
+        "o_r": 4,
+        "o_cr": 202
+      },
+      {
+        "c": "تُسَمَّى",
+        "d": "tusammā",
+        "e_en": "named",
+        "e_ur": "نام رکھا جائے گا۔ نام دیا گیا ہے وہ",
+        "a": 3,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "سَلْسَبِيلًا",
+        "d": "salsabīlan",
+        "e_en": "Salsabil",
+        "e_ur": "سلسبیل",
+        "a": 4,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      }
+    ],
+    "a": {
+      "g_en": "[From] a fountain within Paradise named Salsabeel.",
+      "g_ur": "یہ اس میں ایک چشمہ ہے جس کو سلسبیل کہا جاتا ہے"
+    }
+  },
+  "19": {
+    "w": [
+      {
+        "c": "وَيَطُوفُ",
+        "d": "wayaṭūfu",
+        "e_en": "And will circulate",
+        "e_ur": "اور گھومیں گے",
+        "a": 1,
+        "o_ca": 2,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 2
+      },
+      {
+        "c": "عَلَيْهِمْ",
+        "d": "ʿalayhim",
+        "e_en": "among them",
+        "e_ur": "ان پر",
+        "a": 2,
+        "o_ca": 176,
+        "o_s": 3,
+        "o_r": 3,
+        "o_cr": 150
+      },
+      {
+        "c": "وِلْدَانٌ",
+        "d": "wil'dānun",
+        "e_en": "young boys",
+        "e_ur": "لڑکے",
+        "a": 3,
+        "o_ca": 2,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 2
+      },
+      {
+        "c": "مُخَلَّدُونَ",
+        "d": "mukhalladūna",
+        "e_en": "made eternal",
+        "e_ur": "ہمیشہ لڑکے رہنے والے",
+        "a": 4,
+        "o_ca": 2,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 2
+      },
+      {
+        "c": "إِذَا",
+        "d": "idhā",
+        "e_en": "When",
+        "e_ur": "جب",
+        "a": 5,
+        "o_ca": 169,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 166
+      },
+      {
+        "c": "رَأَيْتَهُمْ",
+        "d": "ra-aytahum",
+        "e_en": "you see them",
+        "e_ur": "تم دیکھو گے ان کو",
+        "a": 6,
+        "o_ca": 4,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 3
+      },
+      {
+        "c": "حَسِبْتَهُمْ",
+        "d": "ḥasib'tahum",
+        "e_en": "you would think them",
+        "e_ur": "تم سمجھو گے ان کو",
+        "a": 7,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "لُؤْلُؤًا",
+        "d": "lu'lu-an",
+        "e_en": "(as) pearls",
+        "e_ur": "موتی ہیں",
+        "a": 8,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "مَنْثُورًا",
+        "d": "manthūran",
+        "e_en": "scattered",
+        "e_ur": "بکھرے ہوئے",
+        "a": 9,
+        "o_ca": 2,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 2
+      }
+    ],
+    "a": {
+      "g_en": "There will circulate among them young boys made eternal. When you see them, you would think them [as beautiful as] scattered pearls.",
+      "g_ur": "اور ان کے پاس پھر رہے ہوں گے ایسے بچے جو ہمیشہ بچے ہی رہیں گےتم انھیں دیکھو تو سمجھو کہ موتی ہیں جو بکھیردئے گئے ہیں"
+    }
+  },
+  "20": {
+    "w": [
+      {
+        "c": "وَإِذَا",
+        "d": "wa-idhā",
+        "e_en": "And when",
+        "e_ur": "اور جب",
+        "a": 1,
+        "o_ca": 105,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 112
+      },
+      {
+        "c": "رَأَيْتَ",
+        "d": "ra-ayta",
+        "e_en": "you look",
+        "e_ur": "تم دیکھو گے",
+        "a": 2,
+        "o_ca": 4,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 4
+      },
+      {
+        "c": "ثَمَّ",
+        "d": "thamma",
+        "e_en": "then",
+        "e_ur": "اس جگہ",
+        "a": 3,
+        "o_ca": 2,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 3
+      },
+      {
+        "c": "رَأَيْتَ",
+        "d": "ra-ayta",
+        "e_en": "you will see",
+        "e_ur": "تم دیکھو گے",
+        "a": 4,
+        "o_ca": 5,
+        "o_s": 2,
+        "o_r": 2,
+        "o_cr": 5
+      },
+      {
+        "c": "نَعِيمًا",
+        "d": "naʿīman",
+        "e_en": "blessings",
+        "e_ur": "نعمتیں",
+        "a": 5,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "وَمُلْكًا",
+        "d": "wamul'kan",
+        "e_en": "and a kingdom",
+        "e_ur": "اور  بادشاہت",
+        "a": 6,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "كَبِيرًا",
+        "d": "kabīran",
+        "e_en": "great",
+        "e_ur": "بہت بڑی",
+        "a": 7,
+        "o_ca": 17,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 17
+      }
+    ],
+    "a": {
+      "g_en": "And when you look there [in Paradise], you will see pleasure and great dominion.",
+      "g_ur": "اور تم جہاں دیکھوگے، وہیں عظیم نعمت اورعظیم بادشاہی دیکھوگے"
+    }
+  },
+  "21": {
+    "w": [
+      {
+        "c": "عَالِيَهُمْ",
+        "d": "ʿāliyahum",
+        "e_en": "Upon them",
+        "e_ur": "اوپر ان کے",
+        "a": 1,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "ثِيَابُ",
+        "d": "thiyābu",
+        "e_en": "(will be) garments",
+        "e_ur": "کپڑے ہوں گے",
+        "a": 2,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "سُنْدُسٍ",
+        "d": "sundusin",
+        "e_en": "(of) fine silk",
+        "e_ur": "باریک ریشم کے",
+        "a": 3,
+        "o_ca": 3,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 3
+      },
+      {
+        "c": "خُضْرٌ",
+        "d": "khuḍ'run",
+        "e_en": "green",
+        "e_ur": "سبز",
+        "a": 4,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "وَإِسْتَبْرَقٌ",
+        "d": "wa-is'tabraqun",
+        "e_en": "and heavy brocade",
+        "e_ur": "اور موٹے ریشم کے",
+        "a": 5,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "وَحُلُّوا",
+        "d": "waḥullū",
+        "e_en": "And they will be adorned",
+        "e_ur": "اور وہ پہنائے جائیں گے",
+        "a": 6,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "أَسَاوِرَ",
+        "d": "asāwira",
+        "e_en": "(with) bracelets",
+        "e_ur": "کنگن",
+        "a": 7,
+        "o_ca": 4,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 3
+      },
+      {
+        "c": "مِنْ",
+        "d": "min",
+        "e_en": "of",
+        "e_ur": "سے",
+        "a": 8,
+        "o_ca": 1643,
+        "o_s": 6,
+        "o_r": 6,
+        "o_cr": 1469
+      },
+      {
+        "c": "فِضَّةٍ",
+        "d": "fiḍḍatin",
+        "e_en": "silver",
+        "e_ur": "چاندی",
+        "a": 9,
+        "o_ca": 4,
+        "o_s": 3,
+        "o_r": 3,
+        "o_cr": 4
+      },
+      {
+        "c": "وَسَقَاهُمْ",
+        "d": "wasaqāhum",
+        "e_en": "and will give them to drink",
+        "e_ur": "اور پلائے گا ان کو",
+        "a": 10,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "رَبُّهُمْ",
+        "d": "rabbuhum",
+        "e_en": "their Lord",
+        "e_ur": "ان کا رب",
+        "a": 11,
+        "o_ca": 11,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 11
+      },
+      {
+        "c": "شَرَابًا",
+        "d": "sharāban",
+        "e_en": "a drink",
+        "e_ur": "شراب",
+        "a": 12,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 2
+      },
+      {
+        "c": "طَهُورًا",
+        "d": "ṭahūran",
+        "e_en": "pure",
+        "e_ur": "پاکیزہ",
+        "a": 13,
+        "o_ca": 2,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 2
+      }
+    ],
+    "a": {
+      "g_en": "Upon the inhabitants will be green garments of fine silk and brocade. And they will be adorned with bracelets of silver, and their Lord will give them a purifying drink.",
+      "g_ur": "ان کے اوپر باریک ریشم کے سبز کپڑے ہوں گے اور دبیز ریشم کے کپڑے بھیاور ان کو چاندی کے کنگن پہنائے جائیں گےاور ان کا رب ان کو پاکیزہ مشروب پلائے گا"
+    }
+  },
+  "22": {
+    "w": [
+      {
+        "c": "إِنَّ",
+        "d": "inna",
+        "e_en": "Indeed",
+        "e_ur": "بیشک",
+        "a": 1,
+        "o_ca": 576,
+        "o_s": 2,
+        "o_r": 2,
+        "o_cr": 509
+      },
+      {
+        "c": "هَذَا",
+        "d": "hādhā",
+        "e_en": "this",
+        "e_ur": "یہ",
+        "a": 2,
+        "o_ca": 185,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 178
+      },
+      {
+        "c": "كَانَ",
+        "d": "kāna",
+        "e_en": "is",
+        "e_ur": "ہے",
+        "a": 3,
+        "o_ca": 315,
+        "o_s": 4,
+        "o_r": 4,
+        "o_cr": 302
+      },
+      {
+        "c": "لَكُمْ",
+        "d": "lakum",
+        "e_en": "for you",
+        "e_ur": "تمہارے لیے",
+        "a": 4,
+        "o_ca": 290,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 238
+      },
+      {
+        "c": "جَزَاءً",
+        "d": "jazāan",
+        "e_en": "a reward",
+        "e_ur": "بدلہ",
+        "a": 5,
+        "o_ca": 13,
+        "o_s": 2,
+        "o_r": 2,
+        "o_cr": 12
+      },
+      {
+        "c": "وَكَانَ",
+        "d": "wakāna",
+        "e_en": "and has been",
+        "e_ur": "اور ہے",
+        "a": 6,
+        "o_ca": 84,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 75
+      },
+      {
+        "c": "سَعْيُكُمْ",
+        "d": "saʿyukum",
+        "e_en": "your effort",
+        "e_ur": "تمہاری کوشش",
+        "a": 7,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "مَشْكُورًا",
+        "d": "mashkūran",
+        "e_en": "appreciated",
+        "e_ur": "قابل قدر",
+        "a": 8,
+        "o_ca": 2,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 2
+      }
+    ],
+    "a": {
+      "g_en": "[And it will be said], \"Indeed, this is for you a reward, and your effort has been appreciated.\"",
+      "g_ur": "بے شک یہ تمھارا صلہ ہے اور تمھاری کوشش مقبول ہوئی"
+    }
+  },
+  "23": {
+    "w": [
+      {
+        "c": "إِنَّا",
+        "d": "innā",
+        "e_en": "Indeed We",
+        "e_ur": "بیشک ہم نے",
+        "a": 1,
+        "o_ca": 152,
+        "o_s": 5,
+        "o_r": 1,
+        "o_cr": 144
+      },
+      {
+        "c": "نَحْنُ",
+        "d": "naḥnu",
+        "e_en": "[We]",
+        "e_ur": "ہم نے",
+        "a": 2,
+        "o_ca": 64,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 61
+      },
+      {
+        "c": "نَزَّلْنَا",
+        "d": "nazzalnā",
+        "e_en": "[We] revealed",
+        "e_ur": "نازل کیا ہم نے",
+        "a": 3,
+        "o_ca": 6,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 6
+      },
+      {
+        "c": "عَلَيْكَ",
+        "d": "ʿalayka",
+        "e_en": "to you",
+        "e_ur": "آپ پر",
+        "a": 4,
+        "o_ca": 55,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 53
+      },
+      {
+        "c": "الْقُرْءَانَ",
+        "d": "l-qur'āna",
+        "e_en": "the Quran",
+        "e_ur": "قرآن",
+        "a": 5,
+        "o_ca": 22,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 21
+      },
+      {
+        "c": "تَنْزِيلًا",
+        "d": "tanzīlan",
+        "e_en": "progressively",
+        "e_ur": "آہستہ آہستہ نازل کرنا",
+        "a": 6,
+        "o_ca": 4,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 4
+      }
+    ],
+    "a": {
+      "g_en": "Indeed, it is We who have sent down to you, [O Muhammad], the Qur'an progressively.",
+      "g_ur": "ہم نے تم پرقرآن تھوڑا تھوڑا کرکے اُتارا ہے"
+    }
+  },
+  "24": {
+    "w": [
+      {
+        "c": "فَاصْبِرْ",
+        "d": "fa-iṣ'bir",
+        "e_en": "So be patient",
+        "e_ur": "پس صبر کرو",
+        "a": 1,
+        "o_ca": 11,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 11
+      },
+      {
+        "c": "لِحُكْمِ",
+        "d": "liḥuk'mi",
+        "e_en": "for (the) Command",
+        "e_ur": "حکم پر",
+        "a": 2,
+        "o_ca": 3,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 3
+      },
+      {
+        "c": "رَبِّكَ",
+        "d": "rabbika",
+        "e_en": "(of) your Lord",
+        "e_ur": "اپنے رب کے",
+        "a": 3,
+        "o_ca": 104,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 108
+      },
+      {
+        "c": "وَلَا",
+        "d": "walā",
+        "e_en": "and (do) not",
+        "e_ur": "اور نہ",
+        "a": 4,
+        "o_ca": 644,
+        "o_s": 3,
+        "o_r": 1,
+        "o_cr": 562
+      },
+      {
+        "c": "تُطِعْ",
+        "d": "tuṭiʿ",
+        "e_en": "obey",
+        "e_ur": "تم اطاعت کرو",
+        "a": 5,
+        "o_ca": 4,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 4
+      },
+      {
+        "c": "مِنْهُمْ",
+        "d": "min'hum",
+        "e_en": "from them",
+        "e_ur": "ان میں سے",
+        "a": 6,
+        "o_ca": 143,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 107
+      },
+      {
+        "c": "ءَاثِمًا",
+        "d": "āthiman",
+        "e_en": "any sinner",
+        "e_ur": "کسی گناہ گار کی",
+        "a": 7,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "أَوْ",
+        "d": "aw",
+        "e_en": "or",
+        "e_ur": "یا",
+        "a": 8,
+        "o_ca": 257,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 206
+      },
+      {
+        "c": "كَفُورًا",
+        "d": "kafūran",
+        "e_en": "disbeliever",
+        "e_ur": "ناشکرے کی",
+        "a": 9,
+        "o_ca": 4,
+        "o_s": 2,
+        "o_r": 1,
+        "o_cr": 4
+      }
+    ],
+    "a": {
+      "g_en": "So be patient for the decision of your Lord and do not obey from among them a sinner or ungrateful [disbeliever].",
+      "g_ur": "پس تم اپنے رب کے حکم پر صبر کرو اور ان میں سے کسی گناہ گار یا ناشکر کی بات نہ مانو"
+    }
+  },
+  "25": {
+    "w": [
+      {
+        "c": "وَاذْكُرِ",
+        "d": "wa-udh'kuri",
+        "e_en": "And remember",
+        "e_ur": "اور یاد کرو",
+        "a": 1,
+        "o_ca": 2,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 2
+      },
+      {
+        "c": "اسْمَ",
+        "d": "is'ma",
+        "e_en": "(the) name",
+        "e_ur": "نام",
+        "a": 2,
+        "o_ca": 7,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 5
+      },
+      {
+        "c": "رَبِّكَ",
+        "d": "rabbika",
+        "e_en": "(of) your Lord",
+        "e_ur": "اپنے رب کا",
+        "a": 3,
+        "o_ca": 105,
+        "o_s": 2,
+        "o_r": 2,
+        "o_cr": 109
+      },
+      {
+        "c": "بُكْرَةً",
+        "d": "buk'ratan",
+        "e_en": "morning",
+        "e_ur": "صبح",
+        "a": 4,
+        "o_ca": 7,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 6
+      },
+      {
+        "c": "وَأَصِيلًا",
+        "d": "wa-aṣīlan",
+        "e_en": "and evening",
+        "e_ur": "اور شام",
+        "a": 5,
+        "o_ca": 4,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 3
+      }
+    ],
+    "a": {
+      "g_en": "And mention the name of your Lord [in prayer] morning and evening",
+      "g_ur": "اور اپنے رب کانام صبح وشام یادکرو"
+    }
+  },
+  "26": {
+    "w": [
+      {
+        "c": "وَمِنَ",
+        "d": "wamina",
+        "e_en": "And of",
+        "e_ur": "اور  میں",
+        "a": 1,
+        "o_ca": 38,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 28
+      },
+      {
+        "c": "اللَّيْلِ",
+        "d": "al-layli",
+        "e_en": "the night",
+        "e_ur": "رات کے اوقات",
+        "a": 2,
+        "o_ca": 30,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 29
+      },
+      {
+        "c": "فَاسْجُدْ",
+        "d": "fa-us'jud",
+        "e_en": "prostrate",
+        "e_ur": "سجدہ کرو",
+        "a": 3,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "لَهُ",
+        "d": "lahu",
+        "e_en": "to Him",
+        "e_ur": "اس کے لیے",
+        "a": 4,
+        "o_ca": 267,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 243
+      },
+      {
+        "c": "وَسَبِّحْهُ",
+        "d": "wasabbiḥ'hu",
+        "e_en": "and glorify Him",
+        "e_ur": "اور تسبیح کرو اس کی",
+        "a": 5,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "لَيْلًا",
+        "d": "laylan",
+        "e_en": "a night",
+        "e_ur": "رات",
+        "a": 6,
+        "o_ca": 5,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 5
+      },
+      {
+        "c": "طَوِيلًا",
+        "d": "ṭawīlan",
+        "e_en": "long",
+        "e_ur": "طویل",
+        "a": 7,
+        "o_ca": 2,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 2
+      }
+    ],
+    "a": {
+      "g_en": "And during the night prostrate to Him and exalt Him a long [part of the] night.",
+      "g_ur": "اور رات کوبھی اس کوسجدہ کرواور اس کی تسبیح کرو رات کے طویل حصہ میں"
+    }
+  },
+  "27": {
+    "w": [
+      {
+        "c": "إِنَّ",
+        "d": "inna",
+        "e_en": "Indeed",
+        "e_ur": "بیشک",
+        "a": 1,
+        "o_ca": 577,
+        "o_s": 3,
+        "o_r": 1,
+        "o_cr": 510
+      },
+      {
+        "c": "هَؤُلَاءِ",
+        "d": "hāulāi",
+        "e_en": "these",
+        "e_ur": "یہ لوگ تو",
+        "a": 2,
+        "o_ca": 40,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 41
+      },
+      {
+        "c": "يُحِبُّونَ",
+        "d": "yuḥibbūna",
+        "e_en": "love",
+        "e_ur": "محبت رکھتے ہیں",
+        "a": 3,
+        "o_ca": 4,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "الْعَاجِلَةَ",
+        "d": "l-ʿājilata",
+        "e_en": "the immediate",
+        "e_ur": "جلد ملنے والی سے (دنیا)",
+        "a": 4,
+        "o_ca": 3,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 3
+      },
+      {
+        "c": "وَيَذَرُونَ",
+        "d": "wayadharūna",
+        "e_en": "and leave",
+        "e_ur": "اور چھوڑ دیتے ہیں",
+        "a": 5,
+        "o_ca": 3,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 3
+      },
+      {
+        "c": "وَرَاءَهُمْ",
+        "d": "warāahum",
+        "e_en": "behind them",
+        "e_ur": "اپنے آگے",
+        "a": 6,
+        "o_ca": 2,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 2
+      },
+      {
+        "c": "يَوْمًا",
+        "d": "yawman",
+        "e_en": "a Day",
+        "e_ur": "دن",
+        "a": 7,
+        "o_ca": 16,
+        "o_s": 3,
+        "o_r": 1,
+        "o_cr": 14
+      },
+      {
+        "c": "ثَقِيلًا",
+        "d": "thaqīlan",
+        "e_en": "grave",
+        "e_ur": "بھاری",
+        "a": 8,
+        "o_ca": 2,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 2
+      }
+    ],
+    "a": {
+      "g_en": "Indeed, these [disbelievers] love the immediate and leave behind them a grave Day.",
+      "g_ur": "یہ لوگ جلدی ملنے والی چیز کو چاہتے ہیں اور انھوں نے چھوڑ رکھا ہے اپنے پیچھے ایک بھاری دن کو"
+    }
+  },
+  "28": {
+    "w": [
+      {
+        "c": "نَحْنُ",
+        "d": "naḥnu",
+        "e_en": "We",
+        "e_ur": "ہم نے ہی",
+        "a": 1,
+        "o_ca": 65,
+        "o_s": 2,
+        "o_r": 2,
+        "o_cr": 62
+      },
+      {
+        "c": "خَلَقْنَاهُمْ",
+        "d": "khalaqnāhum",
+        "e_en": "created them",
+        "e_ur": "پیدا کیا ہم نے ان کو",
+        "a": 2,
+        "o_ca": 3,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 3
+      },
+      {
+        "c": "وَشَدَدْنَا",
+        "d": "washadadnā",
+        "e_en": "and We strengthened",
+        "e_ur": "اور ہم نے مضبوط کیے",
+        "a": 3,
+        "o_ca": 2,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 2
+      },
+      {
+        "c": "أَسْرَهُمْ",
+        "d": "asrahum",
+        "e_en": "their forms",
+        "e_ur": "ان کے بندھن",
+        "a": 4,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "وَإِذَا",
+        "d": "wa-idhā",
+        "e_en": "and when",
+        "e_ur": "اور جب",
+        "a": 5,
+        "o_ca": 106,
+        "o_s": 2,
+        "o_r": 1,
+        "o_cr": 113
+      },
+      {
+        "c": "شِئْنَا",
+        "d": "shi'nā",
+        "e_en": "We will",
+        "e_ur": "چاہیں ہم",
+        "a": 6,
+        "o_ca": 5,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 5
+      },
+      {
+        "c": "بَدَّلْنَا",
+        "d": "baddalnā",
+        "e_en": "We can change",
+        "e_ur": "بدل دیں ہم",
+        "a": 7,
+        "o_ca": 3,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 3
+      },
+      {
+        "c": "أَمْثَالَهُمْ",
+        "d": "amthālahum",
+        "e_en": "their likeness[es]",
+        "e_ur": "ان کی شکلوں کو۔ ان کی مثالوں کو",
+        "a": 8,
+        "o_ca": 2,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 2
+      },
+      {
+        "c": "تَبْدِيلًا",
+        "d": "tabdīlan",
+        "e_en": "(with) a change",
+        "e_ur": "بدل دینا",
+        "a": 9,
+        "o_ca": 5,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 4
+      }
+    ],
+    "a": {
+      "g_en": "We have created them and strengthened their forms, and when We will, We can change their likenesses with [complete] alteration.",
+      "g_ur": "ہم ہی نے ان کو پیداکیا اور ہم ہی نے ان کے جوڑ بند مضبوط کيے،اور جب ہم چاہیں گے انھیں جیسے لوگ ان کی جگہ بدل لائیں گے"
+    }
+  },
+  "29": {
+    "w": [
+      {
+        "c": "إِنَّ",
+        "d": "inna",
+        "e_en": "Indeed",
+        "e_ur": "بیشک",
+        "a": 1,
+        "o_ca": 578,
+        "o_s": 4,
+        "o_r": 2,
+        "o_cr": 511
+      },
+      {
+        "c": "هَذِهِ",
+        "d": "hādhihi",
+        "e_en": "this",
+        "e_ur": "یہ",
+        "a": 2,
+        "o_ca": 46,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 44
+      },
+      {
+        "c": "تَذْكِرَةٌ",
+        "d": "tadhkiratun",
+        "e_en": "(is) a reminder",
+        "e_ur": "ایک یاد دہانی ہے",
+        "a": 3,
+        "o_ca": 3,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 4
+      },
+      {
+        "c": "فَمَنْ",
+        "d": "faman",
+        "e_en": "so whoever",
+        "e_ur": "تو جو کوئی",
+        "a": 4,
+        "o_ca": 64,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 57
+      },
+      {
+        "c": "شَاءَ",
+        "d": "shāa",
+        "e_en": "wills",
+        "e_ur": "چاہے",
+        "a": 5,
+        "o_ca": 50,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 53
+      },
+      {
+        "c": "اتَّخَذَ",
+        "d": "ittakhadha",
+        "e_en": "let him take",
+        "e_ur": "بنا لے",
+        "a": 6,
+        "o_ca": 14,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 15
+      },
+      {
+        "c": "إِلَى",
+        "d": "ilā",
+        "e_en": "to",
+        "e_ur": "طرف",
+        "a": 7,
+        "o_ca": 390,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 347
+      },
+      {
+        "c": "رَبِّهِ",
+        "d": "rabbihi",
+        "e_en": "his Lord",
+        "e_ur": "اپنے رب کی",
+        "a": 8,
+        "o_ca": 40,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 43
+      },
+      {
+        "c": "سَبِيلًا",
+        "d": "sabīlan",
+        "e_en": "a way",
+        "e_ur": "راستہ",
+        "a": 9,
+        "o_ca": 29,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 29
+      }
+    ],
+    "a": {
+      "g_en": "Indeed, this is a reminder, so he who wills may take to his Lord a way.",
+      "g_ur": "یہ ایک نصیحت ہے پس جو شخص چاہے، اپنے رب کی طرف راستہ اختیار کرلے"
+    }
+  },
+  "30": {
+    "w": [
+      {
+        "c": "وَمَا",
+        "d": "wamā",
+        "e_en": "And not",
+        "e_ur": "اور نہیں",
+        "a": 1,
+        "o_ca": 611,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 592
+      },
+      {
+        "c": "تَشَاءُونَ",
+        "d": "tashāūna",
+        "e_en": "you will",
+        "e_ur": "تم چاہ سکتے",
+        "a": 2,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 2
+      },
+      {
+        "c": "إِلَّا",
+        "d": "illā",
+        "e_en": "except",
+        "e_ur": "مگر",
+        "a": 3,
+        "o_ca": 644,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 601
+      },
+      {
+        "c": "أَنْ",
+        "d": "an",
+        "e_en": "that",
+        "e_ur": "یہ کہ",
+        "a": 4,
+        "o_ca": 510,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 428
+      },
+      {
+        "c": "يَشَاءَ",
+        "d": "yashāa",
+        "e_en": "wills",
+        "e_ur": "چاہے",
+        "a": 5,
+        "o_ca": 7,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 8
+      },
+      {
+        "c": "اللَّهُ",
+        "d": "l-lahu",
+        "e_en": "Allah",
+        "e_ur": "اللہ",
+        "a": 6,
+        "o_ca": 725,
+        "o_s": 2,
+        "o_r": 1,
+        "o_cr": 538
+      },
+      {
+        "c": "إِنَّ",
+        "d": "inna",
+        "e_en": "Indeed",
+        "e_ur": "کیونکہ",
+        "a": 7,
+        "o_ca": 579,
+        "o_s": 5,
+        "o_r": 3,
+        "o_cr": 512
+      },
+      {
+        "c": "اللَّهَ",
+        "d": "l-laha",
+        "e_en": "Allah",
+        "e_ur": "اللہ",
+        "a": 8,
+        "o_ca": 590,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 409
+      },
+      {
+        "c": "كَانَ",
+        "d": "kāna",
+        "e_en": "is",
+        "e_ur": "ہے",
+        "a": 9,
+        "o_ca": 316,
+        "o_s": 5,
+        "o_r": 1,
+        "o_cr": 303
+      },
+      {
+        "c": "عَلِيمًا",
+        "d": "ʿalīman",
+        "e_en": "All-Knower",
+        "e_ur": "علم والا",
+        "a": 10,
+        "o_ca": 22,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 20
+      },
+      {
+        "c": "حَكِيمًا",
+        "d": "ḥakīman",
+        "e_en": "All-Wise",
+        "e_ur": "حکمت والا",
+        "a": 11,
+        "o_ca": 16,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 13
+      }
+    ],
+    "a": {
+      "g_en": "And you do not will except that Allah wills. Indeed, Allah is ever Knowing and Wise.",
+      "g_ur": "اور تم نہیں چاہ سکتے مگر یہ کہ اللہ چاہےبے شک اللہ جاننے والا، حکمت والا ہے"
+    }
+  },
+  "31": {
+    "w": [
+      {
+        "c": "يُدْخِلُ",
+        "d": "yud'khilu",
+        "e_en": "He admits",
+        "e_ur": "داخل کرے گا",
+        "a": 1,
+        "o_ca": 5,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 3
+      },
+      {
+        "c": "مَنْ",
+        "d": "man",
+        "e_en": "whom",
+        "e_ur": "جس کو",
+        "a": 2,
+        "o_ca": 356,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 320
+      },
+      {
+        "c": "يَشَاءُ",
+        "d": "yashāu",
+        "e_en": "He wills",
+        "e_ur": "چاہے گا",
+        "a": 3,
+        "o_ca": 108,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 86
+      },
+      {
+        "c": "فِي",
+        "d": "fī",
+        "e_en": "to",
+        "e_ur": "میں",
+        "a": 4,
+        "o_ca": 1154,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1017
+      },
+      {
+        "c": "رَحْمَتِهِ",
+        "d": "raḥmatihi",
+        "e_en": "His mercy",
+        "e_ur": "اپنی رحمت",
+        "a": 5,
+        "o_ca": 13,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 11
+      },
+      {
+        "c": "وَالظَّالِمِينَ",
+        "d": "wal-ẓālimīna",
+        "e_en": "but (for) the wrongdoers",
+        "e_ur": "اور ظالم لوگ",
+        "a": 6,
+        "o_ca": 1,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 1
+      },
+      {
+        "c": "أَعَدَّ",
+        "d": "aʿadda",
+        "e_en": "He has prepared",
+        "e_ur": "اس نے تیار کیا",
+        "a": 7,
+        "o_ca": 7,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 4
+      },
+      {
+        "c": "لَهُمْ",
+        "d": "lahum",
+        "e_en": "for them",
+        "e_ur": "ان کے لیے",
+        "a": 8,
+        "o_ca": 319,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 269
+      },
+      {
+        "c": "عَذَابًا",
+        "d": "ʿadhāban",
+        "e_en": "a punishment",
+        "e_ur": "عذاب",
+        "a": 9,
+        "o_ca": 36,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 29
+      },
+      {
+        "c": "أَلِيمًا",
+        "d": "alīman",
+        "e_en": "painful",
+        "e_ur": "دردناک",
+        "a": 10,
+        "o_ca": 14,
+        "o_s": 1,
+        "o_r": 1,
+        "o_cr": 9
+      }
+    ],
+    "a": {
+      "g_en": "He admits whom He wills into His mercy; but the wrongdoers - He has prepared for them a painful punishment.",
+      "g_ur": "وہ جس کو چاہتا ہے اپنی رحمت میں داخل کرتا ہے، اور ظالموں کے لیے اس نے دردناک عذاب تیار کررکھا ہے"
+    }
+  }
+}
