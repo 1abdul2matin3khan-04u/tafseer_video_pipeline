@@ -149,6 +149,18 @@ def main():
             step6_entries
         )
 
+    # ── step7: todo_ruku_english.json + todo_ruku_urdu.json ──
+    print("\nGenerating step7 tracking files...")
+    step7_entries = [
+        {**r, "completed": False}
+        for r in ruku_list
+    ]
+    for fname in ["todo_ruku_english.json", "todo_ruku_urdu.json"]:
+        write_json(
+            os.path.join(root, "step7__ruku-assembly", "guiding_resources", fname),
+            step7_entries
+        )
+
     print(f"\nAll tracking files generated/updated. Total Rukus per file: {len(ruku_list)}")
 
 if __name__ == "__main__":
