@@ -41,6 +41,27 @@ def load_ruku_list(mapping_path):
     return ruku_list
 
 def write_json(path, data):
+    completed_map = {}
+    if os.path.exists(path):
+        try:
+            with open(path, 'r', encoding='utf-8') as f:
+                old_data = json.load(f)
+                for entry in old_data:
+                    abs_ruku = entry.get("absolute_ruku")
+                    if abs_ruku is not None:
+                        completed_map[abs_ruku] = entry.get("completed", False)
+                        if "sources_completed" in entry:
+                            completed_map[f"{abs_ruku}_sources"] = entry["sources_completed"]
+        except Exception as e:
+            print(f"  Warning: Could not parse existing tracking file {path}: {e}")
+
+    for entry in data:
+        abs_ruku = entry.get("absolute_ruku")
+        if abs_ruku in completed_map:
+            entry["completed"] = completed_map[abs_ruku]
+        if f"{abs_ruku}_sources" in completed_map and "sources_completed" in entry:
+            entry["sources_completed"] = completed_map[f"{abs_ruku}_sources"]
+
     os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path, 'w', encoding='utf-8') as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
@@ -116,7 +137,19 @@ def main():
             step5_entries
         )
 
-    print(f"\nAll tracking files generated. Total Rukus per file: {len(ruku_list)}")
+    # ── step6: todo_assembly_english.json + todo_assembly_urdu.json ──
+    print("\nGenerating step6 tracking files...")
+    step6_entries = [
+        {**r, "completed": False}
+        for r in ruku_list
+    ]
+    for fname in ["todo_assembly_english.json", "todo_assembly_urdu.json"]:
+        write_json(
+            os.path.join(root, "step6__block-assembly", "guiding_resources", fname),
+            step6_entries
+        )
+
+    print(f"\nAll tracking files generated/updated. Total Rukus per file: {len(ruku_list)}")
 
 if __name__ == "__main__":
     main()
