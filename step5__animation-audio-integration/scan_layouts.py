@@ -6,6 +6,9 @@ total = 0
 
 for lang in ['en', 'ur']:
     manifest_path = os.path.join(d, lang, 'subblocks_manifest.json')
+    if not os.path.exists(manifest_path):
+        print(f"Warning: Manifest not found for track '{lang}' at: {manifest_path}. Skipping.")
+        continue
     manifest = json.load(open(manifest_path, 'r', encoding='utf-8'))
     
     for entry in manifest:

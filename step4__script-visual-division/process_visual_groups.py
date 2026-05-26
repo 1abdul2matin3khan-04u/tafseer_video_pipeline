@@ -6,6 +6,7 @@ layout objects and subdivides scenes into subblocks along visual_group boundarie
 """
 
 import copy
+import re
 
 
 def validate_visual_group(vg):
@@ -224,6 +225,16 @@ def _build_layout_from_vg(vg, reveal_count):
     return layout
 
 
+def is_recitation_scene(script):
+    s = script.lower()
+    return "recite" in s or "recitation" in s
+
+
+def is_translation_scene(script):
+    s = script.lower()
+    return "translation" in s or "tarjuma" in s or "ترجمہ" in s
+
+
 def subdivide_by_visual_groups(scenes, visual_groups, metadata, max_narrative_scenes=6):
     """
     Subdivide block scenes into subblocks, splitting tafseer/commentary scenes
@@ -242,48 +253,60 @@ def subdivide_by_visual_groups(scenes, visual_groups, metadata, max_narrative_sc
     Returns:
         List of subblock dicts ready for saving.
     """
+    # Sort scenes by scene_no to ensure correct order
+    scenes = sorted(scenes, key=lambda s: s.get("scene_no", 0))
+
+    # Parse number of verses from metadata
+    verses_val = str(metadata.get("verses", ""))
+    nums = [int(x) for x in re.findall(r'\d+', verses_val)]
+    if nums:
+        num_verses = max(nums) - min(nums) + 1
+    else:
+        num_verses = 0
+
     # --- Classify scenes into phases ---
     phase1_scenes = []  # Title/TOC
     phase2_scenes = []  # Verses (recitation + translation)
     phase3_scenes = []  # Tafseer/Commentary
 
-    state = 1  # 1: Title/TOC, 2: Recitation/Translation, 3: Tafseer
+    if num_verses == 0:
+        # Concept block: Scene 1 goes to Phase 1, remaining go directly to Phase 3
+        if len(scenes) > 0:
+            phase1_scenes = [scenes[0]]
+            phase3_scenes = scenes[1:]
+    else:
+        # Verse block: State machine-based classification
+        # state: 1: Title/Intro (before recitation), 2: Recitation/Translation, 3: Commentary
+        state = 1
+        last_was_recitation = False
 
-    last_was_arabic = False
-
-    for scene in scenes:
-        script = scene.get("script", "")
-        
-        # Check if the script contains Arabic characters or explicit recitation keywords
-        is_arabic = any('\u0600' <= char <= '\u06FF' for char in script)
-        is_recitation_cue = "[Recite Verse" in script or is_arabic
-        
-        # Check if the script contains translation keywords or is English text following Arabic recitation
-        is_translation_cue = (
-            "Translation:" in script
-            or "Translation (cont):" in script
-            or (last_was_arabic and not is_arabic)
-        )
-        
-        is_verse_scene = is_recitation_cue or is_translation_cue
-
-        if state == 1:
-            if is_verse_scene:
-                state = 2
-                phase2_scenes.append(scene)
-            else:
-                # Commentary or title scenes before the recitation goes to Phase 1
-                phase1_scenes.append(scene)
-        elif state == 2:
-            if not is_verse_scene:
-                state = 3
-                phase3_scenes.append(scene)
-            else:
-                phase2_scenes.append(scene)
-        elif state == 3:
-            phase3_scenes.append(scene)
+        for i, scene in enumerate(scenes):
+            script = scene.get("script", "")
             
-        last_was_arabic = is_arabic
+            # Scene 1 is always Phase 1 (Title/TOC)
+            if i == 0:
+                phase1_scenes.append(scene)
+                continue
+
+            is_rec = is_recitation_scene(script)
+            is_trans = is_translation_scene(script) or (last_was_recitation and not is_rec)
+
+            if state == 1:
+                if is_rec or is_trans:
+                    state = 2
+                    phase2_scenes.append(scene)
+                else:
+                    phase1_scenes.append(scene)
+            elif state == 2:
+                if is_rec or is_trans:
+                    phase2_scenes.append(scene)
+                else:
+                    state = 3
+                    phase3_scenes.append(scene)
+            elif state == 3:
+                phase3_scenes.append(scene)
+
+            last_was_recitation = is_rec
 
     # --- Build subblocks ---
     subblocks = []
