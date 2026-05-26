@@ -1,6 +1,6 @@
 import json, os
-
-d = 'step5__animation-audio-integration/remotion_project/public/output_resources/surah_001/ruku_1_1'
+script_dir = os.path.dirname(os.path.abspath(__file__))
+d = os.path.join(script_dir, 'remotion_project', 'public', 'output_resources', 'surah_001', 'ruku_1_1')
 broken = []
 total = 0
 
