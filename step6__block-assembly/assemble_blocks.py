@@ -37,8 +37,9 @@ def run_command(cmd, cwd=None):
 
 def main():
     parser = argparse.ArgumentParser(description="Step 6: Block Assembly Pipeline (Phase B Rendering & Stitching)")
-    parser.add_argument("--limit", type=int, default=None, help="Limit the number of Rukus to process.")
+    parser.add_argument("--limit", type=int, default=None, help="Limit the number of blocks to process.")
     parser.add_argument("--ruku", type=int, default=None, help="Process a specific absolute Ruku index.")
+    parser.add_argument("--block", type=int, default=None, help="Process a specific block index.")
     parser.add_argument("--force", action="store_true", help="Force re-rendering and stitching of blocks.")
     parser.add_argument("--lang", choices=["en", "ur", "both"], default="both", help="Process specific tracks.")
     args = parser.parse_args()
@@ -68,13 +69,16 @@ def main():
         with open(todo_path, 'r', encoding='utf-8') as f:
             todo_list = json.load(f)
 
-        processed_rukus = 0
+        processed_blocks = 0
 
         for entry in todo_list:
-            if args.limit is not None and processed_rukus >= args.limit:
+            if args.limit is not None and processed_blocks >= args.limit:
                 break
 
             if args.ruku is not None and entry["absolute_ruku"] != args.ruku:
+                continue
+
+            if args.block is not None and entry.get("block_no") != args.block:
                 continue
 
             if entry["completed"] and not args.force:
@@ -84,8 +88,9 @@ def main():
             surah_num = entry["surah_number"]
             surah_name = entry["surah_name"]
             rel_ruku = entry["relative_ruku"]
+            block_no = entry["block_no"]
 
-            print(f"\n>>> Assembling blocks for Ruku {abs_ruku} (Surah {surah_num:03d} {surah_name}, Relative Ruku {rel_ruku})")
+            print(f"\n>>> Assembling Block {block_no} for Ruku {abs_ruku} (Surah {surah_num:03d} {surah_name})")
 
             ruku_folder = f"surah_{surah_num:03d}/ruku_{rel_ruku}_{abs_ruku}/{lang}"
             step5_out_dir = os.path.join(
@@ -95,7 +100,7 @@ def main():
 
             manifest_path = os.path.join(step5_out_dir, "subblocks_manifest.json")
             if not os.path.exists(manifest_path):
-                print(f"  Warning: Step 5 output manifest not found at {manifest_path}. Verify that Step 5 has been executed. Skipping Ruku.")
+                print(f"  Warning: Step 5 output manifest not found at {manifest_path}. Verify that Step 5 has been executed. Skipping Block.")
                 continue
 
             with open(manifest_path, 'r', encoding='utf-8') as f_man:
@@ -109,19 +114,22 @@ def main():
                     blocks[b_num] = []
                 blocks[b_num].append(item)
 
+            if block_no not in blocks:
+                print(f"  Warning: Block {block_no} not found in step 5 output manifest. Skipping Block.")
+                continue
+
+            subblocks = blocks[block_no]
+
             os.makedirs(step6_out_dir, exist_ok=True)
-            temp_dir = os.path.join(script_dir, "temp_chunks", f"ruku_{abs_ruku}_{lang}")
+            temp_dir = os.path.join(script_dir, "temp_chunks", f"ruku_{abs_ruku}_block_{block_no}_{lang}")
 
-            ruku_success = True
+            block_success = True
+            final_block_mp4 = os.path.join(step6_out_dir, f"block_{block_no}.mp4")
 
-            for block_no, subblocks in sorted(blocks.items()):
-                final_block_mp4 = os.path.join(step6_out_dir, f"block_{block_no}.mp4")
-
-                if os.path.exists(final_block_mp4) and not args.force:
-                    print(f"  Block {block_no} already exists at {final_block_mp4}. Skipping.")
-                    continue
-
-                print(f"\n  --- Assembling Block {block_no} (Contains {len(subblocks)} subblocks) ---")
+            if os.path.exists(final_block_mp4) and not args.force:
+                print(f"  Block {block_no} already exists at {final_block_mp4}. Skipping.")
+            else:
+                print(f"  --- Rendering Block {block_no} (Contains {len(subblocks)} subblocks) ---")
 
                 # Optimization: if block has exactly 1 subblock, render directly to final path
                 if len(subblocks) == 1:
@@ -136,9 +144,9 @@ def main():
                     success, stdout, stderr = run_command(cmd, cwd=remotion_dir)
                     if not success:
                         print(f"    [Error] Failed to render block {block_no}:\n{stderr}")
-                        ruku_success = False
-                        break
-                    print(f"    Successfully rendered block {block_no} directly.")
+                        block_success = False
+                    else:
+                        print(f"    Successfully rendered block {block_no} directly.")
                 else:
                     # Multiple subblocks: render individually to temp directory and stitch
                     block_temp_dir = os.path.join(temp_dir, f"block_{block_no}")
@@ -165,28 +173,25 @@ def main():
                         print(f"      Rendered chunk saved to {temp_chunk_mp4}")
 
                     if not render_success:
-                        ruku_success = False
-                        break
-
-                    # Stitch files together using FFmpeg concat demuxer
-                    print(f"    Stitching {len(rendered_chunks)} chunks losslessly using FFmpeg concat...")
-                    list_file_path = os.path.join(block_temp_dir, "chunks_list.txt")
-                    
-                    with open(list_file_path, 'w', encoding='utf-8') as lf:
-                        for chunk in rendered_chunks:
-                            # Forward slashes work best for FFmpeg on Windows
-                            safe_path = chunk.replace("\\", "/")
-                            lf.write(f"file '{safe_path}'\n")
-
-                    ffmpeg_cmd = f'ffmpeg -y -f concat -safe 0 -i "{list_file_path.replace("\\", "/")}" -c copy "{final_block_mp4.replace("\\", "/")}"'
-                    success, stdout, stderr = run_command(ffmpeg_cmd)
-                    
-                    if not success:
-                        print(f"    [Error] FFmpeg stitching failed for block {block_no}:\n{stderr}")
-                        ruku_success = False
-                        break
+                        block_success = False
+                    else:
+                        # Stitch files together using FFmpeg concat demuxer
+                        print(f"    Stitching {len(rendered_chunks)} chunks losslessly using FFmpeg concat...")
+                        list_file_path = os.path.join(block_temp_dir, "chunks_list.txt")
                         
-                    print(f"    Stitching complete. Final video saved to {final_block_mp4}")
+                        with open(list_file_path, 'w', encoding='utf-8') as lf:
+                            for chunk in rendered_chunks:
+                                safe_path = chunk.replace("\\", "/")
+                                lf.write(f"file '{safe_path}'\n")
+
+                        ffmpeg_cmd = f'ffmpeg -y -f concat -safe 0 -i "{list_file_path.replace("\\", "/")}" -c copy "{final_block_mp4.replace("\\", "/")}"'
+                        success, stdout, stderr = run_command(ffmpeg_cmd)
+                        
+                        if not success:
+                            print(f"    [Error] FFmpeg stitching failed for block {block_no}:\n{stderr}")
+                            block_success = False
+                        else:
+                            print(f"    Stitching complete. Final video saved to {final_block_mp4}")
 
                     # Cleanup temporary subblock chunk files
                     shutil.rmtree(block_temp_dir, ignore_errors=True)
@@ -194,14 +199,14 @@ def main():
             # Cleanup absolute ruku temp folder
             shutil.rmtree(temp_dir, ignore_errors=True)
 
-            if ruku_success:
+            if block_success:
                 entry["completed"] = True
                 with open(todo_path, 'w', encoding='utf-8') as f_todo:
                     json.dump(todo_list, f_todo, ensure_ascii=False, indent=2)
-                processed_rukus += 1
-                print(f"\n>>> Successfully completed Block Assembly for Ruku {abs_ruku}.")
+                processed_blocks += 1
+                print(f"Successfully completed Block Assembly for Ruku {abs_ruku} Block {block_no}.")
             else:
-                print(f"\n>>> [Error] Block Assembly failed for Ruku {abs_ruku}.")
+                print(f"[Error] Block Assembly failed for Ruku {abs_ruku} Block {block_no}.")
 
     print("\nAssembly finished.")
 

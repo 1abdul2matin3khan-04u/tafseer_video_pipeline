@@ -415,8 +415,9 @@ Text:
 
 async def main_async():
     parser = argparse.ArgumentParser(description="Step 5: Animation-Audio Integration Pipeline")
-    parser.add_argument("--limit", type=int, default=None, help="Limit the number of Rukus to process.")
+    parser.add_argument("--limit", type=int, default=None, help="Limit the number of blocks to process.")
     parser.add_argument("--ruku", type=int, default=None, help="Process a specific absolute Ruku index.")
+    parser.add_argument("--block", type=int, default=None, help="Process a specific block index.")
     parser.add_argument("--force", action="store_true", help="Force reprocessing of already completed entries.")
     parser.add_argument("--lang", choices=["en", "ur", "both"], default="both", help="Process specific tracks.")
     args = parser.parse_args()
@@ -475,13 +476,16 @@ async def main_async():
         with open(todo_path, 'r', encoding='utf-8') as f:
             todo_list = json.load(f)
             
-        processed_rukus = 0
+        processed_blocks = 0
         
         for entry in todo_list:
-            if args.limit is not None and processed_rukus >= args.limit:
+            if args.limit is not None and processed_blocks >= args.limit:
                 break
                 
             if args.ruku is not None and entry["absolute_ruku"] != args.ruku:
+                continue
+                
+            if args.block is not None and entry.get("block_no") != args.block:
                 continue
                 
             if entry["completed"] and not args.force:
@@ -491,8 +495,9 @@ async def main_async():
             surah_num = entry["surah_number"]
             surah_name = entry["surah_name"]
             rel_ruku = entry["relative_ruku"]
+            block_idx = entry["block_no"]
             
-            print(f"\n>>> Processing Ruku {abs_ruku} (Surah {surah_num:03d} {surah_name}, Relative Ruku {rel_ruku})")
+            print(f"\n>>> Processing Ruku {abs_ruku} Block {block_idx} (Surah {surah_num:03d} {surah_name})")
             
             step4_dir = os.path.join(
                 root_dir, "step4__script-visual-division", "output_resources",
@@ -513,7 +518,11 @@ async def main_async():
                 manifest = json.load(f_man)
                 
             success = True
+            processed_subblocks_in_manifest = []
             for subblock_entry in manifest:
+                if subblock_entry.get("block_no") != block_idx:
+                    continue
+                    
                 filename = subblock_entry["filename"]
                 subblock_json_path = os.path.join(step4_dir, filename)
                 
@@ -527,18 +536,39 @@ async def main_async():
                 )
                 if not subblock_success:
                     success = False
+                else:
+                    processed_subblocks_in_manifest.append(subblock_entry)
                     
             if success:
-                with open(os.path.join(output_dir, "subblocks_manifest.json"), 'w', encoding='utf-8') as f_out:
-                    json.dump(manifest, f_out, ensure_ascii=False, indent=2)
+                dest_manifest_path = os.path.join(output_dir, "subblocks_manifest.json")
+                existing_manifest = []
+                if os.path.exists(dest_manifest_path):
+                    try:
+                        with open(dest_manifest_path, 'r', encoding='utf-8') as f_dest:
+                            existing_manifest = json.load(f_dest)
+                    except Exception as e:
+                        print(f"  Warning: Could not read existing manifest in step 5: {e}")
                 
+                existing_manifest = [m for m in existing_manifest if m.get("block_no") != block_idx]
+                combined_manifest = existing_manifest + processed_subblocks_in_manifest
+                combined_manifest.sort(key=lambda x: (x.get("block_no", 0), x.get("subblock_id", "")))
+                
+                try:
+                    with open(dest_manifest_path, 'w', encoding='utf-8') as f_out:
+                        json.dump(combined_manifest, f_out, ensure_ascii=False, indent=2)
+                    print(f"  Wrote combined subblock manifest: {dest_manifest_path}")
+                except Exception as e:
+                    print(f"  Error writing manifest file {dest_manifest_path}: {e}")
+                    success = False
+                    
+            if success:
                 entry["completed"] = True
                 with open(todo_path, 'w', encoding='utf-8') as f_todo:
                     json.dump(todo_list, f_todo, ensure_ascii=False, indent=2)
-                processed_rukus += 1
-                print(f"  Completed integration for Ruku {abs_ruku}.")
+                processed_blocks += 1
+                print(f"  Completed integration for Ruku {abs_ruku} Block {block_idx}.")
             else:
-                print(f"  Failed integration for Ruku {abs_ruku}.")
+                print(f"  Failed integration for Ruku {abs_ruku} Block {block_idx}.")
                 
     print("\nIntegration finished.")
 
