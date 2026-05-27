@@ -31,9 +31,9 @@ def load_env_keys():
                     key, val = line.split('=', 1)
                     key = key.strip()
                     val = val.strip()
-                    if re.match(r'^GEMINI_API_KEY_[1-7]$', key) and val:
+                    if re.match(r'^(PROJECT_\d+_)?GEMINI_API_KEY(_\d+)?$', key) and val:
                         keys.append((key, val))
-        # Ensure they are sorted by name (1 to 7)
+        # Ensure they are sorted by name
         keys.sort(key=lambda x: x[0])
     except Exception as e:
         print(f"Warning: Failed to load API keys from .env: {e}")
