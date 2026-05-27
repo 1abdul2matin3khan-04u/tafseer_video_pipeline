@@ -15,7 +15,7 @@ import api_logger
 GEMINI_MODEL = "models/gemini-2.5-flash"
 
 SYSTEM_PROMPT_URDU = """You are an expert Islamic media producer, scriptwriter, and public speaker fluent in Roman Urdu.
-Your task is to take a single Ruku's target functional block Tafseer data (written in Urdu script) and the Arabic verse text as input, and generate a conversational, natural, and human-like spoken video script in Roman Urdu.
+Your task is to take a single Ruku's target functional block Tafseer data and the Arabic verse text as input, and generate a conversational, natural, and human-like spoken video script in Roman Urdu.
 
 === Script Formatting Sequence ===
 The generated script must follow this exact linear sequence:
