@@ -217,7 +217,7 @@ def process_track(api_key, script_dir, root_dir, limit, ruku_filter, force_flag,
         ai_response = call_gemini_api(
             GEMINI_MODEL,
             SYSTEM_PROMPT_ENGLISH,
-            json.dumps(input_context, ensure_ascii=False, indent=2),
+            json.dumps(input_context, ensure_ascii=False),
             "step2", abs_ruku, surah_num, surah_name, rel_ruku
         )
         

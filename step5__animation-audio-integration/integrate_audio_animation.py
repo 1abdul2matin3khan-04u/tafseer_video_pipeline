@@ -54,7 +54,7 @@ def load_env_vars(filepath):
         print(f"Warning: Failed to parse .env file: {e}")
     return env_vars
 
-def call_gemini_api(model, prompt, step_name, abs_ruku, surph_num, surah_name, rel_ruku):
+def call_gemini_api(model, prompt, step_name, abs_ruku, surph_num, surah_name, rel_ruku, generation_config=None):
     global GEMINI_DISABLED
     if GEMINI_DISABLED:
         return None
@@ -82,6 +82,9 @@ def call_gemini_api(model, prompt, step_name, abs_ruku, surph_num, surah_name, r
                 }
             ]
         }
+        if generation_config:
+            payload["generationConfig"] = generation_config
+            
         req = urllib.request.Request(
             url,
             data=json.dumps(payload).encode("utf-8"),
@@ -183,7 +186,7 @@ def download_arabic_recitation(surah, verse, output_path, reciter="Alafasy_128kb
                 time.sleep(2)
     return False
 
-def generate_polly_audio(polly_client, text, output_path):
+def generate_polly_audio(polly_client, text, output_path, voice='Matthew'):
     """
     Generates English speech audio using AWS Polly (Matthew Generative).
     """
@@ -195,7 +198,7 @@ def generate_polly_audio(polly_client, text, output_path):
         response = polly_client.synthesize_speech(
             Text=cleaned_text,
             OutputFormat='mp3',
-            VoiceId='Matthew',
+            VoiceId=voice,
             Engine='generative'
         )
     except (BotoCoreError, ClientError) as e:
@@ -204,7 +207,7 @@ def generate_polly_audio(polly_client, text, output_path):
             response = polly_client.synthesize_speech(
                 Text=cleaned_text,
                 OutputFormat='mp3',
-                VoiceId='Matthew',
+                VoiceId=voice,
                 Engine='neural'
             )
         except Exception as ex:
@@ -212,7 +215,7 @@ def generate_polly_audio(polly_client, text, output_path):
             response = polly_client.synthesize_speech(
                 Text=cleaned_text,
                 OutputFormat='mp3',
-                VoiceId='Matthew',
+                VoiceId=voice,
                 Engine='standard'
             )
             
@@ -282,7 +285,8 @@ def parse_recitation_verse(text):
     return None
 
 async def process_subblock(subblock_path, output_dir, lang, polly_client,
-                           surah_num_fallback, rel_ruku_fallback, abs_ruku_fallback, surah_name_fallback):
+                           surah_num_fallback, rel_ruku_fallback, abs_ruku_fallback, surah_name_fallback, 
+                           force_flag=False, target_scene=None, voice_en="Matthew", voice_ur="ur-PK-AsadNeural", no_audio=False):
     """
     Processes a single subblock, generating audio files and updating the JSON metadata.
     """
@@ -297,48 +301,113 @@ async def process_subblock(subblock_path, output_dir, lang, polly_client,
     abs_ruku = data.get("absolute_ruku") or abs_ruku_fallback
     surah_name = data.get("surah_name") or surah_name_fallback
     
+    output_json_path = os.path.join(output_dir, f"{subblock_id}.json")
+    existing_scenes_map = {}
+    if target_scene is not None:
+        if os.path.exists(output_json_path):
+            try:
+                with open(output_json_path, 'r', encoding='utf-8') as f_exist:
+                    existing_data = json.load(f_exist)
+                    existing_scenes_map = {s["scene_no"]: s for s in existing_data.get("scenes", [])}
+                print(f"      Loaded existing output subblock for scene-level targeting: {output_json_path}")
+            except Exception as e:
+                print(f"      Warning: Failed to load existing output JSON for target scene: {e}")
+
     audio_dir = os.path.join(output_dir, "audio", subblock_id)
     os.makedirs(audio_dir, exist_ok=True)
     
+    # Load transliteration cache if Urdu track
+    cache_path = os.path.join(output_dir, "transliteration_cache.json")
+    cache_data = {}
+    if lang == "ur":
+        if os.path.exists(cache_path):
+            try:
+                with open(cache_path, "r", encoding="utf-8") as f_c:
+                    cache_data = json.load(f_c)
+                print(f"      Loaded {len(cache_data)} transliterations from cache.")
+            except Exception as e:
+                print(f"      Warning: Failed to load transliteration cache: {e}")
+                
     # Batch Transliteration for Roman Urdu to Nastaliq Urdu to optimize Gemini API calls
     transliterated_map = {}
-    if lang == "ur" and not GEMINI_DISABLED:
+    if lang == "ur" and not GEMINI_DISABLED and not no_audio:
         scenes_to_transliterate = []
         for scene in data.get("scenes", []):
+            scene_no = scene["scene_no"]
+            if target_scene is not None and scene_no != target_scene:
+                continue
             script_text = scene["script"]
             recitation_verse = parse_recitation_verse(script_text)
             if recitation_verse is None:
                 cleaned_roman = re.sub(r'\[.*?\]', '', script_text).strip()
                 if cleaned_roman:
-                    scenes_to_transliterate.append((scene["scene_no"], cleaned_roman))
-                    
+                    if cleaned_roman in cache_data and not force_flag:
+                        transliterated_map[scene_no] = cache_data[cleaned_roman]
+                    else:
+                        scenes_to_transliterate.append({
+                            "scene_no": scene_no,
+                            "text": cleaned_roman
+                        })
+                        
         if scenes_to_transliterate:
-            combined_prompt_text = ""
-            for s_no, text in scenes_to_transliterate:
-                combined_prompt_text += f"===SCENE {s_no}===\n{text}\n"
-                
             prompt = f"""You are an expert Urdu transliterator. Convert the following list of Roman Urdu scenes (written in Latin alphabet) into standard, formal Nastaliq Urdu script.
 === Rules ===
 1. DO NOT translate the text. Preserve the exact words and meaning. Only change the script from Latin (Roman Urdu) to Arabic/Nastaliq script.
-2. Keep the delimiters `===SCENE X===` exactly as they are. Do not alter or translate them.
-3. Return ONLY the transliterated Nastaliq Urdu scenes with their delimiters, without any introductory or concluding text, explanation, or markdown code blocks.
+2. Return the results in the requested JSON structure mapping each scene's 'scene_no' to its 'transliterated_text'.
 
-Text:
-{combined_prompt_text}"""
+Scenes to transliterate:
+{json.dumps(scenes_to_transliterate, ensure_ascii=False, indent=2)}"""
+
+            generation_config = {
+                "responseMimeType": "application/json",
+                "responseSchema": {
+                    "type": "OBJECT",
+                    "properties": {
+                        "scenes": {
+                            "type": "ARRAY",
+                            "items": {
+                                "type": "OBJECT",
+                                "properties": {
+                                    "scene_no": {"type": "INTEGER"},
+                                    "transliterated_text": {"type": "STRING"}
+                                },
+                                "required": ["scene_no", "transliterated_text"]
+                            }
+                        }
+                    },
+                    "required": ["scenes"]
+                }
+            }
             
-            print(f"      Batch transliterating {len(scenes_to_transliterate)} scenes using Gemini...")
-            gemini_res = call_gemini_api(PRIMARY_GEMINI_MODEL, prompt, "step5", abs_ruku, surah_num, surah_name, rel_ruku)
+            print(f"      Batch transliterating {len(scenes_to_transliterate)} scenes using Gemini structured JSON...")
+            gemini_res = call_gemini_api(
+                PRIMARY_GEMINI_MODEL, prompt, "step5", abs_ruku, surah_num, surah_name, rel_ruku,
+                generation_config=generation_config
+            )
             if gemini_res:
-                cleaned_res = strip_markdown_code_blocks(gemini_res)
-                parts = re.split(r'===SCENE\s+(\d+)===', cleaned_res)
-                for i in range(1, len(parts), 2):
-                    if i + 1 < len(parts):
-                        try:
-                            s_no = int(parts[i].strip())
-                            s_text = parts[i+1].strip()
+                try:
+                    res_data = json.loads(gemini_res)
+                    for item in res_data.get("scenes", []):
+                        s_no = item.get("scene_no")
+                        s_text = item.get("transliterated_text", "").strip()
+                        if s_no is not None and s_text:
                             transliterated_map[s_no] = s_text
-                        except ValueError:
-                            pass
+                            
+                            # Update transliteration cache
+                            for original_item in scenes_to_transliterate:
+                                if original_item["scene_no"] == s_no:
+                                    cache_data[original_item["text"]] = s_text
+                                    break
+                                    
+                    # Save updated transliteration cache
+                    try:
+                        with open(cache_path, "w", encoding="utf-8") as f_c:
+                            json.dump(cache_data, f_c, ensure_ascii=False, indent=2)
+                        print(f"      Saved updated transliteration cache to {cache_path}")
+                    except Exception as e:
+                        print(f"      Warning: Failed to save transliteration cache: {e}")
+                except Exception as e:
+                    print(f"      Warning: Failed to parse structured JSON transliteration response: {e}")
             
             print(f"      Successfully transliterated {len(transliterated_map)} / {len(scenes_to_transliterate)} scenes.")
  
@@ -346,6 +415,22 @@ Text:
     
     for scene in data.get("scenes", []):
         scene_no = scene["scene_no"]
+        
+        # If this is not the target scene, copy data from existing file if available
+        if target_scene is not None and scene_no != target_scene:
+            if scene_no in existing_scenes_map:
+                existing_scene = existing_scenes_map[scene_no]
+                scene["audio_path"] = existing_scene.get("audio_path")
+                scene["audio_duration_seconds"] = existing_scene.get("audio_duration_seconds", 0.0)
+                scene["pause_duration_seconds"] = existing_scene.get("pause_duration_seconds", 0.0)
+                scene["duration_seconds"] = existing_scene.get("duration_seconds", 0.0)
+                scene["duration_frames"] = existing_scene.get("duration_frames", 0)
+                if "layout" in existing_scene:
+                    scene["layout"] = existing_scene["layout"]
+                updated_scenes.append(scene)
+                print(f"      Scene {scene_no}: Copied cached audio and durations (target={target_scene})")
+                continue
+
         script_text = scene["script"]
         remarks = scene.get("remarks", "")
         
@@ -363,35 +448,52 @@ Text:
         audio_success = False
         duration_seconds = 0.0
         
-        if recitation_verse is not None:
-            audio_success = download_arabic_recitation(surah_num, recitation_verse, audio_filepath)
-        else:
-            if lang == "en":
-                audio_success = generate_polly_audio(polly_client, script_text, audio_filepath)
-            elif lang == "ur":
-                cleaned_roman = re.sub(r'\[.*?\]', '', script_text).strip()
-                if cleaned_roman:
-                    nastaliq_text = None
-                    if not GEMINI_DISABLED:
-                        nastaliq_text = transliterated_map.get(scene_no)
-                        if not nastaliq_text:
-                            print(f"        Warning: Scene {scene_no} missing from batch. Transliterating individually...")
-                            nastaliq_text = transliterate_roman_to_nastaliq(cleaned_roman, abs_ruku, surah_num, surah_name, rel_ruku)
-                    
-                    if not nastaliq_text:
-                        # Fallback directly to Roman Urdu if Gemini is exhausted
-                        nastaliq_text = cleaned_roman
-                        
-                    print_safe_nastaliq = re.sub(r'[^\x00-\x7F]+', '?', nastaliq_text)
-                    print(f"        Nastaliq/Text: {print_safe_nastaliq}")
-                    audio_success = await generate_edge_tts_audio(nastaliq_text, audio_filepath)
-                
-        if audio_success:
+        # Skip generating audio if it already exists and force_flag is False
+        if os.path.exists(audio_filepath) and os.path.getsize(audio_filepath) > 0 and not force_flag:
+            print(f"        Audio file already exists at {audio_filepath}. Skipping generation.")
+            audio_success = True
             duration_seconds = get_audio_duration(audio_filepath)
             print(f"        Audio duration: {duration_seconds:.2f}s")
         else:
-            print(f"        No audio generated for this scene.")
-            duration_seconds = 0.0
+            if no_audio:
+                print(f"        [No-Audio Mode] Skipping audio generation/download for Scene {scene_no}. Assigning default 5.0s.")
+                audio_success = False
+                duration_seconds = 5.0
+            else:
+                if recitation_verse is not None:
+                    audio_success = download_arabic_recitation(surah_num, recitation_verse, audio_filepath)
+                else:
+                    if lang == "en":
+                        audio_success = generate_polly_audio(polly_client, script_text, audio_filepath, voice=voice_en)
+                    elif lang == "ur":
+                        cleaned_roman = re.sub(r'\[.*?\]', '', script_text).strip()
+                        if cleaned_roman:
+                            nastaliq_text = transliterated_map.get(scene_no) or cache_data.get(cleaned_roman)
+                            if not nastaliq_text:
+                                if not GEMINI_DISABLED:
+                                    print(f"        Warning: Scene {scene_no} missing from cache. Transliterating individually...")
+                                    nastaliq_text = transliterate_roman_to_nastaliq(cleaned_roman, abs_ruku, surah_num, surah_name, rel_ruku)
+                                    if nastaliq_text:
+                                        cache_data[cleaned_roman] = nastaliq_text
+                                        try:
+                                            with open(cache_path, "w", encoding="utf-8") as f_c:
+                                                json.dump(cache_data, f_c, ensure_ascii=False, indent=2)
+                                        except Exception:
+                                            pass
+                            
+                            if not nastaliq_text:
+                                nastaliq_text = cleaned_roman
+                                
+                            print_safe_nastaliq = re.sub(r'[^\x00-\x7F]+', '?', nastaliq_text)
+                            print(f"        Nastaliq/Text: {print_safe_nastaliq}")
+                            audio_success = await generate_edge_tts_audio(nastaliq_text, audio_filepath, voice=voice_ur)
+                
+                if audio_success:
+                    duration_seconds = get_audio_duration(audio_filepath)
+                    print(f"        Audio duration: {duration_seconds:.2f}s")
+                else:
+                    print(f"        No audio generated for this scene.")
+                    duration_seconds = 0.0
             
         total_duration_seconds = duration_seconds + pause_duration
         total_duration_frames = int(math.ceil(total_duration_seconds * 30))
@@ -414,13 +516,26 @@ Text:
     return True
 
 async def main_async():
-    parser = argparse.ArgumentParser(description="Step 5: Animation-Audio Integration Pipeline")
+    parser = argparse.ArgumentParser(description="Integrate audio and animation.")
     parser.add_argument("--limit", type=int, default=None, help="Limit the number of blocks to process.")
     parser.add_argument("--ruku", type=int, default=None, help="Process a specific absolute Ruku index.")
     parser.add_argument("--block", type=int, default=None, help="Process a specific block index.")
+    parser.add_argument("--scene", type=int, default=None, help="Process a specific scene index only, keeping all other scenes as-is.")
+    parser.add_argument("--subblock", type=str, default=None, help="Process a specific subblock ID only (e.g. block_5_phase_3_1).")
+    parser.add_argument("--voice-en", type=str, default="Matthew", help="AWS Polly voice for English track.")
+    parser.add_argument("--voice-ur", type=str, default="ur-PK-AsadNeural", help="Edge-TTS voice for Urdu track.")
+    parser.add_argument("--no-audio", "--layout-only", dest="no_audio", action="store_true", help="Bypass audio generation/transliteration for layout-only dry-run.")
     parser.add_argument("--force", action="store_true", help="Force reprocessing of already completed entries.")
     parser.add_argument("--lang", choices=["en", "ur", "both"], default="both", help="Process specific tracks.")
     args = parser.parse_args()
+    
+    if args.subblock:
+        match = re.match(r"block_(\d+)", args.subblock)
+        if match:
+            block_from_subblock = int(match.group(1))
+            if args.block is not None and args.block != block_from_subblock:
+                print(f"Warning: Specified --block {args.block} conflicts with --subblock {args.subblock}. Using block {block_from_subblock} from subblock.")
+            args.block = block_from_subblock
     
     script_dir = os.path.dirname(os.path.abspath(__file__))
     root_dir = os.path.dirname(script_dir)
@@ -523,6 +638,9 @@ async def main_async():
                 if subblock_entry.get("block_no") != block_idx:
                     continue
                     
+                if args.subblock and subblock_entry.get("subblock_id") != args.subblock:
+                    continue
+                    
                 filename = subblock_entry["filename"]
                 subblock_json_path = os.path.join(step4_dir, filename)
                 
@@ -532,7 +650,9 @@ async def main_async():
                     
                 subblock_success = await process_subblock(
                     subblock_json_path, output_dir, lang, polly_client,
-                    surah_num, rel_ruku, abs_ruku, surah_name
+                    surah_num, rel_ruku, abs_ruku, surah_name, force_flag=args.force,
+                    target_scene=args.scene, voice_en=args.voice_en, voice_ur=args.voice_ur,
+                    no_audio=args.no_audio
                 )
                 if not subblock_success:
                     success = False
@@ -540,31 +660,36 @@ async def main_async():
                     processed_subblocks_in_manifest.append(subblock_entry)
                     
             if success:
-                dest_manifest_path = os.path.join(output_dir, "subblocks_manifest.json")
-                existing_manifest = []
-                if os.path.exists(dest_manifest_path):
+                if processed_subblocks_in_manifest:
+                    dest_manifest_path = os.path.join(output_dir, "subblocks_manifest.json")
+                    existing_manifest = []
+                    if os.path.exists(dest_manifest_path):
+                        try:
+                            with open(dest_manifest_path, 'r', encoding='utf-8') as f_dest:
+                                existing_manifest = json.load(f_dest)
+                        except Exception as e:
+                            print(f"  Warning: Could not read existing manifest in step 5: {e}")
+                    
+                    if args.subblock:
+                        existing_manifest = [m for m in existing_manifest if m.get("subblock_id") != args.subblock]
+                    else:
+                        existing_manifest = [m for m in existing_manifest if m.get("block_no") != block_idx]
+                    combined_manifest = existing_manifest + processed_subblocks_in_manifest
+                    combined_manifest.sort(key=lambda x: (x.get("block_no", 0), x.get("subblock_id", "")))
+                    
                     try:
-                        with open(dest_manifest_path, 'r', encoding='utf-8') as f_dest:
-                            existing_manifest = json.load(f_dest)
+                        with open(dest_manifest_path, 'w', encoding='utf-8') as f_out:
+                            json.dump(combined_manifest, f_out, ensure_ascii=False, indent=2)
+                        print(f"  Wrote combined subblock manifest: {dest_manifest_path}")
                     except Exception as e:
-                        print(f"  Warning: Could not read existing manifest in step 5: {e}")
-                
-                existing_manifest = [m for m in existing_manifest if m.get("block_no") != block_idx]
-                combined_manifest = existing_manifest + processed_subblocks_in_manifest
-                combined_manifest.sort(key=lambda x: (x.get("block_no", 0), x.get("subblock_id", "")))
-                
-                try:
-                    with open(dest_manifest_path, 'w', encoding='utf-8') as f_out:
-                        json.dump(combined_manifest, f_out, ensure_ascii=False, indent=2)
-                    print(f"  Wrote combined subblock manifest: {dest_manifest_path}")
-                except Exception as e:
-                    print(f"  Error writing manifest file {dest_manifest_path}: {e}")
-                    success = False
+                        print(f"  Error writing manifest file {dest_manifest_path}: {e}")
+                        success = False
                     
             if success:
-                entry["completed"] = True
-                with open(todo_path, 'w', encoding='utf-8') as f_todo:
-                    json.dump(todo_list, f_todo, ensure_ascii=False, indent=2)
+                if not args.subblock:
+                    entry["completed"] = True
+                    with open(todo_path, 'w', encoding='utf-8') as f_todo:
+                        json.dump(todo_list, f_todo, ensure_ascii=False, indent=2)
                 processed_blocks += 1
                 print(f"  Completed integration for Ruku {abs_ruku} Block {block_idx}.")
             else:

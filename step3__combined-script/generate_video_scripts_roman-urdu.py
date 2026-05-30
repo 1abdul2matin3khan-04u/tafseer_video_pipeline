@@ -12,41 +12,65 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import api_logger
 
 # Configurable Gemini Model
-GEMINI_MODEL = "models/gemini-2.5-flash"
+GEMINI_MODEL = "models/gemini-3.1-flash-lite"
 
-SYSTEM_PROMPT_URDU = """You are an expert Islamic media producer, scriptwriter, and public speaker fluent in Roman Urdu.
-Your task is to take a single Ruku's target functional block Tafseer data and the Arabic verse text as input, and generate a conversational, natural, and human-like spoken video script in Roman Urdu.
+SYSTEM_PROMPT_URDU = """You are an Islamic video scriptwriter writing in Roman Urdu for a 
+modern audience.
 
-=== Script Formatting Sequence ===
-The generated script must follow this exact linear sequence:
+Your input is a single Ruku block containing its tafseer content, 
+Arabic verse text, and translation. Convert it into a conversational 
+spoken video script in Roman Urdu.
 
-1. **Title line**:
+=== Output Sequence ===
+The script must follow this exact order:
+
+1. Title line:
    "Tafseer [surah_name] Ruku [relative_ruku] Verses [verses] - [title]"
-   
-2. **Arabic Recitation cues**:
-   For each verse in the range, list the recitation cue:
-   "[Recite Verse X: Arabic Text]"
-   (Omit this section entirely if the block does not cover specific verses (e.g., is a Concept block)).
-   
-3. **Translation line**:
-   "Translation: [combined translation of the block in Roman Urdu]"
-   (Omit this section entirely if the block does not cover specific verses).
-   
-4. **Narrator Commentary (Tafseer)**:
-   The spoken narrative in Roman Urdu explaining the verses.
 
-=== Narration Guidelines (Human-Like Speaking Style in Roman Urdu) ===
-1. **The Hook**: Start the Narrator Commentary immediately with an attention-grabbing, existential, or relatable question/statement in Roman Urdu connected to the block's theme. Do not start with generic greetings.
-2. **Pacing and Pauses**: To give the listener cognitive space to absorb the text, insert explicit pacing cues in square brackets (e.g., `[Pause 2 seconds]`) immediately after:
-   - The Translation line.
-   - Any main exegesis highlight or deep spiritual reflection.
-3. **Conversational Tone**: Write in the tone of an engaging narrator, podcaster, or teacher talking directly to a modern audience in Roman Urdu. Use standard Roman Urdu vocabulary (e.g., "Assalamu Alaikum", "aaj hum baat karenge", "farmaate hain"). Avoid stiff or overly complex Urdu words where simpler words are more conversational.
-4. **Vocabulary guidelines**: Use standard Urdu terms (e.g., "Namaz" instead of "Salah", "Aayat" instead of "Verse", "Jannat" instead of "Jannah").
-5. **Conversational Attribution**: Introduce the commentators smoothly into the talk without breaking the flow (e.g., "Ibn Kathir farmaate hain...", "Maarif-ul-Quran mein likha hai...").
-6. **No Screen Directions**: Write ONLY the clean text that the narrator is meant to speak out loud. Do not include visual cues, scene descriptions, or music instructions (except the [Recite Verse] and [Pause] tags).
+2. Recitation cues — one line per verse:
+   "[Recite Verse X: Arabic Text]"
+   Omit this section entirely for Concept blocks.
+
+3. Translation line:
+   "Translation: [combined translation in Roman Urdu]"
+   Omit this section entirely for Concept blocks.
+   Follow immediately with: [Pause 2 seconds]
+
+4. Narrator Commentary:
+   The spoken explanation of the block's tafseer content.
+
+=== Commentary Rules ===
+
+1. Hook: Open with a single attention-grabbing question or statement 
+   directly connected to the block's theme. No greetings, no 
+   introductory filler.
+
+2. Coverage: Cover every point from the tafseer content — every hadith, 
+   every scholar attribution, every historical detail, every lesson. 
+   Omitting content is not permitted.
+
+3. Attributions: Introduce scholars naturally into the flow.
+   Write: "Ibn Kathir farmaate hain..." or "Maarif-ul-Quran mein 
+   likha hai..." — never break the narrative to announce a source.
+
+4. Pauses: Insert [Pause 2 seconds] after any major theological point 
+   or spiritual reflection that needs listener absorption time.
+
+5. Length: Proportional to content depth. A light block: 300–400 words. 
+   A dense block with multiple hadith or a historical narrative: 
+   600–900 words.
+
+6. Vocabulary: Use conversational Urdu register throughout.
+   Namaz, not Salah.
+   Aayat, not Verse.
+   Jannat, not Jannah.
+   Roza, not Sawm.
 
 === Output Format ===
-Return only the Markdown script. Do not wrap it in code blocks or add any conversational intro/outro text. Start directly with the title line.
+Return only the script text.
+Do not wrap in code blocks.
+Do not add any intro or closing remark outside the script.
+Start directly with the title line.
 """
 
 def load_env(filepath):
@@ -302,7 +326,7 @@ def generate_track(api_key, script_dir, root_dir, limit, ruku_filter, force_flag
             ai_response = call_gemini_api(
                 GEMINI_MODEL,
                 SYSTEM_PROMPT_URDU,
-                json.dumps(block_context, ensure_ascii=False, indent=2),
+                json.dumps(block_context, ensure_ascii=False),
                 "step3", abs_ruku, surah_num, surah_name, rel_ruku
             )
             

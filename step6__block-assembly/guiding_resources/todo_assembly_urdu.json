@@ -6,7 +6,7 @@
     "relative_ruku": 1,
     "verse_range": "1-7",
     "block_no": 1,
-    "completed": true
+    "completed": false
   },
   {
     "absolute_ruku": 1,
@@ -15,7 +15,7 @@
     "relative_ruku": 1,
     "verse_range": "1-7",
     "block_no": 2,
-    "completed": true
+    "completed": false
   },
   {
     "absolute_ruku": 1,
@@ -24,7 +24,7 @@
     "relative_ruku": 1,
     "verse_range": "1-7",
     "block_no": 3,
-    "completed": true
+    "completed": false
   },
   {
     "absolute_ruku": 1,
@@ -33,7 +33,7 @@
     "relative_ruku": 1,
     "verse_range": "1-7",
     "block_no": 4,
-    "completed": true
+    "completed": false
   },
   {
     "absolute_ruku": 1,
@@ -42,7 +42,7 @@
     "relative_ruku": 1,
     "verse_range": "1-7",
     "block_no": 5,
-    "completed": true
+    "completed": false
   },
   {
     "absolute_ruku": 1,
@@ -51,7 +51,7 @@
     "relative_ruku": 1,
     "verse_range": "1-7",
     "block_no": 6,
-    "completed": true
+    "completed": false
   },
   {
     "absolute_ruku": 1,
@@ -60,7 +60,7 @@
     "relative_ruku": 1,
     "verse_range": "1-7",
     "block_no": 7,
-    "completed": true
+    "completed": false
   },
   {
     "absolute_ruku": 1,
@@ -69,7 +69,7 @@
     "relative_ruku": 1,
     "verse_range": "1-7",
     "block_no": 8,
-    "completed": true
+    "completed": false
   },
   {
     "absolute_ruku": 1,
@@ -78,6 +78,6 @@
     "relative_ruku": 1,
     "verse_range": "1-7",
     "block_no": 9,
-    "completed": true
+    "completed": false
   }
 ]

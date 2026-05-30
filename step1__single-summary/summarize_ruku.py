@@ -271,8 +271,8 @@ def main():
                 continue
                 
             # Construct Prompt: data + simple instruction
-            json_str = json.dumps(raw_data, ensure_ascii=False, indent=2)
-            prompt = f"{json_str}\n\nwrite in an organized manner. donot skip anything. Write in {src_info['lang_name']}."
+            json_str = json.dumps(raw_data, ensure_ascii=False)
+            prompt = f"The following is a Tafseer JSON. It contains repeated explanations, restated meanings, and redundant phrasing throughout. /nYour task: rewrite it as condensed prose in {src_info['lang_name']}, removing all repetition while retaining every unique point exactly once. /nWhat counts as repetition — skip these:/n- The same meaning explained twice in different words/n- Redundant transitions or restatements between paragraphs/n- A hadith or narration cited more than once/nWhat must be retained — never skip these:/n- Every distinct hadith or narration (even if similar, keep if wording or chain differs)/n- Every named scholar opinion or attribution/n- Every historical event or cause of revelation/n- Every ruling, lesson, or theological conclusion/n- Every linguistic or grammatical observation/nOutput: flowing prose only. No headers, no bullets, no added structure./n {json_str}"
             
             # Call API via call_gemini_api
             response_text = call_gemini_api(GEMINI_MODEL, prompt, "step1", abs_ruku, surah_num, surah_name, rel_ruku)

@@ -11,7 +11,7 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import api_logger
 
 # Configurable Gemini Model
-GEMINI_MODEL = "models/gemini-2.5-flash"
+GEMINI_MODEL = "models/gemini-3.5-flash"
 
 SYSTEM_PROMPT_ENGLISH = """You are an expert Islamic media producer, scriptwriter, and public speaker.
 Your task is to take a single Ruku's target functional block Tafseer data and the Arabic verse text as input, and generate a conversational, natural, and human-like spoken video script in English.
@@ -298,7 +298,7 @@ def generate_track(api_key, script_dir, root_dir, limit, ruku_filter, force_flag
             ai_response = call_gemini_api(
                 GEMINI_MODEL,
                 SYSTEM_PROMPT_ENGLISH,
-                json.dumps(block_context, ensure_ascii=False, indent=2),
+                json.dumps(block_context, ensure_ascii=False),
                 "step3", abs_ruku, surah_num, surah_name, rel_ruku
             )
             
