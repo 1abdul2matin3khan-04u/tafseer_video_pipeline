@@ -170,6 +170,34 @@ def main():
     ruku_list = load_ruku_list(mapping_path)
     print(f"Loaded {len(ruku_list)} Rukus from rukuDivision.json.\n")
 
+    # Construct virtual Ruku list for Surahs with > 1 Ruku
+    virtual_ruku_list = []
+    with open(mapping_path, 'r', encoding='utf-8') as f:
+        surahs = json.load(f)
+    for surah in surahs:
+        surah_num = surah.get('surah_number')
+        surah_name = surah.get('surah_name', '')
+        total_rukus = len(surah.get('verse_ranges', []))
+        if total_rukus > 1:
+            virtual_ruku_list.append({
+                "absolute_ruku": 1000 + surah_num,
+                "surah_number": surah_num,
+                "surah_name": surah_name,
+                "relative_ruku": 0,
+                "verse_range": "Overview",
+            })
+            virtual_ruku_list.append({
+                "absolute_ruku": 2000 + surah_num,
+                "surah_number": surah_num,
+                "surah_name": surah_name,
+                "relative_ruku": total_rukus + 1,
+                "verse_range": "Summary",
+            })
+
+    # full_ruku_list is used for steps 2, 3, 7 and block level lookup
+    full_ruku_list = ruku_list + virtual_ruku_list
+    full_ruku_list.sort(key=lambda x: (x["surah_number"], x["relative_ruku"]))
+
     # ── step1: todo_summary.json (per-source tracking inside each Ruku entry) ──
     print("Generating step1 tracking file...")
     summary_entries = [
@@ -185,7 +213,7 @@ def main():
     print("\nGenerating step2 tracking files...")
     step2_entries = [
         {**r, "completed": False}
-        for r in ruku_list
+        for r in full_ruku_list
     ]
     for fname in ["todo_tafseer_english.json", "todo_tafseer_urdu.json"]:
         write_json(
@@ -197,7 +225,7 @@ def main():
     print("\nGenerating step3 tracking files...")
     step3_entries = [
         {**r, "completed": False}
-        for r in ruku_list
+        for r in full_ruku_list
     ]
     for fname in ["todo_script_english.json", "todo_script_urdu.json"]:
         write_json(
@@ -207,8 +235,8 @@ def main():
 
     # ── step4: todo_visuals_english.json + todo_visuals_urdu.json ──
     print("\nGenerating step4 tracking files...")
-    step4_entries_en = get_block_entries(root, ruku_list, "en")
-    step4_entries_ur = get_block_entries(root, ruku_list, "ur")
+    step4_entries_en = get_block_entries(root, full_ruku_list, "en")
+    step4_entries_ur = get_block_entries(root, full_ruku_list, "ur")
     
     write_block_json(
         os.path.join(root, "step4__script-visual-division", "guiding_resources", "todo_visuals_english.json"),
@@ -218,7 +246,6 @@ def main():
         os.path.join(root, "step4__script-visual-division", "guiding_resources", "todo_visuals_urdu.json"),
         step4_entries_ur
     )
-
 
     # ── step5: todo_integration_english.json + todo_integration_urdu.json ──
     print("\nGenerating step5 tracking files...")
@@ -246,7 +273,7 @@ def main():
     print("\nGenerating step7 tracking files...")
     step7_entries = [
         {**r, "completed": False}
-        for r in ruku_list
+        for r in full_ruku_list
     ]
     for fname in ["todo_ruku_english.json", "todo_ruku_urdu.json"]:
         write_json(
@@ -254,7 +281,7 @@ def main():
             step7_entries
         )
 
-    print(f"\nAll tracking files generated/updated. Total Rukus in base list: {len(ruku_list)}")
+    print(f"\nAll tracking files generated/updated. Total Rukus (including virtual): {len(full_ruku_list)}")
 
 if __name__ == "__main__":
     main()

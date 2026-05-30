@@ -28,16 +28,16 @@ Synthesize them into one combined Tafseer in Roman Urdu, divided into
 thematic blocks.
 
 === Block Structure ===
-Divide the Ruku into logical thematic blocks. Each block covers a dominant theme and, where applicable, a verse range.
-- Demarcate each block with a level-2 header in the format: ## Block: [Verse Range] - [Theme in Roman Urdu] (e.g. ## Block: 1-3 - Tauheed).
-- If a block is conceptual (e.g. overview or concluding story), use: ## Block: Concept - [Theme in Roman Urdu].
-- Do not skip any verses in the Ruku.
+Divide the Ruku into logical thematic blocks.
+- You MUST start the Ruku with a Ruku Overview block: ## Block: Concept - Ruku Overview. In this block, provide an academic overview/introduction of the Ruku's themes in Roman Urdu.
+- Then, divide the actual verses into logical thematic blocks. Each block covers a dominant theme and, where applicable, a verse range. Demarcate each block with a level-2 header in the format: ## Block: [Verse Range] - [Theme in Roman Urdu] (e.g. ## Block: 1-3 - Tauheed).
+- You MUST end the Ruku with a Ruku Summary block: ## Block: Concept - Ruku Summary. In this block, provide a concise summary, key lessons, and takeaways of the Ruku in Roman Urdu.
 - Blocks must follow the exact sequential order of the content as it appears in the sources. Do not reorganize, reorder, or extract content out of its original position.
 
 === Under Each Block ===
 
 ### Core Tafseer (Ibn Kathir)
-Write a complete account of Ibn Kathir's explanation for these verses.
+Write a complete account of Ibn Kathir's explanation for these verses/concepts.
 Preserve every hadith, narration, historical detail, and theological 
 conclusion from his summary. Do not compress here.
 
@@ -74,6 +74,26 @@ Do not wrap in code blocks.
 Do not add any introduction or closing remark.
 Start directly with the first block header."""
 
+SYSTEM_PROMPT_SURAH_OVERVIEW_ROMAN_URDU = """You are a comparative Islamic exegetical analyst writing in Roman Urdu.
+Synthesize the provided Ruku-level summaries of Surah {surah_name} (Surah {surah_num}) into a Surah Overview in Markdown format, organized into one or more thematic blocks in Roman Urdu.
+=== Rules ===
+1. THEMATIC GROUPING: Organize the Overview into one or more thematic blocks.
+   - Demarcate each block with a level-2 header in the format: ## Block: Concept - [Theme in Roman Urdu] (e.g. ## Block: Concept - Shaan-e-Nuzool, ## Block: Concept - Markazi Mazameen).
+   - In each block, discuss the Surah's historical context, period of revelation, core themes, or structural division in Roman Urdu.
+2. LANGUAGE: Write entirely in Roman Urdu using the Latin alphabet. Do not use Urdu or Arabic script characters.
+3. OUTPUT FORMAT: Return only the synthesized Markdown document. Do not wrap it in markdown code blocks or add introductory/concluding conversational filler. Start directly with the first block header.
+"""
+
+SYSTEM_PROMPT_SURAH_SUMMARY_ROMAN_URDU = """You are a comparative Islamic exegetical analyst writing in Roman Urdu.
+Synthesize the provided Ruku-level summaries of Surah {surah_name} (Surah {surah_num}) into a Surah Summary in Markdown format, organized into one or more thematic blocks in Roman Urdu.
+=== Rules ===
+1. THEMATIC GROUPING: Organize the Summary into one or more thematic blocks.
+   - Demarcate each block with a level-2 header in the format: ## Block: Concept - [Theme in Roman Urdu] (e.g. ## Block: Concept - Khasosi Asbaq, ## Block: Concept - Ahem Hidayat).
+   - In each block, detail core theological lessons, practical takeaways, and key messages in Roman Urdu.
+2. LANGUAGE: Write entirely in Roman Urdu using the Latin alphabet. Do not use Urdu or Arabic script characters.
+3. OUTPUT FORMAT: Return only the synthesized Markdown document. Do not wrap it in markdown code blocks or add introductory/concluding conversational filler. Start directly with the first block header.
+"""
+
 def parse_markdown_summary(filepath):
     if not os.path.exists(filepath):
         return ""
@@ -103,6 +123,26 @@ def process_track(script_dir, root_dir, limit, ruku_filter, force_flag, delay, i
 
     processed_rukus = 0
 
+    # Load rukuDivision mapping to check total standard rukus per surah
+    mapping_path = os.path.join(root_dir, "step0__whole-single", "input_resources", "rukuDivision.json")
+    if os.path.exists(mapping_path):
+        try:
+            with open(mapping_path, 'r', encoding='utf-8') as f:
+                surahs_mapping = {s["surah_number"]: s for s in json.load(f)}
+        except Exception as e:
+            print(f"Warning: Failed to load rukuDivision.json: {e}")
+            surahs_mapping = {}
+    else:
+        surahs_mapping = {}
+
+    source_keys = {
+        "tafseer-ibn-kathir": "ibn_kathir_summary.md",
+        "maarif-ul-quran": "maarif_summary.md",
+        "tazkir-ul-quran": "tazkir_summary.md",
+        "tafsir-as-saadi": "saadi_summary.md",
+        "tafsir-bayan-ul-quran": "bayan_ul_quran_summary.md",
+    }
+
     for entry in todo_list:
         if limit is not None and processed_rukus >= limit:
             print(
@@ -122,8 +162,13 @@ def process_track(script_dir, root_dir, limit, ruku_filter, force_flag, delay, i
         rel_ruku = entry["relative_ruku"]
         verse_range = entry["verse_range"]
 
+        # Determine total standard rukus for current surah
+        surah_info = surahs_mapping.get(surah_num, {})
+        total_rukus = len(surah_info.get("verse_ranges", []))
+        is_virtual = (rel_ruku == 0 or rel_ruku > total_rukus)
+
         print(
-            f"\n>>> [ROMAN URDU] Processing Ruku {abs_ruku} (Surah {surah_num:03d} {surah_name}, Relative Ruku {rel_ruku})"
+            f"\n>>> [ROMAN URDU] Processing {'Virtual ' if is_virtual else ''}Ruku {abs_ruku} (Surah {surah_num:03d} {surah_name}, Relative Ruku {rel_ruku})"
         )
 
         # Directories
@@ -135,45 +180,89 @@ def process_track(script_dir, root_dir, limit, ruku_filter, force_flag, delay, i
             f"ruku_{rel_ruku}_{abs_ruku}",
         )
 
-        step1_ruku_dir = os.path.join(
-            root_dir,
-            "step1__single-summary",
-            "output_resources",
-            f"surah_{surah_num:03d}",
-            f"ruku_{rel_ruku}_{abs_ruku}",
-        )
-
-
-
-        # Load summaries from Step 1
-        sources_data = {}
-        source_keys = {
-            "tafseer-ibn-kathir": "ibn_kathir_summary.md",
-            "maarif-ul-quran": "maarif_summary.md",
-            "tazkir-ul-quran": "tazkir_summary.md",
-            "tafsir-as-saadi": "saadi_summary.md",
-            "tafsir-bayan-ul-quran": "bayan_ul_quran_summary.md",
-        }
-
-        for k, fname in source_keys.items():
-            fpath = os.path.join(step1_ruku_dir, fname)
-            summary_content = parse_markdown_summary(fpath)
-            if summary_content:
-                sources_data[k] = summary_content
+        if is_virtual:
+            # Pre-flight dependency check: make sure all standard Rukus for this Surah are completed in Step 1
+            standard_entries = [e for e in todo_list if e["surah_number"] == surah_num and 0 < e["relative_ruku"] <= total_rukus]
+            standard_entries.sort(key=lambda x: x["relative_ruku"])
+            
+            missing_rukus = []
+            for sr in standard_entries:
+                s_rel = sr["relative_ruku"]
+                s_abs = sr["absolute_ruku"]
+                step1_dir = os.path.join(
+                    root_dir, "step1__single-summary", "output_resources", f"surah_{surah_num:03d}", f"ruku_{s_rel}_{s_abs}"
+                )
+                main_summary_file = os.path.join(step1_dir, "ibn_kathir_summary.md")
+                if not os.path.exists(main_summary_file):
+                    missing_rukus.append(s_abs)
+                    
+            if missing_rukus:
+                print(f"  [Warning/Dependency] Missing Step 1 summaries for standard Rukus of Surah {surah_num}: {missing_rukus}. Cannot generate virtual Ruku {abs_ruku} yet. Skipping.")
+                continue
+                
+            # Load all standard Ruku summaries
+            all_rukus_summaries = {}
+            for sr in standard_entries:
+                s_rel = sr["relative_ruku"]
+                s_abs = sr["absolute_ruku"]
+                step1_dir = os.path.join(
+                    root_dir, "step1__single-summary", "output_resources", f"surah_{surah_num:03d}", f"ruku_{s_rel}_{s_abs}"
+                )
+                ruku_summaries = {}
+                for k, fname in source_keys.items():
+                    fpath = os.path.join(step1_dir, fname)
+                    if os.path.exists(fpath):
+                        content = parse_markdown_summary(fpath)
+                        if content:
+                            ruku_summaries[k] = content
+                all_rukus_summaries[f"ruku_{s_rel}"] = {
+                    "metadata": sr,
+                    "summaries": ruku_summaries
+                }
+                
+            input_context = {
+                "surah_metadata": {
+                    "surah_number": surah_num,
+                    "surah_name": surah_name,
+                    "total_rukus": total_rukus,
+                    "type": "Overview" if rel_ruku == 0 else "Summary"
+                },
+                "ruku_summaries": all_rukus_summaries
+            }
+            
+            if rel_ruku == 0:
+                sys_prompt = SYSTEM_PROMPT_SURAH_OVERVIEW_ROMAN_URDU.format(surah_name=surah_name, surah_num=surah_num)
             else:
-                print(f"  Warning: Summary file {fname} not found or empty.")
+                sys_prompt = SYSTEM_PROMPT_SURAH_SUMMARY_ROMAN_URDU.format(surah_name=surah_name, surah_num=surah_num)
+        else:
+            # Standard Ruku flow
+            step1_ruku_dir = os.path.join(
+                root_dir,
+                "step1__single-summary",
+                "output_resources",
+                f"surah_{surah_num:03d}",
+                f"ruku_{rel_ruku}_{abs_ruku}",
+            )
+            sources_data = {}
+            for k, fname in source_keys.items():
+                fpath = os.path.join(step1_ruku_dir, fname)
+                summary_content = parse_markdown_summary(fpath)
+                if summary_content:
+                    sources_data[k] = summary_content
+                else:
+                    print(f"  Warning: Summary file {fname} not found or empty.")
 
-        # Build simplified user context for AI containing all 5 summaries
-        input_context = {
-            "ruku_metadata": {
-                "surah_number": surah_num,
-                "surah_name": surah_name,
-                "absolute_ruku": abs_ruku,
-                "relative_ruku": rel_ruku,
-                "verse_range": verse_range,
-            },
-            "sources": sources_data,
-        }
+            input_context = {
+                "ruku_metadata": {
+                    "surah_number": surah_num,
+                    "surah_name": surah_name,
+                    "absolute_ruku": abs_ruku,
+                    "relative_ruku": rel_ruku,
+                    "verse_range": verse_range,
+                },
+                "sources": sources_data,
+            }
+            sys_prompt = SYSTEM_PROMPT_ROMAN_URDU_COMBINE
 
         print(
             f"  Querying Gemini API ({GEMINI_MODEL}) for combined Roman Urdu Tafseer..."
@@ -186,7 +275,7 @@ def process_track(script_dir, root_dir, limit, ruku_filter, force_flag, delay, i
             surah_num,
             surah_name,
             rel_ruku,
-            system_instruction=SYSTEM_PROMPT_ROMAN_URDU_COMBINE,
+            system_instruction=sys_prompt,
         )
 
         if not ai_response:

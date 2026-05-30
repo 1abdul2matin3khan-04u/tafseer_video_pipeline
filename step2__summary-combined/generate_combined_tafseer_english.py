@@ -16,13 +16,14 @@ SYSTEM_PROMPT_ENGLISH = """You are an expert academic Islamic scholar and compar
 Read the provided Ruku exegesis summaries from 5 different sources and synthesize them into a single, comprehensive "Combined Tafseer" in Markdown format, organized block by block.
 === Rules ===
 1. THEMATIC GROUPING: Divide the Ruku into logical thematic blocks.
-   - Demarcate each block with a level-2 header in the format: `## Block: [Verse Range] - [Theme]` (e.g., `## Block: 1-3 - The Oneness of Allah`).
-   - If a block is conceptual and does not correspond to specific verses (e.g., introductory concepts before verses start, or concluding remarks after the ruku ends), format the header as: `## Block: Concept - [Theme]`.
+   - You MUST start the Ruku with a Ruku Overview block: `## Block: Concept - Ruku Overview`. In this block, provide an academic overview/introduction of the Ruku's themes.
+   - Then, divide the actual verses into logical thematic blocks. Demarcate each block with a level-2 header in the format: `## Block: [Verse Range] - [Theme]` (e.g., `## Block: 1-3 - The Oneness of Allah`).
+   - You MUST end the Ruku with a Ruku Summary block: `## Block: Concept - Ruku Summary`. In this block, provide a concise summary, key lessons, and takeaways of the Ruku.
    - Blocks can cover a group of adjacent verses. Multiple blocks can cover the same verse range if they discuss different themes.
    - Do not skip any verses in the Ruku.
 2. CORE TAFSEER: Under each block, write a section:
    ### Core Tafseer (Ibn Kathir)
-   Provide a detailed, comprehensive summary of Tafseer Ibn Kathir for the verses in this block. Do not omit any key historical details or theological explanations.
+   Provide a detailed, comprehensive summary of Tafseer Ibn Kathir for the verses/concepts in this block. Do not omit any key historical details or theological explanations.
 3. COMPARATIVE ANALYSIS (NO REPETITION): Compare the other 4 Tafseers (Maarif-ul-Quran, Tazkir-ul-Quran, Tafsir As-Saadi, Tafsir Bayan-ul-Quran) against Ibn Kathir.
    - Under each block, write a section:
      ### Additional Interpretations
@@ -35,6 +36,27 @@ Read the provided Ruku exegesis summaries from 5 different sources and synthesiz
 4. LANGUAGE: The output text must be in clear, formal English. Translate any Urdu insights from Tafsir As-Saadi and Bayan-ul-Quran into English.
 5. OUTPUT FORMAT: Return only the synthesized Markdown document. Do not wrap it in markdown code blocks (e.g. do not wrap in ```markdown ... ```) or add introductory/concluding conversational filler. Start directly with the first block header.
 """
+
+SYSTEM_PROMPT_SURAH_OVERVIEW = """You are an expert academic Islamic scholar and media producer.
+Synthesize the provided Ruku-level summaries of Surah {surah_name} (Surah {surah_num}) into a Surah Overview in Markdown format, organized into one or more thematic blocks.
+=== Rules ===
+1. THEMATIC GROUPING: Organize the Overview into one or more thematic blocks.
+   - Demarcate each block with a level-2 header in the format: ## Block: Concept - [Theme] (e.g. ## Block: Concept - Historical Context, ## Block: Concept - Period of Revelation).
+   - In each block, discuss the Surah's historical context, period of revelation, core themes, or structural division.
+2. LANGUAGE: The output text must be in clear, formal English.
+3. OUTPUT FORMAT: Return only the synthesized Markdown document. Do not wrap it in markdown code blocks (e.g. do not wrap in ```markdown ... ```) or add introductory/concluding conversational filler. Start directly with the first block header.
+"""
+
+SYSTEM_PROMPT_SURAH_SUMMARY = """You are an expert academic Islamic scholar and media producer.
+Synthesize the provided Ruku-level summaries of Surah {surah_name} (Surah {surah_num}) into a Surah Summary in Markdown format, organized into one or more thematic blocks.
+=== Rules ===
+1. THEMATIC GROUPING: Organize the Summary into one or more thematic blocks.
+   - Demarcate each block with a level-2 header in the format: ## Block: Concept - [Theme] (e.g. ## Block: Concept - Theological Lessons, ## Block: Concept - Key Messages).
+   - In each block, detail core theological lessons, practical takeaways, and key messages.
+2. LANGUAGE: The output text must be in clear, formal English.
+3. OUTPUT FORMAT: Return only the synthesized Markdown document. Do not wrap it in markdown code blocks (e.g. do not wrap in ```markdown ... ```) or add introductory/concluding conversational filler. Start directly with the first block header.
+"""
+
 def parse_markdown_summary(filepath):
     if not os.path.exists(filepath):
         return ""
@@ -62,6 +84,26 @@ def process_track(script_dir, root_dir, limit, ruku_filter, force_flag, delay, i
         
     processed_rukus = 0
     
+    # Load rukuDivision mapping to check total standard rukus per surah
+    mapping_path = os.path.join(root_dir, "step0__whole-single", "input_resources", "rukuDivision.json")
+    if os.path.exists(mapping_path):
+        try:
+            with open(mapping_path, 'r', encoding='utf-8') as f:
+                surahs_mapping = {s["surah_number"]: s for s in json.load(f)}
+        except Exception as e:
+            print(f"Warning: Failed to load rukuDivision.json: {e}")
+            surahs_mapping = {}
+    else:
+        surahs_mapping = {}
+    
+    source_keys = {
+        "tafseer-ibn-kathir": "ibn_kathir_summary.md",
+        "maarif-ul-quran": "maarif_summary.md",
+        "tazkir-ul-quran": "tazkir_summary.md",
+        "tafsir-as-saadi": "saadi_summary.md",
+        "tafsir-bayan-ul-quran": "bayan_ul_quran_summary.md"
+    }
+
     for entry in todo_list:
         if limit is not None and processed_rukus >= limit:
             print(f"Reached processing limit of {limit} Rukus for ENGLISH track. Stopping.")
@@ -79,54 +121,105 @@ def process_track(script_dir, root_dir, limit, ruku_filter, force_flag, delay, i
         rel_ruku = entry["relative_ruku"]
         verse_range = entry["verse_range"]
         
-        print(f"\n>>> [ENGLISH] Processing Ruku {abs_ruku} (Surah {surah_num:03d} {surah_name}, Relative Ruku {rel_ruku})")
+        # Determine total standard rukus for current surah
+        surah_info = surahs_mapping.get(surah_num, {})
+        total_rukus = len(surah_info.get("verse_ranges", []))
+        is_virtual = (rel_ruku == 0 or rel_ruku > total_rukus)
+        
+        print(f"\n>>> [ENGLISH] Processing {'Virtual ' if is_virtual else ''}Ruku {abs_ruku} (Surah {surah_num:03d} {surah_name}, Relative Ruku {rel_ruku})")
         
         # Directories
         output_ruku_dir = os.path.join(
             root_dir, "step2__summary-combined", "output_resources", f"surah_{surah_num:03d}", f"ruku_{rel_ruku}_{abs_ruku}"
         )
         
-        step1_ruku_dir = os.path.join(
-            root_dir, "step1__single-summary", "output_resources", f"surah_{surah_num:03d}", f"ruku_{rel_ruku}_{abs_ruku}"
-        )
-        
-        # Load summaries
-        sources_data = {}
-        source_keys = {
-            "tafseer-ibn-kathir": "ibn_kathir_summary.md",
-            "maarif-ul-quran": "maarif_summary.md",
-            "tazkir-ul-quran": "tazkir_summary.md",
-            "tafsir-as-saadi": "saadi_summary.md",
-            "tafsir-bayan-ul-quran": "bayan_ul_quran_summary.md"
-        }
-        
-        for k, fname in source_keys.items():
-            fpath = os.path.join(step1_ruku_dir, fname)
-            summary_content = parse_markdown_summary(fpath)
-            if summary_content:
-                sources_data[k] = summary_content
-            else:
-                print(f"  Warning: Summary file {fname} not found or empty.")
+        if is_virtual:
+            # Pre-flight dependency check: make sure all standard Rukus for this Surah are completed in Step 1
+            standard_entries = [e for e in todo_list if e["surah_number"] == surah_num and 0 < e["relative_ruku"] <= total_rukus]
+            standard_entries.sort(key=lambda x: x["relative_ruku"])
+            
+            missing_rukus = []
+            for sr in standard_entries:
+                s_rel = sr["relative_ruku"]
+                s_abs = sr["absolute_ruku"]
+                step1_dir = os.path.join(
+                    root_dir, "step1__single-summary", "output_resources", f"surah_{surah_num:03d}", f"ruku_{s_rel}_{s_abs}"
+                )
+                main_summary_file = os.path.join(step1_dir, "ibn_kathir_summary.md")
+                if not os.path.exists(main_summary_file):
+                    missing_rukus.append(s_abs)
+                    
+            if missing_rukus:
+                print(f"  [Warning/Dependency] Missing Step 1 summaries for standard Rukus of Surah {surah_num}: {missing_rukus}. Cannot generate virtual Ruku {abs_ruku} yet. Skipping.")
+                continue
                 
-        # Build simplified user context for AI
-        input_context = {
-            "ruku_metadata": {
-                "surah_number": surah_num,
-                "surah_name": surah_name,
-                "absolute_ruku": abs_ruku,
-                "relative_ruku": rel_ruku,
-                "verse_range": verse_range
-            },
-            "sources": sources_data
-        }
-        
+            # Load all standard Ruku summaries
+            all_rukus_summaries = {}
+            for sr in standard_entries:
+                s_rel = sr["relative_ruku"]
+                s_abs = sr["absolute_ruku"]
+                step1_dir = os.path.join(
+                    root_dir, "step1__single-summary", "output_resources", f"surah_{surah_num:03d}", f"ruku_{s_rel}_{s_abs}"
+                )
+                ruku_summaries = {}
+                for k, fname in source_keys.items():
+                    fpath = os.path.join(step1_dir, fname)
+                    if os.path.exists(fpath):
+                        content = parse_markdown_summary(fpath)
+                        if content:
+                            ruku_summaries[k] = content
+                all_rukus_summaries[f"ruku_{s_rel}"] = {
+                    "metadata": sr,
+                    "summaries": ruku_summaries
+                }
+                
+            input_context = {
+                "surah_metadata": {
+                    "surah_number": surah_num,
+                    "surah_name": surah_name,
+                    "total_rukus": total_rukus,
+                    "type": "Overview" if rel_ruku == 0 else "Summary"
+                },
+                "ruku_summaries": all_rukus_summaries
+            }
+            
+            if rel_ruku == 0:
+                sys_prompt = SYSTEM_PROMPT_SURAH_OVERVIEW.format(surah_name=surah_name, surah_num=surah_num)
+            else:
+                sys_prompt = SYSTEM_PROMPT_SURAH_SUMMARY.format(surah_name=surah_name, surah_num=surah_num)
+        else:
+            # Standard Ruku flow
+            step1_ruku_dir = os.path.join(
+                root_dir, "step1__single-summary", "output_resources", f"surah_{surah_num:03d}", f"ruku_{rel_ruku}_{abs_ruku}"
+            )
+            sources_data = {}
+            for k, fname in source_keys.items():
+                fpath = os.path.join(step1_ruku_dir, fname)
+                summary_content = parse_markdown_summary(fpath)
+                if summary_content:
+                    sources_data[k] = summary_content
+                else:
+                    print(f"  Warning: Summary file {fname} not found or empty.")
+                    
+            input_context = {
+                "ruku_metadata": {
+                    "surah_number": surah_num,
+                    "surah_name": surah_name,
+                    "absolute_ruku": abs_ruku,
+                    "relative_ruku": rel_ruku,
+                    "verse_range": verse_range
+                },
+                "sources": sources_data
+            }
+            sys_prompt = SYSTEM_PROMPT_ENGLISH
+            
         # Call Gemini API
         print(f"  Querying Gemini API ({GEMINI_MODEL}) for combined Markdown exegesis...")
         ai_response = call_gemini_api(
             GEMINI_MODEL,
             json.dumps(input_context, ensure_ascii=False),
             "step2", abs_ruku, surah_num, surah_name, rel_ruku,
-            system_instruction=SYSTEM_PROMPT_ENGLISH
+            system_instruction=sys_prompt
         )
         
         if not ai_response:

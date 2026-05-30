@@ -8,6 +8,14 @@
     "completed": false
   },
   {
+    "absolute_ruku": 1002,
+    "surah_number": 2,
+    "surah_name": "Baqarah",
+    "relative_ruku": 0,
+    "verse_range": "Overview",
+    "completed": false
+  },
+  {
     "absolute_ruku": 2,
     "surah_number": 2,
     "surah_name": "Baqarah",
@@ -328,6 +336,22 @@
     "completed": false
   },
   {
+    "absolute_ruku": 2002,
+    "surah_number": 2,
+    "surah_name": "Baqarah",
+    "relative_ruku": 41,
+    "verse_range": "Summary",
+    "completed": false
+  },
+  {
+    "absolute_ruku": 1003,
+    "surah_number": 3,
+    "surah_name": "Aal-e-Imran",
+    "relative_ruku": 0,
+    "verse_range": "Overview",
+    "completed": false
+  },
+  {
     "absolute_ruku": 42,
     "surah_number": 3,
     "surah_name": "Aal-e-Imran",
@@ -485,6 +509,22 @@
     "surah_name": "Aal-e-Imran",
     "relative_ruku": 20,
     "verse_range": "190-200",
+    "completed": false
+  },
+  {
+    "absolute_ruku": 2003,
+    "surah_number": 3,
+    "surah_name": "Aal-e-Imran",
+    "relative_ruku": 21,
+    "verse_range": "Summary",
+    "completed": false
+  },
+  {
+    "absolute_ruku": 1004,
+    "surah_number": 4,
+    "surah_name": "Nisaa",
+    "relative_ruku": 0,
+    "verse_range": "Overview",
     "completed": false
   },
   {
@@ -680,6 +720,22 @@
     "completed": false
   },
   {
+    "absolute_ruku": 2004,
+    "surah_number": 4,
+    "surah_name": "Nisaa",
+    "relative_ruku": 25,
+    "verse_range": "Summary",
+    "completed": false
+  },
+  {
+    "absolute_ruku": 1005,
+    "surah_number": 5,
+    "surah_name": "Maidah",
+    "relative_ruku": 0,
+    "verse_range": "Overview",
+    "completed": false
+  },
+  {
     "absolute_ruku": 86,
     "surah_number": 5,
     "surah_name": "Maidah",
@@ -805,6 +861,22 @@
     "surah_name": "Maidah",
     "relative_ruku": 16,
     "verse_range": "116-120",
+    "completed": false
+  },
+  {
+    "absolute_ruku": 2005,
+    "surah_number": 5,
+    "surah_name": "Maidah",
+    "relative_ruku": 17,
+    "verse_range": "Summary",
+    "completed": false
+  },
+  {
+    "absolute_ruku": 1006,
+    "surah_number": 6,
+    "surah_name": "Al-Anaam",
+    "relative_ruku": 0,
+    "verse_range": "Overview",
     "completed": false
   },
   {
@@ -965,6 +1037,22 @@
     "surah_name": "Al-Anaam",
     "relative_ruku": 20,
     "verse_range": "155-165",
+    "completed": false
+  },
+  {
+    "absolute_ruku": 2006,
+    "surah_number": 6,
+    "surah_name": "Al-Anaam",
+    "relative_ruku": 21,
+    "verse_range": "Summary",
+    "completed": false
+  },
+  {
+    "absolute_ruku": 1007,
+    "surah_number": 7,
+    "surah_name": "Al-Araaf",
+    "relative_ruku": 0,
+    "verse_range": "Overview",
     "completed": false
   },
   {
@@ -1160,6 +1248,22 @@
     "completed": false
   },
   {
+    "absolute_ruku": 2007,
+    "surah_number": 7,
+    "surah_name": "Al-Araaf",
+    "relative_ruku": 25,
+    "verse_range": "Summary",
+    "completed": false
+  },
+  {
+    "absolute_ruku": 1008,
+    "surah_number": 8,
+    "surah_name": "Al-Anfaal",
+    "relative_ruku": 0,
+    "verse_range": "Overview",
+    "completed": false
+  },
+  {
     "absolute_ruku": 146,
     "surah_number": 8,
     "surah_name": "Al-Anfaal",
@@ -1237,6 +1341,22 @@
     "surah_name": "Al-Anfaal",
     "relative_ruku": 10,
     "verse_range": "70-75",
+    "completed": false
+  },
+  {
+    "absolute_ruku": 2008,
+    "surah_number": 8,
+    "surah_name": "Al-Anfaal",
+    "relative_ruku": 11,
+    "verse_range": "Summary",
+    "completed": false
+  },
+  {
+    "absolute_ruku": 1009,
+    "surah_number": 9,
+    "surah_name": "Tawbah",
+    "relative_ruku": 0,
+    "verse_range": "Overview",
     "completed": false
   },
   {
@@ -1368,6 +1488,22 @@
     "completed": false
   },
   {
+    "absolute_ruku": 2009,
+    "surah_number": 9,
+    "surah_name": "Tawbah",
+    "relative_ruku": 17,
+    "verse_range": "Summary",
+    "completed": false
+  },
+  {
+    "absolute_ruku": 1010,
+    "surah_number": 10,
+    "surah_name": "Yunus",
+    "relative_ruku": 0,
+    "verse_range": "Overview",
+    "completed": false
+  },
+  {
     "absolute_ruku": 172,
     "surah_number": 10,
     "surah_name": "Yunus",
@@ -1456,6 +1592,22 @@
     "completed": false
   },
   {
+    "absolute_ruku": 2010,
+    "surah_number": 10,
+    "surah_name": "Yunus",
+    "relative_ruku": 12,
+    "verse_range": "Summary",
+    "completed": false
+  },
+  {
+    "absolute_ruku": 1011,
+    "surah_number": 11,
+    "surah_name": "Hud",
+    "relative_ruku": 0,
+    "verse_range": "Overview",
+    "completed": false
+  },
+  {
     "absolute_ruku": 183,
     "surah_number": 11,
     "surah_name": "Hud",
@@ -1533,6 +1685,22 @@
     "surah_name": "Hud",
     "relative_ruku": 10,
     "verse_range": "110-123",
+    "completed": false
+  },
+  {
+    "absolute_ruku": 2011,
+    "surah_number": 11,
+    "surah_name": "Hud",
+    "relative_ruku": 11,
+    "verse_range": "Summary",
+    "completed": false
+  },
+  {
+    "absolute_ruku": 1012,
+    "surah_number": 12,
+    "surah_name": "Yusuf",
+    "relative_ruku": 0,
+    "verse_range": "Overview",
     "completed": false
   },
   {
@@ -1632,6 +1800,22 @@
     "completed": false
   },
   {
+    "absolute_ruku": 2012,
+    "surah_number": 12,
+    "surah_name": "Yusuf",
+    "relative_ruku": 13,
+    "verse_range": "Summary",
+    "completed": false
+  },
+  {
+    "absolute_ruku": 1013,
+    "surah_number": 13,
+    "surah_name": "Ar-Ra'd",
+    "relative_ruku": 0,
+    "verse_range": "Overview",
+    "completed": false
+  },
+  {
     "absolute_ruku": 205,
     "surah_number": 13,
     "surah_name": "Ar-Ra'd",
@@ -1677,6 +1861,22 @@
     "surah_name": "Ar-Ra'd",
     "relative_ruku": 6,
     "verse_range": "35-43",
+    "completed": false
+  },
+  {
+    "absolute_ruku": 2013,
+    "surah_number": 13,
+    "surah_name": "Ar-Ra'd",
+    "relative_ruku": 7,
+    "verse_range": "Summary",
+    "completed": false
+  },
+  {
+    "absolute_ruku": 1014,
+    "surah_number": 14,
+    "surah_name": "Ibrahim",
+    "relative_ruku": 0,
+    "verse_range": "Overview",
     "completed": false
   },
   {
@@ -1736,6 +1936,22 @@
     "completed": false
   },
   {
+    "absolute_ruku": 2014,
+    "surah_number": 14,
+    "surah_name": "Ibrahim",
+    "relative_ruku": 8,
+    "verse_range": "Summary",
+    "completed": false
+  },
+  {
+    "absolute_ruku": 1015,
+    "surah_number": 15,
+    "surah_name": "Al-Hijr",
+    "relative_ruku": 0,
+    "verse_range": "Overview",
+    "completed": false
+  },
+  {
     "absolute_ruku": 218,
     "surah_number": 15,
     "surah_name": "Al-Hijr",
@@ -1781,6 +1997,22 @@
     "surah_name": "Al-Hijr",
     "relative_ruku": 6,
     "verse_range": "80-99",
+    "completed": false
+  },
+  {
+    "absolute_ruku": 2015,
+    "surah_number": 15,
+    "surah_name": "Al-Hijr",
+    "relative_ruku": 7,
+    "verse_range": "Summary",
+    "completed": false
+  },
+  {
+    "absolute_ruku": 1016,
+    "surah_number": 16,
+    "surah_name": "An-Nahl",
+    "relative_ruku": 0,
+    "verse_range": "Overview",
     "completed": false
   },
   {
@@ -1912,6 +2144,22 @@
     "completed": false
   },
   {
+    "absolute_ruku": 2016,
+    "surah_number": 16,
+    "surah_name": "An-Nahl",
+    "relative_ruku": 17,
+    "verse_range": "Summary",
+    "completed": false
+  },
+  {
+    "absolute_ruku": 1017,
+    "surah_number": 17,
+    "surah_name": "Bani Israeel",
+    "relative_ruku": 0,
+    "verse_range": "Overview",
+    "completed": false
+  },
+  {
     "absolute_ruku": 240,
     "surah_number": 17,
     "surah_name": "Bani Israeel",
@@ -2005,6 +2253,22 @@
     "surah_name": "Bani Israeel",
     "relative_ruku": 12,
     "verse_range": "101-111",
+    "completed": false
+  },
+  {
+    "absolute_ruku": 2017,
+    "surah_number": 17,
+    "surah_name": "Bani Israeel",
+    "relative_ruku": 13,
+    "verse_range": "Summary",
+    "completed": false
+  },
+  {
+    "absolute_ruku": 1018,
+    "surah_number": 18,
+    "surah_name": "Al-Kahf",
+    "relative_ruku": 0,
+    "verse_range": "Overview",
     "completed": false
   },
   {
@@ -2104,6 +2368,22 @@
     "completed": false
   },
   {
+    "absolute_ruku": 2018,
+    "surah_number": 18,
+    "surah_name": "Al-Kahf",
+    "relative_ruku": 13,
+    "verse_range": "Summary",
+    "completed": false
+  },
+  {
+    "absolute_ruku": 1019,
+    "surah_number": 19,
+    "surah_name": "Maryam",
+    "relative_ruku": 0,
+    "verse_range": "Overview",
+    "completed": false
+  },
+  {
     "absolute_ruku": 264,
     "surah_number": 19,
     "surah_name": "Maryam",
@@ -2149,6 +2429,22 @@
     "surah_name": "Maryam",
     "relative_ruku": 6,
     "verse_range": "83-98",
+    "completed": false
+  },
+  {
+    "absolute_ruku": 2019,
+    "surah_number": 19,
+    "surah_name": "Maryam",
+    "relative_ruku": 7,
+    "verse_range": "Summary",
+    "completed": false
+  },
+  {
+    "absolute_ruku": 1020,
+    "surah_number": 20,
+    "surah_name": "Taa-Haa",
+    "relative_ruku": 0,
+    "verse_range": "Overview",
     "completed": false
   },
   {
@@ -2216,6 +2512,22 @@
     "completed": false
   },
   {
+    "absolute_ruku": 2020,
+    "surah_number": 20,
+    "surah_name": "Taa-Haa",
+    "relative_ruku": 9,
+    "verse_range": "Summary",
+    "completed": false
+  },
+  {
+    "absolute_ruku": 1021,
+    "surah_number": 21,
+    "surah_name": "Al-Anbiyaa",
+    "relative_ruku": 0,
+    "verse_range": "Overview",
+    "completed": false
+  },
+  {
     "absolute_ruku": 278,
     "surah_number": 21,
     "surah_name": "Al-Anbiyaa",
@@ -2269,6 +2581,22 @@
     "surah_name": "Al-Anbiyaa",
     "relative_ruku": 7,
     "verse_range": "102-112",
+    "completed": false
+  },
+  {
+    "absolute_ruku": 2021,
+    "surah_number": 21,
+    "surah_name": "Al-Anbiyaa",
+    "relative_ruku": 8,
+    "verse_range": "Summary",
+    "completed": false
+  },
+  {
+    "absolute_ruku": 1022,
+    "surah_number": 22,
+    "surah_name": "Al-Hajj",
+    "relative_ruku": 0,
+    "verse_range": "Overview",
     "completed": false
   },
   {
@@ -2352,6 +2680,22 @@
     "completed": false
   },
   {
+    "absolute_ruku": 2022,
+    "surah_number": 22,
+    "surah_name": "Al-Hajj",
+    "relative_ruku": 11,
+    "verse_range": "Summary",
+    "completed": false
+  },
+  {
+    "absolute_ruku": 1023,
+    "surah_number": 23,
+    "surah_name": "Al-Muminoon",
+    "relative_ruku": 0,
+    "verse_range": "Overview",
+    "completed": false
+  },
+  {
     "absolute_ruku": 295,
     "surah_number": 23,
     "surah_name": "Al-Muminoon",
@@ -2397,6 +2741,22 @@
     "surah_name": "Al-Muminoon",
     "relative_ruku": 6,
     "verse_range": "93-118",
+    "completed": false
+  },
+  {
+    "absolute_ruku": 2023,
+    "surah_number": 23,
+    "surah_name": "Al-Muminoon",
+    "relative_ruku": 7,
+    "verse_range": "Summary",
+    "completed": false
+  },
+  {
+    "absolute_ruku": 1024,
+    "surah_number": 24,
+    "surah_name": "An-Noor",
+    "relative_ruku": 0,
+    "verse_range": "Overview",
     "completed": false
   },
   {
@@ -2472,6 +2832,22 @@
     "completed": false
   },
   {
+    "absolute_ruku": 2024,
+    "surah_number": 24,
+    "surah_name": "An-Noor",
+    "relative_ruku": 10,
+    "verse_range": "Summary",
+    "completed": false
+  },
+  {
+    "absolute_ruku": 1025,
+    "surah_number": 25,
+    "surah_name": "Al-Furqaan",
+    "relative_ruku": 0,
+    "verse_range": "Overview",
+    "completed": false
+  },
+  {
     "absolute_ruku": 310,
     "surah_number": 25,
     "surah_name": "Al-Furqaan",
@@ -2517,6 +2893,22 @@
     "surah_name": "Al-Furqaan",
     "relative_ruku": 6,
     "verse_range": "68-77",
+    "completed": false
+  },
+  {
+    "absolute_ruku": 2025,
+    "surah_number": 25,
+    "surah_name": "Al-Furqaan",
+    "relative_ruku": 7,
+    "verse_range": "Summary",
+    "completed": false
+  },
+  {
+    "absolute_ruku": 1026,
+    "surah_number": 26,
+    "surah_name": "Ash-Shu'araa",
+    "relative_ruku": 0,
+    "verse_range": "Overview",
     "completed": false
   },
   {
@@ -2608,6 +3000,22 @@
     "completed": false
   },
   {
+    "absolute_ruku": 2026,
+    "surah_number": 26,
+    "surah_name": "Ash-Shu'araa",
+    "relative_ruku": 12,
+    "verse_range": "Summary",
+    "completed": false
+  },
+  {
+    "absolute_ruku": 1027,
+    "surah_number": 27,
+    "surah_name": "An-Naml",
+    "relative_ruku": 0,
+    "verse_range": "Overview",
+    "completed": false
+  },
+  {
     "absolute_ruku": 327,
     "surah_number": 27,
     "surah_name": "An-Naml",
@@ -2661,6 +3069,22 @@
     "surah_name": "An-Naml",
     "relative_ruku": 7,
     "verse_range": "83-93",
+    "completed": false
+  },
+  {
+    "absolute_ruku": 2027,
+    "surah_number": 27,
+    "surah_name": "An-Naml",
+    "relative_ruku": 8,
+    "verse_range": "Summary",
+    "completed": false
+  },
+  {
+    "absolute_ruku": 1028,
+    "surah_number": 28,
+    "surah_name": "Al-Qasas",
+    "relative_ruku": 0,
+    "verse_range": "Overview",
     "completed": false
   },
   {
@@ -2736,6 +3160,22 @@
     "completed": false
   },
   {
+    "absolute_ruku": 2028,
+    "surah_number": 28,
+    "surah_name": "Al-Qasas",
+    "relative_ruku": 10,
+    "verse_range": "Summary",
+    "completed": false
+  },
+  {
+    "absolute_ruku": 1029,
+    "surah_number": 29,
+    "surah_name": "Al-Ankaboot",
+    "relative_ruku": 0,
+    "verse_range": "Overview",
+    "completed": false
+  },
+  {
     "absolute_ruku": 343,
     "surah_number": 29,
     "surah_name": "Al-Ankaboot",
@@ -2792,6 +3232,22 @@
     "completed": false
   },
   {
+    "absolute_ruku": 2029,
+    "surah_number": 29,
+    "surah_name": "Al-Ankaboot",
+    "relative_ruku": 8,
+    "verse_range": "Summary",
+    "completed": false
+  },
+  {
+    "absolute_ruku": 1030,
+    "surah_number": 30,
+    "surah_name": "Ar-Room",
+    "relative_ruku": 0,
+    "verse_range": "Overview",
+    "completed": false
+  },
+  {
     "absolute_ruku": 350,
     "surah_number": 30,
     "surah_name": "Ar-Room",
@@ -2840,6 +3296,22 @@
     "completed": false
   },
   {
+    "absolute_ruku": 2030,
+    "surah_number": 30,
+    "surah_name": "Ar-Room",
+    "relative_ruku": 7,
+    "verse_range": "Summary",
+    "completed": false
+  },
+  {
+    "absolute_ruku": 1031,
+    "surah_number": 31,
+    "surah_name": "Luqman",
+    "relative_ruku": 0,
+    "verse_range": "Overview",
+    "completed": false
+  },
+  {
     "absolute_ruku": 356,
     "surah_number": 31,
     "surah_name": "Luqman",
@@ -2872,6 +3344,22 @@
     "completed": false
   },
   {
+    "absolute_ruku": 2031,
+    "surah_number": 31,
+    "surah_name": "Luqman",
+    "relative_ruku": 5,
+    "verse_range": "Summary",
+    "completed": false
+  },
+  {
+    "absolute_ruku": 1032,
+    "surah_number": 32,
+    "surah_name": "As-Sajda",
+    "relative_ruku": 0,
+    "verse_range": "Overview",
+    "completed": false
+  },
+  {
     "absolute_ruku": 360,
     "surah_number": 32,
     "surah_name": "As-Sajda",
@@ -2893,6 +3381,22 @@
     "surah_name": "As-Sajda",
     "relative_ruku": 3,
     "verse_range": "23-30",
+    "completed": false
+  },
+  {
+    "absolute_ruku": 2032,
+    "surah_number": 32,
+    "surah_name": "As-Sajda",
+    "relative_ruku": 4,
+    "verse_range": "Summary",
+    "completed": false
+  },
+  {
+    "absolute_ruku": 1033,
+    "surah_number": 33,
+    "surah_name": "Al-Ahzaab",
+    "relative_ruku": 0,
+    "verse_range": "Overview",
     "completed": false
   },
   {
@@ -2968,6 +3472,22 @@
     "completed": false
   },
   {
+    "absolute_ruku": 2033,
+    "surah_number": 33,
+    "surah_name": "Al-Ahzaab",
+    "relative_ruku": 10,
+    "verse_range": "Summary",
+    "completed": false
+  },
+  {
+    "absolute_ruku": 1034,
+    "surah_number": 34,
+    "surah_name": "Saba",
+    "relative_ruku": 0,
+    "verse_range": "Overview",
+    "completed": false
+  },
+  {
     "absolute_ruku": 372,
     "surah_number": 34,
     "surah_name": "Saba",
@@ -3016,6 +3536,22 @@
     "completed": false
   },
   {
+    "absolute_ruku": 2034,
+    "surah_number": 34,
+    "surah_name": "Saba",
+    "relative_ruku": 7,
+    "verse_range": "Summary",
+    "completed": false
+  },
+  {
+    "absolute_ruku": 1035,
+    "surah_number": 35,
+    "surah_name": "Faatir",
+    "relative_ruku": 0,
+    "verse_range": "Overview",
+    "completed": false
+  },
+  {
     "absolute_ruku": 378,
     "surah_number": 35,
     "surah_name": "Faatir",
@@ -3053,6 +3589,22 @@
     "surah_name": "Faatir",
     "relative_ruku": 5,
     "verse_range": "38-45",
+    "completed": false
+  },
+  {
+    "absolute_ruku": 2035,
+    "surah_number": 35,
+    "surah_name": "Faatir",
+    "relative_ruku": 6,
+    "verse_range": "Summary",
+    "completed": false
+  },
+  {
+    "absolute_ruku": 1036,
+    "surah_number": 36,
+    "surah_name": "Yaseen",
+    "relative_ruku": 0,
+    "verse_range": "Overview",
     "completed": false
   },
   {
@@ -3096,6 +3648,22 @@
     "completed": false
   },
   {
+    "absolute_ruku": 2036,
+    "surah_number": 36,
+    "surah_name": "Yaseen",
+    "relative_ruku": 6,
+    "verse_range": "Summary",
+    "completed": false
+  },
+  {
+    "absolute_ruku": 1037,
+    "surah_number": 37,
+    "surah_name": "As-Saaffaat",
+    "relative_ruku": 0,
+    "verse_range": "Overview",
+    "completed": false
+  },
+  {
     "absolute_ruku": 388,
     "surah_number": 37,
     "surah_name": "As-Saaffaat",
@@ -3136,6 +3704,22 @@
     "completed": false
   },
   {
+    "absolute_ruku": 2037,
+    "surah_number": 37,
+    "surah_name": "As-Saaffaat",
+    "relative_ruku": 6,
+    "verse_range": "Summary",
+    "completed": false
+  },
+  {
+    "absolute_ruku": 1038,
+    "surah_number": 38,
+    "surah_name": "Saad",
+    "relative_ruku": 0,
+    "verse_range": "Overview",
+    "completed": false
+  },
+  {
     "absolute_ruku": 393,
     "surah_number": 38,
     "surah_name": "Saad",
@@ -3173,6 +3757,22 @@
     "surah_name": "Saad",
     "relative_ruku": 5,
     "verse_range": "65-88",
+    "completed": false
+  },
+  {
+    "absolute_ruku": 2038,
+    "surah_number": 38,
+    "surah_name": "Saad",
+    "relative_ruku": 6,
+    "verse_range": "Summary",
+    "completed": false
+  },
+  {
+    "absolute_ruku": 1039,
+    "surah_number": 39,
+    "surah_name": "Az-Zumar",
+    "relative_ruku": 0,
+    "verse_range": "Overview",
     "completed": false
   },
   {
@@ -3237,6 +3837,22 @@
     "surah_name": "Az-Zumar",
     "relative_ruku": 8,
     "verse_range": "71-75",
+    "completed": false
+  },
+  {
+    "absolute_ruku": 2039,
+    "surah_number": 39,
+    "surah_name": "Az-Zumar",
+    "relative_ruku": 9,
+    "verse_range": "Summary",
+    "completed": false
+  },
+  {
+    "absolute_ruku": 1040,
+    "surah_number": 40,
+    "surah_name": "Ghaafir",
+    "relative_ruku": 0,
+    "verse_range": "Overview",
     "completed": false
   },
   {
@@ -3312,6 +3928,22 @@
     "completed": false
   },
   {
+    "absolute_ruku": 2040,
+    "surah_number": 40,
+    "surah_name": "Ghaafir",
+    "relative_ruku": 10,
+    "verse_range": "Summary",
+    "completed": false
+  },
+  {
+    "absolute_ruku": 1041,
+    "surah_number": 41,
+    "surah_name": "Fussilat",
+    "relative_ruku": 0,
+    "verse_range": "Overview",
+    "completed": false
+  },
+  {
     "absolute_ruku": 415,
     "surah_number": 41,
     "surah_name": "Fussilat",
@@ -3360,6 +3992,22 @@
     "completed": false
   },
   {
+    "absolute_ruku": 2041,
+    "surah_number": 41,
+    "surah_name": "Fussilat",
+    "relative_ruku": 7,
+    "verse_range": "Summary",
+    "completed": false
+  },
+  {
+    "absolute_ruku": 1042,
+    "surah_number": 42,
+    "surah_name": "Ash-Shura",
+    "relative_ruku": 0,
+    "verse_range": "Overview",
+    "completed": false
+  },
+  {
     "absolute_ruku": 421,
     "surah_number": 42,
     "surah_name": "Ash-Shura",
@@ -3397,6 +4045,22 @@
     "surah_name": "Ash-Shura",
     "relative_ruku": 5,
     "verse_range": "42-53",
+    "completed": false
+  },
+  {
+    "absolute_ruku": 2042,
+    "surah_number": 42,
+    "surah_name": "Ash-Shura",
+    "relative_ruku": 6,
+    "verse_range": "Summary",
+    "completed": false
+  },
+  {
+    "absolute_ruku": 1043,
+    "surah_number": 43,
+    "surah_name": "Az-Zukhruf",
+    "relative_ruku": 0,
+    "verse_range": "Overview",
     "completed": false
   },
   {
@@ -3456,6 +4120,22 @@
     "completed": false
   },
   {
+    "absolute_ruku": 2043,
+    "surah_number": 43,
+    "surah_name": "Az-Zukhruf",
+    "relative_ruku": 8,
+    "verse_range": "Summary",
+    "completed": false
+  },
+  {
+    "absolute_ruku": 1044,
+    "surah_number": 44,
+    "surah_name": "Ad-Dukhaan",
+    "relative_ruku": 0,
+    "verse_range": "Overview",
+    "completed": false
+  },
+  {
     "absolute_ruku": 433,
     "surah_number": 44,
     "surah_name": "Ad-Dukhaan",
@@ -3477,6 +4157,22 @@
     "surah_name": "Ad-Dukhaan",
     "relative_ruku": 3,
     "verse_range": "43-59",
+    "completed": false
+  },
+  {
+    "absolute_ruku": 2044,
+    "surah_number": 44,
+    "surah_name": "Ad-Dukhaan",
+    "relative_ruku": 4,
+    "verse_range": "Summary",
+    "completed": false
+  },
+  {
+    "absolute_ruku": 1045,
+    "surah_number": 45,
+    "surah_name": "Al-Jaathiya",
+    "relative_ruku": 0,
+    "verse_range": "Overview",
     "completed": false
   },
   {
@@ -3512,6 +4208,22 @@
     "completed": false
   },
   {
+    "absolute_ruku": 2045,
+    "surah_number": 45,
+    "surah_name": "Al-Jaathiya",
+    "relative_ruku": 5,
+    "verse_range": "Summary",
+    "completed": false
+  },
+  {
+    "absolute_ruku": 1046,
+    "surah_number": 46,
+    "surah_name": "Al-Ahqaaf",
+    "relative_ruku": 0,
+    "verse_range": "Overview",
+    "completed": false
+  },
+  {
     "absolute_ruku": 440,
     "surah_number": 46,
     "surah_name": "Al-Ahqaaf",
@@ -3541,6 +4253,22 @@
     "surah_name": "Al-Ahqaaf",
     "relative_ruku": 4,
     "verse_range": "29-35",
+    "completed": false
+  },
+  {
+    "absolute_ruku": 2046,
+    "surah_number": 46,
+    "surah_name": "Al-Ahqaaf",
+    "relative_ruku": 5,
+    "verse_range": "Summary",
+    "completed": false
+  },
+  {
+    "absolute_ruku": 1047,
+    "surah_number": 47,
+    "surah_name": "Muhammad",
+    "relative_ruku": 0,
+    "verse_range": "Overview",
     "completed": false
   },
   {
@@ -3576,6 +4304,22 @@
     "completed": false
   },
   {
+    "absolute_ruku": 2047,
+    "surah_number": 47,
+    "surah_name": "Muhammad",
+    "relative_ruku": 5,
+    "verse_range": "Summary",
+    "completed": false
+  },
+  {
+    "absolute_ruku": 1048,
+    "surah_number": 48,
+    "surah_name": "Al-Fath",
+    "relative_ruku": 0,
+    "verse_range": "Overview",
+    "completed": false
+  },
+  {
     "absolute_ruku": 448,
     "surah_number": 48,
     "surah_name": "Al-Fath",
@@ -3608,6 +4352,22 @@
     "completed": false
   },
   {
+    "absolute_ruku": 2048,
+    "surah_number": 48,
+    "surah_name": "Al-Fath",
+    "relative_ruku": 5,
+    "verse_range": "Summary",
+    "completed": false
+  },
+  {
+    "absolute_ruku": 1049,
+    "surah_number": 49,
+    "surah_name": "Al-Hujuraat",
+    "relative_ruku": 0,
+    "verse_range": "Overview",
+    "completed": false
+  },
+  {
     "absolute_ruku": 452,
     "surah_number": 49,
     "surah_name": "Al-Hujuraat",
@@ -3621,6 +4381,22 @@
     "surah_name": "Al-Hujuraat",
     "relative_ruku": 2,
     "verse_range": "11-18",
+    "completed": false
+  },
+  {
+    "absolute_ruku": 2049,
+    "surah_number": 49,
+    "surah_name": "Al-Hujuraat",
+    "relative_ruku": 3,
+    "verse_range": "Summary",
+    "completed": false
+  },
+  {
+    "absolute_ruku": 1050,
+    "surah_number": 50,
+    "surah_name": "Qaaf",
+    "relative_ruku": 0,
+    "verse_range": "Overview",
     "completed": false
   },
   {
@@ -3648,6 +4424,22 @@
     "completed": false
   },
   {
+    "absolute_ruku": 2050,
+    "surah_number": 50,
+    "surah_name": "Qaaf",
+    "relative_ruku": 4,
+    "verse_range": "Summary",
+    "completed": false
+  },
+  {
+    "absolute_ruku": 1051,
+    "surah_number": 51,
+    "surah_name": "Adh-Dhaariyaat",
+    "relative_ruku": 0,
+    "verse_range": "Overview",
+    "completed": false
+  },
+  {
     "absolute_ruku": 457,
     "surah_number": 51,
     "surah_name": "Adh-Dhaariyaat",
@@ -3672,6 +4464,22 @@
     "completed": false
   },
   {
+    "absolute_ruku": 2051,
+    "surah_number": 51,
+    "surah_name": "Adh-Dhaariyaat",
+    "relative_ruku": 4,
+    "verse_range": "Summary",
+    "completed": false
+  },
+  {
+    "absolute_ruku": 1052,
+    "surah_number": 52,
+    "surah_name": "At-Tur",
+    "relative_ruku": 0,
+    "verse_range": "Overview",
+    "completed": false
+  },
+  {
     "absolute_ruku": 460,
     "surah_number": 52,
     "surah_name": "At-Tur",
@@ -3685,6 +4493,22 @@
     "surah_name": "At-Tur",
     "relative_ruku": 2,
     "verse_range": "29-49",
+    "completed": false
+  },
+  {
+    "absolute_ruku": 2052,
+    "surah_number": 52,
+    "surah_name": "At-Tur",
+    "relative_ruku": 3,
+    "verse_range": "Summary",
+    "completed": false
+  },
+  {
+    "absolute_ruku": 1053,
+    "surah_number": 53,
+    "surah_name": "An-Najm",
+    "relative_ruku": 0,
+    "verse_range": "Overview",
     "completed": false
   },
   {
@@ -3712,6 +4536,22 @@
     "completed": false
   },
   {
+    "absolute_ruku": 2053,
+    "surah_number": 53,
+    "surah_name": "An-Najm",
+    "relative_ruku": 4,
+    "verse_range": "Summary",
+    "completed": false
+  },
+  {
+    "absolute_ruku": 1054,
+    "surah_number": 54,
+    "surah_name": "Al-Qamar",
+    "relative_ruku": 0,
+    "verse_range": "Overview",
+    "completed": false
+  },
+  {
     "absolute_ruku": 465,
     "surah_number": 54,
     "surah_name": "Al-Qamar",
@@ -3733,6 +4573,22 @@
     "surah_name": "Al-Qamar",
     "relative_ruku": 3,
     "verse_range": "41-55",
+    "completed": false
+  },
+  {
+    "absolute_ruku": 2054,
+    "surah_number": 54,
+    "surah_name": "Al-Qamar",
+    "relative_ruku": 4,
+    "verse_range": "Summary",
+    "completed": false
+  },
+  {
+    "absolute_ruku": 1055,
+    "surah_number": 55,
+    "surah_name": "Ar-Rahmaan",
+    "relative_ruku": 0,
+    "verse_range": "Overview",
     "completed": false
   },
   {
@@ -3760,6 +4616,22 @@
     "completed": false
   },
   {
+    "absolute_ruku": 2055,
+    "surah_number": 55,
+    "surah_name": "Ar-Rahmaan",
+    "relative_ruku": 4,
+    "verse_range": "Summary",
+    "completed": false
+  },
+  {
+    "absolute_ruku": 1056,
+    "surah_number": 56,
+    "surah_name": "Al-Waaqia",
+    "relative_ruku": 0,
+    "verse_range": "Overview",
+    "completed": false
+  },
+  {
     "absolute_ruku": 471,
     "surah_number": 56,
     "surah_name": "Al-Waaqia",
@@ -3781,6 +4653,22 @@
     "surah_name": "Al-Waaqia",
     "relative_ruku": 3,
     "verse_range": "75-96",
+    "completed": false
+  },
+  {
+    "absolute_ruku": 2056,
+    "surah_number": 56,
+    "surah_name": "Al-Waaqia",
+    "relative_ruku": 4,
+    "verse_range": "Summary",
+    "completed": false
+  },
+  {
+    "absolute_ruku": 1057,
+    "surah_number": 57,
+    "surah_name": "Al-Hadid",
+    "relative_ruku": 0,
+    "verse_range": "Overview",
     "completed": false
   },
   {
@@ -3816,6 +4704,22 @@
     "completed": false
   },
   {
+    "absolute_ruku": 2057,
+    "surah_number": 57,
+    "surah_name": "Al-Hadid",
+    "relative_ruku": 5,
+    "verse_range": "Summary",
+    "completed": false
+  },
+  {
+    "absolute_ruku": 1058,
+    "surah_number": 58,
+    "surah_name": "Al-Mujaadila",
+    "relative_ruku": 0,
+    "verse_range": "Overview",
+    "completed": false
+  },
+  {
     "absolute_ruku": 478,
     "surah_number": 58,
     "surah_name": "Al-Mujaadila",
@@ -3837,6 +4741,22 @@
     "surah_name": "Al-Mujaadila",
     "relative_ruku": 3,
     "verse_range": "14-22",
+    "completed": false
+  },
+  {
+    "absolute_ruku": 2058,
+    "surah_number": 58,
+    "surah_name": "Al-Mujaadila",
+    "relative_ruku": 4,
+    "verse_range": "Summary",
+    "completed": false
+  },
+  {
+    "absolute_ruku": 1059,
+    "surah_number": 59,
+    "surah_name": "Al-Hashr",
+    "relative_ruku": 0,
+    "verse_range": "Overview",
     "completed": false
   },
   {
@@ -3864,6 +4784,22 @@
     "completed": false
   },
   {
+    "absolute_ruku": 2059,
+    "surah_number": 59,
+    "surah_name": "Al-Hashr",
+    "relative_ruku": 4,
+    "verse_range": "Summary",
+    "completed": false
+  },
+  {
+    "absolute_ruku": 1060,
+    "surah_number": 60,
+    "surah_name": "Al-Mumtahana",
+    "relative_ruku": 0,
+    "verse_range": "Overview",
+    "completed": false
+  },
+  {
     "absolute_ruku": 484,
     "surah_number": 60,
     "surah_name": "Al-Mumtahana",
@@ -3877,6 +4813,22 @@
     "surah_name": "Al-Mumtahana",
     "relative_ruku": 2,
     "verse_range": "10-13",
+    "completed": false
+  },
+  {
+    "absolute_ruku": 2060,
+    "surah_number": 60,
+    "surah_name": "Al-Mumtahana",
+    "relative_ruku": 3,
+    "verse_range": "Summary",
+    "completed": false
+  },
+  {
+    "absolute_ruku": 1061,
+    "surah_number": 61,
+    "surah_name": "As-Saff",
+    "relative_ruku": 0,
+    "verse_range": "Overview",
     "completed": false
   },
   {
@@ -3896,6 +4848,22 @@
     "completed": false
   },
   {
+    "absolute_ruku": 2061,
+    "surah_number": 61,
+    "surah_name": "As-Saff",
+    "relative_ruku": 3,
+    "verse_range": "Summary",
+    "completed": false
+  },
+  {
+    "absolute_ruku": 1062,
+    "surah_number": 62,
+    "surah_name": "Al-Jumu'a",
+    "relative_ruku": 0,
+    "verse_range": "Overview",
+    "completed": false
+  },
+  {
     "absolute_ruku": 488,
     "surah_number": 62,
     "surah_name": "Al-Jumu'a",
@@ -3909,6 +4877,22 @@
     "surah_name": "Al-Jumu'a",
     "relative_ruku": 2,
     "verse_range": "9-11",
+    "completed": false
+  },
+  {
+    "absolute_ruku": 2062,
+    "surah_number": 62,
+    "surah_name": "Al-Jumu'a",
+    "relative_ruku": 3,
+    "verse_range": "Summary",
+    "completed": false
+  },
+  {
+    "absolute_ruku": 1063,
+    "surah_number": 63,
+    "surah_name": "Al-Munaafiqoon",
+    "relative_ruku": 0,
+    "verse_range": "Overview",
     "completed": false
   },
   {
@@ -3928,6 +4912,22 @@
     "completed": false
   },
   {
+    "absolute_ruku": 2063,
+    "surah_number": 63,
+    "surah_name": "Al-Munaafiqoon",
+    "relative_ruku": 3,
+    "verse_range": "Summary",
+    "completed": false
+  },
+  {
+    "absolute_ruku": 1064,
+    "surah_number": 64,
+    "surah_name": "At-Taghaabun",
+    "relative_ruku": 0,
+    "verse_range": "Overview",
+    "completed": false
+  },
+  {
     "absolute_ruku": 492,
     "surah_number": 64,
     "surah_name": "At-Taghaabun",
@@ -3941,6 +4941,22 @@
     "surah_name": "At-Taghaabun",
     "relative_ruku": 2,
     "verse_range": "11-18",
+    "completed": false
+  },
+  {
+    "absolute_ruku": 2064,
+    "surah_number": 64,
+    "surah_name": "At-Taghaabun",
+    "relative_ruku": 3,
+    "verse_range": "Summary",
+    "completed": false
+  },
+  {
+    "absolute_ruku": 1065,
+    "surah_number": 65,
+    "surah_name": "At-Talaaq",
+    "relative_ruku": 0,
+    "verse_range": "Overview",
     "completed": false
   },
   {
@@ -3960,6 +4976,22 @@
     "completed": false
   },
   {
+    "absolute_ruku": 2065,
+    "surah_number": 65,
+    "surah_name": "At-Talaaq",
+    "relative_ruku": 3,
+    "verse_range": "Summary",
+    "completed": false
+  },
+  {
+    "absolute_ruku": 1066,
+    "surah_number": 66,
+    "surah_name": "At-Tahrim",
+    "relative_ruku": 0,
+    "verse_range": "Overview",
+    "completed": false
+  },
+  {
     "absolute_ruku": 496,
     "surah_number": 66,
     "surah_name": "At-Tahrim",
@@ -3973,6 +5005,22 @@
     "surah_name": "At-Tahrim",
     "relative_ruku": 2,
     "verse_range": "8-12",
+    "completed": false
+  },
+  {
+    "absolute_ruku": 2066,
+    "surah_number": 66,
+    "surah_name": "At-Tahrim",
+    "relative_ruku": 3,
+    "verse_range": "Summary",
+    "completed": false
+  },
+  {
+    "absolute_ruku": 1067,
+    "surah_number": 67,
+    "surah_name": "Al-Mulk",
+    "relative_ruku": 0,
+    "verse_range": "Overview",
     "completed": false
   },
   {
@@ -3992,6 +5040,22 @@
     "completed": false
   },
   {
+    "absolute_ruku": 2067,
+    "surah_number": 67,
+    "surah_name": "Al-Mulk",
+    "relative_ruku": 3,
+    "verse_range": "Summary",
+    "completed": false
+  },
+  {
+    "absolute_ruku": 1068,
+    "surah_number": 68,
+    "surah_name": "Al-Qalam",
+    "relative_ruku": 0,
+    "verse_range": "Overview",
+    "completed": false
+  },
+  {
     "absolute_ruku": 500,
     "surah_number": 68,
     "surah_name": "Al-Qalam",
@@ -4005,6 +5069,22 @@
     "surah_name": "Al-Qalam",
     "relative_ruku": 2,
     "verse_range": "34-52",
+    "completed": false
+  },
+  {
+    "absolute_ruku": 2068,
+    "surah_number": 68,
+    "surah_name": "Al-Qalam",
+    "relative_ruku": 3,
+    "verse_range": "Summary",
+    "completed": false
+  },
+  {
+    "absolute_ruku": 1069,
+    "surah_number": 69,
+    "surah_name": "Al-Haaqqa",
+    "relative_ruku": 0,
+    "verse_range": "Overview",
     "completed": false
   },
   {
@@ -4024,6 +5104,22 @@
     "completed": false
   },
   {
+    "absolute_ruku": 2069,
+    "surah_number": 69,
+    "surah_name": "Al-Haaqqa",
+    "relative_ruku": 3,
+    "verse_range": "Summary",
+    "completed": false
+  },
+  {
+    "absolute_ruku": 1070,
+    "surah_number": 70,
+    "surah_name": "Al-Ma'aarij",
+    "relative_ruku": 0,
+    "verse_range": "Overview",
+    "completed": false
+  },
+  {
     "absolute_ruku": 504,
     "surah_number": 70,
     "surah_name": "Al-Ma'aarij",
@@ -4037,6 +5133,22 @@
     "surah_name": "Al-Ma'aarij",
     "relative_ruku": 2,
     "verse_range": "36-44",
+    "completed": false
+  },
+  {
+    "absolute_ruku": 2070,
+    "surah_number": 70,
+    "surah_name": "Al-Ma'aarij",
+    "relative_ruku": 3,
+    "verse_range": "Summary",
+    "completed": false
+  },
+  {
+    "absolute_ruku": 1071,
+    "surah_number": 71,
+    "surah_name": "Nooh",
+    "relative_ruku": 0,
+    "verse_range": "Overview",
     "completed": false
   },
   {
@@ -4056,6 +5168,22 @@
     "completed": false
   },
   {
+    "absolute_ruku": 2071,
+    "surah_number": 71,
+    "surah_name": "Nooh",
+    "relative_ruku": 3,
+    "verse_range": "Summary",
+    "completed": false
+  },
+  {
+    "absolute_ruku": 1072,
+    "surah_number": 72,
+    "surah_name": "Al-Jinn",
+    "relative_ruku": 0,
+    "verse_range": "Overview",
+    "completed": false
+  },
+  {
     "absolute_ruku": 508,
     "surah_number": 72,
     "surah_name": "Al-Jinn",
@@ -4069,6 +5197,22 @@
     "surah_name": "Al-Jinn",
     "relative_ruku": 2,
     "verse_range": "20-28",
+    "completed": false
+  },
+  {
+    "absolute_ruku": 2072,
+    "surah_number": 72,
+    "surah_name": "Al-Jinn",
+    "relative_ruku": 3,
+    "verse_range": "Summary",
+    "completed": false
+  },
+  {
+    "absolute_ruku": 1073,
+    "surah_number": 73,
+    "surah_name": "Al-Muzzammil",
+    "relative_ruku": 0,
+    "verse_range": "Overview",
     "completed": false
   },
   {
@@ -4088,6 +5232,22 @@
     "completed": false
   },
   {
+    "absolute_ruku": 2073,
+    "surah_number": 73,
+    "surah_name": "Al-Muzzammil",
+    "relative_ruku": 3,
+    "verse_range": "Summary",
+    "completed": false
+  },
+  {
+    "absolute_ruku": 1074,
+    "surah_number": 74,
+    "surah_name": "Al-Muddaththir",
+    "relative_ruku": 0,
+    "verse_range": "Overview",
+    "completed": false
+  },
+  {
     "absolute_ruku": 512,
     "surah_number": 74,
     "surah_name": "Al-Muddaththir",
@@ -4101,6 +5261,22 @@
     "surah_name": "Al-Muddaththir",
     "relative_ruku": 2,
     "verse_range": "32-56",
+    "completed": false
+  },
+  {
+    "absolute_ruku": 2074,
+    "surah_number": 74,
+    "surah_name": "Al-Muddaththir",
+    "relative_ruku": 3,
+    "verse_range": "Summary",
+    "completed": false
+  },
+  {
+    "absolute_ruku": 1075,
+    "surah_number": 75,
+    "surah_name": "Al-Qiyaama",
+    "relative_ruku": 0,
+    "verse_range": "Overview",
     "completed": false
   },
   {
@@ -4120,6 +5296,22 @@
     "completed": false
   },
   {
+    "absolute_ruku": 2075,
+    "surah_number": 75,
+    "surah_name": "Al-Qiyaama",
+    "relative_ruku": 3,
+    "verse_range": "Summary",
+    "completed": false
+  },
+  {
+    "absolute_ruku": 1076,
+    "surah_number": 76,
+    "surah_name": "Ad-Dahr",
+    "relative_ruku": 0,
+    "verse_range": "Overview",
+    "completed": false
+  },
+  {
     "absolute_ruku": 516,
     "surah_number": 76,
     "surah_name": "Ad-Dahr",
@@ -4133,6 +5325,22 @@
     "surah_name": "Ad-Dahr",
     "relative_ruku": 2,
     "verse_range": "23-31",
+    "completed": false
+  },
+  {
+    "absolute_ruku": 2076,
+    "surah_number": 76,
+    "surah_name": "Ad-Dahr",
+    "relative_ruku": 3,
+    "verse_range": "Summary",
+    "completed": false
+  },
+  {
+    "absolute_ruku": 1077,
+    "surah_number": 77,
+    "surah_name": "Al-Mursalaat",
+    "relative_ruku": 0,
+    "verse_range": "Overview",
     "completed": false
   },
   {
@@ -4152,6 +5360,22 @@
     "completed": false
   },
   {
+    "absolute_ruku": 2077,
+    "surah_number": 77,
+    "surah_name": "Al-Mursalaat",
+    "relative_ruku": 3,
+    "verse_range": "Summary",
+    "completed": false
+  },
+  {
+    "absolute_ruku": 1078,
+    "surah_number": 78,
+    "surah_name": "An-Naba",
+    "relative_ruku": 0,
+    "verse_range": "Overview",
+    "completed": false
+  },
+  {
     "absolute_ruku": 520,
     "surah_number": 78,
     "surah_name": "An-Naba",
@@ -4168,6 +5392,22 @@
     "completed": false
   },
   {
+    "absolute_ruku": 2078,
+    "surah_number": 78,
+    "surah_name": "An-Naba",
+    "relative_ruku": 3,
+    "verse_range": "Summary",
+    "completed": false
+  },
+  {
+    "absolute_ruku": 1079,
+    "surah_number": 79,
+    "surah_name": "An-Naazi'aat",
+    "relative_ruku": 0,
+    "verse_range": "Overview",
+    "completed": false
+  },
+  {
     "absolute_ruku": 522,
     "surah_number": 79,
     "surah_name": "An-Naazi'aat",
@@ -4181,6 +5421,14 @@
     "surah_name": "An-Naazi'aat",
     "relative_ruku": 2,
     "verse_range": "27-46",
+    "completed": false
+  },
+  {
+    "absolute_ruku": 2079,
+    "surah_number": 79,
+    "surah_name": "An-Naazi'aat",
+    "relative_ruku": 3,
+    "verse_range": "Summary",
     "completed": false
   },
   {
