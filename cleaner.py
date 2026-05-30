@@ -23,7 +23,8 @@ STEPS = {
     4: {"name": "step4__script-visual-division", "path_type": "lang_based"},
     5: {"name": "step5__animation-audio-integration", "path_type": "remotion"},
     6: {"name": "step6__block-assembly", "path_type": "lang_based"},
-    7: {"name": "step7__ruku-assembly", "path_type": "lang_based"}
+    7: {"name": "step7__ruku-assembly", "path_type": "lang_based"},
+    8: {"name": "step8__surah-assembly", "path_type": "standard"}
 }
 
 def load_ruku_list(mapping_path):
@@ -39,6 +40,9 @@ def load_ruku_list(mapping_path):
         surah_num = surah.get('surah_number')
         surah_name = surah.get('surah_name', '')
         verse_ranges = surah.get('verse_ranges', [])
+        total_rukus = len(verse_ranges)
+        
+        # Standard Rukus
         for rel_idx, range_str in enumerate(verse_ranges):
             ruku_list.append({
                 "absolute_ruku": abs_idx,
@@ -48,7 +52,26 @@ def load_ruku_list(mapping_path):
                 "verse_range": range_str,
             })
             abs_idx += 1
+            
+        # Virtual Rukus (Overview and Summary)
+        if total_rukus > 1:
+            ruku_list.append({
+                "absolute_ruku": 1000 + surah_num,
+                "surah_number": surah_num,
+                "surah_name": surah_name,
+                "relative_ruku": 0,
+                "verse_range": "Overview",
+            })
+            ruku_list.append({
+                "absolute_ruku": 2000 + surah_num,
+                "surah_number": surah_num,
+                "surah_name": surah_name,
+                "relative_ruku": total_rukus + 1,
+                "verse_range": "Summary",
+            })
     return ruku_list
+
+
 
 def get_target_rukus(ruku_list, args):
     if args.ruku is not None:
@@ -178,26 +201,69 @@ def main():
     ruku_list = load_ruku_list(mapping_path)
 
     parser = argparse.ArgumentParser(description="Utility cleaner script for Tafseer video pipeline.")
-    parser.add_argument("--ruku", type=int, default=None, help="Target absolute Ruku index (1-558).")
+    parser.add_argument("--ruku", type=int, default=None, help="Target absolute Ruku index (1-558 or 1001+/2001+).")
     parser.add_argument("--surah", type=int, default=None, help="Target Surah number.")
     parser.add_argument("--rel-ruku", type=int, default=None, help="Target relative Ruku index inside the Surah.")
-    parser.add_argument("--step", type=str, default="all", help="Target step(s) to clean (0-7, comma-separated, or 'all').")
+    parser.add_argument("--step", type=str, default="all", help="Target step(s) to clean (0-8, comma-separated, or 'all').")
     parser.add_argument("--block", type=int, default=None, help="Target specific block index.")
     parser.add_argument("--subblock", type=str, default=None, help="Target specific subblock ID (e.g. block_5_phase_3_1).")
     parser.add_argument("--lang", choices=["en", "ur", "both"], default="both", help="Target language track (en, ur, both).")
     parser.add_argument("-y", "--yes", action="store_true", help="Bypass interactive confirmation prompt.")
+    parser.add_argument("--purge", action="store_true", help="Purge all outputs and reset all tracking files in the entire pipeline.")
     args = parser.parse_args()
+
+    # If purging, bypass normal checks and run purge directly
+    if args.purge:
+        if not args.yes:
+            confirm = input("\nWARNING: This will delete ALL output directories, temporary chunks, and reset ALL pipeline tracking files. Are you sure? (y/N): ").strip().lower()
+            if confirm != 'y' and confirm != 'yes':
+                print("Purge cancelled.")
+                sys.exit(0)
+                
+        print("\nPurging all output directories...")
+        output_dirs = [
+            os.path.join(root, "step0__whole-single", "output_resources"),
+            os.path.join(root, "step1__single-summary", "output_resources"),
+            os.path.join(root, "step2__summary-combined", "output_resources"),
+            os.path.join(root, "step3__combined-script", "output_resources"),
+            os.path.join(root, "step4__script-visual-division", "output_resources"),
+            os.path.join(root, "step5__animation-audio-integration", "remotion_project", "public", "output_resources"),
+            os.path.join(root, "step6__block-assembly", "output_resources"),
+            os.path.join(root, "step6__block-assembly", "temp_chunks"),
+            os.path.join(root, "step7__ruku-assembly", "output_resources"),
+            os.path.join(root, "step8__surah-assembly", "output_resources")
+        ]
+        
+        for d in output_dirs:
+            if os.path.exists(d):
+                try:
+                    shutil.rmtree(d)
+                    print(f"  Deleted: {os.path.relpath(d, root)}")
+                except Exception as e:
+                    print(f"  Failed to delete {d}: {e}")
+                    
+        print("\nResetting all pipeline tracking files...")
+        try:
+            import initialize_tracking
+            initialize_tracking.main()
+            print("  Successfully reset all tracking files.")
+        except Exception as e:
+            print(f"  Failed to reset tracking files automatically: {e}")
+            print("  Please run: python initialize_tracking.py manually.")
+            
+        print("\nPipeline purge completed successfully.")
+        sys.exit(0)
 
     # Determine steps to clean
     steps_to_clean = []
     if args.step == "all":
-        steps_to_clean = list(range(8))
+        steps_to_clean = list(range(9))
     else:
         try:
             steps_to_clean = [int(s.strip()) for s in args.step.split(",") if s.strip().isdigit()]
-            steps_to_clean = [s for s in steps_to_clean if s in range(8)]
+            steps_to_clean = [s for s in steps_to_clean if s in range(9)]
         except Exception:
-            print("Error: Invalid step specification. Use numbers 0-7 or 'all'.")
+            print("Error: Invalid step specification. Use numbers 0-8 or 'all'.")
             sys.exit(1)
 
     if not steps_to_clean:
@@ -267,7 +333,7 @@ def main():
                     tracking_resets.append((p, abs_ruku, None, is_sum))
 
         # Steps 3 to 7
-        for step in [s for s in steps_to_clean if s >= 3]:
+        for step in [s for s in steps_to_clean if 3 <= s <= 7]:
             step_name = STEPS[step]["name"]
             
             # Resolve base Ruku output directory for this step
@@ -375,6 +441,17 @@ def main():
                     elif step == 7:
                         # Deletes ruku mp4
                         deletions_dirs.append(lang_dir)
+
+        # Step 8
+        if 8 in steps_to_clean and not args.block and not args.subblock:
+            step8_dir = os.path.join(root, "step8__surah-assembly", "output_resources", f"surah_{surah:03d}")
+            if os.path.exists(step8_dir):
+                if args.lang == "both":
+                    deletions_dirs.append(step8_dir)
+                else:
+                    for fname in os.listdir(step8_dir):
+                        if fname.endswith(f"_{args.lang}.mp4"):
+                            deletions_files.append(os.path.join(step8_dir, fname))
 
         # Build tracking resets for Steps 3 to 7
         for step in range(8):
