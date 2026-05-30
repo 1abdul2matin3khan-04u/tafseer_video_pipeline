@@ -231,20 +231,28 @@ def generate_polly_audio(polly_client, text, output_path, voice=DEFAULT_VOICE_EN
 
 async def generate_edge_tts_audio(text, output_path, voice=DEFAULT_VOICE_UR):
     """
-    Generates Urdu speech audio using Edge TTS.
+    Generates Urdu speech audio using Edge TTS with automatic retries on connection failures.
     """
     cleaned_text = re.sub(r'\[.*?\]', '', text).strip()
     if not cleaned_text:
         return False
         
-    try:
-        communicate = edge_tts.Communicate(cleaned_text, voice)
-        await communicate.save(output_path)
-        print(f"      Saved Edge TTS audio to {output_path}")
-        return True
-    except Exception as e:
-        print(f"      Error generating Edge TTS audio: {e}")
-        return False
+    max_retries = 3
+    for attempt in range(1, max_retries + 1):
+        try:
+            communicate = edge_tts.Communicate(cleaned_text, voice)
+            await communicate.save(output_path)
+            print(f"      Saved Edge TTS audio to {output_path} (Attempt {attempt})")
+            return True
+        except Exception as e:
+            print(f"      [Warning] Attempt {attempt} failed to generate Edge TTS audio: {e}")
+            if attempt < max_retries:
+                wait_time = attempt * 2
+                print(f"      Waiting {wait_time}s before retrying...")
+                await asyncio.sleep(wait_time)
+            else:
+                print(f"      [Error] All {max_retries} attempts failed to generate Edge TTS audio.")
+    return False
 
 def get_audio_duration(path):
     """
