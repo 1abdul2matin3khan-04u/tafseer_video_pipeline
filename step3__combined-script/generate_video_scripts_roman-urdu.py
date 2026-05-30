@@ -42,8 +42,11 @@ The script must follow this exact order:
 === Commentary Rules ===
 
 1. Hook: Open with a single attention-grabbing question or statement 
-   directly connected to the block's theme. No greetings, no 
-   introductory filler.
+   directly connected to the block's theme.
+   Do NOT open with "Assalamu Alaikum", "Bhai Saab", "Dosto", or any 
+   greeting or salutation.
+   For Concept blocks (no verses): begin commentary directly with the hook —
+   no recitation or translation lines.
 
 2. Coverage: Cover every point from the tafseer content — every hadith, 
    every scholar attribution, every historical detail, every lesson. 

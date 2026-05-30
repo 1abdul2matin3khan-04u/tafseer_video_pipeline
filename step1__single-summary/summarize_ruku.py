@@ -20,6 +20,27 @@ from pipeline_utils import call_gemini_api, strip_markdown_code_blocks
 # 5. "models/gemini-2.5-flash-lite" (Lightweight previous generation Flash model)
 GEMINI_MODEL = "models/gemini-3.1-flash-lite"
 
+SYSTEM_PROMPT_SUMMARIZE = """You are an Islamic exegetical scholar condensing raw Tafseer JSON into clean scholarly prose in {lang_name}.
+
+<rules>
+REMOVE (repetition — include each point only once):
+- The same meaning restated in different words
+- Redundant transitions or restatements between paragraphs
+- A hadith or narration cited more than once with identical wording
+
+KEEP (never drop):
+- Every distinct hadith or narration, even if similar (keep if wording or chain differs)
+- Every named scholar opinion or attribution
+- Every historical event or cause of revelation (asbab al-nuzul)
+- Every ruling, lesson, or theological conclusion
+- Every linguistic or grammatical observation
+</rules>
+
+<output>
+Flowing prose only. No headers, no bullet points, no added structure.
+Start directly with the content. No preamble or closing remarks.
+</output>"""
+
 SOURCE_MAP = {
     "ibn_kathir": {
         "input_name": "tafseer-ibn-kathir",
@@ -172,12 +193,13 @@ def main():
                 print(f"  Error reading/parsing {input_file}: {e}. Skipping source.")
                 continue
                 
-            # Construct Prompt: data + simple instruction
+            # Construct Prompt: system instruction + XML-tagged data
             json_str = json.dumps(raw_data, ensure_ascii=False)
-            prompt = f"The following is a Tafseer JSON. It contains repeated explanations, restated meanings, and redundant phrasing throughout. \nYour task: rewrite it as condensed prose in {src_info['lang_name']}, removing all repetition while retaining every unique point exactly once. \nWhat counts as repetition — skip these:\n- The same meaning explained twice in different words\n- Redundant transitions or restatements between paragraphs\n- A hadith or narration cited more than once\nWhat must be retained — never skip these:\n- Every distinct hadith or narration (even if similar, keep if wording or chain differs)\n- Every named scholar opinion or attribution\n- Every historical event or cause of revelation\n- Every ruling, lesson, or theological conclusion\n- Every linguistic or grammatical observation\nOutput: flowing prose only. No headers, no bullets, no added structure.\n {json_str}"
+            sys_prompt = SYSTEM_PROMPT_SUMMARIZE.format(lang_name=src_info['lang_name'])
+            prompt = f"<tafseer_json>\n{json_str}\n</tafseer_json>"
             
             # Call API via call_gemini_api
-            response_text = call_gemini_api(GEMINI_MODEL, prompt, "step1", abs_ruku, surah_num, surah_name, rel_ruku)
+            response_text = call_gemini_api(GEMINI_MODEL, prompt, "step1", abs_ruku, surah_num, surah_name, rel_ruku, system_instruction=sys_prompt)
             
             if response_text is None:
                 print(f"  Error: Failed to obtain summary for {src_key} from Gemini API. Skipping.")

@@ -42,23 +42,17 @@ Preserve every hadith, narration, historical detail, and theological
 conclusion from his summary. Do not compress here.
 
 ### Additional Interpretations
-List only what each of the remaining 4 sources adds beyond Ibn Kathir.
+List only what each source adds beyond Ibn Kathir:
+- **Maarif-ul-Quran**: [unique addition]
+- **Tazkir-ul-Quran**: [unique addition]
+- **Tafsir As-Saadi**: [unique addition]
+- **Tafsir Bayan-ul-Quran**: [unique addition]
 
-Format:
-- **Maarif-ul-Quran**: [unique addition, or omit this line entirely]
-- **Tazkir-ul-Quran**: [unique addition, or omit this line entirely]
-- **Tafsir As-Saadi**: [unique addition, or omit this line entirely]
-- **Tafsir Bayan-ul-Quran**: [unique addition, or omit this line entirely]
-
-Rules for Additional Interpretations:
-- A point already present in Ibn Kathir's section must not appear again 
-  under any author.
-- If an author's entire contribution for this block is already covered by 
-  Ibn Kathir, omit that author's line completely.
-- If two authors make the same unique point, attribute it to both in one 
-  line rather than repeating it.
-- If sources contradict Ibn Kathir on a point, note the disagreement 
-  explicitly: "[Author] differs here — [their position]."
+Rules:
+- Include only points not already covered by Ibn Kathir.
+- Omit an author's line entirely if they add nothing unique.
+- If two authors share the same unique point, attribute both in one line.
+- If a source contradicts Ibn Kathir, note it explicitly: "[Author] differs here — [their position]."
 
 === Language ===
 Write entirely in Roman Urdu using the Latin alphabet.
