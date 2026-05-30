@@ -1,6 +1,14 @@
-import json, os
+import json
+import os
+import argparse
+
+parser = argparse.ArgumentParser(description='Scan layouts for a specific Surah and Ruku')
+parser.add_argument('--surah', type=int, required=True, help='Surah number')
+parser.add_argument('--ruku', type=str, required=True, help='Ruku identifier (e.g. 1_1)')
+args = parser.parse_args()
+
 script_dir = os.path.dirname(os.path.abspath(__file__))
-d = os.path.join(script_dir, 'remotion_project', 'public', 'output_resources', 'surah_001', 'ruku_1_1')
+d = os.path.join(script_dir, 'remotion_project', 'public', 'output_resources', f'surah_{args.surah:03d}', f'ruku_{args.ruku}')
 broken = []
 total = 0
 
@@ -9,13 +17,15 @@ for lang in ['en', 'ur']:
     if not os.path.exists(manifest_path):
         print(f"Warning: Manifest not found for track '{lang}' at: {manifest_path}. Skipping.")
         continue
-    manifest = json.load(open(manifest_path, 'r', encoding='utf-8'))
+    with open(manifest_path, 'r', encoding='utf-8') as f:
+        manifest = json.load(f)
     
     for entry in manifest:
         if entry['subblock_type'] == 'verses':
             continue
         filepath = os.path.join(d, lang, entry['filename'])
-        data = json.load(open(filepath, 'r', encoding='utf-8'))
+        with open(filepath, 'r', encoding='utf-8') as f:
+            data = json.load(f)
         
         for scene in data.get('scenes', []):
             total += 1

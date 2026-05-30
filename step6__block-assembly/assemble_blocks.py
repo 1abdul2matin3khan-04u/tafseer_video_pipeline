@@ -15,23 +15,25 @@ import subprocess
 import argparse
 import shutil
 
-def run_command(cmd, cwd=None):
+def run_command(cmd, cwd=None, timeout=None):
     """
     Executes a system command and returns success boolean, stdout, and stderr.
     """
-    print(f"      Executing command: {cmd}")
+    print(f"      Executing command: {' '.join(cmd) if isinstance(cmd, list) else cmd}")
     try:
         result = subprocess.run(
             cmd,
-            shell=True,
             cwd=cwd,
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE,
             text=True,
             encoding='utf-8',
-            errors='replace'
+            errors='replace',
+            timeout=timeout
         )
         return result.returncode == 0, result.stdout, result.stderr
+    except subprocess.TimeoutExpired:
+        return False, "", f"Command timed out after {timeout} seconds"
     except Exception as e:
         return False, "", str(e)
 
@@ -139,9 +141,9 @@ def main():
 
                     # Props path is relative to the remotion project directory
                     props_path = f"public/output_resources/{ruku_folder}/{sub_filename}"
-                    cmd = f'npx remotion render DynamicSequencer "{final_block_mp4}" --props="{props_path}"'
+                    cmd = ['npx', 'remotion', 'render', 'DynamicSequencer', final_block_mp4, f'--props={props_path}']
                     
-                    success, stdout, stderr = run_command(cmd, cwd=remotion_dir)
+                    success, stdout, stderr = run_command(cmd, cwd=remotion_dir, timeout=600)
                     if not success:
                         print(f"    [Error] Failed to render block {block_no}:\n{stderr}")
                         block_success = False
@@ -162,9 +164,9 @@ def main():
 
                         print(f"    Rendering subblock chunk {sub_id}...")
                         props_path = f"public/output_resources/{ruku_folder}/{sub_filename}"
-                        cmd = f'npx remotion render DynamicSequencer "{temp_chunk_mp4}" --props="{props_path}"'
+                        cmd = ['npx', 'remotion', 'render', 'DynamicSequencer', temp_chunk_mp4, f'--props={props_path}']
 
-                        success, stdout, stderr = run_command(cmd, cwd=remotion_dir)
+                        success, stdout, stderr = run_command(cmd, cwd=remotion_dir, timeout=600)
                         if not success:
                             print(f"      [Error] Failed to render subblock {sub_id}:\n{stderr}")
                             render_success = False
@@ -184,8 +186,8 @@ def main():
                                 safe_path = chunk.replace("\\", "/")
                                 lf.write(f"file '{safe_path}'\n")
 
-                        ffmpeg_cmd = f'ffmpeg -y -f concat -safe 0 -i "{list_file_path.replace("\\", "/")}" -c copy "{final_block_mp4.replace("\\", "/")}"'
-                        success, stdout, stderr = run_command(ffmpeg_cmd)
+                        ffmpeg_cmd = ['ffmpeg', '-y', '-f', 'concat', '-safe', '0', '-i', list_file_path, '-c', 'copy', final_block_mp4]
+                        success, stdout, stderr = run_command(ffmpeg_cmd, timeout=300)
                         
                         if not success:
                             print(f"    [Error] FFmpeg stitching failed for block {block_no}:\n{stderr}")

@@ -13,22 +13,24 @@ import json
 import subprocess
 import argparse
 
-def run_command(cmd):
+def run_command(cmd, timeout=None):
     """
     Executes a system command and returns success boolean, stdout, and stderr.
     """
-    print(f"    Executing command: {cmd}")
+    print(f"    Executing command: {' '.join(cmd) if isinstance(cmd, list) else cmd}")
     try:
         result = subprocess.run(
             cmd,
-            shell=True,
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE,
             text=True,
             encoding='utf-8',
-            errors='replace'
+            errors='replace',
+            timeout=timeout
         )
         return result.returncode == 0, result.stdout, result.stderr
+    except subprocess.TimeoutExpired:
+        return False, "", f"Command timed out after {timeout} seconds"
     except Exception as e:
         return False, "", str(e)
 
@@ -136,9 +138,9 @@ def main():
 
             # Run FFmpeg Concat
             print(f"  Concatenating {len(block_paths)} blocks into final video...")
-            ffmpeg_cmd = f'ffmpeg -y -f concat -safe 0 -i "{list_file_path.replace("\\", "/")}" -c copy "{final_ruku_mp4.replace("\\", "/")}"'
+            ffmpeg_cmd = ['ffmpeg', '-y', '-f', 'concat', '-safe', '0', '-i', list_file_path, '-c', 'copy', final_ruku_mp4]
             
-            success, stdout, stderr = run_command(ffmpeg_cmd)
+            success, stdout, stderr = run_command(ffmpeg_cmd, timeout=300)
             
             # Clean up the list file
             if os.path.exists(list_file_path):

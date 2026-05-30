@@ -7,9 +7,9 @@ import time
 import urllib.request
 import urllib.error
 import argparse
-import sys
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import api_logger
+from pipeline_utils import call_gemini_api, strip_markdown_code_blocks
 
 # Configurable Gemini Model
 # Popular Gemini Models:
@@ -55,23 +55,6 @@ SOURCE_MAP = {
 
 SUMMARY_SOURCES = list(SOURCE_MAP.keys())
 
-def load_env(filepath):
-    if not os.path.exists(filepath):
-        return {}
-    env_vars = {}
-    try:
-        with open(filepath, 'r', encoding='utf-8') as f:
-            for line in f:
-                line = line.strip()
-                if not line or line.startswith('#'):
-                    continue
-                if '=' in line:
-                    key, val = line.split('=', 1)
-                    env_vars[key.strip()] = val.strip()
-    except Exception as e:
-        print(f"Warning: Failed to parse .env file: {e}")
-    return env_vars
-
 def strip_html(text):
     if not isinstance(text, str):
         return text
@@ -87,87 +70,6 @@ def clean_html_structure(obj):
     elif isinstance(obj, str):
         return strip_html(obj)
     return obj
-
-def strip_markdown_code_blocks(text):
-    text = text.strip()
-    if text.startswith("```"):
-        # Remove opening backticks and language indicator
-        text = re.sub(r"^```[a-zA-Z0-9]*\n", "", text)
-        # Remove closing backticks
-        if text.endswith("```"):
-            text = text[:-3].strip()
-    return text
-
-def call_gemini_api(model, prompt, step_name, abs_ruku, surah_number, surah_name, rel_ruku):
-    max_retries = 7  # Allow rotating through all 7 keys
-    for attempt in range(1, max_retries + 1):
-        key_name, api_key = api_logger.get_next_api_key(step_name)
-        if not api_key:
-            print("  Error: No API keys loaded.")
-            return None
-            
-        url = f"https://generativelanguage.googleapis.com/v1beta/{model}:generateContent?key={api_key}"
-        headers = {
-            "Content-Type": "application/json"
-        }
-        payload = {
-            "contents": [
-                {
-                    "parts": [
-                        {"text": prompt}
-                    ]
-                }
-            ]
-        }
-        
-        req = urllib.request.Request(
-            url,
-            data=json.dumps(payload).encode("utf-8"),
-            headers=headers
-        )
-        try:
-            with urllib.request.urlopen(req, timeout=180) as response:
-                res_data = json.loads(response.read().decode("utf-8"))
-                response_text = res_data["candidates"][0]["content"]["parts"][0]["text"].strip()
-                
-                input_tokens = None
-                output_tokens = None
-                if "usageMetadata" in res_data:
-                    input_tokens = res_data["usageMetadata"].get("promptTokenCount")
-                    output_tokens = res_data["usageMetadata"].get("candidatesTokenCount")
-                    
-                api_logger.log_api_call(
-                    step_name, abs_ruku, surah_number, surah_name, rel_ruku,
-                    model, key_name, "Success", input_tokens, output_tokens
-                )
-                return response_text
-        except urllib.error.HTTPError as e:
-            try:
-                err_msg = e.read().decode('utf-8')
-            except Exception:
-                err_msg = e.reason
-            print(f"  [Attempt {attempt}/{max_retries} with {key_name}] HTTP Error {e.code}: {e.reason}. Detail: {err_msg}")
-            
-            api_logger.log_api_call(
-                step_name, abs_ruku, surah_number, surah_name, rel_ruku,
-                model, key_name, f"HTTP Error {e.code}", None, None
-            )
-            
-            if e.code == 429:
-                print(f"  [Rate Limit Active] Rotating key and retrying...")
-                time.sleep(2)
-                continue
-        except Exception as e:
-            print(f"  [Attempt {attempt}/{max_retries} with {key_name}] Error: {e}")
-            api_logger.log_api_call(
-                step_name, abs_ruku, surah_number, surah_name, rel_ruku,
-                model, key_name, f"Error: {str(e)[:50]}", None, None
-            )
-            
-        if attempt < max_retries:
-            time.sleep(1)
-            
-    return None
 
 def main():
     parser = argparse.ArgumentParser(description="Summarize Quran Tafseers per Ruku using Gemini API.")
@@ -272,7 +174,7 @@ def main():
                 
             # Construct Prompt: data + simple instruction
             json_str = json.dumps(raw_data, ensure_ascii=False)
-            prompt = f"The following is a Tafseer JSON. It contains repeated explanations, restated meanings, and redundant phrasing throughout. /nYour task: rewrite it as condensed prose in {src_info['lang_name']}, removing all repetition while retaining every unique point exactly once. /nWhat counts as repetition — skip these:/n- The same meaning explained twice in different words/n- Redundant transitions or restatements between paragraphs/n- A hadith or narration cited more than once/nWhat must be retained — never skip these:/n- Every distinct hadith or narration (even if similar, keep if wording or chain differs)/n- Every named scholar opinion or attribution/n- Every historical event or cause of revelation/n- Every ruling, lesson, or theological conclusion/n- Every linguistic or grammatical observation/nOutput: flowing prose only. No headers, no bullets, no added structure./n {json_str}"
+            prompt = f"The following is a Tafseer JSON. It contains repeated explanations, restated meanings, and redundant phrasing throughout. \nYour task: rewrite it as condensed prose in {src_info['lang_name']}, removing all repetition while retaining every unique point exactly once. \nWhat counts as repetition — skip these:\n- The same meaning explained twice in different words\n- Redundant transitions or restatements between paragraphs\n- A hadith or narration cited more than once\nWhat must be retained — never skip these:\n- Every distinct hadith or narration (even if similar, keep if wording or chain differs)\n- Every named scholar opinion or attribution\n- Every historical event or cause of revelation\n- Every ruling, lesson, or theological conclusion\n- Every linguistic or grammatical observation\nOutput: flowing prose only. No headers, no bullets, no added structure.\n {json_str}"
             
             # Call API via call_gemini_api
             response_text = call_gemini_api(GEMINI_MODEL, prompt, "step1", abs_ruku, surah_num, surah_name, rel_ruku)

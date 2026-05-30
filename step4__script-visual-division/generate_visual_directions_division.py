@@ -1,85 +1,23 @@
 #!/usr/bin/env python3
+"""
+generate_visual_directions_division.py
+Unified script to generate scene-by-scene visual directions with structured visual groups.
+Supports English and Roman Urdu tracks via the --lang argument.
+"""
+
 import os
 import sys
 import json
 import time
 import re
-import urllib.request
-import urllib.error
 import argparse
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import api_logger
+from pipeline_utils import call_gemini_api
 from process_visual_groups import flatten_visual_groups, subdivide_by_visual_groups
 
 # Configurable Gemini Model
 GEMINI_MODEL = "models/gemini-3.1-flash-lite"
-
-PROMPT_SCENE_BREAKDOWN = """You are a video script editor breaking an English 
-Tafseer block into individual spoken scenes.
-
-=== Scene Rules ===
-
-1. Scene 1 — Title:
-   Contains only the title line from the script.
-
-2. Recitation and Translation scenes:
-   Each [Recite Verse X: ...] tag becomes its own scene.
-   The Translation line becomes its own scene.
-   Preserve the exact bracketed tag and prefix in the script field.
-   Do not alter, clean, or paraphrase them.
-
-3. Commentary scenes:
-   Break narrator commentary into individual spoken phrases of 10–18 
-   words each (approximately 5–10 seconds of speech).
-   One natural sentence or clause per scene.
-
-4. remarks field:
-   Write delivery notes in English — tone, pacing, emphasis, 
-   sound effect cues.
-"""
-
-PROMPT_VISUAL_GROUPS = """You are a motion graphics director designing 
-visual aids for an English Tafseer video.
-
-You will receive a block script and its scene breakdown. Your task is 
-to assign structured visual groups to commentary scenes only.
-
-=== What Visual Groups Are ===
-Graphics that occupy the top 75% of screen while the narrator speaks.
-They do not apply to title, recitation, or translation scenes.
-
-=== Decision Process ===
-Read all commentary scenes first. Identify segments where a visual 
-would genuinely aid comprehension. Not every scene needs one — 
-reflective or transitional statements stay narrative-only.
-
-=== Available Types ===
-bullets — key points, characteristics, or lessons as a list.
-table — columnar data, attribute comparisons, structured categories.
-timeline — chronological sequence of events or prophetic narrative.
-comparison — side-by-side contrast of two groups, states, or concepts.
-hierarchy — a tree of categories or branches of a concept.
-
-=== Themes ===
-warning — punishment, hellfire, theological consequences.
-mercy — guidance, blessings, forgiveness, paradise.
-historical — prophetic stories, historical events, narrative passages.
-default — general discussion, neutral content.
-
-=== Progressive Reveal ===
-Each group spans multiple consecutive commentary scenes.
-The graphic builds gradually across its scene range.
-reveals is an array of cumulative integers, one per scene in the range.
-Values may repeat (hold) or jump by more than one.
-
-=== Constraints ===
-reveals length must equal (scene_range[1] - scene_range[0] + 1).
-Maximum reveal value must not exceed item count of the visual type.
-Scene ranges must not overlap between groups.
-group_id must be unique: vg_1, vg_2, etc.
-For unused fields output empty arrays [] or empty strings "".
-Visual titles must be in English.
-"""
 
 SCENE_SCHEMA = {
     "type": "OBJECT",
@@ -207,8 +145,8 @@ VISUAL_GROUPS_SCHEMA = {
                             "properties": {
                                 "label": {"type": "STRING"},
                                 "children": {
-                                    "type": "ARRAY",
-                                    "items": {"type": "STRING"}
+                                     "type": "ARRAY",
+                                     "items": {"type": "STRING"}
                                 }
                             },
                             "required": ["label", "children"]
@@ -225,92 +163,6 @@ VISUAL_GROUPS_SCHEMA = {
     },
     "required": ["visual_groups"]
 }
-
-
-def call_gemini_api(model, system_prompt, user_content, response_schema, step_name, abs_ruku, surah_number, surah_name, rel_ruku):
-    max_retries = 7
-    for attempt in range(1, max_retries + 1):
-        key_name, api_key = api_logger.get_next_api_key(step_name)
-        if not api_key:
-            print("  Error: No API keys loaded.")
-            return None
-
-        url = f"https://generativelanguage.googleapis.com/v1beta/{model}:generateContent?key={api_key}"
-        headers = {
-            "Content-Type": "application/json"
-        }
-        payload = {
-            "contents": [
-                {
-                    "parts": [
-                        {"text": f"{system_prompt}\n\nInput Context:\n{user_content}"}
-                    ]
-                }
-            ],
-            "generationConfig": {
-                "responseMimeType": "application/json",
-                "responseSchema": response_schema
-            }
-        }
-        req = urllib.request.Request(
-            url,
-            data=json.dumps(payload).encode("utf-8"),
-            headers=headers
-        )
-        try:
-            with urllib.request.urlopen(req, timeout=180) as response:
-                res_data = json.loads(response.read().decode("utf-8"))
-                response_text = res_data["candidates"][0]["content"]["parts"][0]["text"].strip()
-
-                input_tokens = None
-                output_tokens = None
-                if "usageMetadata" in res_data:
-                    input_tokens = res_data["usageMetadata"].get("promptTokenCount")
-                    output_tokens = res_data["usageMetadata"].get("candidatesTokenCount")
-
-                api_logger.log_api_call(
-                    step_name, abs_ruku, surah_number, surah_name, rel_ruku,
-                    model, key_name, "Success", input_tokens, output_tokens
-                )
-                return response_text
-        except urllib.error.HTTPError as e:
-            try:
-                err_msg = e.read().decode('utf-8')
-            except Exception:
-                err_msg = e.reason
-            print(f"  [Attempt {attempt}/{max_retries} with {key_name}] HTTP Error {e.code}: {e.reason}. Detail: {err_msg}")
-
-            api_logger.log_api_call(
-                step_name, abs_ruku, surah_number, surah_name, rel_ruku,
-                model, key_name, f"HTTP Error {e.code}", None, None
-            )
-
-            if e.code == 429:
-                wait_time = 15.0
-                try:
-                    err_json = json.loads(err_msg)
-                    details = err_json.get("error", {}).get("details", [])
-                    for d in details:
-                        if "retryDelay" in d:
-                            delay_str = d["retryDelay"].rstrip("s")
-                            wait_time = float(delay_str) + 1.0
-                            break
-                except Exception:
-                    pass
-                print(f"  [Rate Limit Active] Waiting {wait_time}s before rotating key and retrying...")
-                time.sleep(wait_time)
-                continue
-        except Exception as e:
-            print(f"  [Attempt {attempt}/{max_retries} with {key_name}] Error: {e}")
-            api_logger.log_api_call(
-                step_name, abs_ruku, surah_number, surah_name, rel_ruku,
-                model, key_name, f"Error: {str(e)[:50]}", None, None
-            )
-
-        if attempt < max_retries:
-            time.sleep(1)
-
-    return None
 
 
 def parse_markdown_with_yaml(filepath):
@@ -431,22 +283,89 @@ def sync_block_todo_list(todo_path, root_dir, lang):
     return block_entries
 
 
-def process_track(script_dir, root_dir, limit, ruku_filter, block_filter, force_flag, delay, max_narrative_scenes):
-    print("\n===== Starting Step 4 (ENGLISH Track - Visual Groups) =====")
-    todo_path = os.path.join(script_dir, "guiding_resources", "todo_visuals_english.json")
+def process_track(lang, script_dir, root_dir, limit, ruku_filter, block_filter, force_flag, delay, max_narrative_scenes):
+    lang_label = "English" if lang == "en" else "Roman Urdu"
+    print(f"\n===== Starting Step 4 ({lang_label.upper()} Track - Visual Groups) =====")
+    todo_file = f"todo_visuals_english.json" if lang == "en" else f"todo_visuals_urdu.json"
+    todo_path = os.path.join(script_dir, "guiding_resources", todo_file)
 
     if not os.path.exists(todo_path):
         print(f"Error: Tracking file not found at {todo_path}", file=sys.stderr)
         return
 
+    # Prompts tailored for the specific language track
+    prompt_scene_breakdown = f"""You are a video script editor breaking a {lang_label} Tafseer block into individual spoken scenes.
+
+=== Scene Rules ===
+
+1. Scene 1 — Title:
+   Contains only the title line from the script.
+
+2. Recitation and Translation scenes:
+   Each [Recite Verse X: ...] tag becomes its own scene.
+   The Translation line becomes its own scene.
+   Preserve the exact bracketed tag and prefix in the script field.
+   Do not alter, clean, or paraphrase them.
+
+3. Commentary scenes:
+   Break narrator commentary into individual spoken phrases of 10–18 
+   words each (approximately 5–10 seconds of speech).
+   One natural sentence or clause per scene.
+
+4. remarks field:
+   Write delivery notes in English — tone, pacing, emphasis, 
+   sound effect cues.
+"""
+
+    prompt_visual_groups = f"""You are a motion graphics director designing visual aids for a {lang_label} Tafseer video.
+
+You will receive a block script and its scene breakdown. Your task is to assign structured visual groups to commentary scenes only.
+
+=== What Visual Groups Are ===
+Graphics that occupy the top 75% of screen while the narrator speaks.
+They do not apply to title, recitation, or translation scenes.
+
+=== Decision Process ===
+Read all commentary scenes first. Identify segments where a visual 
+would genuinely aid comprehension. Not every scene needs one — 
+reflective or transitional statements stay narrative-only.
+
+=== Available Types ===
+bullets — key points, characteristics, or lessons as a list.
+table — columnar data, attribute comparisons, structured categories.
+timeline — chronological sequence of events or prophetic narrative.
+comparison — side-by-side contrast of two groups, states, or concepts.
+hierarchy — a tree of categories or branches of a concept.
+
+=== Themes ===
+warning — punishment, hellfire, theological consequences.
+mercy — guidance, blessings, forgiveness, paradise.
+historical — prophetic stories, historical events, narrative passages.
+default — general discussion, neutral content.
+
+=== Progressive Reveal ===
+Each group spans multiple consecutive commentary scenes.
+The graphic builds gradually across its scene range.
+reveals is an array of cumulative integers, one per scene in the range.
+Values may repeat (hold) or jump by more than one.
+
+=== Constraints ===
+reveals length must equal (scene_range[1] - scene_range[0] + 1).
+Maximum reveal value must not exceed item count of the visual type.
+Scene ranges must not overlap between groups.
+group_id must be unique: vg_1, vg_2, etc.
+For unused fields output empty arrays [] or empty strings "".
+Visual titles must be in English.
+"""
+
     # Expand Ruku todo list into block todo list dynamically
-    todo_list = sync_block_todo_list(todo_path, root_dir, "en")
+    todo_list = sync_block_todo_list(todo_path, root_dir, lang)
 
     processed_blocks = 0
 
     for entry in todo_list:
         if limit is not None and processed_blocks >= limit:
-            print(f"Reached processing limit of {limit} Blocks for ENGLISH track. Stopping.")
+            print(f"Reached processing limit of {limit} Blocks for {lang_label} track. Stopping.")
             break
 
         if ruku_filter is not None and entry["absolute_ruku"] != ruku_filter:
@@ -464,11 +383,11 @@ def process_track(script_dir, root_dir, limit, ruku_filter, block_filter, force_
         rel_ruku = entry["relative_ruku"]
         idx = entry["block_no"]
 
-        print(f"\n>>> [ENGLISH] Generating Visual Groups for Ruku {abs_ruku} Block {idx} (Surah {surah_num:03d} {surah_name})")
+        print(f"\n>>> [{lang_label.upper()}] Generating Visual Groups for Ruku {abs_ruku} Block {idx} (Surah {surah_num:03d} {surah_name})")
 
         input_script_dir = os.path.join(
             root_dir, "step3__combined-script", "output_resources",
-            f"surah_{surah_num:03d}", f"ruku_{rel_ruku}_{abs_ruku}", "en"
+            f"surah_{surah_num:03d}", f"ruku_{rel_ruku}_{abs_ruku}", lang
         )
 
         filename = f"block_{idx}.md"
@@ -480,7 +399,7 @@ def process_track(script_dir, root_dir, limit, ruku_filter, block_filter, force_
 
         output_dir = os.path.join(
             root_dir, "step4__script-visual-division", "output_resources",
-            f"surah_{surah_num:03d}", f"ruku_{rel_ruku}_{abs_ruku}", "en"
+            f"surah_{surah_num:03d}", f"ruku_{rel_ruku}_{abs_ruku}", lang
         )
         os.makedirs(output_dir, exist_ok=True)
 
@@ -512,10 +431,10 @@ def process_track(script_dir, root_dir, limit, ruku_filter, block_filter, force_
             print(f"    [Call 1] Generating scene breakdown for Block {idx}...")
             ai_response_scenes = call_gemini_api(
                 GEMINI_MODEL,
-                PROMPT_SCENE_BREAKDOWN,
                 input_payload_str,
-                SCENE_SCHEMA,
-                "step4_scenes", abs_ruku, surah_num, surah_name, rel_ruku
+                "step4_scenes", abs_ruku, surah_num, surah_name, rel_ruku,
+                system_instruction=prompt_scene_breakdown,
+                response_schema=SCENE_SCHEMA
             )
 
             if not ai_response_scenes:
@@ -534,10 +453,10 @@ def process_track(script_dir, root_dir, limit, ruku_filter, block_filter, force_
             vg_input_context = f"Block Script:\n{input_payload_str}\n\nScene Breakdown:\n{json.dumps(scenes, ensure_ascii=False)}"
             ai_response_vg = call_gemini_api(
                 GEMINI_MODEL,
-                PROMPT_VISUAL_GROUPS,
                 vg_input_context,
-                VISUAL_GROUPS_SCHEMA,
-                "step4_visuals", abs_ruku, surah_num, surah_name, rel_ruku
+                "step4_visuals", abs_ruku, surah_num, surah_name, rel_ruku,
+                system_instruction=prompt_visual_groups,
+                response_schema=VISUAL_GROUPS_SCHEMA
             )
 
             if not ai_response_vg:
@@ -659,7 +578,8 @@ def process_track(script_dir, root_dir, limit, ruku_filter, block_filter, force_
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Generate scene-by-scene English visual directions with structured visual groups.")
+    parser = argparse.ArgumentParser(description="Generate scene-by-scene visual directions with structured visual groups.")
+    parser.add_argument("--lang", choices=["en", "ur"], required=True, help="Language track: 'en' for English, 'ur' for Roman Urdu.")
     parser.add_argument("--limit", type=int, default=None, help="Limit the number of blocks to process.")
     parser.add_argument("--ruku", type=int, default=None, help="Process a specific absolute Ruku index.")
     parser.add_argument("--block", type=int, default=None, help="Process a specific block index.")
@@ -678,8 +598,8 @@ def main():
         print("Error: No GEMINI_API_KEY_1 through GEMINI_API_KEY_7 found in .env file.", file=sys.stderr)
         sys.exit(1)
 
-    process_track(script_dir, root_dir, args.limit, args.ruku, args.block, args.force, args.delay, args.max_narrative_scenes)
-    print("\nEnglish Step 4 processing finished.")
+    process_track(args.lang, script_dir, root_dir, args.limit, args.ruku, args.block, args.force, args.delay, args.max_narrative_scenes)
+    print(f"\n{args.lang.upper()} Step 4 processing finished.")
 
 
 if __name__ == "__main__":

@@ -9,6 +9,7 @@ import urllib.error
 import argparse
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import api_logger
+from pipeline_utils import call_gemini_api, strip_markdown_code_blocks, parse_verse_range
 
 # Configurable Gemini Model
 GEMINI_MODEL = "models/gemini-3.5-flash"
@@ -45,119 +46,9 @@ The generated script must follow this exact linear sequence:
 6. **No Screen Directions**: Write ONLY the clean text that the narrator is meant to speak out loud. Do not include visual cues, scene descriptions, or music instructions (except the [Recite Verse] and [Pause] tags).
 """
 
-def load_env(filepath):
-    if not os.path.exists(filepath):
-        return {}
-    env_vars = {}
-    try:
-        with open(filepath, 'r', encoding='utf-8') as f:
-            for line in f:
-                line = line.strip()
-                if not line or line.startswith('#'):
-                    continue
-                if '=' in line:
-                    key, val = line.split('=', 1)
-                    env_vars[key.strip()] = val.strip()
-    except Exception as e:
-        print(f"Warning: Failed to parse .env file: {e}")
-    return env_vars
 
-def strip_markdown_code_blocks(text):
-    text = text.strip()
-    if text.startswith("```"):
-        text = re.sub(r"^```[a-zA-Z0-9]*\n", "", text)
-        if text.endswith("```"):
-            text = text[:-3].strip()
-    return text
 
-def call_gemini_api(model, system_prompt, user_content, step_name, abs_ruku, surah_number, surah_name, rel_ruku):
-    max_retries = 7
-    for attempt in range(1, max_retries + 1):
-        key_name, api_key = api_logger.get_next_api_key(step_name)
-        if not api_key:
-            print("  Error: No API keys loaded.")
-            return None
-            
-        url = f"https://generativelanguage.googleapis.com/v1beta/{model}:generateContent?key={api_key}"
-        headers = {
-            "Content-Type": "application/json"
-        }
-        payload = {
-            "contents": [
-                {
-                    "parts": [
-                        {"text": f"{system_prompt}\n\nInput Context:\n{user_content}"}
-                    ]
-                }
-            ]
-        }
-        req = urllib.request.Request(
-            url,
-            data=json.dumps(payload).encode("utf-8"),
-            headers=headers
-        )
-        try:
-            with urllib.request.urlopen(req, timeout=180) as response:
-                res_data = json.loads(response.read().decode("utf-8"))
-                response_text = res_data["candidates"][0]["content"]["parts"][0]["text"].strip()
-                
-                input_tokens = None
-                output_tokens = None
-                if "usageMetadata" in res_data:
-                    input_tokens = res_data["usageMetadata"].get("promptTokenCount")
-                    output_tokens = res_data["usageMetadata"].get("candidatesTokenCount")
-                    
-                api_logger.log_api_call(
-                    step_name, abs_ruku, surah_number, surah_name, rel_ruku,
-                    model, key_name, "Success", input_tokens, output_tokens
-                )
-                return response_text
-        except urllib.error.HTTPError as e:
-            try:
-                err_msg = e.read().decode('utf-8')
-            except Exception:
-                err_msg = e.reason
-            print(f"  [Attempt {attempt}/{max_retries} with {key_name}] HTTP Error {e.code}: {e.reason}. Detail: {err_msg}")
-            
-            api_logger.log_api_call(
-                step_name, abs_ruku, surah_number, surah_name, rel_ruku,
-                model, key_name, f"HTTP Error {e.code}", None, None
-            )
-            
-            if e.code == 429:
-                print(f"  [Rate Limit Active] Rotating key and retrying...")
-                time.sleep(2)
-                continue
-        except Exception as e:
-            print(f"  [Attempt {attempt}/{max_retries} with {key_name}] Error: {e}")
-            api_logger.log_api_call(
-                step_name, abs_ruku, surah_number, surah_name, rel_ruku,
-                model, key_name, f"Error: {str(e)[:50]}", None, None
-            )
-            
-        if attempt < max_retries:
-            time.sleep(1)
-            
-    return None
-
-def parse_verse_range(verses_str):
-    verses_str = verses_str.strip()
-    if '-' in verses_str:
-        parts = verses_str.split('-')
-        try:
-            start = int(parts[0].strip())
-            end = int(parts[1].strip())
-            return list(range(start, end + 1))
-        except ValueError:
-            return []
-    else:
-        try:
-            val = int(verses_str.strip())
-            return [val]
-        except ValueError:
-            return []
-
-def generate_track(api_key, script_dir, root_dir, limit, ruku_filter, force_flag, delay):
+def generate_track(script_dir, root_dir, limit, ruku_filter, force_flag, delay):
     print("\n--- [Phase 2: Generate] Generating English scripts ---")
     todo_path = os.path.join(script_dir, "guiding_resources", "todo_script_english.json")
     
@@ -297,9 +188,9 @@ def generate_track(api_key, script_dir, root_dir, limit, ruku_filter, force_flag
             
             ai_response = call_gemini_api(
                 GEMINI_MODEL,
-                SYSTEM_PROMPT_ENGLISH,
                 json.dumps(block_context, ensure_ascii=False),
-                "step3", abs_ruku, surah_num, surah_name, rel_ruku
+                "step3", abs_ruku, surah_num, surah_name, rel_ruku,
+                system_instruction=SYSTEM_PROMPT_ENGLISH
             )
             
             if not ai_response:
@@ -356,9 +247,7 @@ def main():
     if not keys:
         print("Error: No GEMINI_API_KEY_1 through GEMINI_API_KEY_7 found in .env file.", file=sys.stderr)
         sys.exit(1)
-    api_key = None
-        
-    generate_track(api_key, script_dir, root_dir, args.limit, args.ruku, args.force, args.delay)
+    generate_track(script_dir, root_dir, args.limit, args.ruku, args.force, args.delay)
     print("\nEnglish Step 3 processing finished.")
 
 if __name__ == "__main__":

@@ -11,8 +11,8 @@ if sys.platform.startswith('win'):
     try:
         sys.stdout.reconfigure(encoding='utf-8')
         sys.stderr.reconfigure(encoding='utf-8')
-    except Exception:
-        pass
+    except (AttributeError, OSError):
+        pass  # Encoding reconfiguration not supported on this platform
 
 # List of pipeline steps
 STEPS = {

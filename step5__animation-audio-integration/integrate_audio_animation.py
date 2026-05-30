@@ -28,6 +28,7 @@ root_dir = os.path.dirname(script_dir)
 if root_dir not in sys.path:
     sys.path.append(root_dir)
 import api_logger
+from config import FRAME_RATE, DEFAULT_SILENCE_DURATION, QURAN_RECITER, DEFAULT_VOICE_EN, DEFAULT_VOICE_UR, DEFAULT_AWS_REGION
 
 # Configurable Gemini Models for transliteration
 PRIMARY_GEMINI_MODEL = "models/gemini-3.1-flash-lite"
@@ -54,7 +55,7 @@ def load_env_vars(filepath):
         print(f"Warning: Failed to parse .env file: {e}")
     return env_vars
 
-def call_gemini_api(model, prompt, step_name, abs_ruku, surph_num, surah_name, rel_ruku, generation_config=None):
+def call_gemini_api(model, prompt, step_name, abs_ruku, surah_num, surah_name, rel_ruku, generation_config=None):
     global GEMINI_DISABLED
     if GEMINI_DISABLED:
         return None
@@ -102,7 +103,7 @@ def call_gemini_api(model, prompt, step_name, abs_ruku, surph_num, surah_name, r
                     output_tokens = res_data["usageMetadata"].get("candidatesTokenCount")
                     
                 api_logger.log_api_call(
-                    step_name, abs_ruku, surph_num, surah_name, rel_ruku,
+                    step_name, abs_ruku, surah_num, surah_name, rel_ruku,
                     current_model, key_name, "Success", input_tokens, output_tokens
                 )
                 return response_text
@@ -114,7 +115,7 @@ def call_gemini_api(model, prompt, step_name, abs_ruku, surph_num, surah_name, r
             print(f"  [Attempt {attempt}/{max_retries} with {key_name}] HTTP Error {e.code}: {e.reason}. Detail: {err_msg}")
             
             api_logger.log_api_call(
-                step_name, abs_ruku, surph_num, surah_name, rel_ruku,
+                step_name, abs_ruku, surah_num, surah_name, rel_ruku,
                 current_model, key_name, f"HTTP Error {e.code}", None, None
             )
             
@@ -129,7 +130,7 @@ def call_gemini_api(model, prompt, step_name, abs_ruku, surph_num, surah_name, r
         except Exception as e:
             print(f"  [Attempt {attempt}/{max_retries} with {key_name}] Error: {e}")
             api_logger.log_api_call(
-                step_name, abs_ruku, surph_num, surah_name, rel_ruku,
+                step_name, abs_ruku, surah_num, surah_name, rel_ruku,
                 current_model, key_name, f"Error: {str(e)[:50]}", None, None
             )
             
@@ -165,7 +166,7 @@ Text: {text}"""
         return strip_markdown_code_blocks(response)
     return text
 
-def download_arabic_recitation(surah, verse, output_path, reciter="Alafasy_128kbps"):
+def download_arabic_recitation(surah, verse, output_path, reciter=QURAN_RECITER):
     """
     Downloads Arabic recitation mp3 from everyayah.com.
     """
@@ -186,7 +187,7 @@ def download_arabic_recitation(surah, verse, output_path, reciter="Alafasy_128kb
                 time.sleep(2)
     return False
 
-def generate_polly_audio(polly_client, text, output_path, voice='Matthew'):
+def generate_polly_audio(polly_client, text, output_path, voice=DEFAULT_VOICE_EN):
     """
     Generates English speech audio using AWS Polly (Matthew Generative).
     """
@@ -228,7 +229,7 @@ def generate_polly_audio(polly_client, text, output_path, voice='Matthew'):
         print(f"      Error writing Polly audio file: {e}")
         return False
 
-async def generate_edge_tts_audio(text, output_path, voice="ur-PK-AsadNeural"):
+async def generate_edge_tts_audio(text, output_path, voice=DEFAULT_VOICE_UR):
     """
     Generates Urdu speech audio using Edge TTS.
     """
@@ -286,7 +287,7 @@ def parse_recitation_verse(text):
 
 async def process_subblock(subblock_path, output_dir, lang, polly_client,
                            surah_num_fallback, rel_ruku_fallback, abs_ruku_fallback, surah_name_fallback, 
-                           force_flag=False, target_scene=None, voice_en="Matthew", voice_ur="ur-PK-AsadNeural", no_audio=False):
+                           force_flag=False, target_scene=None, voice_en=DEFAULT_VOICE_EN, voice_ur=DEFAULT_VOICE_UR, no_audio=False):
     """
     Processes a single subblock, generating audio files and updating the JSON metadata.
     """
@@ -458,7 +459,7 @@ Scenes to transliterate:
             if no_audio:
                 print(f"        [No-Audio Mode] Skipping audio generation/download for Scene {scene_no}. Assigning default 5.0s.")
                 audio_success = False
-                duration_seconds = 5.0
+                duration_seconds = DEFAULT_SILENCE_DURATION
             else:
                 if recitation_verse is not None:
                     audio_success = download_arabic_recitation(surah_num, recitation_verse, audio_filepath)
@@ -496,7 +497,7 @@ Scenes to transliterate:
                     duration_seconds = 0.0
             
         total_duration_seconds = duration_seconds + pause_duration
-        total_duration_frames = int(math.ceil(total_duration_seconds * 30))
+        total_duration_frames = int(math.ceil(total_duration_seconds * FRAME_RATE))
         
         scene["audio_path"] = relative_audio_path if audio_success else None
         scene["audio_duration_seconds"] = duration_seconds
@@ -522,8 +523,8 @@ async def main_async():
     parser.add_argument("--block", type=int, default=None, help="Process a specific block index.")
     parser.add_argument("--scene", type=int, default=None, help="Process a specific scene index only, keeping all other scenes as-is.")
     parser.add_argument("--subblock", type=str, default=None, help="Process a specific subblock ID only (e.g. block_5_phase_3_1).")
-    parser.add_argument("--voice-en", type=str, default="Matthew", help="AWS Polly voice for English track.")
-    parser.add_argument("--voice-ur", type=str, default="ur-PK-AsadNeural", help="Edge-TTS voice for Urdu track.")
+    parser.add_argument("--voice-en", type=str, default=DEFAULT_VOICE_EN, help="AWS Polly voice for English track.")
+    parser.add_argument("--voice-ur", type=str, default=DEFAULT_VOICE_UR, help="Edge-TTS voice for Urdu track.")
     parser.add_argument("--no-audio", "--layout-only", dest="no_audio", action="store_true", help="Bypass audio generation/transliteration for layout-only dry-run.")
     parser.add_argument("--force", action="store_true", help="Force reprocessing of already completed entries.")
     parser.add_argument("--lang", choices=["en", "ur", "both"], default="both", help="Process specific tracks.")
@@ -552,7 +553,7 @@ async def main_async():
     
     aws_access_key = env.get("AWS_ACCESS_KEY_ID")
     aws_secret_key = env.get("AWS_SECRET_ACCESS_KEY")
-    aws_region = env.get("AWS_DEFAULT_REGION", "us-east-1")
+    aws_region = env.get("AWS_DEFAULT_REGION", DEFAULT_AWS_REGION)
     
     polly_client = None
     if args.lang in ["en", "both"]:

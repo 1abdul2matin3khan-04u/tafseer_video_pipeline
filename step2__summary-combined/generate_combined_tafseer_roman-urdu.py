@@ -10,6 +10,7 @@ import argparse
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import api_logger
+from pipeline_utils import call_gemini_api, strip_markdown_code_blocks
 
 # Configurable Gemini Model (using flash-lite to prevent free-tier rate limits)
 GEMINI_MODEL = "models/gemini-3.5-flash"
@@ -83,24 +84,6 @@ Do not wrap in code blocks.
 Do not add any introduction or closing remark.
 Start directly with the first block header."""
 
-def load_env(filepath):
-    if not os.path.exists(filepath):
-        return {}
-    env_vars = {}
-    try:
-        with open(filepath, "r", encoding="utf-8") as f:
-            for line in f:
-                line = line.strip()
-                if not line or line.startswith("#"):
-                    continue
-                if "=" in line:
-                    key, val = line.split("=", 1)
-                    env_vars[key.strip()] = val.strip()
-    except Exception as e:
-        print(f"Warning: Failed to parse .env file: {e}")
-    return env_vars
-
-
 def parse_markdown_summary(filepath):
     if not os.path.exists(filepath):
         return ""
@@ -117,117 +100,7 @@ def parse_markdown_summary(filepath):
         return ""
 
 
-def strip_markdown_code_blocks(text):
-    text = text.strip()
-    if text.startswith("```"):
-        text = re.sub(r"^```[a-zA-Z0-9]*\n", "", text)
-        if text.endswith("```"):
-            text = text[:-3].strip()
-    return text
-
-
-def call_gemini_api(
-    model, system_prompt, user_content, step_name, abs_ruku, surah_number, surah_name, rel_ruku
-):
-    max_retries = 7
-    for attempt in range(1, max_retries + 1):
-        key_name, api_key = api_logger.get_next_api_key(step_name)
-        if not api_key:
-            print("  Error: No API keys loaded.")
-            return None
-
-        url = f"https://generativelanguage.googleapis.com/v1beta/{model}:generateContent?key={api_key}"
-        headers = {"Content-Type": "application/json"}
-        payload = {
-            "contents": [
-                {
-                    "parts": [
-                        {
-                            "text": f"{system_prompt}\n\nInput Context:\n{user_content}"
-                        }
-                    ]
-                }
-            ]
-        }
-        req = urllib.request.Request(
-            url, data=json.dumps(payload).encode("utf-8"), headers=headers
-        )
-        try:
-            with urllib.request.urlopen(req, timeout=180) as response:
-                res_data = json.loads(response.read().decode("utf-8"))
-                response_text = res_data["candidates"][0]["content"]["parts"][0][
-                    "text"
-                ].strip()
-
-                input_tokens = None
-                output_tokens = None
-                if "usageMetadata" in res_data:
-                    input_tokens = res_data["usageMetadata"].get("promptTokenCount")
-                    output_tokens = res_data["usageMetadata"].get(
-                        "candidatesTokenCount"
-                    )
-
-                api_logger.log_api_call(
-                    step_name,
-                    abs_ruku,
-                    surah_number,
-                    surah_name,
-                    rel_ruku,
-                    model,
-                    key_name,
-                    "Success",
-                    input_tokens,
-                    output_tokens,
-                )
-                return response_text
-        except urllib.error.HTTPError as e:
-            try:
-                err_msg = e.read().decode("utf-8")
-            except Exception:
-                err_msg = e.reason
-            print(
-                f"  [Attempt {attempt}/{max_retries} with {key_name}] HTTP Error {e.code}: {e.reason}. Detail: {err_msg}"
-            )
-
-            api_logger.log_api_call(
-                step_name,
-                abs_ruku,
-                surah_number,
-                surah_name,
-                rel_ruku,
-                model,
-                key_name,
-                f"HTTP Error {e.code}",
-                None,
-                None,
-            )
-
-            if e.code == 429:
-                print(f"  [Rate Limit Active] Rotating key and retrying...")
-                time.sleep(2)
-                continue
-        except Exception as e:
-            print(f"  [Attempt {attempt}/{max_retries} with {key_name}] Error: {e}")
-            api_logger.log_api_call(
-                step_name,
-                abs_ruku,
-                surah_number,
-                surah_name,
-                rel_ruku,
-                model,
-                key_name,
-                f"Error: {str(e)[:50]}",
-                None,
-                None,
-            )
-
-        if attempt < max_retries:
-            time.sleep(1)
-
-    return None
-
-
-def process_track(api_key, script_dir, root_dir, limit, ruku_filter, force_flag, delay):
+def process_track(script_dir, root_dir, limit, ruku_filter, force_flag, delay, interactive=False):
     print("\n===== Starting Step 2 (ROMAN URDU Track) =====")
     todo_path = os.path.join(script_dir, "guiding_resources", "todo_tafseer_urdu.json")
 
@@ -350,13 +223,13 @@ def process_track(api_key, script_dir, root_dir, limit, ruku_filter, force_flag,
         )
         ai_response = call_gemini_api(
             GEMINI_MODEL,
-            SYSTEM_PROMPT_ROMAN_URDU_COMBINE + block_headers_instr,
             json.dumps(input_context, ensure_ascii=False),
             "step2",
             abs_ruku,
             surah_num,
             surah_name,
             rel_ruku,
+            system_instruction=SYSTEM_PROMPT_ROMAN_URDU_COMBINE + block_headers_instr,
         )
 
         if not ai_response:
@@ -397,7 +270,7 @@ def process_track(api_key, script_dir, root_dir, limit, ruku_filter, force_flag,
 
         # Robust interactive block splitting prompt
         should_split = True
-        if sys.stdin.isatty():
+        if interactive and sys.stdin.isatty():
             try:
                 user_input = (
                     input(
@@ -486,11 +359,38 @@ def main():
         default=1.0,
         help="Delay in seconds between successful API calls (default: 1.0).",
     )
+    parser.add_argument(
+        "--interactive",
+        action="store_true",
+        help="Ask for confirmation before dividing Tafseer into blocks.",
+    )
     args = parser.parse_args()
 
     # Determine directories
     script_dir = os.path.dirname(os.path.abspath(__file__))
     root_dir = os.path.dirname(script_dir)
+
+    # English dependency check (Urdu depends on English block headers)
+    if args.ruku is not None:
+        todo_path = os.path.join(script_dir, "guiding_resources", "todo_tafseer_urdu.json")
+        if os.path.exists(todo_path):
+            try:
+                with open(todo_path, "r", encoding="utf-8") as f:
+                    todo_list = json.load(f)
+                target_entry = next((e for e in todo_list if e["absolute_ruku"] == args.ruku), None)
+                if target_entry:
+                    surah_num = target_entry["surah_number"]
+                    rel_ruku = target_entry["relative_ruku"]
+                    en_tafseer_path = os.path.join(
+                        root_dir, "step2__summary-combined", "output_resources", f"surah_{surah_num:03d}", f"ruku_{rel_ruku}_{args.ruku}", "tafseer_english.md"
+                    )
+                    if not os.path.exists(en_tafseer_path):
+                        print(f"Error: English tafseer must be generated before Urdu.", file=sys.stderr)
+                        print(f"Run generate_combined_tafseer_english.py first.", file=sys.stderr)
+                        print(f"Expected file: {en_tafseer_path}", file=sys.stderr)
+                        sys.exit(1)
+            except Exception as e:
+                print(f"Warning: English dependency check failed: {e}", file=sys.stderr)
 
     # Load environment variables via api_logger
     keys = api_logger.load_env_keys()
@@ -500,10 +400,9 @@ def main():
             file=sys.stderr,
         )
         sys.exit(1)
-    api_key = None
 
     process_track(
-        api_key, script_dir, root_dir, args.limit, args.ruku, args.force, args.delay
+        script_dir, root_dir, args.limit, args.ruku, args.force, args.delay, args.interactive
     )
     print("\nUrdu Step 2 processing finished.")
 

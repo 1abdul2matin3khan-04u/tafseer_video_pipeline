@@ -10,6 +10,38 @@ import re
 from datetime import datetime
 import time
 
+class FileLock:
+    """Cross-platform file lock using atomic file creation."""
+    def __init__(self, filepath, timeout=10, delay=0.1):
+        self.lockfile = filepath + '.lock'
+        self.timeout = timeout
+        self.delay = delay
+        self.fd = None
+
+    def __enter__(self):
+        start = time.time()
+        while True:
+            try:
+                self.fd = os.open(self.lockfile, os.O_CREAT | os.O_EXCL | os.O_WRONLY)
+                return self
+            except FileExistsError:
+                if time.time() - start > self.timeout:
+                    # Stale lock — force remove and retry once
+                    try:
+                        os.remove(self.lockfile)
+                    except OSError:
+                        pass
+                    raise TimeoutError(f"Could not acquire lock on {self.lockfile}")
+                time.sleep(self.delay)
+
+    def __exit__(self, *args):
+        if self.fd is not None:
+            os.close(self.fd)
+        try:
+            os.remove(self.lockfile)
+        except OSError:
+            pass
+
 def load_env_keys():
     """
     Loads GEMINI_API_KEY_1 to GEMINI_API_KEY_7 from the root .env file.
@@ -57,32 +89,33 @@ def get_next_api_key(step_name):
         return None, None
         
     state_file = get_rotation_state_filepath()
-    state = {}
-    if os.path.exists(state_file):
-        try:
-            with open(state_file, 'r', encoding='utf-8') as f:
-                state = json.load(f)
-        except Exception:
-            state = {}
+    with FileLock(state_file):
+        state = {}
+        if os.path.exists(state_file):
+            try:
+                with open(state_file, 'r', encoding='utf-8') as f:
+                    state = json.load(f)
+            except Exception:
+                state = {}
+                
+        # Get current index, defaulting to 0
+        idx = state.get(step_name, 0)
+        
+        # In case keys count changed or index went out of range
+        if idx >= len(keys):
+            idx = 0
             
-    # Get current index, defaulting to 0
-    idx = state.get(step_name, 0)
-    
-    # In case keys count changed or index went out of range
-    if idx >= len(keys):
-        idx = 0
+        key_name, key_value = keys[idx]
         
-    key_name, key_value = keys[idx]
-    
-    # Save the NEXT index statefully
-    state[step_name] = (idx + 1) % len(keys)
-    try:
-        with open(state_file, 'w', encoding='utf-8') as f:
-            json.dump(state, f, ensure_ascii=False, indent=2)
-    except Exception as e:
-        print(f"Warning: Failed to save key rotation state: {e}")
-        
-    return key_name, key_value
+        # Save the NEXT index statefully
+        state[step_name] = (idx + 1) % len(keys)
+        try:
+            with open(state_file, 'w', encoding='utf-8') as f:
+                json.dump(state, f, ensure_ascii=False, indent=2)
+        except Exception as e:
+            print(f"Warning: Failed to save key rotation state: {e}")
+            
+        return key_name, key_value
 
 def log_api_call(step_name, abs_ruku, surah_number, surah_name, rel_ruku, model, key_name, status, input_tokens=None, output_tokens=None):
     """
@@ -95,76 +128,69 @@ def log_api_call(step_name, abs_ruku, surah_number, surah_name, rel_ruku, model,
     
     json_path = os.path.join(logs_dir, f"{date_str}_api_usage.json")
     
-    # Thread/process safe write lock or quick file lock logic (via basic retries)
-    data = None
-    max_retries = 5
-    for attempt in range(max_retries):
+    with FileLock(json_path):
+        # Read existing data
+        data = None
         try:
             if os.path.exists(json_path):
                 with open(json_path, 'r', encoding='utf-8') as f:
                     data = json.load(f)
-            break
         except Exception:
-            time.sleep(0.1)
+            pass
+                
+        if not data:
+            data = {
+                "date": date_str,
+                "summary": {
+                    "total_calls": 0,
+                    "success_calls": 0,
+                    "failed_calls": 0,
+                    "models": {},
+                    "keys": {}
+                },
+                "rukus": {}
+            }
             
-    if not data:
-        data = {
-            "date": date_str,
-            "summary": {
-                "total_calls": 0,
-                "success_calls": 0,
-                "failed_calls": 0,
-                "models": {},
-                "keys": {}
-            },
-            "rukus": {}
+        # Build the entry
+        entry = {
+            "timestamp": datetime.now().strftime("%H:%M:%S"),
+            "step": step_name,
+            "model": model,
+            "key_name": key_name,
+            "status": status,
+            "tokens": {
+                "input": input_tokens,
+                "output": output_tokens
+            }
         }
         
-    # Build the entry
-    entry = {
-        "timestamp": datetime.now().strftime("%H:%M:%S"),
-        "step": step_name,
-        "model": model,
-        "key_name": key_name,
-        "status": status,
-        "tokens": {
-            "input": input_tokens,
-            "output": output_tokens
-        }
-    }
-    
-    # Place entry under the Ruku key
-    ruku_key = f"ruku_{abs_ruku}"
-    if ruku_key not in data["rukus"]:
-        data["rukus"][ruku_key] = {
-            "metadata": {
-                "surah_number": surah_number,
-                "surah_name": surah_name,
-                "relative_ruku": rel_ruku
-            },
-            "calls": []
-        }
-    data["rukus"][ruku_key]["calls"].append(entry)
-    
-    # Update Summary
-    summary = data["summary"]
-    summary["total_calls"] += 1
-    if status == "Success":
-        summary["success_calls"] += 1
-    else:
-        summary["failed_calls"] += 1
+        # Place entry under the Ruku key
+        ruku_key = f"ruku_{abs_ruku}"
+        if ruku_key not in data["rukus"]:
+            data["rukus"][ruku_key] = {
+                "metadata": {
+                    "surah_number": surah_number,
+                    "surah_name": surah_name,
+                    "relative_ruku": rel_ruku
+                },
+                "calls": []
+            }
+        data["rukus"][ruku_key]["calls"].append(entry)
         
-    summary["models"][model] = summary["models"].get(model, 0) + 1
-    summary["keys"][key_name] = summary["keys"].get(key_name, 0) + 1
-    
-    # Save the updated JSON
-    for attempt in range(max_retries):
-        try:
-            with open(json_path, 'w', encoding='utf-8') as f:
-                json.dump(data, f, ensure_ascii=False, indent=2)
-            break
-        except Exception:
-            time.sleep(0.1)
+        # Update Summary
+        summary = data["summary"]
+        summary["total_calls"] += 1
+        if status == "Success":
+            summary["success_calls"] += 1
+        else:
+            summary["failed_calls"] += 1
+            
+        summary["models"][model] = summary["models"].get(model, 0) + 1
+        summary["keys"][key_name] = summary["keys"].get(key_name, 0) + 1
+        
+        # Save the updated JSON
+        with open(json_path, 'w', encoding='utf-8') as f:
+            json.dump(data, f, ensure_ascii=False, indent=2)
             
     # Auto-render Markdown report
     try:

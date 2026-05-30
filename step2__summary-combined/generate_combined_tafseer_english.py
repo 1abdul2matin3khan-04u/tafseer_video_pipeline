@@ -7,9 +7,9 @@ import re
 import urllib.request
 import urllib.error
 import argparse
-import sys
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import api_logger
+from pipeline_utils import call_gemini_api, strip_markdown_code_blocks
 # Configurable Gemini Model
 GEMINI_MODEL = "models/gemini-3.5-flash"
 SYSTEM_PROMPT_ENGLISH = """You are an expert academic Islamic scholar and comparative exegetical analyst.
@@ -35,22 +35,6 @@ Read the provided Ruku exegesis summaries from 5 different sources and synthesiz
 4. LANGUAGE: The output text must be in clear, formal English. Translate any Urdu insights from Tafsir As-Saadi and Bayan-ul-Quran into English.
 5. OUTPUT FORMAT: Return only the synthesized Markdown document. Do not wrap it in markdown code blocks (e.g. do not wrap in ```markdown ... ```) or add introductory/concluding conversational filler. Start directly with the first block header.
 """
-def load_env(filepath):
-    if not os.path.exists(filepath):
-        return {}
-    env_vars = {}
-    try:
-        with open(filepath, 'r', encoding='utf-8') as f:
-            for line in f:
-                line = line.strip()
-                if not line or line.startswith('#'):
-                    continue
-                if '=' in line:
-                    key, val = line.split('=', 1)
-                    env_vars[key.strip()] = val.strip()
-    except Exception as e:
-        print(f"Warning: Failed to parse .env file: {e}")
-    return env_vars
 def parse_markdown_summary(filepath):
     if not os.path.exists(filepath):
         return ""
@@ -65,83 +49,7 @@ def parse_markdown_summary(filepath):
     except Exception as e:
         print(f"Warning: Failed to read/parse markdown summary {filepath}: {e}")
         return ""
-def strip_markdown_code_blocks(text):
-    text = text.strip()
-    if text.startswith("```"):
-        text = re.sub(r"^```[a-zA-Z0-9]*\n", "", text)
-        if text.endswith("```"):
-            text = text[:-3].strip()
-    return text
-def call_gemini_api(model, system_prompt, user_content, step_name, abs_ruku, surah_number, surah_name, rel_ruku):
-    max_retries = 7
-    for attempt in range(1, max_retries + 1):
-        key_name, api_key = api_logger.get_next_api_key(step_name)
-        if not api_key:
-            print("  Error: No API keys loaded.")
-            return None
-            
-        url = f"https://generativelanguage.googleapis.com/v1beta/{model}:generateContent?key={api_key}"
-        headers = {
-            "Content-Type": "application/json"
-        }
-        payload = {
-            "contents": [
-                {
-                    "parts": [
-                        {"text": f"{system_prompt}\n\nInput Context:\n{user_content}"}
-                    ]
-                }
-            ]
-        }
-        req = urllib.request.Request(
-            url,
-            data=json.dumps(payload).encode("utf-8"),
-            headers=headers
-        )
-        try:
-            with urllib.request.urlopen(req, timeout=180) as response:
-                res_data = json.loads(response.read().decode("utf-8"))
-                response_text = res_data["candidates"][0]["content"]["parts"][0]["text"].strip()
-                
-                input_tokens = None
-                output_tokens = None
-                if "usageMetadata" in res_data:
-                    input_tokens = res_data["usageMetadata"].get("promptTokenCount")
-                    output_tokens = res_data["usageMetadata"].get("candidatesTokenCount")
-                    
-                api_logger.log_api_call(
-                    step_name, abs_ruku, surah_number, surah_name, rel_ruku,
-                    model, key_name, "Success", input_tokens, output_tokens
-                )
-                return response_text
-        except urllib.error.HTTPError as e:
-            try:
-                err_msg = e.read().decode('utf-8')
-            except Exception:
-                err_msg = e.reason
-            print(f"  [Attempt {attempt}/{max_retries} with {key_name}] HTTP Error {e.code}: {e.reason}. Detail: {err_msg}")
-            
-            api_logger.log_api_call(
-                step_name, abs_ruku, surah_number, surah_name, rel_ruku,
-                model, key_name, f"HTTP Error {e.code}", None, None
-            )
-            
-            if e.code == 429:
-                print(f"  [Rate Limit Active] Rotating key and retrying...")
-                time.sleep(2)
-                continue
-        except Exception as e:
-            print(f"  [Attempt {attempt}/{max_retries} with {key_name}] Error: {e}")
-            api_logger.log_api_call(
-                step_name, abs_ruku, surah_number, surah_name, rel_ruku,
-                model, key_name, f"Error: {str(e)[:50]}", None, None
-            )
-            
-        if attempt < max_retries:
-            time.sleep(1)
-            
-    return None
-def process_track(api_key, script_dir, root_dir, limit, ruku_filter, force_flag, delay):
+def process_track(script_dir, root_dir, limit, ruku_filter, force_flag, delay, interactive=False):
     print("\n===== Starting Step 2 (ENGLISH Track) =====")
     todo_path = os.path.join(script_dir, "guiding_resources", "todo_tafseer_english.json")
     
@@ -216,9 +124,9 @@ def process_track(api_key, script_dir, root_dir, limit, ruku_filter, force_flag,
         print(f"  Querying Gemini API ({GEMINI_MODEL}) for combined Markdown exegesis...")
         ai_response = call_gemini_api(
             GEMINI_MODEL,
-            SYSTEM_PROMPT_ENGLISH,
             json.dumps(input_context, ensure_ascii=False),
-            "step2", abs_ruku, surah_num, surah_name, rel_ruku
+            "step2", abs_ruku, surah_num, surah_name, rel_ruku,
+            system_instruction=SYSTEM_PROMPT_ENGLISH
         )
         
         if not ai_response:
@@ -254,7 +162,7 @@ def process_track(api_key, script_dir, root_dir, limit, ruku_filter, force_flag,
 
         # Robust interactive block splitting prompt
         should_split = True
-        if sys.stdin.isatty():
+        if interactive and sys.stdin.isatty():
             try:
                 user_input = input(f"\n[?] Ready to divide the Tafseer into blocks? Press Enter or type 'yes' to proceed: ").strip().lower()
                 should_split = (user_input == "" or user_input.startswith("y"))
@@ -313,6 +221,7 @@ def main():
     parser.add_argument("--ruku", type=int, default=None, help="Process a specific absolute Ruku index.")
     parser.add_argument("--force", action="store_true", help="Force reprocessing of already completed entries.")
     parser.add_argument("--delay", type=float, default=1.0, help="Delay in seconds between successful API calls (default: 1.0).")
+    parser.add_argument("--interactive", action="store_true", help="Ask for confirmation before dividing Tafseer into blocks.")
     args = parser.parse_args()
     
     # Determine directories
@@ -324,9 +233,8 @@ def main():
     if not keys:
         print("Error: No GEMINI_API_KEY_1 through GEMINI_API_KEY_7 found in .env file.", file=sys.stderr)
         sys.exit(1)
-    api_key = None
         
-    process_track(api_key, script_dir, root_dir, args.limit, args.ruku, args.force, args.delay)
+    process_track(script_dir, root_dir, args.limit, args.ruku, args.force, args.delay, args.interactive)
     print("\nEnglish Step 2 processing finished.")
 if __name__ == "__main__":
     main()
