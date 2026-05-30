@@ -28,21 +28,11 @@ Synthesize them into one combined Tafseer in Roman Urdu, divided into
 thematic blocks.
 
 === Block Structure ===
-Divide the Ruku into logical thematic blocks. Each block covers a 
-dominant theme and, where applicable, a verse range.
-
-Blocks must follow the exact sequential order of the content as it 
-appears in the sources. Do not reorganize, reorder, or extract content 
-out of its original position. If an overview appears before verse 
-explanation, it is Block 1. If a story appears at the end, it stays 
-at the end.
-
-Demarcate each block with:
-## Block: [N] - [Verse Range] - [Theme in Roman Urdu]
-
-If a block has no specific verse range (e.g. an overview, a concluding 
-story, or a conceptual discussion), use:
-## Block: [N] - Concept - [Theme in Roman Urdu]
+Divide the Ruku into logical thematic blocks. Each block covers a dominant theme and, where applicable, a verse range.
+- Demarcate each block with a level-2 header in the format: ## Block: [Verse Range] - [Theme in Roman Urdu] (e.g. ## Block: 1-3 - Tauheed).
+- If a block is conceptual (e.g. overview or concluding story), use: ## Block: Concept - [Theme in Roman Urdu].
+- Do not skip any verses in the Ruku.
+- Blocks must follow the exact sequential order of the content as it appears in the sources. Do not reorganize, reorder, or extract content out of its original position.
 
 === Under Each Block ===
 
@@ -153,40 +143,7 @@ def process_track(script_dir, root_dir, limit, ruku_filter, force_flag, delay, i
             f"ruku_{rel_ruku}_{abs_ruku}",
         )
 
-        # Extract Block Alignment Headers from English Track
-        en_tafseer_path = os.path.join(output_ruku_dir, "tafseer_english.md")
-        if not os.path.exists(en_tafseer_path):
-            print(
-                f"  Error: English combined Tafseer not found at {en_tafseer_path}. Cannot align blocks. Run English track first."
-            )
-            continue
 
-        try:
-            with open(en_tafseer_path, "r", encoding="utf-8") as f_en:
-                en_content = f_en.read()
-        except Exception as e:
-            print(f"  Error reading {en_tafseer_path}: {e}. Skipping Ruku.")
-            continue
-
-        block_headers = []
-        for line in en_content.splitlines():
-            if line.strip().startswith("## Block:"):
-                block_headers.append(line.strip())
-
-        if not block_headers:
-            print(
-                f"  Warning: No block headers found in {en_tafseer_path}. Using default grouping."
-            )
-            block_headers_instr = ""
-        else:
-            block_headers_str = "\n".join(f"- {h}" for h in block_headers)
-            block_headers_instr = (
-                f"\n=== Block Structure Alignment ===\n"
-                f"You MUST organize the Roman Urdu Tafseer into the exact same blocks as the English track. "
-                f"Here are the exact block headers you must use (translate the theme at the end of the header to Roman Urdu, "
-                f"but keep the verse range/structure identical, e.g. '## Block: 1 - Basmalah'):\n"
-                f"{block_headers_str}\n"
-            )
 
         # Load summaries from Step 1
         sources_data = {}
@@ -229,7 +186,7 @@ def process_track(script_dir, root_dir, limit, ruku_filter, force_flag, delay, i
             surah_num,
             surah_name,
             rel_ruku,
-            system_instruction=SYSTEM_PROMPT_ROMAN_URDU_COMBINE + block_headers_instr,
+            system_instruction=SYSTEM_PROMPT_ROMAN_URDU_COMBINE,
         )
 
         if not ai_response:
@@ -369,28 +326,6 @@ def main():
     # Determine directories
     script_dir = os.path.dirname(os.path.abspath(__file__))
     root_dir = os.path.dirname(script_dir)
-
-    # English dependency check (Urdu depends on English block headers)
-    if args.ruku is not None:
-        todo_path = os.path.join(script_dir, "guiding_resources", "todo_tafseer_urdu.json")
-        if os.path.exists(todo_path):
-            try:
-                with open(todo_path, "r", encoding="utf-8") as f:
-                    todo_list = json.load(f)
-                target_entry = next((e for e in todo_list if e["absolute_ruku"] == args.ruku), None)
-                if target_entry:
-                    surah_num = target_entry["surah_number"]
-                    rel_ruku = target_entry["relative_ruku"]
-                    en_tafseer_path = os.path.join(
-                        root_dir, "step2__summary-combined", "output_resources", f"surah_{surah_num:03d}", f"ruku_{rel_ruku}_{args.ruku}", "tafseer_english.md"
-                    )
-                    if not os.path.exists(en_tafseer_path):
-                        print(f"Error: English tafseer must be generated before Urdu.", file=sys.stderr)
-                        print(f"Run generate_combined_tafseer_english.py first.", file=sys.stderr)
-                        print(f"Expected file: {en_tafseer_path}", file=sys.stderr)
-                        sys.exit(1)
-            except Exception as e:
-                print(f"Warning: English dependency check failed: {e}", file=sys.stderr)
 
     # Load environment variables via api_logger
     keys = api_logger.load_env_keys()
