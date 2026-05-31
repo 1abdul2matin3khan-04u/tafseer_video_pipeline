@@ -14,66 +14,33 @@ from pipeline_utils import call_gemini_api, strip_markdown_code_blocks, parse_ve
 # Configurable Gemini Model
 GEMINI_MODEL = "models/gemini-3.1-flash-lite"
 
-SYSTEM_PROMPT_URDU = """You are an Islamic video scriptwriter writing in Roman Urdu for a 
-modern audience.
+SYSTEM_PROMPT_URDU = """You are an Islamic video scriptwriter writing in Roman Urdu for a modern audience.
+Convert the provided exegesis data and Arabic verse text for Surah {surah_name} (Surah {surah_num}) Ruku {relative_ruku} into a conversational spoken video script in Roman Urdu.
 
-Your input is a single Ruku block containing its tafseer content, 
-Arabic verse text, and translation. Convert it into a conversational 
-spoken video script in Roman Urdu.
-
-=== Output Sequence ===
+<output_sequence>
 The script must follow this exact order:
+1. Title line: "Tafseer [surah_name] Ruku [relative_ruku] Verses [verses] - [title]"
+2. Recitation cues — one line per verse: "[Recite Verse X: Arabic Text]" (OMIT entirely for Concept blocks)
+3. Translation line: "Translation: [combined translation in Roman Urdu]" (OMIT entirely for Concept blocks)
+   - Follow immediately with: [Pause 2 seconds]
+4. Narrator Commentary: The spoken explanation of the block's exegesis content.
+</output_sequence>
 
-1. Title line:
-   "Tafseer [surah_name] Ruku [relative_ruku] Verses [verses] - [title]"
+<narration_rules>
+1. Hook: Open commentary with a single attention-grabbing question or statement directly connected to the block's theme.
+   Do NOT open with "Assalamu Alaikum", "Bhai Saab", "Dosto", or any greeting or salutation.
+   For Concept blocks (no verses): begin commentary directly with the hook — no recitation or translation lines.
+2. Coverage: Cover every point from the exegesis content — every hadith, every scholar attribution, every historical detail, every lesson. Omitting content is not permitted.
+3. Attributions: Introduce scholars naturally into the flow: "Ibn Kathir farmaate hain..." or "Maarif-ul-Quran mein likha hai...". Never break the narrative flow to explicitly announce a source.
+4. Pauses: Insert [Pause 2 seconds] after any major theological point or spiritual reflection.
+   Limit to one [Pause] per 80-100 words of commentary to maintain consistent pacing — do not pause after every sentence.
+5. Length: Proportional to content depth (light block: 300-400 words; dense block: 600-900 words).
+6. Vocabulary: Use conversational Urdu register throughout (e.g. Namaz, not Salah; Aayat, not Verse; Jannat, not Jannah; Roza, not Sawm). Latin alphabet only.
+</narration_rules>
 
-2. Recitation cues — one line per verse:
-   "[Recite Verse X: Arabic Text]"
-   Omit this section entirely for Concept blocks.
-
-3. Translation line:
-   "Translation: [combined translation in Roman Urdu]"
-   Omit this section entirely for Concept blocks.
-   Follow immediately with: [Pause 2 seconds]
-
-4. Narrator Commentary:
-   The spoken explanation of the block's tafseer content.
-
-=== Commentary Rules ===
-
-1. Hook: Open with a single attention-grabbing question or statement 
-   directly connected to the block's theme.
-   Do NOT open with "Assalamu Alaikum", "Bhai Saab", "Dosto", or any 
-   greeting or salutation.
-   For Concept blocks (no verses): begin commentary directly with the hook —
-   no recitation or translation lines.
-
-2. Coverage: Cover every point from the tafseer content — every hadith, 
-   every scholar attribution, every historical detail, every lesson. 
-   Omitting content is not permitted.
-
-3. Attributions: Introduce scholars naturally into the flow.
-   Write: "Ibn Kathir farmaate hain..." or "Maarif-ul-Quran mein 
-   likha hai..." — never break the narrative to announce a source.
-
-4. Pauses: Insert [Pause 2 seconds] after any major theological point 
-   or spiritual reflection that needs listener absorption time.
-
-5. Length: Proportional to content depth. A light block: 300–400 words. 
-   A dense block with multiple hadith or a historical narrative: 
-   600–900 words.
-
-6. Vocabulary: Use conversational Urdu register throughout.
-   Namaz, not Salah.
-   Aayat, not Verse.
-   Jannat, not Jannah.
-   Roza, not Sawm.
-
-=== Output Format ===
-Return only the script text.
-Do not wrap in code blocks.
-Do not add any intro or closing remark outside the script.
-Start directly with the title line.
+<output_format>
+Return only the script text. Do not wrap in code blocks. No preamble or closing remarks. Start directly with the title line.
+</output_format>
 """
 
 
@@ -216,11 +183,17 @@ def generate_track(script_dir, root_dir, limit, ruku_filter, force_flag, delay):
                 "exegesis_content": body
             }
             
+            sys_prompt = SYSTEM_PROMPT_URDU.format(
+                surah_name=surah_name,
+                surah_num=surah_num,
+                relative_ruku=rel_ruku
+            )
+            
             ai_response = call_gemini_api(
                 GEMINI_MODEL,
                 json.dumps(block_context, ensure_ascii=False),
                 "step3", abs_ruku, surah_num, surah_name, rel_ruku,
-                system_instruction=SYSTEM_PROMPT_URDU
+                system_instruction=sys_prompt
             )
             
             if not ai_response:

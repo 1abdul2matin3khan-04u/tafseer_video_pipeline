@@ -296,66 +296,49 @@ def process_track(lang, script_dir, root_dir, limit, ruku_filter, block_filter, 
     # Prompts tailored for the specific language track
     prompt_scene_breakdown = f"""You are a video script editor breaking a {lang_label} Tafseer block into individual spoken scenes.
 
-=== Scene Rules ===
-
+<scene_rules>
 1. Scene 1 — Title:
    Contains only the title line from the script.
-
 2. Recitation and Translation scenes:
    Each [Recite Verse X: ...] tag becomes its own scene.
    The Translation line becomes its own scene.
-   Preserve the exact bracketed tag and prefix in the script field.
-   Do not alter, clean, or paraphrase them.
-
+   Preserve the exact bracketed tag and prefix in the script field. Do not alter, clean, or paraphrase them.
 3. Commentary scenes:
-   Break narrator commentary into individual spoken phrases of 10–18 
-   words each (approximately 5–10 seconds of speech).
+   Break narrator commentary into individual spoken phrases of 10–18 words each (approximately 5–10 seconds of speech).
    One natural sentence or clause per scene.
-
-4. remarks field:
-   Write delivery notes in English — tone, pacing, emphasis, 
-   sound effect cues.
+4. Remarks field:
+   Write delivery notes in English — tone, pacing, emphasis, and sound effect cues.
+</scene_rules>
 """
 
     prompt_visual_groups = f"""You are a motion graphics director designing visual aids for a {lang_label} Tafseer video.
-
 You will receive a block script and its scene breakdown. Your task is to assign structured visual groups to commentary scenes only.
 
-=== What Visual Groups Are ===
-Graphics that occupy the top 75% of screen while the narrator speaks.
-They do not apply to title, recitation, or translation scenes.
-
-=== Decision Process ===
-Read all commentary scenes first. Identify segments where a visual 
-would genuinely aid comprehension. Not every scene needs one — 
-reflective or transitional statements stay narrative-only.
-
-=== Available Types ===
-bullets — key points, characteristics, or lessons as a list.
-table — columnar data, attribute comparisons, structured categories.
-timeline — chronological sequence of events or prophetic narrative.
-comparison — side-by-side contrast of two groups, states, or concepts.
-hierarchy — a tree of categories or branches of a concept.
-
-=== Themes ===
-warning — punishment, hellfire, theological consequences.
-mercy — guidance, blessings, forgiveness, paradise.
-historical — prophetic stories, historical events, narrative passages.
-default — general discussion, neutral content.
-
-=== Progressive Reveal ===
-Each group spans multiple consecutive commentary scenes.
-The graphic builds gradually across its scene range.
-reveals is an array of cumulative integers, one per scene in the range.
-Values may repeat (hold) or jump by more than one.
-
-=== Constraints ===
-reveals length must equal (scene_range[1] - scene_range[0] + 1).
-Maximum reveal value must not exceed item count of the visual type.
-Scene ranges must not overlap between groups.
-group_id must be unique: vg_1, vg_2, etc.
-For unused fields output empty arrays [] or empty strings "".
-Visual titles must be in English.
+<visual_groups_rules>
+1. Scope: Graphics that occupy the top 75% of screen while the narrator speaks. They do not apply to title, recitation, or translation scenes.
+2. Decision Process: Read all commentary scenes first. Identify segments where a visual would genuinely aid comprehension. Not every scene needs one — reflective or transitional statements stay narrative-only.
+3. Available Types:
+   - bullets: key points, characteristics, or lessons as a list.
+   - table: columnar data, attribute comparisons, structured categories.
+   - timeline: chronological sequence of events or prophetic narrative.
+   - comparison: side-by-side contrast of two groups, states, or concepts.
+   - hierarchy: a tree of categories or branches of a concept.
+4. Themes:
+   - warning: punishment, hellfire, theological consequences.
+   - mercy: guidance, blessings, forgiveness, paradise.
+   - historical: prophetic stories, historical events, narrative passages.
+   - default: general discussion, neutral content.
+5. Progressive Reveal:
+   Each group spans multiple consecutive commentary scenes. The graphic builds gradually across its scene range.
+   reveals is an array of cumulative integers, one per scene in the range. Values may repeat (hold) or jump by more than one.
+6. Constraints:
+   - reveals length must equal (scene_range[1] - scene_range[0] + 1).
+   - Maximum reveal value must not exceed item count of the visual type.
+   - Scene ranges must not overlap between groups.
+   - group_id must be unique: vg_1, vg_2, etc.
+   - For unused fields output empty arrays [] or empty strings "".
+   - Visual titles must be in English.
+</visual_groups_rules>
 """
 
     # Expand Ruku todo list into block todo list dynamically

@@ -128,14 +128,14 @@ def call_gemini_api(
         - If response_schema is provided: parsed JSON object, or None on failure.
     """
     for attempt in range(1, MAX_API_RETRIES + 1):
-        key_name, api_key = api_logger.get_next_api_key(step_name)
-        if not api_key:
-            print("  Error: No API keys loaded.")
+        active_model, key_name, api_key = api_logger.get_next_api_key_and_model(step_name)
+        if not api_key or not active_model:
+            print("  Error: No active API keys/models resolved.")
             return None
 
         url = (
             f"https://generativelanguage.googleapis.com/v1beta/"
-            f"{model}:generateContent?key={api_key}"
+            f"{active_model}:generateContent?key={api_key}"
         )
         headers = {"Content-Type": "application/json"}
 
@@ -175,7 +175,7 @@ def call_gemini_api(
                     )
                     api_logger.log_api_call(
                         step_name, abs_ruku, surah_number, surah_name, rel_ruku,
-                        model, key_name, f"Error: {str(e)[:50]}", None, None,
+                        active_model, key_name, f"Error: {str(e)[:50]}", None, None,
                     )
                     if attempt < MAX_API_RETRIES:
                         time.sleep(1)
@@ -192,7 +192,7 @@ def call_gemini_api(
 
                 api_logger.log_api_call(
                     step_name, abs_ruku, surah_number, surah_name, rel_ruku,
-                    model, key_name, "Success", input_tokens, output_tokens,
+                    active_model, key_name, "Success", input_tokens, output_tokens,
                 )
 
                 # If structured output requested, parse as JSON
@@ -223,7 +223,7 @@ def call_gemini_api(
 
             api_logger.log_api_call(
                 step_name, abs_ruku, surah_number, surah_name, rel_ruku,
-                model, key_name, f"HTTP Error {e.code}", None, None,
+                active_model, key_name, f"HTTP Error {e.code}", None, None,
             )
 
             if e.code == 429:
@@ -253,7 +253,7 @@ def call_gemini_api(
             )
             api_logger.log_api_call(
                 step_name, abs_ruku, surah_number, surah_name, rel_ruku,
-                model, key_name, f"Error: {str(e)[:50]}", None, None,
+                active_model, key_name, f"Error: {str(e)[:50]}", None, None,
             )
 
         if attempt < MAX_API_RETRIES:

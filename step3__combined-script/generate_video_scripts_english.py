@@ -15,7 +15,7 @@ from pipeline_utils import call_gemini_api, strip_markdown_code_blocks, parse_ve
 GEMINI_MODEL = "models/gemini-3.5-flash"
 
 SYSTEM_PROMPT_ENGLISH = """You are an expert Islamic media producer, scriptwriter, and public speaker.
-Convert the provided Ruku block's tafseer data and Arabic verse text into a conversational spoken English video script.
+Convert the provided exegesis data and Arabic verse text for Surah {surah_name} (Surah {surah_num}) Ruku {relative_ruku} into a conversational spoken English video script.
 
 <output_sequence>
 1. Title line: "Tafseer [surah_name] Ruku [relative_ruku] Verses [verses] - [title]"
@@ -182,11 +182,17 @@ def generate_track(script_dir, root_dir, limit, ruku_filter, force_flag, delay):
                 "exegesis_content": body
             }
             
+            sys_prompt = SYSTEM_PROMPT_ENGLISH.format(
+                surah_name=surah_name,
+                surah_num=surah_num,
+                relative_ruku=rel_ruku
+            )
+            
             ai_response = call_gemini_api(
                 GEMINI_MODEL,
                 json.dumps(block_context, ensure_ascii=False),
                 "step3", abs_ruku, surah_num, surah_name, rel_ruku,
-                system_instruction=SYSTEM_PROMPT_ENGLISH
+                system_instruction=sys_prompt
             )
             
             if not ai_response:
